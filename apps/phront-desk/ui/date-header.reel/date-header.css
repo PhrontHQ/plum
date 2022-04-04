@@ -1,0 +1,27 @@
+.DateHeader {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    text-shadow: 0.25px 0.5px 1px rgba(0, 0, 0, .72);
+    font-size: .65em;
+    margin-top: .1em;
+}
+
+.DateHeader-day {
+    float: left;
+    padding-right: .14em;
+    line-height: 1em;
+}
+
+.DateHeader-month {
+    margin-top: .44em;
+    font-size: .28em;
+    line-height: 1em;
+}
+
+.DateHeader-weekDay {
+    margin-top: .1em;
+    font-size: .5em;
+    line-height: 1em;
+}

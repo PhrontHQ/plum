@@ -1,0 +1,61 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "readOperationRulesForApplicationIdentityMapEntry"}
+            ]
+        }
+    },
+    "readOperationRulesForApplicationIdentityMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "value": [
+                {"@": "matchDataIdentityAppointmentRule"},
+                {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+
+    "matchServiceEngagementIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+          "expression": "(isTemplate == true && calendar.b2cCustomerSupplierRelationshipOwner.supplier.services.filter{variants.filter{serviceEngagements.filter{originId == $.serviceEngagementOriginId}}}) || (rescheduledEventReferrer.originId == $.serviceEngagementOriginId)",
+            "parameters": {
+                "<-": "{serviceEngagementOriginId: @root.dataOperation.identity.scope.0.criteria.parameters.originId}"
+            }
+        }
+    },
+
+    "matchDataIdentityAppointmentRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(identity.scope.0.criteria.or(@matchServiceEngagementIdentityCriteria))"
+                }
+            }
+        }
+    },
+    
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "true"
+                }
+            }
+        }
+    }
+
+
+}

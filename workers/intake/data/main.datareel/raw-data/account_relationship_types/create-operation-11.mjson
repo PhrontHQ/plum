@@ -1,0 +1,17 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "DA4C3904-242B-4ED6-B9AA-9CDEFDA56C46",
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "type": "createOperation",
+      "timeStamp": 71144.6766769886,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": 100000,
+        "type_label": "Other",
+        "permanent_label": "Other"
+      }
+    }
+  }
+}

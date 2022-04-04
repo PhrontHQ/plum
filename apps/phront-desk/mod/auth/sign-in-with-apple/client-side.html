@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+        <!-- 
+
+            https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/configuring_your_webpage_for_sign_in_with_apple
+            https://sarunw.com/posts/sign-in-with-apple-4/
+
+        -->
+    </head>
+    <body>
+        <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+        <div id="appleid-signin" data-color="black" data-border="true" data-type="sign in"></div>
+        <script type="text/javascript">
+
+            var ClientConfigInit = {
+                clientId : 'com.phront.schedule-appointment',
+                // clientId : 'com.phront.signInWithApple',
+                scope : 'name email',
+                redirectURI : 'https://social-auth-1.phront.com/oauth2/idpresponse',
+                state : 'ZXlKMWMyVnlVRzl2YkVsa0lqb2lkWE10WldGemRDMHhYMGRwVTBRMVlUbGhhU0lzSW5CeWIzWnBaR1Z5VG1GdFpTSTZJbE5wWjI1SmJsZHBkR2hCY0hCc1pTSXNJbU5zYVdWdWRFbGtJam9pTkRWeVpYUjBiWEpyT1dzeGFtUnhhbU13Wm1Wb2RtSndNSFFpTENKeVpXUnBjbVZqZEZWU1NTSTZJbWgwZEhCek9pOHZjMjlqYVdGc0xXRjFkR2d0TVM1d2FISnZiblF1WTI5dEwyTmhiR3hpWVdOcklpd2ljbVZ6Y0c5dWMyVlVlWEJsSWpvaVkyOWtaU0lzSW5CeWIzWnBaR1Z5Vkhsd1pTSTZJbE5wWjI1SmJsZHBkR2hCY0hCc1pTSXNJbk5qYjNCbGN5STZXeUpsYldGcGJDSXNJbTl3Wlc1cFpDSXNJbkJvYjI1bElsMHNJbk4wWVhSbElqcHVkV3hzTENKamIyUmxRMmhoYkd4bGJtZGxJanB1ZFd4c0xDSmpiMlJsUTJoaGJHeGxibWRsVFdWMGFHOWtJanB1ZFd4c0xDSnViMjVqWlNJNklrNVlORVY2VWxCWWIwbE1TMVk1U2preE5VUmFTbmRFYUZOWWRYRnNhWGhLVGtWTlJVSnJZakJUVVhGWGVEUkRXaTFmU1ZZMFpYUktPRmQ2WlVRMlgxSk5TekJQWmxOb1ltTlBPRWxQYkZSNk1sRlZXRVV5VlUwek9FVnNNRE5pVW5aaFoxbFNRV2hEZDJoaFZsWlBjakpQTldKVWVHTmFOWGw1ZVhjMWRWaFBNVmRwWWxFdGJuVXRaalpxVmt4M1dXZDFjM2xOZURsWVEwOU9WSGRzYTBzemQyTTFSSGhTV2tKUVZTSXNJbk5sY25abGNraHZjM1JRYjNKMElqb2ljMjlqYVdGc0xXRjFkR2d0TVM1d2FISnZiblF1WTI5dElpd2lZM0psWVhScGIyNVVhVzFsVTJWamIyNWtjeUk2TVRZME5EVXlPRFE1TXl3aWMyVnpjMmx2YmlJNmJuVnNiQ3dpZFhObGNrRjBkSEpwWW5WMFpYTWlPbTUxYkd3c0luTjBZWFJsUm05eVRHbHVhMmx1WjFObGMzTnBiMjRpT21aaGJITmxmUT09OmZrYjU3QXo2bVo5TmlicUQySWhhSUhmbTBLNzV6UkxEWHE4a1R6bTBMcFU9OjQ%3D',
+                nonce : '[NONCE]',
+                usePopup : true
+            };
+
+            AppleID.auth.init(ClientConfigInit);
+
+
+                        // Listen for authorization success.
+            document.addEventListener('AppleIDSignInOnSuccess', (event) => {
+                // Handle successful response.
+                console.log(event.detail.data);
+            });
+
+            // Listen for authorization failures.
+            document.addEventListener('AppleIDSignInOnFailure', (event) => {
+                // Handle error.
+                console.log(event.detail.error);
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "DD9772C7-A6B3-406E-8587-368328EA7345",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/account_holders"
+        ]
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

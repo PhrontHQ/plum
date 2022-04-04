@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Install ",
+        "command": "npm",
+        "args": ["build"],
+        "options": {
+          "cwd": "${workspaceFolder}/client"
+        }
+      },
+      {
+        "label": "Server Build",
+        "command": "npm",
+        "args": ["build"],
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        }
+      },
+      {
+        "label": "Build",
+        "dependsOn": ["Client Build", "Server Build"]
+      }
+    ]
+  }
+  

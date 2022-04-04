@@ -1,0 +1,23 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-operation",
+        "values": {
+            "id": "92824BFF-C68E-41FD-A468-161602FD4AC4",
+            "type": "readCompletedOperation",
+            "timeStamp": 54154.260784983635,
+            "targetModuleId": "data/main.datareel/model/app/user-pool-client",
+            "referrerId": "9980D7CF-F1C8-43E6-B393-B55AA0CA0966",
+            "data": [
+                [{
+                    "stringValue": "{\"id\": \"1b850b9d-4003-416a-a626-3e0c531dd107\", \"name\": \"plum-appointments\", \"identifier\": \"37j9gumllrfaridmgddmmv0st1\", \"credentials\": \"1h9spsm6c8q154ed5cpe8vls81215doesgb7df4qutkovior03f\"}"
+                }],
+                [{
+                    "stringValue": "{\"id\": \"bd952f7d-e8b9-4c54-b277-5427044ef166\", \"name\": \"plumming-workstation\", \"identifier\": \"27r861r7ej0jr7845548hbh4mi\", \"credentials\": \"1kad8uurvm7ist8i733a3nkj7ebogeeerp6r8ut5n7q71c4df49v\"}"
+                }],
+                [{
+                    "stringValue": "{\"id\": \"c8631a75-f169-4c65-b502-e497ef3e1638\", \"name\": \"plumming-tool\", \"identifier\": \"3g7hm1qgkr0vk4pk65p8cfgiql\", \"credentials\": \"3amt45ip7h133414vmlh0qts6r3l284ktetg0otp42mulor4jks\"}"
+                }]
+            ]
+        }
+    }
+}

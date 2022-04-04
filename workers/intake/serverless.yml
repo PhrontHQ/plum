@@ -1,0 +1,388 @@
+frameworkVersion: '3'
+# Removes serveless enterprise plugin injection
+# See https://www.serverless.com/blog/framework-release-v138-websockets
+# org: benoitmarchant
+service: plum-workers-intake
+# variablesResolutionMode: 20210326
+
+# Load environment variables from .env files (default: false)
+# See https://www.serverless.com/framework/docs/environment-variables
+useDotenv: true
+
+package:
+    individually: false
+
+    excludeDevDependencies: false
+    patterns:
+      - '!~/**'
+      - '!tools/**'
+      - '!test/**'
+      - '!builds/**'
+      - '!dev/**'
+      - '!.vscode/**'
+      - '!node_modules/montage/demo/**'
+      - '!node_modules/montage/.git/**'
+      - '!node_modules/montage/ui/**'
+      - '!node_modules/montage/test/**'
+      - '!node_modules/montage/testing/**'
+      - '!node_modules/montage/tools/**'
+      - '!node_modules/montage/node_modules/**'
+      - '!node_modules/montage/.vscode/**'
+      - '!node_modules/phront/dev/**'
+      - '!node_modules/phront/test/**'
+      - '!node_modules/phront/sandbox/**'
+      - '!node_modules/phront/node_modules/**'
+      - '!node_modules/phront/.git/**'
+      - '!node_modules/phront/.vscode/**'
+      - '!node_modules/montage-geo/ui/**'
+      - '!node_modules/montage-geo/test/**'
+      - '!node_modules/montage-geo/.git/**'
+      - '!node_modules/local-websocket-server/**'
+      - '!node_modules/serverless/**'
+      - '!node_modules/serverless-offline/**'
+      - '!node_modules/serverless-plugin-common-excludes/**'
+      - '!node_modules/serverless-plugin-include-dependencies/**'
+      - '!node-build*'
+      - '!node_modules/@aws-sdk/**/dist-es/**'
+      - '!node_modules/@aws-sdk/**/dist-types/**'
+
+
+    include:
+      - node_modules/uuid/**
+      - "!dev/**"
+
+    exclude:
+      - ~/**
+      # - node_modules/**/**.ts
+      - builds/**
+      # - dev/**
+      - node-build*/**
+      - test/**
+      - tools/**
+      - tmp/**
+      - .vscode/**
+      # Manual dev dependencies
+      # - node_modules/http-server/**
+      # - node_modules/webpack/**
+      # - node_modules/local-websocket-server/**
+      # - node_modules/serverless/**
+      # - node_modules/serverless-apigw-binary/**
+      # - node_modules/serverless-dotenv-plugin/**
+      # - node_modules/serverless-offline/**
+      # - node_modules/serverless-plugin-common-excludes/**
+      # - node_modules/serverless-plugin-include-dependencies/**
+      # - node_modules/serverless-plugin-package-size/**
+      # - node_modules/serverless-webpack/**
+
+      # - node_modules/@aws-sdk/**/dist-es/**
+      # - node_modules/@aws-sdk/**/dist-types/**
+      - node_modules/montage/.git/**
+      - node_modules/montage/.vscode/**
+      - node_modules/montage/demo/**
+      - node_modules/montage/ui/**
+      - node_modules/montage/test/**
+      - node_modules/montage/testing/**
+      - node_modules/montage/tools/**
+      # - node_modules/montage/window-loader/**
+      - node_modules/montage-geo/.git/**
+      - node_modules/montage-geo/test/**
+      - node_modules/montage-geo/ui/**
+      - node_modules/phront/.git/**
+      - node_modules/phront/.vscode/**
+      - node_modules/phront/dev/**
+      - node_modules/phront/sandbox/**
+      - node_modules/phront/test/**
+      - node_modules/phront/ui/**
+      - node_modules/local-websocket-server/**
+      - node_modules/serverless/**
+      - node_modules/serverless-offline/**
+      - node_modules/serverless-plugin-include-dependencies/**
+      - vscode-profile-**
+      - ./**.cpuprofile
+  
+#setup for environements and accounts to use so we cand do
+# $ serverless deploy --stage mod
+# $ serverless deploy --stage test
+# $ serverless deploy --stage prod
+# more at https://serverless-stack.com/chapters/configure-multiple-aws-profiles.html
+custom:
+  # scriptHooks:
+  #       # before:aws:package:finalize:saveServiceState: scripts/completeLambdaAssociation.js
+  #       before:package:initialize: tools/serverless/set-version-components.js
+        
+
+  projectVersion: ${file(../../package.json):version}
+  # myVersionString: 1.0.0
+  versionComponents: ${file(../../tools/serverless/package-version-components.js)}
+
+  # myMajorVersion: 1
+  # myMajorVersionParts: 
+  #   "Fn::Split":
+  #     - "."
+  #     - ${self:custom.myVersionString}
+
+  # myMajorVersionParts: [1,0,0]
+  # myVersionComponents: !Split [".", !Ref myVersionString]
+  #myMajorVersion: ${self:custom.versionComponents.0}
+  # majorVersion: ${file(../../package.json):version.0}
+  # majorVersion: ${file(../../package.json):version.0}
+  majorVersion: ${self:custom.versionComponents.0}
+
+  # myMajorVersion: 
+  #   fn::split:
+  #     delimiter: "."
+  #     value: ${self:custom.myVersionString}
+  #     index: 0
+  # myMajorVersionString: '${self:custom.myMajorVersion}'
+
+  # myMinorVersion: 
+  #   fn::split:
+  #     delimiter: "."
+  #     value: ${self:custom.myVersionString}
+  #     index: 1
+  # myPatchVersion: 
+  #   fn::split:
+  #     delimiter: "."
+  #     value: ${self:custom.myVersionString}
+  #     index: 2
+
+  myLiveAppId: fc3b780d-8a69-4688-8f62-871390be4143
+  myServiceObjectName: ${sls:stage}-${self:service}
+  myServiceObjectVersionedName: ${self:custom.myServiceObjectName}-v${self:custom.majorVersion}
+  myStage: ${opt:stage, self:provider.stage}
+  myRegion: ${opt:region, self:provider.region}
+  myDefaultBaseDomain: ${self:custom.myLiveAppId}.phrontier.live
+  myBaseDomain: oh.my-plum-appointment.guru
+  myStageBaseDomain: 
+    mod: intake.${self:custom.myStage}.${self:custom.myBaseDomain}
+    test: intake.${self:custom.myStage}.${self:custom.myBaseDomain}
+    live: intake.${self:custom.myBaseDomain}.
+
+  myMainWorkerWebsocketDomainName: connect.${self:custom.myStageBaseDomain.${self:custom.myStage}}
+  myMainWorkerHttpDomainName: send.${self:custom.myStageBaseDomain.${self:custom.myStage}}
+
+  # myDomaincertificateArn:
+  #   mod: arn:aws:acm:us-east-1:006408448862:certificate/452dcfe1-a769-4036-a0c3-2921aff02621
+  #   test: 
+  #   live: 
+
+
+  myProfile:
+    mod: cogent-mod
+    test: cogent-test
+    live: cogent-live
+  myAccount:
+    mod: 006408448862
+    test: 545740467277
+    live: 540973189736
+  myRole:
+    mod: arn:aws:iam::006408448862:role/lambda-runner
+    test: arn:aws:iam::545740467277:role/lambda-runner
+    live: arn:aws:iam::540973189736:role/lambda-runner
+  myCfnRole:
+    mod: arn:aws:iam::006408448862:role/cloudformation-manager
+    test: arn:aws:iam::545740467277:role/cloudformation-manager
+    live: arn:aws:iam::540973189736:role/cloudformation-manager
+  serverless-offline:
+    httpPort: 4000
+    websocketPort: 3001
+    lambdaPort: 4002
+
+  distill:
+    include:
+      - 'node_modules/montage/core/date/time-zone-data'
+      - 'node_modules/uuid'
+      # data/main.datareel/raw-data is missed by default, so making sure it's taken care off before we figure out why it's not picked up in the first place
+      - 'data/main.datareel/raw-data'
+
+    minifyPatterns:
+      - 'node_modules/**'
+      - '!node_modules/montage/**'
+      - '!node_modules/montage-geo/**'
+      - '!node_modules/phront/**'
+      # - '!*/**'
+
+  hostedZone:
+    name: ${self:custom.myStageBaseDomain.${self:custom.myStage}}.
+
+  # Amazon Certificate Manager
+  customCertificate:
+    - 
+      # Route 53 Hosted Zone name
+      # don't forget the dot on the end!
+      hostedZoneNames: 
+        # - phrontier.live.
+        - ${self:custom.myStageBaseDomain.${self:custom.myStage}}.
+      #hostedZoneIds: Z0729969302NRWU3T38ZD
+      # Here we get our certificate name inside custom.domain.STAGE.certificateName
+      # STAGE will be automatically filled with the value from "provider > stage"
+      # certificateName: ${self:custom.myStageBaseDomain}
+      # certificateName: "*.phrontier.live"
+      certificateName: "*.${self:custom.myStageBaseDomain.${self:custom.myStage}}"
+      region: ${self:custom.myRegion}
+
+  customDomains:
+    - websocket:
+        apiType: websocket
+        autoDomain: true
+        domainName: ${self:custom.myMainWorkerWebsocketDomainName}
+        stage: ${self:custom.myStage}
+        basePath: v${self:custom.majorVersion}
+        certificateName: "*.${self:custom.myStageBaseDomain.${self:custom.myStage}}"
+        # certificateName: "*.phrontier.live"
+        #certificateArn: ${self:custom.myDomaincertificateArn.${self:custom.myStage}}
+        createRoute53Record: true
+        createRoute53IPv6Record: true
+        endpointType: 'regional'
+        securityPolicy: tls_1_2
+    - http:
+        apiType: http
+        autoDomain: true
+        domainName: ${self:custom.myMainWorkerHttpDomainName}
+        stage: ${self:custom.myStage}
+        basePath: v${self:custom.majorVersion}
+        certificateName: "*.${self:custom.myStageBaseDomain.${self:custom.myStage}}"
+        # certificateName: '*.phrontier.live'
+        #certificateArn: ${self:custom.myDomaincertificateArn.${self:custom.myStage}}
+        createRoute53Record: true
+        createRoute53IPv6Record: true
+        endpointType: 'regional'
+        securityPolicy: tls_1_2
+
+  prune:
+    automatic: true
+    includeLayers: true
+    number: 3
+
+provider:
+  name: aws
+  profile: ${self:custom.myProfile.${self:custom.myStage}}
+  role: ${self:custom.myRole.${self:custom.myStage}} 
+  cfnRole: ${self:custom.myCfnRole.${self:custom.myStage}}  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
+  region: us-west-2 # Overwrite the default region used. Default is us-east-1
+
+  runtime: nodejs14.x
+  apiGateway:
+    # Attach to an externally created REST API via its ID:
+    # restApiId: ${self:custom.myLiveAppId} # REST API resource ID. Default is generated by the framework
+    # restApiRootResourceId: ${self:custom.myLiveAppId} # Root resource, represent as / path
+    # websocketApiId: Attach to an externally created Websocket API via its ID:
+    # Websocket API resource ID. Default is generated by the framework
+    # websocketApiId: ${self:custom.myLiveAppId} 
+    description: Some Description # optional - description of deployment history
+    disableDefaultEndpoint: true
+
+  deploymentBucket:
+    name: ${self:custom.myServiceObjectVersionedName}
+    serverSideEncryption: AES256
+
+  # lambdaHashingVersion: 20201221
+  stage: mod
+  stackName: ${self:custom.myServiceObjectVersionedName} # Overwrite default CloudFormation stack name. Default is ${self:service}-${sls:stage}
+  apiName: ${self:custom.myServiceObjectVersionedName} # Overwrite default API Gateway name. Default is ${sls:stage}-${self:service}
+  websocketsApiName: ${self:custom.myServiceObjectVersionedName}
+  websocketsDescription: connect main worker
+  websocketsApiRouteSelectionExpression: $request.body.action # custom routes are selected by the value of the action property in the body
+  
+  # used in phront/data/main.datareel/serverles/a-w-s-a-p-i-gateway.js
+  # This allows our AWSAPIGateway to know to which endpoint it should post data
+  environment:
+    APIG_ENDPOINT:
+      Fn::Join:
+        - ''
+        - - Ref: WebsocketsApi
+          - .execute-api.
+          # - Ref: AWS::Region
+          - ${self:custom.myRegion}
+          - .amazonaws.com/
+          - ${self:custom.myStage}
+  httpApi:
+    name: ${self:custom.myServiceObjectVersionedName}
+    # Disable the default 'execute-api' HTTP endpoint (default: false)
+    # Useful when using a custom domain.
+    disableDefaultEndpoint: true
+    # Enable CORS HTTP headers with default settings (allow all)
+    # Can be fine-tuned with specific options
+    cors: true
+    authorizers:
+      authorizeSend:
+        type: request
+        functionName: authorizeSend
+        identitySource:
+          - $request.querystring.session
+
+
+
+
+functions:
+  connect:
+    name: ${self:custom.myServiceObjectVersionedName}-connect
+    handler: main.connect
+    events:
+      - websocket:
+          route: $connect # authorizers are only for connect routes
+          authorizer: # references the auth function below
+            name: authorize
+            # resultTtlInSeconds: 3600
+            identitySource:
+              - 'route.request.querystring.session'
+
+  authorize:
+    name: ${self:custom.myServiceObjectVersionedName}-authorize
+    handler: main.authorize
+
+  default:
+    name: ${self:custom.myServiceObjectVersionedName}-default
+    handler: main.default
+    events:
+      - websocket:
+          route: $default
+
+  authorizeSend:
+    name: ${self:custom.myServiceObjectVersionedName}-authorizeSend
+    handler: main.authorizeSend
+
+  send:
+    name: ${self:custom.myServiceObjectVersionedName}-send
+    handler: main.send
+    events:
+      - httpApi:
+          path: /
+          method: POST
+          authorizer:
+            name: authorizeSend
+            # type: request
+            # identitySource:
+            #   - 'method.request.querystring.session'
+
+  disconnect:
+    name: ${self:custom.myServiceObjectVersionedName}-disconnect
+    handler: main.disconnect
+    events:
+      - websocket:
+          route: $disconnect
+            # auth:
+  #   handler: handler.auth
+
+  authenticate:
+    name: ${self:custom.myServiceObjectVersionedName}-authenticate
+    handler: main.authenticate
+    events:
+      - httpApi:
+          path: /authenticate
+          method: POST
+
+
+plugins:
+  #- serverless-apigw-binary
+  - serverless-plugin-utils
+  - serverless-deployment-bucket
+  - serverless-plugin-common-excludes
+  - serverless-scriptable-plugin
+  - distill
+  - serverless-hosted-zone
+  - "@dezeroku/serverless-certificate-creator"
+  - serverless-domain-manager
+  # - serverless-dotenv-plugin
+  - serverless-prune-plugin
+  - serverless-offline

@@ -1,0 +1,13 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "CF0B2827-3922-486E-BC97-6298C342C598",
+      "type": "readCompleted",
+      "timeStamp": 29232.678264006972,
+      "targetModuleId": "data/main.datareel/model/event",
+      "referrerId": "B6A46489-35E8-4FCD-BE21-3121722D72CF",
+      "data": []
+    }
+  }
+}

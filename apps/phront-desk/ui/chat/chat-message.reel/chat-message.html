@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="chat-message.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "classList.has('ChatMessage--isMainSender')": {"<-": "isMainSender"},
+                "classList.has('ChatMessage--isFirstInGroup')": {"<-": "isFirstInGroup"},
+                "classList.has('ChatMessage--isLastInGroup')": {"<-": "isLastInGroup"},
+                "messageComponentSlot": {"#": "messageComponentSlot"}
+            }
+        },
+        "messageComponentSlot": {
+            "prototype": "montage/ui/slot.reel",
+            "values": {
+                "element": {"#": "messageComponentSlot"},
+                "content": {"<-": "@owner.data.outputComponent"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ChatMessage">
+        <div data-montage-id="messageComponentSlot" class="ChatMessage-componentSlot">
+        </div>
+    </div>
+</body>
+</html>
+ 

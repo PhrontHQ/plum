@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<script>
+(() => {
+"use strict"
+const get = url => {
+    const request = new XMLHttpRequest
+    request.open("GET", url, false)
+    request.send()
+    return request.responseText
+}
+const options = JSON.parse(get("launcher.json?q=" + Date.now())).options
+document.write(get("index.html?q=" + Date.now()))
+const launcher = document.createElement("div")
+launcher.id = "launcher"
+launcher.innerHTML = `<style>
+    #launcher {
+        font-family: sans-serif;
+        position: fixed;
+        right: 0;
+        z-index: 999999;
+        box-shadow: 0 0 16px rgba(0, 0, 0, .25);
+        display: flex;
+        opacity: .35;
+        padding-left: 50px;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+        background: #aaa;
+        transition: width .4s, opacity .4s;
+        width: 0;
+        touch-action: none;
+        box-sizing: border-box;
+    }
+    #launcher.isLauncherExpanded {
+        width: 290px;
+        opacity: 1;
+    }
+    #launcher select, 
+    #launcher button {
+        -moz-appearance: none; 
+        -webkit-appearance: none; 
+        appearance: none;
+        margin: 0;
+        min-width: 40px;
+        min-height: 40px;
+        border: none;
+        border-radius: 0;
+        font-size: 12px;
+        padding: 0 4px;
+        outline: none;
+        color: black;
+    }
+    #launcher select {
+        width: 170px;
+        background: white;
+    }
+    #launcher button {
+        background: #ddd;
+    }
+</style>
+<button id="launcherPrevious">❮</button>
+<select id="launcherSelect"></select>
+<button id="launcherNext">❯</button>`
+document.body.appendChild(launcher)
+options.forEach(option => {
+    const optionElement = document.createElement("option")
+    optionElement.setAttribute("value", option.search)
+    optionElement.textContent = option.name
+    launcherSelect.appendChild(optionElement)
+})
+let isLauncherExpanded = localStorage.getItem("isLauncherExpanded") || "true"
+if (isLauncherExpanded === "true") {
+    launcher.classList.add("isLauncherExpanded")
+}
+
+const localStorageTop = localStorage.getItem("launcherTop")
+let launcherTop = localStorageTop === null ? 40 : localStorageTop
+function draw() {
+    if (launcherTop < 0) {
+        launcherTop = 0
+    }
+    launcherTop = Math.max(0, Math.min(launcherTop, window.innerHeight - launcher.offsetHeight))
+    localStorage.setItem("launcherTop", launcherTop)
+    launcher.style.top = launcherTop + "px"
+}
+draw()
+let startPageY
+let startTop
+let isMoving
+function pointermove(event) {
+    const dY = event.pageY - startPageY
+    if (!isMoving && dY * dY > 16) {
+        isMoving = true
+    }
+    if (isMoving) {
+        launcherTop = startTop + dY
+        draw()
+        event.stopPropagation()
+    }
+}
+function pointerup(event) {
+    event.stopPropagation()
+    document.removeEventListener("pointermove", pointermove, true)
+    document.removeEventListener("pointerup", pointerup, true)
+    document.removeEventListener("pointercancel", pointercancel, true)
+    if (!isMoving) {
+        launcher.classList.toggle("isLauncherExpanded")
+        localStorage.setItem(
+            "isLauncherExpanded", 
+            isLauncherExpanded = isLauncherExpanded === "true" ? "false" : "true"
+        )
+    }
+}
+function pointercancel(event) {
+    event.stopPropagation()
+    document.removeEventListener("pointermove", pointermove, true)
+    document.removeEventListener("pointerup", pointerup, true)
+    document.removeEventListener("pointercancel", pointercancel, true)
+}
+launcher.addEventListener("pointerdown", event => {
+    if (event.target === launcher) {
+        startPageY = event.pageY
+        startTop = launcherTop
+        document.addEventListener("pointermove", pointermove, true)
+        document.addEventListener("pointerup", pointerup, true)
+        document.addEventListener("pointercancel", pointercancel, true)
+        event.stopPropagation()
+        event.preventDefault()
+        isMoving = false
+
+    }
+}, true)
+launcher.addEventListener("click", () => {})
+window.addEventListener("resize", draw, true)
+let currentOption = [...launcherSelect.options].find(option => option.getAttribute("value") === document.location.search)
+if (!currentOption) {
+    currentOption = document.createElement("option")
+    currentOption.innerText = document.location.href
+    currentOption.setAttribute("value", document.location.search)
+    launcherSelect.insertBefore(currentOption, launcherSelect.firstChild)
+}
+launcherSelect.value = currentOption.getAttribute("value")
+launcherPrevious.addEventListener("click", event => {
+    const previousOption = currentOption.previousElementSibling || launcherSelect.lastElementChild
+    if (previousOption) {
+        document.location.search = previousOption.getAttribute("value")
+    }
+    event.stopPropagation()
+})
+launcherNext.addEventListener("click", event => {
+    const nextOption = currentOption.nextElementSibling || launcherSelect.firstElementChild
+    if (nextOption) {
+        document.location.search = nextOption.getAttribute("value")
+    }
+    event.stopPropagation()
+})
+launcherSelect.addEventListener("click", event => {
+    event.stopPropagation()
+})
+launcherSelect.addEventListener("input", () => document.location.search = launcherSelect.value)
+})()
+</script>

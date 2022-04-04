@@ -1,0 +1,126 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-service",
+        "values": {
+            "name": "MainDataService",
+            "performsAccessControl": true,
+            "isUniquing": true,
+            "childServices": [
+                {"@": "IdentityAuthorizationService"},
+                {"@": "plumming-intake-data-service"},
+                {"@": "phrontDataService"},
+                {"@": "S3DataService"},
+                {"@": "CognitoDataService"}
+            ],
+            "authorizationPolicy": {"=":"@AuthorizationPolicy.OnConnect"},
+            "accessPolicies": [
+                {"@": "MainAccessPolicy"}
+            ]
+        }
+    },
+
+    "AuthorizationPolicy": {
+        "object": "montage/data/service/authorization-policy"
+    },
+
+    "MainAccessPolicy": {
+        "object": "./access-control/main-access-policy.mjson"
+    },
+
+    "IdentityAuthorizationService": {
+        "object": "montage/data/service/identity-authorization-service.mjson",
+        "values": {
+            "accessPolicies": [
+                {"@": "MainAccessPolicy"}
+            ]
+        }        
+    },    
+
+    "plumming-intake-data-service": {
+        "object": "./plumming-intake-data-service.mjson",
+        "values": {
+            "childServices": [
+            ]
+        }
+    },
+
+    "phrontDataService": {
+        "object": "phront/data/main.datareel/phront-service.mjson",
+        "values": {
+            "childServices": [
+            ],
+            "connectionDescriptor": {
+                "live": {
+                    "database": "plumming",
+                    "owner": "postgres",
+                    "schema": "phront",
+                    "profile": "cogent-live",
+                    "resourceArn": "arn:aws:rds:us-east-1:540973189736:cluster:cogent-design-production",
+                    "secretArn": "arn:aws:secretsmanager:us-east-1:540973189736:secret:cogent-design-production-db-133jR7"
+                },
+                "test": {
+                    "database": "plumming",
+                    "owner": "postgres",
+                    "schema": "phront",
+                    "profile": "cogent-test",
+                    "resourceArn": "arn:aws:rds:us-west-2:545740467277:cluster:cogent-design-staging",
+                    "secretArn": "arn:aws:secretsmanager:us-west-2:545740467277:secret:cogent-design-staging-db-ibOFof"
+                },
+                "mod": {
+                    "database": "plum",
+                    "owner": "postgres",
+                    "schema": "phront",
+                    "profile": "cogent-mod",
+                    "resourceArn": "arn:aws:rds:us-east-1:006408448862:cluster:mod-plum",
+                    "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
+                }
+            }
+        }
+    },
+
+    "S3DataService": {
+        "object": "phront/data/main.datareel/s3-data-service.mjson",
+        "values": {
+            "connectionDescriptor": {
+                "live": {
+                    "profile": "cogent-live",
+                    "region": "us-east-1",
+                    "bucketName": "plumming-production"
+                },
+                "test": {
+                    "profile": "cogent-test",
+                    "region": "us-west-2",
+                    "bucketName": "plumming-staging"
+                },
+                "mod": {
+                    "profile": "cogent-mod",
+                    "region": "us-east-1",
+                    "bucketName": "plumming-mod"
+                }
+            }
+        }
+    },
+
+    "CognitoDataService": {
+        "object": "phront/data/main.datareel/cognito-data-service.mjson",
+        "values": {
+            "connectionDescriptor": {
+                "live": {
+                    "profile": "cogent-live",
+                    "region": "us-east-1"
+                },
+                "test": {
+                    "profile": "cogent-test",
+                    "region": "us-east-1"
+                },
+                "mod": {
+                    "profile": "cogent-mod",
+                    "region": "us-east-1"
+                }
+
+            }
+
+        }
+    }
+
+}

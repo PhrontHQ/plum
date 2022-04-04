@@ -1,0 +1,1 @@
+2021-10-05T22:27:09.237Z	undefined	INFO	require.main.paths:  [ '/var/runtime/node_modules', '/var/node_modules', '/node_modules' ]

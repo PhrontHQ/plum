@@ -1,0 +1,13 @@
+.CallPracticeMessage .ChatMessage-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 46px);
+}
+
+.CallPracticeMessage .CallButton {
+    display: inline-block;
+    margin-right: -12px;
+    vertical-align: middle;
+    width: 46px;
+    height: 46px;
+}

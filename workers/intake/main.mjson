@@ -1,0 +1,21 @@
+{
+    "root": {
+        "prototype": "./plumming-intake-worker",
+        "values": {
+            "name": "MainWorker",
+            "apiGateway": {"@": "aws-api-gateway"},
+            "mainService": {"@": "mainDataService"}
+        }
+    },
+
+    "aws-api-gateway": {
+        "object": "phront/serverles/a-w-s-a-p-i-gateway"
+    },
+
+    "mainDataService": {
+        "object": "../data/main.datareel/main.mjson",
+        "values": {
+            "delegate": {"@": "root"}
+        }
+    }
+}

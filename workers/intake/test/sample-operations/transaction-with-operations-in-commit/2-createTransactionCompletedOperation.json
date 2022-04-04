@@ -1,0 +1,16 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "8F98D40B-844C-4B94-8F38-CEE77DE5DE12",
+      "type": "createTransactionCompletedOperation",
+      "timeStamp": 5707.370524000144,
+      "clientId": "BVovteFrvHcCEfw=",
+      "targetModuleId": null,
+      "referrerId": "F3EE589E-4BAA-4486-8659-BE832BA7E7FA",
+      "data": [
+        "data/main.datareel/model/procedure_types"
+      ]
+    }
+  }
+}

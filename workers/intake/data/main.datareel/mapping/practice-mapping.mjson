@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "practiceDescriptor"},
+            "rawDataPrimaryKeys":["practice_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "practiceDescriptor": {
+        "object": "data/main.datareel/model/practice.mjson"
+    }
+
+}

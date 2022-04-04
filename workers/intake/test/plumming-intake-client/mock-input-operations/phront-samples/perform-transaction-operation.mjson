@@ -1,0 +1,25 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "62D45031-296C-41B4-BE8D-556C52F1700F",
+      "type": "performtransaction",
+      "timeStamp": 71463.96910500526,
+      "dataDescriptor": [
+        "data/main.datareel/model/person",
+        "data/main.datareel/model/position",
+        "data/main.datareel/model/employment-position",
+        "data/main.datareel/model/employment-position-staffing",
+        "data/main.datareel/model/contact-information",
+        "data/main.datareel/model/employment-position-relationship",
+        "data/main.datareel/model/calendar",
+        "data/main.datareel/model/organization",
+        "data/main.datareel/model/service"
+      ],
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "data": {
+        "transactionId": "AQlN4l5cd0+U0sXHEoiax/JrtdrH20cQYMSOmN7tyzJr6QjQsOgEBYKxTQKrOFlIjt+wW4+aXbEo/vu1OyCOXnKo5xSPSwtLg78HGfTyXFsB9DTVolmqFawHilIV1obtllRJegBssRgSthnn+UFVowh6bbCugF97zcKTWGTP/0RHDfNJQ5POczo="
+      }
+    }
+  }
+}

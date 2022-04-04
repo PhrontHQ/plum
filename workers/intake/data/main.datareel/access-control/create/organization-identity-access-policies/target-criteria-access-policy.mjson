@@ -1,0 +1,423 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "nextPoliciesKeyCriteria": {"@": "dataOperationTargetCriteria"},
+            "nextPoliciesMap": {"@": "targetNextPoliciesMap"}
+        }
+    },
+
+    "dataOperationTargetCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "target"
+        }
+    },
+
+    "targetNextPoliciesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "EventMapEntry"},
+                {"@": "OrganizationMapEntry"},
+                {"@": "PartyPostalAddressMapEntry"},
+                {"@": "PersonMapEntry"},
+                {"@": "PostalAddressMapEntry"},
+                {"@": "RoleMapEntry"},
+                {"@": "RoleRankingMapEntry"},
+                {"@": "ServiceEngagementMapEntry"},
+                {"@": "ServiceMapEntry"},
+                {"@": "ServiceProductVariantMapEntry"},
+                {"@": "PartyEmailAddressMapEntry"},
+                {"@": "PartyPhoneNumberMapEntry"},
+                {"@": "PartySMSNumberMapEntry"},
+                {"@": "EmailAddressMapEntry"},
+                {"@": "PhoneNumberMapEntry"},
+                {"@": "PositionMapEntry"},
+                {"@": "EmploymentPositionMapEntry"},
+                {"@": "EmploymentPositionStaffingMapEntry"},
+                {"@": "CalendarMapEntry"},
+                {"@": "PersonalRelationshipMapEntry"},
+                {"@": "B2CCustomerSupplierRelationshipMapEntry"},
+                {"@": "B2CCustomerSupplierResponsiblePartyMapEntry"}
+                
+           ]
+        }
+    },
+
+
+    "EventDescriptor": {
+        "object": "phront/data/main.datareel/model/event.mjson"
+    },
+    "EventAccessPolicy": {
+        "object": "./event-access-policy.mjson"
+    },
+    "EventMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "EventDescriptor"},
+            "value": [
+                {"@": "EventAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.datareel/model/organization.mjson"
+    },
+    "OrganizationAccessPolicy": {
+        "object": "./organization-access-policy.mjson"
+    },
+    "OrganizationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "OrganizationDescriptor"},
+            "value": [
+                {"@": "OrganizationAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PartyPostalAddressDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/party-postal-address.mjson"
+    },
+    "PartyPostalAddressAccessPolicy": {
+        "object": "./party-postal-address-access-policy.mjson"
+    },
+    "PartyPostalAddressMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PartyPostalAddressDescriptor"},
+            "value": [
+                {"@": "PartyPostalAddressAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PersonDescriptor": {
+        "object": "phront/data/main.datareel/model/person.mjson"
+    },
+    "PersonAccessPolicy": {
+        "object": "./person-access-policy.mjson"
+    },
+    "PersonMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PersonDescriptor"},
+            "value": [
+                {"@": "PersonAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PostalAddressDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/postal-address.mjson"
+    },
+    "PostalAddressAccessPolicy": {
+        "object": "./postal-address-access-policy.mjson"
+    },
+    "PostalAddressMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PostalAddressDescriptor"},
+            "value": [
+                {"@": "PostalAddressAccessPolicy"}
+            ]
+        }
+    },
+
+
+
+    "RoleDescriptor": {
+        "object": "phront/data/main.datareel/model/role.mjson"
+    },
+    "RoleAccessPolicy": {
+        "object": "./role-access-policy.mjson"
+    },
+    "RoleMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RoleDescriptor"},
+            "value": [
+                {"@": "RoleAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "RoleRankingDescriptor": {
+        "object": "phront/data/main.datareel/model/role-ranking.mjson"
+    },
+    "RoleRankingAccessPolicy": {
+        "object": "./role-ranking-access-policy.mjson"
+    },
+    "RoleRankingMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RoleRankingDescriptor"},
+            "value": [
+                {"@": "RoleRankingAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "ServiceEngagementDescriptor": {
+        "object": "phront/data/main.datareel/model/service-engagement.mjson"
+    },
+    "ServiceEngagementAccessPolicy": {
+        "object": "./service-engagement-access-policy.mjson"
+    },
+    "ServiceEngagementMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ServiceEngagementDescriptor"},
+            "value": [
+                {"@": "ServiceEngagementAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "ServiceDescriptor": {
+        "object": "phront/data/main.datareel/model/service.mjson"
+    },
+    "ServiceAccessPolicy": {
+        "object": "./service-access-policy.mjson"
+    },
+    "ServiceMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ServiceProductVariantDescriptor"},
+            "value": [
+                {"@": "ServiceAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "ServiceProductVariantDescriptor": {
+        "object": "phront/data/main.datareel/model/service-product-variant.mjson"
+    },
+    "ServiceProductVariantAccessPolicy": {
+        "object": "./service-product-variant-access-policy.mjson"
+    },
+    "ServiceProductVariantMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ServiceProductVariantDescriptor"},
+            "value": [
+                {"@": "ServiceProductVariantAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PartyEmailAddressDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/party-email-address.mjson"
+    },
+    "PartyEmailAddressAccessPolicy": {
+        "object": "./party-email-address-access-policy.mjson"
+    },
+    "PartyEmailAddressMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PartyEmailAddressDescriptor"},
+            "value": [
+                {"@": "PartyEmailAddressAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PartyPhoneNumberDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/party-phone-number.mjson"
+    },
+    "PartyPhoneNumberAccessPolicy": {
+        "object": "./party-phone-number-access-policy.mjson"
+    },
+    "PartyPhoneNumberMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PartyPhoneNumberDescriptor"},
+            "value": [
+                {"@": "PartyPhoneNumberAccessPolicy"}
+            ]
+        }
+    },
+
+
+
+    "PartySMSNumberDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/party-s-m-s-number.mjson"
+    },
+    "PartySMSNumberAccessPolicy": {
+        "object": "./party-s-m-s-number-access-policy.mjson"
+    },
+    "PartySMSNumberMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PartySMSNumberDescriptor"},
+            "value": [
+                {"@": "PartySMSNumberAccessPolicy"}
+            ]
+        }
+    },
+
+
+
+    "EmailAddressDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/email-address.mjson"
+    },
+    "EmailAddressAccessPolicy": {
+        "object": "./email-address-access-policy.mjson"
+    },
+    "EmailAddressMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "EmailAddressDescriptor"},
+            "value": [
+                {"@": "EmailAddressAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PhoneNumberDescriptor": {
+        "object": "phront/data/main.datareel/model/messaging-channel/phone-number.mjson"
+    },
+    "PhoneNumberAccessPolicy": {
+        "object": "./phone-number-access-policy.mjson"
+    },
+    "PhoneNumberMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PhoneNumberDescriptor"},
+            "value": [
+                {"@": "PhoneNumberAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PositionDescriptor": {
+        "object": "phront/data/main.datareel/model/position.mjson"
+    },
+    "PositionAccessPolicy": {
+        "object": "./position-access-policy.mjson"
+    },
+    "PositionMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PositionDescriptor"},
+            "value": [
+                {"@": "PositionAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "EmploymentPositionDescriptor": {
+        "object": "phront/data/main.datareel/model/employment-position.mjson"
+    },
+    "EmploymentPositionAccessPolicy": {
+        "object": "./employment-position-access-policy.mjson"
+    },
+    "EmploymentPositionMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "EmploymentPositionDescriptor"},
+            "value": [
+                {"@": "EmploymentPositionAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "EmploymentPositionStaffingDescriptor": {
+        "object": "phront/data/main.datareel/model/employment-position-staffing.mjson"
+    },
+    "EmploymentPositionStaffingAccessPolicy": {
+        "object": "./employment-position-staffing-access-policy.mjson"
+    },
+    "EmploymentPositionStaffingMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "EmploymentPositionStaffingDescriptor"},
+            "value": [
+                {"@": "EmploymentPositionStaffingAccessPolicy"}
+            ]
+        }
+    },
+
+    "CalendarDescriptor": {
+        "object": "phront/data/main.datareel/model/calendar.mjson"
+    },
+    "CalendarAccessPolicy": {
+        "object": "./calendar-access-policy.mjson"
+    },
+    "CalendarMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "CalendarDescriptor"},
+            "value": [
+                {"@": "CalendarAccessPolicy"}
+            ]
+        }
+    },
+
+    "PersonalRelationshipDescriptor": {
+        "object": "phront/data/main.datareel/model/personal-relationship.mjson"
+    },
+    "PersonalRelationshipAccessPolicy": {
+        "object": "./personal-relationship-access-policy.mjson"
+    },
+    "PersonalRelationshipMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PersonalRelationshipDescriptor"},
+            "value": [
+                {"@": "PersonalRelationshipAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "B2CCustomerSupplierRelationshipDescriptor": {
+        "object": "phront/data/main.datareel/model/b-2-c-customer-supplier-relationship.mjson"
+    },
+    "B2CCustomerSupplierRelationshipAccessPolicy": {
+        "object": "./b-2-c-customer-supplier-relationship-access-policy.mjson"
+    },
+    "B2CCustomerSupplierRelationshipMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "B2CCustomerSupplierRelationshipDescriptor"},
+            "value": [
+                {"@": "B2CCustomerSupplierRelationshipAccessPolicy"}
+            ]
+        }
+    },
+
+    "B2CCustomerSupplierResponsiblePartyDescriptor": {
+        "object": "phront/data/main.datareel/model/b-2-c-customer-supplier-responsible-party.mjson"
+    },
+    "B2CCustomerSupplierResponsiblePartyAccessPolicy": {
+        "object": "./b-2-c-customer-supplier-responsible-party-access-policy.mjson"
+    },
+    "B2CCustomerSupplierResponsiblePartyMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "B2CCustomerSupplierResponsiblePartyDescriptor"},
+            "value": [
+                {"@": "B2CCustomerSupplierResponsiblePartyAccessPolicy"}
+            ]
+        }
+    }
+ 
+
+}

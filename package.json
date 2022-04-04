@@ -1,0 +1,19 @@
+{
+    "name": "plum",
+    "private": true,
+    "version": "1.1.1",
+    "devDependencies": {
+        "distill": "github:PhrontHQ/distill#main",
+        "http-server": "^0.9.0",
+        "local-websocket-server": "github:phrontHQ/local-websocket-server#master",
+        "serverless": "~3.9.0",
+        "serverless-apigw-binary": "^0.4.4",
+        "serverless-domain-manager": "^6.0.2",
+        "serverless-dotenv-plugin": "^3.10.0",
+        "serverless-offline": "^8.2.0",
+        "serverless-plugin-common-excludes": "github:phrontHQ/serverless-plugin-common-excludes#master",
+        "serverless-plugin-package-size": "^1.1.3",
+        "serverless-prune-plugin": "^2.0.1",
+        "serverless-s3-sync": "^3.0.0"
+    }
+}

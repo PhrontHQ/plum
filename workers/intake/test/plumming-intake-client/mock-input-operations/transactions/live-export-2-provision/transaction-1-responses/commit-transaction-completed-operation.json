@@ -1,0 +1,143 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-operation",
+        "values": {
+            "id": "af4f3431-0b7f-43b0-bd5c-5dfe5f26eb67",
+            "type": "commitTransactionCompletedOperation",
+            "timeStamp": 20114.405409038067,
+            "clientId": "2d2692f1-44f4-4347-a785-ea0ea3b59a83",
+            "targetModuleId": null,
+            "referrerId": "A4206266-4257-4D78-AC83-23809A76A72A",
+            "data": {
+                "createdDataObjects": {
+                    "data/main.datareel/model/organization": {
+                        "count": 1,
+                        "rawData": [{
+                            "id": "9a5d6df4-55aa-402a-921e-816b76a027f3",
+                            "modificationDate": "2022-03-05T03:00:35.068Z",
+                            "creationDate": "2022-03-05T03:00:35.068Z",
+                            "name": "Eugenio Martins, D.D.S., P.C.",
+                            "originId": "1000",
+                            "parentId": "c5cac9ed-3ac9-4fe6-adf9-19249a5d428b",
+                            "customerEngagementQuestionnaireIds": ["ded675b2-2146-4ccf-b78f-8057397eece4", "3ca1087a-e15a-463e-baa7-a289399075d8"]
+                        }]
+                    },
+                    "data/main.datareel/model/app/application": {
+                        "count": 3,
+                        "rawData": [{
+                            "id": "ba93e4ee-11de-4754-976f-89b2dbf63bda",
+                            "modificationDate": "2022-03-05T03:00:35.068Z",
+                            "creationDate": "2022-03-05T03:00:35.068Z",
+                            "name": "plumming-workstation",
+                            "controllingOrganizationId": "9a5d6df4-55aa-402a-921e-816b76a027f3"
+                        }, {
+                            "id": "27195333-03bc-47aa-8aac-d66d243a5e23",
+                            "modificationDate": "2022-03-05T03:00:35.069Z",
+                            "creationDate": "2022-03-05T03:00:35.069Z",
+                            "name": "plumming-tool",
+                            "controllingOrganizationId": "9a5d6df4-55aa-402a-921e-816b76a027f3"
+                        }, {
+                            "id": "30e7f852-e6e4-4e1c-baa1-54c3c1ed0bb0",
+                            "modificationDate": "2022-03-05T03:00:35.069Z",
+                            "creationDate": "2022-03-05T03:00:35.069Z",
+                            "name": "plum-appointments",
+                            "controllingOrganizationId": "9a5d6df4-55aa-402a-921e-816b76a027f3"
+                        }]
+                    },
+                    "data/main.datareel/model/app/app-client": {
+                        "count": 3,
+                        "rawData": [{
+                            "id": "80247880-6354-40ab-ade6-f01d1881a12b",
+                            "modificationDate": "2022-03-05T03:00:35.069Z",
+                            "creationDate": "2022-03-05T03:00:35.069Z",
+                            "name": "plumming-workstation",
+                            "identifier": "be02de82-a369-421f-948a-093d5507b155",
+                            "credentials": "5ea162c69a6847aa79f691b713cfe14e832035153f5e093cd496063a3b4d213c",
+                            "applicationId": "ba93e4ee-11de-4754-976f-89b2dbf63bda"
+                        }, {
+                            "id": "cedba829-da15-4877-873f-8c96a23040fb",
+                            "modificationDate": "2022-03-05T03:00:35.069Z",
+                            "creationDate": "2022-03-05T03:00:35.069Z",
+                            "name": "plumming-tool",
+                            "identifier": "57f6e455-0acf-4a11-9ca4-609da51ab9a8",
+                            "credentials": "a991578302cfef697b7134982850a3118949b75430b88f3c378563a262a074a6",
+                            "applicationId": "27195333-03bc-47aa-8aac-d66d243a5e23"
+                        }, {
+                            "id": "8e46d70b-6c47-481a-b407-58db5d8bcdd9",
+                            "modificationDate": "2022-03-05T03:00:35.070Z",
+                            "creationDate": "2022-03-05T03:00:35.070Z",
+                            "name": "plum-appointments",
+                            "identifier": "b050f894-3ef3-434a-8d72-fb87b7e745ff",
+                            "credentials": "f53a00a8e7d297f78ea9641b33c942e3819fd585d72002efe24bcb71a2be590c",
+                            "applicationId": "30e7f852-e6e4-4e1c-baa1-54c3c1ed0bb0"
+                        }]
+                    },
+                    "data/main.datareel/model/customer-engagement-questionnaire": {
+                        "count": 2,
+                        "rawData": [{
+                            "id": "ded675b2-2146-4ccf-b78f-8057397eece4",
+                            "modificationDate": "2022-03-05T03:00:35.072Z",
+                            "creationDate": "2022-03-05T03:00:35.072Z",
+                            "participationStatusRequiredByEvent": "InvitedIn",
+                            "roleIdsOptionalToComplete": null,
+                            "organizationId": "9a5d6df4-55aa-402a-921e-816b76a027f3",
+                            "questionnaireId": "4d5bf855-f378-4d14-a6c2-cdd6a06c9efd",
+                            "roleIdsRequiredToComplete": ["48b59784-0cf2-4f84-a7d5-348efd46c282"]
+                        }, {
+                            "id": "3ca1087a-e15a-463e-baa7-a289399075d8",
+                            "modificationDate": "2022-03-05T03:00:35.395Z",
+                            "creationDate": "2022-03-05T03:00:35.395Z",
+                            "participationStatusRequiredByEvent": "InvitedIn",
+                            "roleIdsOptionalToComplete": null,
+                            "organizationId": "9a5d6df4-55aa-402a-921e-816b76a027f3",
+                            "questionnaireId": "88ff8984-29f1-4fb8-8e69-21bad3c81caa",
+                            "roleIdsRequiredToComplete": ["48b59784-0cf2-4f84-a7d5-348efd46c282"]
+                        }]
+                    },
+                    "data/main.datareel/model/b-2-c-customer-supplier-relationship": {
+                        "count": 1,
+                        "rawData": [{
+                            "id": "e418c852-d8d0-4f23-9fa6-0d2d40279eb1",
+                            "modificationDate": "2022-03-05T03:00:35.661Z",
+                            "creationDate": "2022-03-05T03:00:35.661Z",
+                            "isTemplate": true,
+                            "templateName": "PracticePatientRelationshipTemplate",
+                            "templateDescription": "B2CCustomerSupplierRelationship template used for the organization's customers",
+                            "supplierId": "9a5d6df4-55aa-402a-921e-816b76a027f3"
+                        }]
+                    },
+                    "data/main.datareel/model/calendar": {
+                        "count": 1,
+                        "rawData": [{
+                            "id": "705f0392-387c-4c15-bea0-bc45c6829473",
+                            "modificationDate": "2022-03-05T03:00:35.661Z",
+                            "creationDate": "2022-03-05T03:00:35.661Z",
+                            "templateName": "Customer Calendar Template",
+                            "name": "Customer Calendar Template",
+                            "templateDescription": "Calendar template used for customer's appointments",
+                            "description": "Calendar template used for customer's appointments",
+                            "isTemplate": true,
+                            "ownerB2cCustomerSupplierRelationshipId": "e418c852-d8d0-4f23-9fa6-0d2d40279eb1"
+                        }]
+                    },
+                    "data/main.datareel/model/event": {
+                        "count": 1,
+                        "rawData": [{
+                            "id": "ffdaf305-1976-40a2-a0c0-4eec41b94d6c",
+                            "modificationDate": "2022-03-05T03:00:35.662Z",
+                            "creationDate": "2022-03-05T03:00:35.662Z",
+                            "templateName": "Customer Service Engagement Event Template",
+                            "templateDescription": "Event template used for customer's appointments",
+                            "isTemplate": true,
+                            "participationStatusExpectedTimeOffsetsKeys": ["AdmittanceRequirementsCompleted", "Arrived", "CheckedIn", "InvitedIn"],
+                            "participationStatusExpectedTimeOffsetsValues": ["[PT-120M,PT0S]", "[PT-15M,PT15M]", "[PT-1H,PT15M]", "[PT0S,PT0S]"],
+                            "calendarId": "705f0392-387c-4c15-bea0-bc45c6829473",
+                            "participationRoleIds": ["eeb772a3-8e20-41e3-9d63-e10157ba1e3a", "48b59784-0cf2-4f84-a7d5-348efd46c282"]
+                        }]
+                    }
+                },
+                "deletedDataObjects": {}
+            }
+        }
+    }
+}

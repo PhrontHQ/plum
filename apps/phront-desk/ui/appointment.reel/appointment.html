@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="appointment.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "chat": {"@": "chat"},
+                "appointmentArrivalTimeString": {
+                    "<-": "@owner.appointmentArrivalTime",
+                    "converter": {"@": "timeConverter"}
+                },
+                "classList.has('Canceled')": {
+                    "<-": "@owner.data.event.participationStatusLog.has('Canceled') || @owner.patientEvent.participationStatusLog.has('Canceled')"
+                },
+                "classList.has('Rescheduled')": {
+                    "<-": "@owner.isServiceEngagementRescheduled"
+                },
+                "classList.has('Expired')": {
+                    "<-": "@owner.isServiceEngagementExpired"
+                }
+            }
+        },
+
+        "FirstAppointmentStep": {
+            "value": {"#": "FirstAppointmentStep"},
+            "values": {
+                "hidden": {
+                    "<-": "@owner.isServiceEngagementCanceled || @owner.isServiceEngagementExpired || @owner.isServiceEngagementRescheduled"
+                }
+            }
+        },
+        "SecondAppointmentStep": {
+            "value": {"#": "SecondAppointmentStep"},
+            "values": {
+                "hidden": {
+                    "<-": "@owner.isServiceEngagementCanceled || @owner.isServiceEngagementExpired || @owner.isServiceEngagementRescheduled"
+                }
+            }
+        },
+
+        "ThirdAppointmentStepHeader": {
+            "value": {"#": "ThirdAppointmentStepHeader"},
+            "values": {
+                "hidden": {
+                    "<-": "@owner.isServiceEngagementCanceled || @owner.isServiceEngagementExpired || @owner.isServiceEngagementRescheduled"
+                }
+            }
+        },
+
+        "AppointmentRescheduled": {
+            "value": {"#": "AppointmentRescheduled"},
+            "values": {
+                "hidden": {
+                    "<-": "@owner.data.event.rescheduledEvent == null"
+                }
+            }
+        },
+        "rescheduledEventDate": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "rescheduledEventDate"},
+                "value": {
+                    "<-": "@owner.data.event.rescheduledEvent.scheduledTimeRange.begin",
+                    "converter": {"@": "rescheduledEventDateConverter"}
+                }
+            }
+        },
+
+        "rescheduledEventDateConverter": {
+            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "values": {
+                "options": {
+                    "<-": "((@owner.data.event.rescheduledEvent.defined() || @owner.data.event.rescheduledEventReferrer.defined()) && ((@owner.data.event.rescheduledEvent.defined() && @owner.data.event.rescheduledEvent.begin.toDateString() == @owner.data.event.scheduledTimeRange.begin.toDateString()) || (@owner.data.event.rescheduledEventReferrer.defined() && @owner.data.event.rescheduledEventReferrer.begin.toDateString() == @owner.data.event.scheduledTimeRange.begin.toDateString()))) ? {hour: 'numeric', minute: 'numeric'} : {month: 'numeric', day: 'numeric', year: 'numeric'}"
+                }
+            }
+        },
+
+        "rescheduledEventReferrer": {
+            "value": {"#": "rescheduledEventReferrer"},
+            "values": {
+                "hidden": {
+                    "<-": "!@owner.data.event.rescheduledEventReferrer.defined()"
+                }
+            }
+        },
+        "rescheduledEventReferrerDate": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "rescheduledEventReferrerDate"},
+                "value": {
+                    "<-": "@owner.data.event.rescheduledEventReferrer.scheduledTimeRange.begin",
+                    "converter": {"@": "rescheduledEventDateConverter"}
+                }
+            }
+        },
+
+        "LocationChangedMessage": {
+            "value": {"#": "LocationChangedMessage"},
+            "values": {
+                "hidden": {
+                    "<-": "!@owner.shouldHighlightLocationChange"
+                }
+            }
+        },
+
+        "patientName": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "patientName"},
+                "value": {
+                    "<-": "@owner.data.participants.1.name"
+                }
+            }
+        },
+        "appointmentTimeHeader": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "appointmentTimeHeader"},
+                "value": {
+                    "<-": "@owner.data.event.scheduledTimeRange.begin",
+                    "converter": {"@": "timeConverter"}
+                }
+            }
+        },
+        "timeConverter": {
+            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "values": {
+                "options": {
+                    "hour": "numeric",
+                    "minute": "numeric"
+                }
+            }
+        },
+
+        "appointmentArrivalTitle": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "appointmentArrivalTitle"},
+                "value": {
+                    "<-": "(@owner.earlyArrivalMinutes.defined() && @owner.earlyArrivalMinutes > 0) ? 'Arrive Early' : 'Get There'"
+                }
+            }
+        },
+
+        "appointmentArrivalTimeDisplay": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "appointmentArrivalTimeDisplay"},
+                "value": {
+                    "<-": "' by '+ @owner.appointmentArrivalTimeString"
+                },
+                "hidden": {
+                    "<-": "(!@owner.earlyArrivalMinutes.defined() || @owner.earlyArrivalMinutes == 0)"
+                }
+            }
+        },
+        "durationToFillFormsBeforeAppointment": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "durationToFillFormsBeforeAppointmentDisplay"},
+                "value": {
+                    "<-": "@owner.durationToFillFormsBeforeAppointment",
+                    "converter": {"@": "durationToFillFormsBeforeAppointmentConverter"}
+                }
+            }
+        },
+        "durationToFillFormsBeforeAppointmentConverter": {
+            "prototype": "montage/core/converter/international-duration-to-string-formatter",
+            "values": {
+                "options": {
+                    "hours": "long",
+                    "minutes": "long",
+                    "minutesDisplay": "auto"
+                }
+            }
+        },
+        "practiceName": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "practiceName"},
+                "value": {
+                    "<-": "@owner.data.event.location.party.parent.name"
+                }
+            }
+        },
+        "practiceLocation": {
+            "prototype": "ui/address.reel",
+            "values": {
+                "element": {"#": "practiceLocation"},
+                "data": {
+                    "<-": "@owner.data.event.location.messagingChannel"
+                }
+            }
+        },
+        "directionsButton": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "directionsButton"},
+                "value": "Button with icon",
+                "label": ""
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "fillOutFormButton": {
+            "prototype": "phront/ui/controls/button.reel",
+            "values": {
+                "element": {"#": "fillOutFormButton"},
+                "title": "Fill-Out Consent Form",
+                "disabled": {
+                    "<-": "!@owner.canPatientFillForm"
+                },
+                "classList.has('hasPatientFormToFillBeforeAppointment')": {
+                    "<-": "@owner.hasPatientFormToFillBeforeAppointment"
+                },
+                "classList.has('hasPatientFilledForms')": {
+                    "<-": "@owner.hasPatientFilledForms"
+                }
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "chatButton": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "chatButton"},
+                "value": "Set Arrived",
+                "label": "",
+                "src": {
+                    "<-": "@owner.hasPatientArrived ? './checked.svg' : './check-in-button.svg'"
+                },
+                "disabled": {
+                    "<-": "@owner.hasPatientArrived || !@owner.patientCheckInExpectedTimeRange.contains(@owner.now)"
+                },
+                "classList.has('hasPatientArrived')": {
+                    "<-": "@owner.hasPatientArrived"
+                }
+
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "chat" : {
+            "prototype": "ui/chat/chat.reel",
+            "values": {
+                "element": {"#": "chat"},
+                "mainSender": {"=": "@owner.patientSender"},
+                "conversation": {"<-":"@owner.chatConversation"},
+                "conversation.has(@owner.defaultChatMessage)": {
+                    "<-": "@owner.data == undefined || @owner.patientEvent == undefined || @owner.patientEvent.rescheduledEvent == undefined || @owner.patientCheckInExpectedTimeRange == undefined ? false : (@owner.patientEvent.rescheduledEvent == null && ((@owner.now <= @owner.patientCheckInExpectedTimeRange.end) || @owner.hasPatientArrived) && !@owner.isServiceEngagementCanceled) || conversation.has(@owner.defaultChatMessage)"
+                },
+                "conversation.has(@owner.defaultLateChatMessage)": {
+                    "<-": "@owner.data == undefined || @owner.patientEvent == undefined || @owner.patientCheckInExpectedTimeRange == undefined ? false : @owner.patientEvent.defined() && !@owner.isServiceEngagementExpired && @owner.patientEvent.rescheduledEvent == null && (@owner.now > @owner.patientCheckInExpectedTimeRange.end) && !@owner.isServiceEngagementCanceled && !@owner.hasPatientArrived"
+                },
+                "conversation.has(@owner.defaultPatientArrivedMessage)": {
+                    "<-": "@owner.patientEvent.defined() && @owner.patientEvent.rescheduledEvent == null && @owner.hasPatientArrived == true && conversation.has(@owner.defaultChatMessage) == true"
+                },
+                "conversation.has(@owner.defaultRescheduledEventChatMessage)": {
+                    "<-": "@owner.isServiceEngagementRescheduled"
+                },
+                "conversation.has(@owner.defaultPleaseFillOutAdmittanceFormsMessage)": {
+                    "<-": "@owner.chatConversation.has(@owner.defaultPatientArrivedMessage) && @owner.hasPatientRequiredFormToFillBeforeAppointment == true && @owner.hasPatientFilledForms == false" 
+                },
+                "conversation.has(@owner.appointmentCanceledMessage)": {
+                    "<-": "(@owner.data.event.participationStatus == undefined || @owner.patientEvent.participationStatus == undefined) ? false : @owner.isServiceEngagementCanceled" 
+                },
+                "conversation.has(@owner.appointmentExpiredMessage)": {
+                    "<-": "@owner.isServiceEngagementExpired" 
+                }
+                
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Appointment">
+        <div class="Appointment-rescheduled On" data-montage-id="AppointmentRescheduled">
+            ⚠️ Rescheduled to <span data-montage-id="rescheduledEventDate"></span>
+        </div>
+        <div class="Appointment-rescheduled OriginallyOn" data-montage-id="rescheduledEventReferrer">
+            Originally scheduled on <span data-montage-id="rescheduledEventReferrerDate"></span>
+        </div>
+        <h2 class="Appointment-header">
+            <span data-montage-id="patientName" class="Appointment-patientName"></span>
+            <span data-montage-id="appointmentTimeHeader" class="Appointment-timeHeader"></span>
+        </h2>
+        <ol class="Appointment-steps">
+            <li class="Appointment-step" data-montage-id="FirstAppointmentStep">
+                <h3 class="Appointment-stepTitle">
+                    <span data-montage-id="appointmentArrivalTitle">Get There </span>
+                    <span data-montage-id="appointmentArrivalTimeDisplay" class="Appointment-arrivalTime"></span>
+                    <img src="./directions-icon.svg" data-montage-id="directionsButton" height="46" width="46" class="Appointment-Button Directions-Button"/>
+                </h3>
+                <div data-montage-id="practiceName" class="Appointment-stepDetails"></div>
+                <div data-montage-id="practiceLocation" class="Appointment-stepDetails"></div>
+                <div data-montage-id="LocationChangedMessage" class="Appointment-rescheduledLocationChanged">⚠️ Note location change</div>
+            </li>
+            <li class="Appointment-step" data-montage-id="SecondAppointmentStep">
+                <h3 class="Appointment-stepTitle">
+                    Fill Required Form(s)
+                    <div data-montage-id="fillOutFormButton" class="Appointment-Button Appointment-fillOutFormButton Button--naked"></div>
+                </h3>
+                <div class="Appointment-stepDetails">
+                    Please fill out this form within <span data-montage-id="durationToFillFormsBeforeAppointmentDisplay"></span> of your appointment.
+                </div>
+            </li>
+            <li class="Appointment-step">
+                <h3 class="Appointment-stepTitle" data-montage-id="ThirdAppointmentStepHeader">
+                    Check-in to Get In
+                    <div data-montage-id="chatButton" class="Appointment-Button Chat-Button"></div>
+                </h3>
+                <div data-montage-id="chat" class="Appointment-chat"></div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

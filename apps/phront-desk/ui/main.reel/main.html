@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "main"},
+                "mainContent": {"#": "mainContent"},
+                "appointments": {"@": "appointments"},
+                "appointmentSelection": {"<-": "@appointments.dataController.selection.one()"}
+            }
+        },
+        "appointments": {
+            "prototype": "ui/appointments.reel",
+            "values": {
+                "element": {"#": "appointments"},
+                "data": {"<-": "@owner.data"}
+            }
+        },
+        "consentmentForm": {
+            "prototype": "ui/consentment-form.reel",
+            "values": {
+                "element": {"#": "consentmentForm"},
+                "data": {"<-": "@appointments.dataController.selection.one()"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" class="Main">
+        <div data-montage-id="mainContent">
+            <div data-montage-id="appointments"></div>
+        </div>
+        <div data-montage-id="consentmentForm" class="popup"></div>
+    </div>
+</body>
+</html>

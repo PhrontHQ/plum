@@ -1,0 +1,27 @@
+{
+    "criteria": {
+      "prototype": "montage/core/criteria",
+      "values": {
+        "expression": "originId == $.originId && parent != null",
+        "parameters": {
+          "originId": "9797ecfe-a76c-4383-88b7-037d1b230c30"
+        }
+      }
+    },
+    "root": {
+      "prototype": "montage/data/service/data-operation",
+      "values": {
+        "id": "1223FB10-1C10-4974-B8E7-E10750EC2F64",
+        "type": "read",
+        "timeStamp": 3166.2600000272505,
+        "targetModuleId": "data/main.datareel/model/event",
+        "criteria": {"@": "criteria"},
+        "data": {
+          "readExpressions": [
+            "participationStatus",
+            "respondentQuestionnaires"
+          ]
+        }
+      }
+    }
+  }

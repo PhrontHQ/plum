@@ -1,0 +1,49 @@
+{
+  "criteria218": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "originId == $.originId && parent != null",
+      "parameters": {
+        "originId" : "f6aab9f5-c113-4c2f-bd6f-86fce1e476c1"
+      }
+    }
+  },
+  "dataoperation": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B5820FBF-A7A6-4CAD-857A-E5A0A8B0AC29",
+      "type": "updateOperation",
+      "timeStamp": 37211.23000001535,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria218"},
+      "data": {
+        "participationStatus": "InvitedIn"
+      },
+      "snapshot": {
+        "participationStatus": "Accepted"
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "BA3A6F59-ADC6-44E6-8600-675645B8DC90",
+      "type": "appendTransactionOperation",
+      "timeStamp": 185146.59500005655,
+      "targetModuleId": null,
+      "referrerId": "6714C027-EE2B-47A2-B1C4-15D49CB0F3B9",
+      "data": {
+        "rawTransactions": {
+          "PhrontService": "AUsMMTVFzjPOHB1A+/dwPvykVHzMG/1WHtNnDt69Trnmjr1cFZGvjaDMbs4NCmpwni9ciiLGmRcqpv8BbGgfU1SHdKItoh75s92uXS3qBQXhSgdEG/DhcN4LrkY3jHeP2cBSu48Q53sZqHXay5KGrWbIEwU23H9+eJrCZFJ2ezDsujAWRfpHdLfKruNZpXdWz+es1KDRUE1n"
+        },
+        "operations": {
+          "data/main.datareel/model/event": {
+            "updateOperations": [
+              {"@": "dataoperation"}
+            ]
+          }
+        }
+      }
+    }
+  }
+}

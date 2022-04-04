@@ -1,0 +1,15 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "6E908B4B-4FDA-4CD5-90E2-A11BD0FDBD72",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/location_types"
+        ]
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

@@ -1,0 +1,2 @@
+- starting the process without debugger attaching seems to be ~200-300ms faster than when it's launched with the debugger
+- 

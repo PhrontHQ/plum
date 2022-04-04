@@ -1,0 +1,89 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/serve"
+        },
+        {
+            "command": "npm run-script build",
+            "name": "Mop project",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch phront.local https server",
+            "runtimeArgs": [
+                "${workspaceFolder}/node_modules/http-server/bin/http-server",
+                "--silent",
+                "-p",
+                "9898",
+                "-S",
+                "-C",
+                "${workspaceFolder}/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-K",
+                "${workspaceFolder}/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch localhost https server",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "${workspaceFolder}/node_modules/http-server/bin/http-server",
+                "--silent",
+                "-p",
+                "9898",
+                "-S",
+                "-C",
+                "${workspaceFolder}/node_modules/phront/dev/local-ssl-certificate-authority/localhost.crt",
+                "-K",
+                "${workspaceFolder}/node_modules/phront/dev/local-ssl-certificate-authority/localhost.key"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Deploy Staging",
+            "runtimeVersion": "14.18.0",
+            "runtimeArgs": [
+                "${workspaceFolder}/node_modules/s3-redeploy/bin/s3-redeploy.js",
+                "--profile",
+                "cogent-staging",
+                "--bucket",
+                "plum-appointments",
+                "--cwd",
+                ".",
+                "--cf-dist-id",
+                "EWKVAK8IG9FOS"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+
+    ]
+}

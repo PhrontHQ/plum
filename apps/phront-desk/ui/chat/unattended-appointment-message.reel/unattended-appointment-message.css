@@ -1,0 +1,30 @@
+.UnattendedAppointmentMessage .UnattendedAppointmentMessage-header {
+    margin-bottom: 6px;
+}
+
+.UnattendedAppointmentMessage .UnattendedAppointmentMessage-header span {
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: -0.8px;
+    opacity: .82;
+}
+
+.UnattendedAppointmentMessage .UnattendedAppointmentMessage-header img {
+    margin-left: -3px;
+    vertical-align: middle;
+    opacity: .82;
+}
+
+.UnattendedAppointmentMessage .ChatMessage-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 46px);
+}
+
+.UnattendedAppointmentMessage .CallButton {
+    display: inline-block;
+    margin-right: -12px;
+    vertical-align: middle;
+    width: 46px;
+    height: 46px;
+}

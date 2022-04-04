@@ -1,0 +1,207 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/object-descriptor",
+        "values": {
+            "name": "appointments",
+            "propertyDescriptors": [
+                {"@": "appointment_id"},
+                {"@": "practice_id"},
+                {"@": "created_date"},
+                {"@": "last_modified_date"},
+                {"@": "location_object_id"},
+                {"@": "date"},
+                {"@": "start_time"},
+                {"@": "duration"},
+                {"@": "scheduled_flag"},
+                {"@": "orthodontist_object_id"},
+                {"@": "procedure_object_id"},
+                {"@": "patient_object_id"},
+                {"@": "appointment_status_object_id"},
+                {"@": "emergency_flag"},
+                {"@": "should_confirm_flag"},
+                {"@": "confirmed_flag"},
+                {"@": "is_new_patient_exam_flag"},
+                {"@": "entry_date"},
+                {"@": "is_recall_exam_flag"},
+                {"@": "is_records_visit_flag"},
+                {"@": "is_consult_visit_flag"},
+                {"@": "is_retention_visit_flag"}
+            ]
+        }
+    },
+    "appointment_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "appointment_id",
+            "valueType": "string"
+        }
+    },
+    "practice_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_id",
+            "valueType": "string"
+        }
+    },
+    "created_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "created_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "last_modified_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "last_modified_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "location_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "location_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+     "start_time": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "start_time",
+            "valueType": "number",
+            "cardinality": 1
+        }
+    },
+     "duration": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "duration",
+            "valueType": "number",
+            "cardinality": 1
+        }
+    },
+    "scheduled_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "scheduled_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "orthodontist_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "orthodontist_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "procedure_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "procedure_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "patient_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "patient_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "appointment_status_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "appointment_status_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "emergency_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "emergency_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "should_confirm_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "should_confirm_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "confirmed_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "confirmed_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "is_new_patient_exam_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_new_patient_exam_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "entry_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "entry_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "is_recall_exam_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_recall_exam_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "is_records_visit_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_records_visit_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "is_consult_visit_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_consult_visit_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "is_retention_visit_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_retention_visit_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    }
+
+}

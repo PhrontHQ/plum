@@ -1,0 +1,14 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "51431732-895B-459D-B7FB-F6592A580994",
+      "type": "createTransactionOperation",
+      "target": null,
+      "timeStamp": 70990.35903298855,
+      "data": [
+        "data/main.datareel/model/country_types"
+      ]
+    }
+  }
+}

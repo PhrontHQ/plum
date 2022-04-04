@@ -1,0 +1,39 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "EFFDA71A-7C29-4CEA-AAAD-D3F27498F308",
+      "type": "readCompleted",
+      "timeStamp": 23965.618734002113,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "3E78C089-50EB-4125-8D04-A55D05AD558D",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"39019543-fa77-4fbe-8ac3-98c0601b141e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.818+00:00\",\"creationDate\":\"2020-12-20T23:57:35.818+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":5,\"questionId\":\"5239da47-90d1-41fa-9d8d-480fe272f3d8\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"7ede236f-d394-4f6d-b4da-1dcf690e0aa1\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":4,\"questionId\":\"c0f10cdb-b3b4-4e0a-bc8c-300cf342495c\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"33441479-6116-4b57-be6e-5e109bb1c0a3\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":3,\"questionId\":\"f35b19fd-1c81-4629-ae38-7f57fa11d0bf\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"99c48a31-18d3-4600-ab6e-106a0446246e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.816+00:00\",\"creationDate\":\"2020-12-20T23:57:35.816+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":2,\"questionId\":\"57bc1fbb-ba3b-411b-bcff-563b86dbe6ce\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"5e21b5df-9b1a-42fd-9401-b2489b473558\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.815+00:00\",\"creationDate\":\"2020-12-20T23:57:35.815+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":1,\"questionId\":\"b4a77576-761a-4c23-b468-f93f974c21c7\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

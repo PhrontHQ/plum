@@ -1,0 +1,18 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "73007D0C-37F1-4B18-8EDC-39EF22E9EC72",
+      "type": "commitTransactionCompletedOperation",
+      "timeStamp": 361887.68241000175,
+      "targetModuleId": null,
+      "referrerId": "F25E1BF3-441C-40C3-BCB9-DDDC283E91F1",
+      "data": {
+        "transactionStatus": "Transaction Committed",
+        "rawTransactions": {
+          "PhrontService": "AUsMMTVFzjPOHB1A+/dwPvykVHzMG/1WHtNnDt69Trnmjr1cFZGvjaDMbs4NCmpwni9ciiLGmRcqpv8BbGgfU1SHdKItoh75s92uXS3qBQXhSgdEG/DhcN4LrkY3jHeP2cBSu48Q53sZqHXay5KGrWbIEwU23H9+eJrCZFJ2ezDsujAWRfpHdLfKruNZpXdWz+es1KDRUE1n"
+        }
+      }
+    }
+  }
+}

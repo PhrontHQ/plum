@@ -1,0 +1,20 @@
+{
+  "criteria4": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "id == $",
+      "parameters": "8a92e0b9-271b-4451-8fdf-4102ae6cc441"
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C3C68FDE-5E05-4D11-9D61-5622D10989D8",
+      "type": "read",
+      "timeStamp": 7854.525000002468,
+      "targetModuleId": "data/main.datareel/model/person",
+      "criteria": {"@": "criteria4"},
+      "data": {}
+    }
+  }
+}

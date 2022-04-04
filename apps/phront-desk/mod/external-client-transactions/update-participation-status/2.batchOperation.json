@@ -1,0 +1,55 @@
+{
+  "criteria95": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "id == $id",
+      "parameters": {
+        "id": "f466bca7-8404-4f3a-bb40-33f70c28d454"
+      }
+    }
+  },
+  "dataoperation": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "5301364F-2607-44E1-83EB-AFDD32D7BFD7",
+      "type": "updateOperation",
+      "timeStamp": 24498.80000000121,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria95"},
+      "data": {
+        "participationStatus": "Arrived",
+        "participationStatusLogKeys": [
+          "Arrived"
+        ],
+        "participationStatusLogValues": [
+          "2021-02-12T02:44:19.672Z"
+        ]
+      },
+      "snapshot": {
+        "participationStatus": "Accepted",
+        "participationStatusLogKeys": [
+          "Arrived"
+        ],
+        "participationStatusLogValues": [
+          "2021-02-12T02:35:24.252+00:00"
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "076DB24B-FDB7-42C0-BD50-049FDACD86F0",
+      "type": "batchOperation",
+      "timeStamp": 60114.70499999996,
+      "targetModuleId": null,
+      "referrerId": "C7C0DFB8-0D8A-4702-AF6D-BF2DF2F6E776",
+      "data": {
+        "batchedOperations": [
+          {"@": "dataoperation"}
+        ],
+        "transactionId": "ARSft7aaYgMhcnA/lQyPzwhjStFp2VJMiemXfnEqOurKk9bqglmkszF2nWL99hnbtX+nlHq6Wgx069leWWIKjbcxRr3QHTixyT859zgrEZ6QBYNhZdL4dTp2SpV3lApgBnOq1qIUeuYSygbYH7SniL8YvQ1vLEOUMO8sUTO21S4S2d6u/eMkUCY="
+      }
+    }
+  }
+}

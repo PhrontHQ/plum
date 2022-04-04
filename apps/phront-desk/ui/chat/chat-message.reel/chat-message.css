@@ -1,0 +1,78 @@
+@keyframes enterLeft {
+    from {
+        transform: translate3d(-15px, 8px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes enterRight {
+    from {
+        transform: translate3d(15px, 8px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+:first-child > .ChatMessage {
+    margin-top: 0 !important;
+}
+
+.ChatMessage {
+    position: relative;
+    float: left;
+    background: #3ec8fd;
+    margin-top: 1px;
+    max-width: 80%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 17px;
+    animation-duration: .5s;
+    overflow-wrap: break-word;
+    animation-name: enterLeft;
+    z-index: 1;
+    color: black;
+}
+
+.ChatMessage--isMainSender {
+    background: #b368ec;
+    float: right;
+    animation-name: enterRight;
+}
+
+.ChatMessage--isFirstInGroup {
+    margin-top: 9px;
+}
+
+.ChatMessage::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 20px;
+    bottom: 0;
+    left: -15px;
+    z-index: -1;
+    background: url('data:image/svg+xml;utf8,<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg"><path fill="%233ec8fd" d="M 15,0 C 15,10 10,20 5,20 C 5,20 30,20 30,0"/></svg>');
+    opacity: 0;
+    transform: translate3d(100%, -100%, 0);
+    transition: 1s all;
+}
+
+.ChatMessage--isMainSender::before {
+    left: auto;
+    right: -15px;
+    transform: translate3d(-100%, -100%, 0);
+    background: url('data:image/svg+xml;utf8,<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg"><path fill="%23b368ec" d="M 15,0 C 15,10 20,20 25,20 C 25,20 0,20 0,0"/></svg>');
+}
+
+.ChatMessage--isLastInGroup::before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}

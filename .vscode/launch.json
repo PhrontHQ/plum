@@ -1,0 +1,887 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch PhrontDesk on phront.local",
+            "runtimeArgs": [
+                "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
+                "${workspaceFolder}/apps/phront-desk/",
+                "--silent",
+                "--gzip",
+                "-p",
+                "9797",
+                "-S",
+                "-C",
+                "${workspaceFolder}/apps/phront-desk/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-K",
+                "${workspaceFolder}/apps/phront-desk/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "name": "-------------------------------------"
+        },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch mod MainWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--trace-warnings",
+                // "--prof",
+                "--expose-internals",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "mod",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "500"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "env": {
+                "TIME_START": true
+            }
+            // "skipFiles": [
+            //     "<node_internals>/**"
+            // ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Profile mod MainWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--trace-warnings",
+                // "--prof",
+                // "--expose-internals",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "mod",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "PROFILE_START": true
+            }
+        },        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch mod MainWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                // "--prof",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/.serverless/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "mod",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "TIME_START": true
+            }
+        },      
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Profile mod MainWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                // "--prof",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "mod",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "TIME_START": true
+            }
+        },      
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless package --stage mod --region us-east-1",
+            "name": "Package MainWorker for mod/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless deploy --stage mod --region us-east-1",
+            "name": "Deploy MainWorker to mod/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch test MainWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--trace-warnings",
+                // "--prof",
+                "--expose-internals",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "500"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "env": {
+                "TIME_START": true
+            }
+            // "skipFiles": [
+            //     "<node_internals>/**"
+            // ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Profile test MainWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--trace-warnings",
+                // "--prof",
+                // "--expose-internals",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "PROFILE_START": true
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch test MainWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                // "--prof",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "TIME_START": true
+            }
+        },      
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch test MainWorker build with source-maps",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--enable-source-maps",
+                // "--prof",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/**/*.js",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/montage/**/*.js",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/phront/**/*.js"
+            ],
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/**/*.js",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/montage/**/*.js",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/phront/**/*.js"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "TIME_START": true
+            }
+        },      
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Profile test MainWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                // "--prof",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "TIME_START": true
+            }
+        },      
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch test MainWorker (live setting)",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--prof",
+                "--inspect",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "2000"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "NODE_ENV":"live"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch MainWorker on test (localhost)",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3002",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/localhost.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/localhost.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Profile MainWorker on test (localhost)",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3002",
+                "-s",
+                "test",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/localhost.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/localhost.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "PROFILE_START": true
+            }
+        },        
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless package --stage test --region us-west-2",
+            "name": "Package MainWorker for test/us-west-2",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless deploy --stage test --region us-west-2",
+            "name": "Deploy MainWorker to test/us-west-2",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch MainWorker on live (phront.local)",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "live",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch MainWorker on live (localhost)",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3002",
+                "-s",
+                "live",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/localhost.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/localhost.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless package --stage live --region us-east-1",
+            "name": "Package MainWorker for live/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless deploy --stage live --region us-east-1",
+            "name": "Deploy MainWorker to live/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch mod IntakeWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "mod"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch mod IntakeWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/.serverless/plumming-intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "mod"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch live-export-2-provision on local mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/provision-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "ws://phront.local:7373",
+                "--httpURL",
+                "http://phront.local:7374"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-2 on local mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "ws://phront.local:7373",
+                "--httpURL",
+                "http://phront.local:7374"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/intake/",
+            "command": "npx serverless package --stage mod --region us-east-1",
+            "name": "Package IntakeWorker for mod/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/intake/",
+            "command": "npx serverless deploy --stage mod --region us-east-1",
+            "name": "Deploy IntakeWorker to mod/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-2-provision on mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/provision-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "wss://connect.intake.mod.oh.my-plum-appointment.guru/v1",
+                "--httpURL",
+                "https://send.intake.mod.oh.my-plum-appointment.guru/v1"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-2 on mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "wss://connect.intake.mod.oh.my-plum-appointment.guru/v1",
+                "--httpURL",
+                "https://send.intake.mod.oh.my-plum-appointment.guru/v1"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch test IntakeWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "test"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch test IntakeWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/.serverless/intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "test"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live IntakeWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "live"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live IntakeWorker build",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/.serverless/intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "live"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/main/handler.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Serverless Offline via NPM",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "port": 9229,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx serverless prune -n 3 --dryRun",
+            "name": "Prune Dry Run",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx sls create-zone --stage mod --region us-east-1",
+            "name": "create mod zone on us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx sls create-cert --stage mod --region us-east-1",
+            "name": "create mod certificate on us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx sls remove-cert --stage mod --region us-east-1",
+            "name": "remove mod certificate on us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/main/",
+            "command": "npx sls create_domain --stage mod --region us-east-1",
+            "name": "create mod domain on us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/intake/",
+            "command": "npx sls create_domain --aws-profile cogent-mod --stage mod --region us-east-1",
+            "name": "create intake mod domain on us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/intake/",
+            "command": "npx sls create_domain --stage test --region us-west-2",
+            "name": "create intake test domain on us-west-2",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+        
+        
+    ],
+    "compounds": [
+      {
+        "name": "Launch local Plum on mod",
+        "configurations": ["Launch MainWorker on mod", "Client"],
+        "preLaunchTask": "${defaultBuildTask}",
+        "stopAll": true
+      }
+    ]
+}

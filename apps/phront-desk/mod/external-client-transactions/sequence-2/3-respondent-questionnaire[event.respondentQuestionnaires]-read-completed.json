@@ -1,0 +1,24 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "057DF115-4678-482B-82FE-C1E1DC697D3A",
+      "type": "readCompleted",
+      "timeStamp": 23354.27180799842,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "referrerId": "18441D6F-9647-4127-AC45-9D65087D2B15",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a024408f-eed0-4de2-84a9-ada6e129877d\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:38.318+00:00\",\"creationDate\":\"2020-12-21T00:31:38.318+00:00\",\"originId\":\"21b051fa-b758-4e22-b9aa-8260a6af648b\",\"notes\":null,\"pdfExportId\":\"0bdc030e-1083-420b-b405-08e922283d4d\",\"isMandatory\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"respondentAnswerIds\":[\"20d67459-9c79-4f2e-85e3-d6342a6037ce\",\"fe9e92bc-e8b2-42e5-bfad-775303e04e8a\",\"f27e0891-22be-4a2a-bbe9-e0ab20c23714\",\"39f83343-84e7-4851-bbca-6ac17d74c268\",\"6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb\",\"9a593094-8382-4702-920a-5ef1fcfed0ab\",\"3ee3a24d-9898-4aca-b791-b15c323f47ef\",\"dcb5b8dd-5c36-4b71-becb-35962e4e339d\",\"e96a8868-e3e4-4e04-8310-b9e5667e1e9a\",\"fca6798f-462f-42bf-9622-7f1f95c16c2e\",\"58d7369a-7a6d-4c66-971d-cb3f46703b7a\",\"1f57b7eb-3e37-4fa6-ad79-7d72caee0670\",\"479aeda9-3263-4f6c-a960-2e95a7c28e8e\",\"aa5c2446-8c19-40e8-8f3c-e94f87567702\",\"4e533f62-5d00-436c-8d20-1a2238f1b7f8\"],\"respondentVariableValueIds\":null,\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\",\"respondentId\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"88ae55e0-647d-47d9-ad7b-7e8982c8315f\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.209+00:00\",\"creationDate\":\"2020-12-21T00:31:45.209+00:00\",\"originId\":\"21b051fa-b758-4e22-b9aa-8260a6af648b\",\"notes\":null,\"pdfExportId\":null,\"isMandatory\":null,\"completionDate\":\"2020-12-20T08:00:00+00:00\",\"respondentAnswerIds\":null,\"respondentVariableValueIds\":null,\"questionnaireId\":null,\"respondentId\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,2865 @@
+Note: Using the "preview" debug extension
+/Users/benoit/.nvm/versions/node/v12.18.4/bin/node /Users/benoit/Sites/marchant/plum/plumming-data-worker/node_modules/local-websocket-server/index.js --function /Users/benoit/Sites/marchant/plum/plumming-data-worker/main.js -p 7474 -s staging
+'properties' block is deprecated, use 'values' instead 
+ node_modules/montage/core/deprecate.js
+Phront Worker reporting for duty!
+ node_modules/phront/serverles/main.js
+PlummingDataWorker -handleConnect: event: {"requestContext":{"connectionId":"013AA208-0448-457E-9DA8-6E60E5765F74","stage":"staging","identity":{"sourceIp":"::1","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"}},"headers":{"host":"phront.local:7474","connection":"Upgrade","pragma":"no-cache","cache-control":"no-cache","user-agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1","upgrade":"websocket","origin":"http://phront.local:9797","sec-websocket-version":"13","accept-encoding":"gzip, deflate","accept-language":"en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7","sec-websocket-key":"ug9tNR6Afy13fCBkOR4bmA==","sec-websocket-extensions":"permessage-deflate; client_max_window_bits"},"body":""} context: undefined
+ plumming-data-worker.js
+DataWorker -handleConnect: operationCoordinator.handleOperation() done
+ node_modules/phront/serverles/data-worker.js
+{
+  "criteria": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "originId == $.originId && parent != null",
+      "parameters": {
+        "originId": "21b051fa-b758-4e22-b9aa-8260a6af648b"
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B3340B26-3E35-4365-B5F7-F4A9037DE075",
+      "type": "read",
+      "timeStamp": 6766.615000000456,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria"},
+      "data": {
+        "readExpressions": [
+          "participationStatus",
+          "respondentQuestionnaires"
+        ]
+      }
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ} C84C6002-699B-4C71-BC25-4B63B0251324 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "08356FF9-E79B-4E08-99B2-B4DF9A68AB10",
+      "type": "readCompleted",
+      "timeStamp": 23027.755107998848,
+      "targetModuleId": "data/main.datareel/model/event",
+      "referrerId": "B3340B26-3E35-4365-B5F7-F4A9037DE075",
+      "data": [
+        [
+          {
+            "stringValue": "{\"participationStatus\":\"Accepted\",\"respondentQuestionnaireIds\":[\"a024408f-eed0-4de2-84a9-ada6e129877d\",\"88ae55e0-647d-47d9-ad7b-7e8982c8315f\"],\"id\":\"45e1ac2c-54e9-4736-ab27-0df75b6b323c\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "criteria2": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "parentId == $",
+      "parameters": "45e1ac2c-54e9-4736-ab27-0df75b6b323c"
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "02D69CDD-4409-49E2-8BC4-F03B90377550",
+      "type": "read",
+      "timeStamp": 7535.564999998314,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria2"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria3": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "a024408f-eed0-4de2-84a9-ada6e129877d",
+          "88ae55e0-647d-47d9-ad7b-7e8982c8315f"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "18441D6F-9647-4127-AC45-9D65087D2B15",
+      "type": "read",
+      "timeStamp": 7535.600000002887,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "criteria": {"@": "criteria3"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 166DD645-1DCF-40A2-A208-4C3577BAEBAF {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "2B606341-9E2E-47FF-AAB6-8F8457171CD7",
+      "type": "readCompleted",
+      "timeStamp": 23346.083826988935,
+      "targetModuleId": "data/main.datareel/model/event",
+      "referrerId": "02D69CDD-4409-49E2-8BC4-F03B90377550",
+      "data": []
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} B20F1297-2410-41C8-A8C9-5B24AB866476 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "057DF115-4678-482B-82FE-C1E1DC697D3A",
+      "type": "readCompleted",
+      "timeStamp": 23354.27180799842,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "referrerId": "18441D6F-9647-4127-AC45-9D65087D2B15",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a024408f-eed0-4de2-84a9-ada6e129877d\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:38.318+00:00\",\"creationDate\":\"2020-12-21T00:31:38.318+00:00\",\"originId\":\"21b051fa-b758-4e22-b9aa-8260a6af648b\",\"notes\":null,\"pdfExportId\":\"0bdc030e-1083-420b-b405-08e922283d4d\",\"isMandatory\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"respondentAnswerIds\":[\"20d67459-9c79-4f2e-85e3-d6342a6037ce\",\"fe9e92bc-e8b2-42e5-bfad-775303e04e8a\",\"f27e0891-22be-4a2a-bbe9-e0ab20c23714\",\"39f83343-84e7-4851-bbca-6ac17d74c268\",\"6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb\",\"9a593094-8382-4702-920a-5ef1fcfed0ab\",\"3ee3a24d-9898-4aca-b791-b15c323f47ef\",\"dcb5b8dd-5c36-4b71-becb-35962e4e339d\",\"e96a8868-e3e4-4e04-8310-b9e5667e1e9a\",\"fca6798f-462f-42bf-9622-7f1f95c16c2e\",\"58d7369a-7a6d-4c66-971d-cb3f46703b7a\",\"1f57b7eb-3e37-4fa6-ad79-7d72caee0670\",\"479aeda9-3263-4f6c-a960-2e95a7c28e8e\",\"aa5c2446-8c19-40e8-8f3c-e94f87567702\",\"4e533f62-5d00-436c-8d20-1a2238f1b7f8\"],\"respondentVariableValueIds\":null,\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\",\"respondentId\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"88ae55e0-647d-47d9-ad7b-7e8982c8315f\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.209+00:00\",\"creationDate\":\"2020-12-21T00:31:45.209+00:00\",\"originId\":\"21b051fa-b758-4e22-b9aa-8260a6af648b\",\"notes\":null,\"pdfExportId\":null,\"isMandatory\":null,\"completionDate\":\"2020-12-20T08:00:00+00:00\",\"respondentAnswerIds\":null,\"respondentVariableValueIds\":null,\"questionnaireId\":null,\"respondentId\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "criteria4": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "id == $",
+      "parameters": "8a92e0b9-271b-4451-8fdf-4102ae6cc441"
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C3C68FDE-5E05-4D11-9D61-5622D10989D8",
+      "type": "read",
+      "timeStamp": 7854.525000002468,
+      "targetModuleId": "data/main.datareel/model/person",
+      "criteria": {"@": "criteria4"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria5": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "f7eb9340-3075-4f21-84ca-575278cc9c76",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "28FDACE6-397F-46EA-8B0D-40C190063523",
+      "type": "read",
+      "timeStamp": 7854.795000006561,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "criteria": {"@": "criteria5"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria6": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "20d67459-9c79-4f2e-85e3-d6342a6037ce",
+          "fe9e92bc-e8b2-42e5-bfad-775303e04e8a",
+          "f27e0891-22be-4a2a-bbe9-e0ab20c23714",
+          "39f83343-84e7-4851-bbca-6ac17d74c268",
+          "6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb",
+          "9a593094-8382-4702-920a-5ef1fcfed0ab",
+          "3ee3a24d-9898-4aca-b791-b15c323f47ef",
+          "dcb5b8dd-5c36-4b71-becb-35962e4e339d",
+          "e96a8868-e3e4-4e04-8310-b9e5667e1e9a",
+          "fca6798f-462f-42bf-9622-7f1f95c16c2e",
+          "58d7369a-7a6d-4c66-971d-cb3f46703b7a",
+          "1f57b7eb-3e37-4fa6-ad79-7d72caee0670",
+          "479aeda9-3263-4f6c-a960-2e95a7c28e8e",
+          "aa5c2446-8c19-40e8-8f3c-e94f87567702",
+          "4e533f62-5d00-436c-8d20-1a2238f1b7f8"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3EA6FAF5-7A04-4F4E-8BDA-DEBB5CAA327E",
+      "type": "read",
+      "timeStamp": 7854.944999999134,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire-answer",
+      "criteria": {"@": "criteria6"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria7": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "0bdc030e-1083-420b-b405-08e922283d4d",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0A56FBC8-6BD7-40F0-B754-6D18A237874A",
+      "type": "read",
+      "timeStamp": 7855.035000000498,
+      "targetModuleId": "data/main.datareel/model/asset",
+      "criteria": {"@": "criteria7"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} FD4509F0-D3BF-4403-A480-DBF4613F897A {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "19FF7509-148E-49C9-8B30-2D5DA710E41F",
+      "type": "readCompleted",
+      "timeStamp": 23657.91117300093,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "referrerId": "28FDACE6-397F-46EA-8B0D-40C190063523",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.813+00:00\",\"creationDate\":\"2020-12-20T23:57:35.813+00:00\",\"originId\":null,\"referrerQuestionnaireId\":null,\"userContextVariableIds\":[\"9e5bb4d6-8d2e-47ac-a09c-4862252fc13c\",\"f9ddc4a2-5a3a-44db-a60b-ce02af2a0066\",\"b52ee5b6-260f-457c-99a4-2db109ee0bf6\",\"aaff241a-8651-46aa-98c8-46f93db5b0c0\",\"055b96b3-3d79-47ee-9377-f2b746c1ac79\",\"2349fd5f-dd4b-44fc-b20d-dcce75b15eb4\"],\"description\":\"Thank you for your continued trust in our practice. As with the transmission of any communicable disease like a cold or the flu, you may be exposed to COVID-19, also known as “Coronavirus,” at any time or in any place. Be assured that we have always followed state and federal regulations and recommended universal personal protection and disinfection protocols to limit transmission of all diseases in our office and continue to do so.\\n                        Despite our careful attention to sterilization, disinfection, and use of personal barriers, there is still a chance that you could be exposed to an illness in our office, just as you might be at your gym, grocery store, or favorite restaurant. “Social Distancing” nationwide has reduced the transmission of the Coronavirus. Although we have taken measures to provide social distancing in our practice, due to the nature of the procedures we provide, it is not possible to maintain social distancing between the patient, orthodontist, orthodontic staff and sometimes other patients at all times.\",\"headerVisualId\":null,\"title\":\"AAOIC SUPPLEMENTAL INFORMED CONSENT Orthodontic Treatment in the Era of COVID-19\",\"name\":\"AAOIC Consent Questionnaire\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 93BCE544-B01F-4BD8-9F56-62471D0B834D {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0FB71667-193D-44CC-A263-C89E1A15DB5B",
+      "type": "readCompleted",
+      "timeStamp": 23661.706396996975,
+      "targetModuleId": "data/main.datareel/model/person",
+      "referrerId": "C3C68FDE-5E05-4D11-9D61-5622D10989D8",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\",\"publicationDate\":null,\"modificationDate\":\"2017-01-21T06:14:12.1+00:00\",\"creationDate\":\"2018-02-01T05:35:35.022+00:00\",\"originId\":\"932f35e3-8004-445d-a951-9767f39f4e72\",\"imageIds\":null,\"socialProfileIds\":null,\"urlAddresses\":null,\"existenceTimeRange\":null,\"addressIds\":null,\"phone\":null,\"email\":null,\"lastName\":null,\"firstName\":null,\"userIdentityIds\":null,\"tags\":null,\"preferredLocales\":[\"en\"],\"aliases\":null,\"genderID\":null,\"name\":{\"givenName\": \"Steven\", \"familyName\": \"Rogers\", \"namePrefix\": \"\"}}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 96834C08-2F33-41E8-9B4B-DB4C11EC9F4D {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "71749AF7-1FC6-453A-9810-461A9DB90D75",
+      "type": "readCompleted",
+      "timeStamp": 23664.448717996478,
+      "targetModuleId": "data/main.datareel/model/asset",
+      "referrerId": "0A56FBC8-6BD7-40F0-B754-6D18A237874A",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"0bdc030e-1083-420b-b405-08e922283d4d\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.209+00:00\",\"creationDate\":\"2020-12-21T00:31:45.209+00:00\",\"originId\":null,\"originLocation\":null,\"s3Location\":\"https://plumming-staging.s3.us-west-2.amazonaws.com/RespondentQuestionnaire/pdfExport/tops-aaoic-form-21b051fa-b758-4e22-b9aa-8260a6af648b.pdf\",\"description\":null,\"s3ObjectKey\":\"RespondentQuestionnaire/pdfExport/tops-aaoic-form-21b051fa-b758-4e22-b9aa-8260a6af648b.pdf\",\"s3BucketName\":\"plumming-staging\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria8": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
+      "parameters": {
+        "parameter1": "f7eb9340-3075-4f21-84ca-575278cc9c76",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3E78C089-50EB-4125-8D04-A55D05AD558D",
+      "type": "read",
+      "timeStamp": 8158.999999999651,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria8"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria9": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "9e5bb4d6-8d2e-47ac-a09c-4862252fc13c",
+          "f9ddc4a2-5a3a-44db-a60b-ce02af2a0066",
+          "b52ee5b6-260f-457c-99a4-2db109ee0bf6",
+          "aaff241a-8651-46aa-98c8-46f93db5b0c0",
+          "055b96b3-3d79-47ee-9377-f2b746c1ac79",
+          "2349fd5f-dd4b-44fc-b20d-dcce75b15eb4"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "500989F0-80F0-4493-AB59-6518397542B1",
+      "type": "read",
+      "timeStamp": 8159.165000004577,
+      "targetModuleId": "data/main.datareel/model/questionnaire/variable",
+      "criteria": {"@": "criteria9"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria10": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
+      "parameters": {
+        "parameter1": "f7eb9340-3075-4f21-84ca-575278cc9c76",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C900F74D-ABE1-4C02-9A11-F969120FD041",
+      "type": "read",
+      "timeStamp": 8159.339999998338,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "criteria": {"@": "criteria10"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 11C4FB0E-35B0-4D9E-ABF2-E75D5BC8C116 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "9DB9FF1D-0A63-4FA9-8682-54A907A0D8BD",
+      "type": "readCompleted",
+      "timeStamp": 23734.844546988606,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire-answer",
+      "referrerId": "3EA6FAF5-7A04-4F4E-8BDA-DEBB5CAA327E",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"20d67459-9c79-4f2e-85e3-d6342a6037ce\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.206+00:00\",\"creationDate\":\"2020-12-21T00:31:43.206+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"a769fca5-9c73-4fb5-9638-aeb93cad7bf8\",\"89e1873e-ffdb-4cd0-8dc0-88b7bf71aa67\",\"1a3b3edd-4a8f-4479-90d3-e42a6a542088\"],\"questionnaireQuestionId\":\"39019543-fa77-4fbe-8ac3-98c0601b141e\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"fe9e92bc-e8b2-42e5-bfad-775303e04e8a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.208+00:00\",\"creationDate\":\"2020-12-21T00:31:43.208+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"127099ab-005c-4ee2-a77a-f65bc1fc8a98\"],\"questionnaireQuestionId\":\"99c48a31-18d3-4600-ab6e-106a0446246e\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"f27e0891-22be-4a2a-bbe9-e0ab20c23714\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.209+00:00\",\"creationDate\":\"2020-12-21T00:31:43.209+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"52a805f8-99a4-485b-93e5-38cfacb99b27\"],\"questionnaireQuestionId\":\"7ede236f-d394-4f6d-b4da-1dcf690e0aa1\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"39f83343-84e7-4851-bbca-6ac17d74c268\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.211+00:00\",\"creationDate\":\"2020-12-21T00:31:43.211+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"2b7b4122-43f3-4a29-b868-bec99021c316\"],\"questionnaireQuestionId\":\"33441479-6116-4b57-be6e-5e109bb1c0a3\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.213+00:00\",\"creationDate\":\"2020-12-21T00:31:43.213+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\"],\"questionnaireQuestionId\":\"5e21b5df-9b1a-42fd-9401-b2489b473558\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"9a593094-8382-4702-920a-5ef1fcfed0ab\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.212+00:00\",\"creationDate\":\"2020-12-21T00:31:45.212+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"b3051722-347d-4113-b34f-2ba8d5e0a371\"],\"questionnaireQuestionId\":\"1578d7d6-fc64-47a5-8d10-2b44ff1f3ee7\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"3ee3a24d-9898-4aca-b791-b15c323f47ef\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.213+00:00\",\"creationDate\":\"2020-12-21T00:31:45.213+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"442d6e0b-5458-4384-a82d-e2529e7c4050\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"dcb5b8dd-5c36-4b71-becb-35962e4e339d\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.215+00:00\",\"creationDate\":\"2020-12-21T00:31:45.215+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"7183facd-ea86-4211-a56e-bc2a5afc6712\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"e96a8868-e3e4-4e04-8310-b9e5667e1e9a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.216+00:00\",\"creationDate\":\"2020-12-21T00:31:45.216+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"2c8b9a2d-408a-4e9b-b1a0-3820de121bf2\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"fca6798f-462f-42bf-9622-7f1f95c16c2e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.218+00:00\",\"creationDate\":\"2020-12-21T00:31:45.218+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"2a4a60cc-5c5a-4d25-aa13-a5a64dd8255f\",\"823a7378-f3c2-4e6a-9582-9f3d3baee50f\",\"acda2c6c-bec8-4913-a4bc-ff029d1ad3f8\"],\"questionnaireQuestionId\":\"97a16628-b6fa-4e08-9493-ada0bd19e0fc\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"58d7369a-7a6d-4c66-971d-cb3f46703b7a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.22+00:00\",\"creationDate\":\"2020-12-21T00:31:45.22+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"bf2a212e-0ef8-4b91-9251-617cf3dcf79e\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"1f57b7eb-3e37-4fa6-ad79-7d72caee0670\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.221+00:00\",\"creationDate\":\"2020-12-21T00:31:45.221+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"8b7ce088-9367-4b53-9811-9ef7be289693\"],\"questionnaireQuestionId\":\"78cbda5f-0446-471d-8ff3-ee2103f69879\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"479aeda9-3263-4f6c-a960-2e95a7c28e8e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.223+00:00\",\"creationDate\":\"2020-12-21T00:31:45.223+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"fc02c545-a298-47cf-a7ab-6d69a338b74f\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"aa5c2446-8c19-40e8-8f3c-e94f87567702\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.224+00:00\",\"creationDate\":\"2020-12-21T00:31:45.224+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"512eaf3c-cf93-4110-9683-2756cc9a3731\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"4e533f62-5d00-436c-8d20-1a2238f1b7f8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.225+00:00\",\"creationDate\":\"2020-12-21T00:31:45.225+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"5374d1e1-d3f8-4664-b627-18d401f6c91a\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria11": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "39019543-fa77-4fbe-8ac3-98c0601b141e",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0177CA97-D75E-4334-AF09-AA4E6A9ADA3D",
+      "type": "read",
+      "timeStamp": 8270.174999997835,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria11"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria12": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "a769fca5-9c73-4fb5-9638-aeb93cad7bf8",
+          "89e1873e-ffdb-4cd0-8dc0-88b7bf71aa67",
+          "1a3b3edd-4a8f-4479-90d3-e42a6a542088"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C3F7029A-4381-41E0-8E2F-DF9BDD767D73",
+      "type": "read",
+      "timeStamp": 8270.239999998012,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria12"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria13": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "99c48a31-18d3-4600-ab6e-106a0446246e",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C3272F2B-6DE6-4AEC-849B-70AF9536B1AB",
+      "type": "read",
+      "timeStamp": 8270.394999999553,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria13"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria14": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "127099ab-005c-4ee2-a77a-f65bc1fc8a98"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A0FE675C-EA1B-4928-921C-8EBF26D7AA2E",
+      "type": "read",
+      "timeStamp": 8270.430000004126,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria14"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria15": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "7ede236f-d394-4f6d-b4da-1dcf690e0aa1",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "BD782C4F-E5E1-4A49-9B7F-20313D5FFD3C",
+      "type": "read",
+      "timeStamp": 8270.465000008699,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria15"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria16": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "52a805f8-99a4-485b-93e5-38cfacb99b27"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "679D19B6-BFFD-49E5-A5FD-D6592388EC9D",
+      "type": "read",
+      "timeStamp": 8270.485000000917,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria16"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria17": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "33441479-6116-4b57-be6e-5e109bb1c0a3",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "2DEC7952-777E-4997-AF82-76D1F44D96D7",
+      "type": "read",
+      "timeStamp": 8270.514999996522,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria17"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria18": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "2b7b4122-43f3-4a29-b868-bec99021c316"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3AA5BD13-03D8-4DB4-A42A-B74CCB933FEC",
+      "type": "read",
+      "timeStamp": 8270.545000006678,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria18"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria19": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "5e21b5df-9b1a-42fd-9401-b2489b473558",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "D1200340-4EC2-4C88-9D9B-760522AB4A9F",
+      "type": "read",
+      "timeStamp": 8270.579999996698,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria19"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria20": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "4f6074dd-4d6d-49dc-a005-0d423f4ca91a"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "47B92E31-27CC-4803-B5B2-A3D649377747",
+      "type": "read",
+      "timeStamp": 8270.604999997886,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria20"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria21": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "1578d7d6-fc64-47a5-8d10-2b44ff1f3ee7",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "28073485-0E2D-407C-A224-D61149B2B178",
+      "type": "read",
+      "timeStamp": 8270.629999999073,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria21"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria22": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "b3051722-347d-4113-b34f-2ba8d5e0a371"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "D5117C83-473E-43E5-8FB0-817C0AA56829",
+      "type": "read",
+      "timeStamp": 8270.650000005844,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria22"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria23": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "442d6e0b-5458-4384-a82d-e2529e7c4050",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E0B2092D-7737-44CB-B8B8-E8EE12F95B58",
+      "type": "read",
+      "timeStamp": 8270.685000010417,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria23"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria24": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "7183facd-ea86-4211-a56e-bc2a5afc6712",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E7C3F545-AC3B-4F94-BEA5-277136B1C729",
+      "type": "read",
+      "timeStamp": 8270.709999997052,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria24"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria25": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "2c8b9a2d-408a-4e9b-b1a0-3820de121bf2",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "63D4A1E1-A0C6-4749-8695-97722D916774",
+      "type": "read",
+      "timeStamp": 8270.745000001625,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria25"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria26": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "97a16628-b6fa-4e08-9493-ada0bd19e0fc",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "FC299870-5181-446A-8B1F-5A39DCE007FB",
+      "type": "read",
+      "timeStamp": 8270.77499999723,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria26"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria27": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "2a4a60cc-5c5a-4d25-aa13-a5a64dd8255f",
+          "823a7378-f3c2-4e6a-9582-9f3d3baee50f",
+          "acda2c6c-bec8-4913-a4bc-ff029d1ad3f8"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "9F3FD00D-12A4-4E9F-98EF-40FE3864031D",
+      "type": "read",
+      "timeStamp": 8270.799999998417,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria27"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria28": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "bf2a212e-0ef8-4b91-9251-617cf3dcf79e",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F3E8C812-CE84-4186-8607-B659F74113C2",
+      "type": "read",
+      "timeStamp": 8270.824999999604,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria28"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria29": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "78cbda5f-0446-471d-8ff3-ee2103f69879",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "304A1F08-DB44-462D-871A-BF5AA71C0B58",
+      "type": "read",
+      "timeStamp": 8270.860000004177,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria29"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria30": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "8b7ce088-9367-4b53-9811-9ef7be289693"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "64C1D130-5C37-4324-BF27-398117B8134C",
+      "type": "read",
+      "timeStamp": 8270.879999996396,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria30"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria31": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "fc02c545-a298-47cf-a7ab-6d69a338b74f",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "8E7C0B82-8D2F-48B0-852E-4708C64BFD63",
+      "type": "read",
+      "timeStamp": 8270.910000006552,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria31"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria32": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "512eaf3c-cf93-4110-9683-2756cc9a3731",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "435C8FC2-4185-4C00-8F37-B86C8BE97FA8",
+      "type": "read",
+      "timeStamp": 8270.940000002156,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria32"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria33": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "5374d1e1-d3f8-4664-b627-18d401f6c91a",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "63280575-777A-4746-981A-2A1FC7E11A9A",
+      "type": "read",
+      "timeStamp": 8270.965000003343,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria33"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 48A20430-ED0E-43B0-9C6F-9319A3B7DACF {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "62CA3795-E986-4703-8594-D30353F49996",
+      "type": "readCompleted",
+      "timeStamp": 23945.962222993374,
+      "targetModuleId": "data/main.datareel/model/questionnaire/variable",
+      "referrerId": "500989F0-80F0-4493-AB59-6518397542B1",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"9e5bb4d6-8d2e-47ac-a09c-4862252fc13c\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.81+00:00\",\"creationDate\":\"2020-12-20T23:57:35.81+00:00\",\"originId\":null,\"typeModuleId\":null,\"displayName\":\"user's IP address version 4\",\"name\":\"ipv4\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"f9ddc4a2-5a3a-44db-a60b-ce02af2a0066\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.811+00:00\",\"creationDate\":\"2020-12-20T23:57:35.811+00:00\",\"originId\":null,\"typeModuleId\":null,\"displayName\":\"user's IP address version 6\",\"name\":\"ipv6\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"b52ee5b6-260f-457c-99a4-2db109ee0bf6\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.812+00:00\",\"creationDate\":\"2020-12-20T23:57:35.812+00:00\",\"originId\":null,\"typeModuleId\":null,\"displayName\":\"userAgent of user's browser\",\"name\":\"userAgent\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"aaff241a-8651-46aa-98c8-46f93db5b0c0\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.812+00:00\",\"creationDate\":\"2020-12-20T23:57:35.812+00:00\",\"originId\":null,\"typeModuleId\":null,\"displayName\":\"Date the user submitted the form\",\"name\":\"submissionDate\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"055b96b3-3d79-47ee-9377-f2b746c1ac79\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.812+00:00\",\"creationDate\":\"2020-12-20T23:57:35.812+00:00\",\"originId\":null,\"typeModuleId\":null,\"displayName\":\"The name of question asking for signature\",\"name\":\"signatureFile\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"2349fd5f-dd4b-44fc-b20d-dcce75b15eb4\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.812+00:00\",\"creationDate\":\"2020-12-20T23:57:35.812+00:00\",\"originId\":null,\"typeModuleId\":null,\"displayName\":\"The caption around the signature input\",\"name\":\"signatureCaption\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} C5E44834-1337-43C7-84CD-E764F50A17E4 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A269A7A7-39D6-4D24-A386-511ABB2EA983",
+      "type": "readCompleted",
+      "timeStamp": 23955.263046994805,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "referrerId": "C900F74D-ABE1-4C02-9A11-F969120FD041",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a024408f-eed0-4de2-84a9-ada6e129877d\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:38.318+00:00\",\"creationDate\":\"2020-12-21T00:31:38.318+00:00\",\"originId\":\"21b051fa-b758-4e22-b9aa-8260a6af648b\",\"notes\":null,\"pdfExportId\":\"0bdc030e-1083-420b-b405-08e922283d4d\",\"isMandatory\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"respondentAnswerIds\":[\"20d67459-9c79-4f2e-85e3-d6342a6037ce\",\"fe9e92bc-e8b2-42e5-bfad-775303e04e8a\",\"f27e0891-22be-4a2a-bbe9-e0ab20c23714\",\"39f83343-84e7-4851-bbca-6ac17d74c268\",\"6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb\",\"9a593094-8382-4702-920a-5ef1fcfed0ab\",\"3ee3a24d-9898-4aca-b791-b15c323f47ef\",\"dcb5b8dd-5c36-4b71-becb-35962e4e339d\",\"e96a8868-e3e4-4e04-8310-b9e5667e1e9a\",\"fca6798f-462f-42bf-9622-7f1f95c16c2e\",\"58d7369a-7a6d-4c66-971d-cb3f46703b7a\",\"1f57b7eb-3e37-4fa6-ad79-7d72caee0670\",\"479aeda9-3263-4f6c-a960-2e95a7c28e8e\",\"aa5c2446-8c19-40e8-8f3c-e94f87567702\",\"4e533f62-5d00-436c-8d20-1a2238f1b7f8\"],\"respondentVariableValueIds\":null,\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\",\"respondentId\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 85B8145C-C092-4E61-8B4A-418FBC95E8C7 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "EFFDA71A-7C29-4CEA-AAAD-D3F27498F308",
+      "type": "readCompleted",
+      "timeStamp": 23965.618734002113,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "3E78C089-50EB-4125-8D04-A55D05AD558D",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"39019543-fa77-4fbe-8ac3-98c0601b141e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.818+00:00\",\"creationDate\":\"2020-12-20T23:57:35.818+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":5,\"questionId\":\"5239da47-90d1-41fa-9d8d-480fe272f3d8\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"7ede236f-d394-4f6d-b4da-1dcf690e0aa1\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":4,\"questionId\":\"c0f10cdb-b3b4-4e0a-bc8c-300cf342495c\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"33441479-6116-4b57-be6e-5e109bb1c0a3\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":3,\"questionId\":\"f35b19fd-1c81-4629-ae38-7f57fa11d0bf\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"99c48a31-18d3-4600-ab6e-106a0446246e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.816+00:00\",\"creationDate\":\"2020-12-20T23:57:35.816+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":2,\"questionId\":\"57bc1fbb-ba3b-411b-bcff-563b86dbe6ce\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"5e21b5df-9b1a-42fd-9401-b2489b473558\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.815+00:00\",\"creationDate\":\"2020-12-20T23:57:35.815+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":1,\"questionId\":\"b4a77576-761a-4c23-b468-f93f974c21c7\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} A4CE3E4F-C8E0-431B-AEC8-AEEAC9BFE9B4 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "340BB734-481E-44B5-997C-60ED190FA13C",
+      "type": "readCompleted",
+      "timeStamp": 23971.6445799917,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "D5117C83-473E-43E5-8FB0-817C0AA56829",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"b3051722-347d-4113-b34f-2ba8d5e0a371\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.212+00:00\",\"creationDate\":\"2020-12-21T00:31:45.212+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":\"2020-12-20T08:00:00+00:00\",\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":null,\"booleanValue\":null,\"name\":null,\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 931F8AED-DA74-47B2-8CDF-F68464196B99 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "88E79341-8751-45ED-8507-C85D6D01E435",
+      "type": "readCompleted",
+      "timeStamp": 23979.479782000184,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "28073485-0E2D-407C-A224-D61149B2B178",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"1578d7d6-fc64-47a5-8d10-2b44ff1f3ee7\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":10,\"questionId\":\"c0f10cdb-b3b4-4e0a-bc8c-300cf342495c\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 3F5D9950-B850-457C-B6CA-54C6DCCF9965 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B5545373-4AA9-4B5F-BBA3-9E131F067361",
+      "type": "readCompleted",
+      "timeStamp": 23988.642801001668,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "679D19B6-BFFD-49E5-A5FD-D6592388EC9D",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"52a805f8-99a4-485b-93e5-38cfacb99b27\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.209+00:00\",\"creationDate\":\"2020-12-21T00:31:43.209+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":\"2020-12-20T08:00:00+00:00\",\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":null,\"booleanValue\":null,\"name\":\"acceptationDate\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria34": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "5239da47-90d1-41fa-9d8d-480fe272f3d8",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F1EC98BF-96E5-464C-B027-D661A2B0B1F6",
+      "type": "read",
+      "timeStamp": 8486.304999998538,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria34"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria35": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "c0f10cdb-b3b4-4e0a-bc8c-300cf342495c",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "565B5EBC-0A0B-49B4-AA51-208EFF029636",
+      "type": "read",
+      "timeStamp": 8486.44000000786,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria35"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria36": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "f35b19fd-1c81-4629-ae38-7f57fa11d0bf",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "39F21F24-3B28-4B78-8AC1-29C673AFD0F0",
+      "type": "read",
+      "timeStamp": 8486.485000001267,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria36"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria37": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "57bc1fbb-ba3b-411b-bcff-563b86dbe6ce",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "57FFB09D-91AC-43AA-9326-27910C747832",
+      "type": "read",
+      "timeStamp": 8486.525000000256,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria37"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria38": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "b4a77576-761a-4c23-b468-f93f974c21c7",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F196E05B-5AA9-4044-BFDF-7DA80A8BDBE1",
+      "type": "read",
+      "timeStamp": 8486.560000004829,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria38"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria39": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "4f6074dd-4d6d-49dc-a005-0d423f4ca91a",
+          "d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "24F61053-D0BF-427D-9598-08432AFABE84",
+      "type": "read",
+      "timeStamp": 8486.579999997048,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria39"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria40": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "43d22e77-d205-4970-bf08-568873a53d31",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3F695A34-1C7A-47A1-A8A2-A53AF2B9761F",
+      "type": "read",
+      "timeStamp": 8511.725000003935,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "criteria": {"@": "criteria40"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 628C1381-5418-4ABF-80C3-8C1A82F433A8 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "1981F81A-803B-4714-B9D3-14A447AA6745",
+      "type": "readCompleted",
+      "timeStamp": 24088.015316992998,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "C3272F2B-6DE6-4AEC-849B-70AF9536B1AB",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"99c48a31-18d3-4600-ab6e-106a0446246e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.816+00:00\",\"creationDate\":\"2020-12-20T23:57:35.816+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":2,\"questionId\":\"57bc1fbb-ba3b-411b-bcff-563b86dbe6ce\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 1F162CF8-0CD1-44A8-ABE5-90E07ADCC750 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3C6696A2-3D73-466E-A97A-36DEBB95DEE3",
+      "type": "readCompleted",
+      "timeStamp": 24093.862397000194,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "C3F7029A-4381-41E0-8E2F-DF9BDD767D73",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a769fca5-9c73-4fb5-9638-aeb93cad7bf8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.206+00:00\",\"creationDate\":\"2020-12-21T00:31:43.206+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":null,\"booleanValue\":null,\"name\":\"accepts\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"89e1873e-ffdb-4cd0-8dc0-88b7bf71aa67\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.207+00:00\",\"creationDate\":\"2020-12-21T00:31:43.207+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"937853,280,90,white,black\",\"booleanValue\":null,\"name\":\"acceptsSignatureSfs\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"1a3b3edd-4a8f-4479-90d3-e42a6a542088\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.208+00:00\",\"creationDate\":\"2020-12-21T00:31:43.208+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"x937853:1017624:1042612:1039749:997165:995197:985639:1012747:1009627:1005736:963437:960869:955121:958030:953393:979661:979660:981367:981363:981363:953203:955173:965937:1006578:1014189:1032471:1017660:805200:812817:798285:842056:821526:828622:870693:869322:880374:877593:884410:883232:882487:882198:881445:880699\",\"booleanValue\":null,\"name\":\"acceptsSignature\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 545C565C-3475-4CDD-A7FF-CB3A682B56D3 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "27191787-6ADB-4E5C-8B80-E0C4A600B151",
+      "type": "readCompleted",
+      "timeStamp": 24096.510583996773,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "63D4A1E1-A0C6-4749-8695-97722D916774",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"2c8b9a2d-408a-4e9b-b1a0-3820de121bf2\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":4,\"questionId\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} AC8D5FD0-D9AA-48A3-8CFD-F1E14BDA2A73 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "4206F74D-5EC9-4BFA-A995-8B13F1FBCB49",
+      "type": "readCompleted",
+      "timeStamp": 24127.771499991417,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "0177CA97-D75E-4334-AF09-AA4E6A9ADA3D",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"39019543-fa77-4fbe-8ac3-98c0601b141e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.818+00:00\",\"creationDate\":\"2020-12-20T23:57:35.818+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":5,\"questionId\":\"5239da47-90d1-41fa-9d8d-480fe272f3d8\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 14D8F035-8F80-461F-95A0-EC0FC5A19815 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "4C754435-0522-4F29-9ECC-7DA6B39C61EB",
+      "type": "readCompleted",
+      "timeStamp": 24129.59192200005,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "D1200340-4EC2-4C88-9D9B-760522AB4A9F",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"5e21b5df-9b1a-42fd-9401-b2489b473558\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.815+00:00\",\"creationDate\":\"2020-12-20T23:57:35.815+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":1,\"questionId\":\"b4a77576-761a-4c23-b468-f93f974c21c7\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria41": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "42FB00D1-45E0-48CB-801C-5A00D22BDFD8",
+      "type": "read",
+      "timeStamp": 8615.069999999832,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria41"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} D987A8BD-0C0E-48AB-8F77-F2E3AD5F8C8C {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B1C876B0-D215-441C-8892-F534A617A7A7",
+      "type": "readCompleted",
+      "timeStamp": 24135.22584299743,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "9F3FD00D-12A4-4E9F-98EF-40FE3864031D",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"2a4a60cc-5c5a-4d25-aa13-a5a64dd8255f\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.218+00:00\",\"creationDate\":\"2020-12-21T00:31:45.218+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":null,\"booleanValue\":null,\"name\":\"accepts\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"823a7378-f3c2-4e6a-9582-9f3d3baee50f\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.219+00:00\",\"creationDate\":\"2020-12-21T00:31:45.219+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"937853,280,90,white,black\",\"booleanValue\":null,\"name\":\"acceptsRescheduleIfSickSignatureSfs\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"acda2c6c-bec8-4913-a4bc-ff029d1ad3f8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.219+00:00\",\"creationDate\":\"2020-12-21T00:31:45.219+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"x937853:821612:846472:842329:837553:802218:798069:788792:812543:806505:1041930:1032911:990375:1011188:1000430:959795:957220:952188:980180:980938:981231:981264:979337:951348:965583:1006253:1009126:990618:997201:1034122:1045130:1027914:1029253:809159:818176:794250:794748:837784:845875:844610:822368:819412:825082:830488:828560:833343:871403:870020:873406:877335:880718:854510:858902\",\"booleanValue\":null,\"name\":\"acceptsRescheduleIfSickSignature\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 8F85BB64-872D-4E7C-BA4B-E0B3885D423D {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "1BF0DCCE-0D4B-4E43-B13E-442289CCF1D2",
+      "type": "readCompleted",
+      "timeStamp": 24137.000960990787,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "2DEC7952-777E-4997-AF82-76D1F44D96D7",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"33441479-6116-4b57-be6e-5e109bb1c0a3\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":3,\"questionId\":\"f35b19fd-1c81-4629-ae38-7f57fa11d0bf\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 9A478663-4304-4036-841A-040641C020C9 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "7FAFDA65-A607-48F8-A19E-607BA8C8E8A9",
+      "type": "readCompleted",
+      "timeStamp": 24139.035090997815,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "BD782C4F-E5E1-4A49-9B7F-20313D5FFD3C",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"7ede236f-d394-4f6d-b4da-1dcf690e0aa1\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":4,\"questionId\":\"c0f10cdb-b3b4-4e0a-bc8c-300cf342495c\",\"questionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} BAE3DEDB-5D2B-4364-8DDC-3835FE76440A {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "D65CBD04-EE3F-4707-B0CE-C02664234266",
+      "type": "readCompleted",
+      "timeStamp": 24140.92002698779,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "3AA5BD13-03D8-4DB4-A42A-B74CCB933FEC",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"2b7b4122-43f3-4a29-b868-bec99021c316\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.211+00:00\",\"creationDate\":\"2020-12-21T00:31:43.211+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"Rogers\",\"booleanValue\":null,\"name\":\"lastName\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} B247A255-7610-4516-B83E-F901F989249D {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B5588C05-A080-4D3F-9A3E-E29603E161E9",
+      "type": "readCompleted",
+      "timeStamp": 24143.0349919945,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "63280575-777A-4746-981A-2A1FC7E11A9A",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"5374d1e1-d3f8-4664-b627-18d401f6c91a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.378+00:00\",\"creationDate\":\"2020-12-20T23:57:37.378+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":2,\"questionId\":\"92b02911-d48c-41c0-aad2-4506846fdd4e\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 1D5D2ED0-FC02-4491-AF15-C67D4234CA46 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3B633E2A-CC80-4B02-80CD-1597FDCD3BEA",
+      "type": "readCompleted",
+      "timeStamp": 24144.796106994152,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "E0B2092D-7737-44CB-B8B8-E8EE12F95B58",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"442d6e0b-5458-4384-a82d-e2529e7c4050\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.38+00:00\",\"creationDate\":\"2020-12-20T23:57:37.38+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":7,\"questionId\":\"332bb7a9-8493-426f-aa1b-7345b1f24f6c\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 52AAC093-A4F3-4336-A771-8329CEA3732F {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "70DED2FA-31FF-4E20-BE77-CDCE07B8594E",
+      "type": "readCompleted",
+      "timeStamp": 24146.807132989168,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "A0FE675C-EA1B-4928-921C-8EBF26D7AA2E",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"127099ab-005c-4ee2-a77a-f65bc1fc8a98\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.208+00:00\",\"creationDate\":\"2020-12-21T00:31:43.208+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"Steven\",\"booleanValue\":null,\"name\":\"firstName\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 2A81BA20-9891-424A-8891-AD8B1305B4AD {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "CC41DD31-1E3C-41CF-8BD3-D6608599ED56",
+      "type": "readCompleted",
+      "timeStamp": 24148.480241000652,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "8E7C0B82-8D2F-48B0-852E-4708C64BFD63",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"fc02c545-a298-47cf-a7ab-6d69a338b74f\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":8,\"questionId\":\"61d513ba-625a-4e4d-a379-87d0d16b68e3\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 422FA81A-9631-4EE1-91A2-8CEDC2C7309B {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E0B8DF36-5BC6-41CB-8275-4484F482844D",
+      "type": "readCompleted",
+      "timeStamp": 24150.182796001434,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "E7C3F545-AC3B-4F94-BEA5-277136B1C729",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"7183facd-ea86-4211-a56e-bc2a5afc6712\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.38+00:00\",\"creationDate\":\"2020-12-20T23:57:37.38+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":6,\"questionId\":\"a7ea72b4-7cb6-4fab-af16-f8d09dae4bad\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 584956CD-98A7-44E5-BDE9-A321B31E60A2 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "79CAA681-41B1-4D80-8838-38CC23E0025C",
+      "type": "readCompleted",
+      "timeStamp": 24152.475473999977,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "FC299870-5181-446A-8B1F-5A39DCE007FB",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"97a16628-b6fa-4e08-9493-ada0bd19e0fc\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":9,\"questionId\":\"310b01b6-ec7f-4248-869f-151ad8324ef1\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 8A90F057-434E-4CEE-AE02-49839F6FC9A7 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C4C7CF9E-E0CD-4C15-8DBC-186E12C4B631",
+      "type": "readCompleted",
+      "timeStamp": 24154.246615990996,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "47B92E31-27CC-4803-B5B2-A3D649377747",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.813+00:00\",\"creationDate\":\"2020-12-20T23:57:35.813+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"Yes\",\"booleanValue\":true,\"name\":\"Yes\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 291C0BF3-8E1A-4473-ADAF-DD7512B7814C {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "508A7CFB-1081-4741-A42B-5AB970EC3399",
+      "type": "readCompleted",
+      "timeStamp": 24155.91167099774,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "F3E8C812-CE84-4186-8607-B659F74113C2",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"bf2a212e-0ef8-4b91-9251-617cf3dcf79e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.378+00:00\",\"creationDate\":\"2020-12-20T23:57:37.378+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":3,\"questionId\":\"e21783b7-01d7-4692-b2cb-84c3a9ddab3a\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} C6AA480A-B077-4DC2-965C-AB4652131F48 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "7129E3AD-3E1D-43CB-85A9-FC97976B7AEC",
+      "type": "readCompleted",
+      "timeStamp": 24157.92659699917,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "57FFB09D-91AC-43AA-9326-27910C747832",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"57bc1fbb-ba3b-411b-bcff-563b86dbe6ce\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.815+00:00\",\"creationDate\":\"2020-12-20T23:57:35.815+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"firstName\",\"text\":\"Patient First Name\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} E380A7FF-9B97-4F27-A822-F3D1F0F6FBD3 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B76B982D-C01E-4BFD-A757-4E1EE7DD1F82",
+      "type": "readCompleted",
+      "timeStamp": 24159.64396199584,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "F196E05B-5AA9-4044-BFDF-7DA80A8BDBE1",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"b4a77576-761a-4c23-b468-f93f974c21c7\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.814+00:00\",\"creationDate\":\"2020-12-20T23:57:35.814+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"acceptsConsent\",\"text\":\"Although exposure is unlikely, do you accept the risk and consent to treatment?\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} D3C97ADC-232E-42FF-8FBB-F4A23BBFA3CE {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "CBCA1DF4-A5CC-4931-9049-25C1C29616BD",
+      "type": "readCompleted",
+      "timeStamp": 24162.581271991134,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "565B5EBC-0A0B-49B4-AA51-208EFF029636",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"c0f10cdb-b3b4-4e0a-bc8c-300cf342495c\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"acceptationDate\",\"text\":\"Date\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} A8C27F58-A074-48E2-A289-86024E5B8E06 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "9D845C87-0490-4EEA-82C7-864E42743ACF",
+      "type": "readCompleted",
+      "timeStamp": 24164.846673995256,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "435C8FC2-4185-4C00-8F37-B86C8BE97FA8",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"512eaf3c-cf93-4110-9683-2756cc9a3731\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":5,\"questionId\":\"962b7b91-e0a9-453d-b094-2f4680dfe8da\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 390D68C4-8342-4097-9272-DBFC5B405B28 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0DABA192-4372-4132-8C40-E4FAE23342AD",
+      "type": "readCompleted",
+      "timeStamp": 24167.370992988348,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "F1EC98BF-96E5-464C-B027-D661A2B0B1F6",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"5239da47-90d1-41fa-9d8d-480fe272f3d8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"acceptsSignature\",\"text\":\"Patient/Parent’s Signature\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 2EE9C00F-0163-400F-9A81-4EFE9321F5CB {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F08A4121-BCD5-4DFB-BA54-9380EC09284A",
+      "type": "readCompleted",
+      "timeStamp": 24169.27680300176,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "64C1D130-5C37-4324-BF27-398117B8134C",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"8b7ce088-9367-4b53-9811-9ef7be289693\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.221+00:00\",\"creationDate\":\"2020-12-21T00:31:45.221+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"self\",\"booleanValue\":null,\"name\":null,\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} CF088DDE-90C7-4C4D-9E5E-0263855B017B {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "44F2DB5D-0F25-4058-96F0-E5FD3A2B5F63",
+      "type": "readCompleted",
+      "timeStamp": 24171.05214999616,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "304A1F08-DB44-462D-871A-BF5AA71C0B58",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"78cbda5f-0446-471d-8ff3-ee2103f69879\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.376+00:00\",\"creationDate\":\"2020-12-20T23:57:37.376+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":1,\"questionId\":\"4613a992-da74-4dec-b793-39e75b2b1e8c\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 4483DE69-618F-4AC8-A681-81918ACD5B5F {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "8F33A1D3-AF03-47BC-851F-1BD48A8C025C",
+      "type": "readCompleted",
+      "timeStamp": 24172.758778989315,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "referrerId": "3F695A34-1C7A-47A1-A8A2-A53AF2B9761F",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"43d22e77-d205-4970-bf08-568873a53d31\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.818+00:00\",\"creationDate\":\"2020-12-20T23:57:35.818+00:00\",\"originId\":null,\"referrerQuestionnaireId\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\",\"userContextVariableIds\":[\"055b96b3-3d79-47ee-9377-f2b746c1ac79\",\"2349fd5f-dd4b-44fc-b20d-dcce75b15eb4\"],\"description\":\"If you have been exposed to a communicable disease, you may spread the disease to the orthodontist, orthodontic staff, or other patients/parents in the practice. Therefore, prior to each appointment, we will be asking the following questions to reduce the chances of transmission:\",\"headerVisualId\":null,\"title\":\"AAOIC SUPPLEMENTAL INFORMED CONSENT Orthodontic Treatment in the Era of COVID-19\",\"name\":\"AAOIC Supplemental Health Questionnaire\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria42": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "92b02911-d48c-41c0-aad2-4506846fdd4e",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "5DE008C7-B728-4A65-87D5-1C7C3DAE84BA",
+      "type": "read",
+      "timeStamp": 8690.810000000056,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria42"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria43": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "332bb7a9-8493-426f-aa1b-7345b1f24f6c",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "FB8018AF-308C-4931-8316-EE7BCF257F81",
+      "type": "read",
+      "timeStamp": 8701.87000000442,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria43"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria44": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "61d513ba-625a-4e4d-a379-87d0d16b68e3",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "73CEF895-597D-4F66-A962-B868A2E23F50",
+      "type": "read",
+      "timeStamp": 8724.70500000054,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria44"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria45": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "a7ea72b4-7cb6-4fab-af16-f8d09dae4bad",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E6FDD2C9-B126-4CFE-BE89-405E68E5488A",
+      "type": "read",
+      "timeStamp": 8734.989999997197,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria45"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria46": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "310b01b6-ec7f-4248-869f-151ad8324ef1",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F63718A3-DC87-44AD-9B5C-8FF4542B7B0C",
+      "type": "read",
+      "timeStamp": 8745.43999999878,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria46"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} AE87B53B-1819-42EF-BDF0-D61C2165AF75 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "4206CE11-4202-482D-891F-7D47F78B616E",
+      "type": "readCompleted",
+      "timeStamp": 24276.02628698945,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "39F21F24-3B28-4B78-8AC1-29C673AFD0F0",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"f35b19fd-1c81-4629-ae38-7f57fa11d0bf\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"lastName\",\"text\":\"Patient Last Name\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 4A458F27-AF33-4642-A793-BE9A67FCC80A {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "4C70B789-9818-4FF5-9D81-C1102B436FDA",
+      "type": "readCompleted",
+      "timeStamp": 24278.061248987913,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "24F61053-D0BF-427D-9598-08432AFABE84",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.813+00:00\",\"creationDate\":\"2020-12-20T23:57:35.813+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"Yes\",\"booleanValue\":true,\"name\":\"Yes\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.813+00:00\",\"creationDate\":\"2020-12-20T23:57:35.813+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"No\",\"booleanValue\":null,\"name\":null,\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria47": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "e21783b7-01d7-4692-b2cb-84c3a9ddab3a",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E0DAF0CE-0CEA-407B-91B9-DEDE9520234F",
+      "type": "read",
+      "timeStamp": 8765.230000004522,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria47"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria48": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "962b7b91-e0a9-453d-b094-2f4680dfe8da",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "DC758CAF-2259-4C0F-8171-0EDB7D170499",
+      "type": "read",
+      "timeStamp": 8802.855000001728,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria48"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria49": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "74318678-ECB2-4059-A898-02FBBFE0DBB3",
+      "type": "read",
+      "timeStamp": 8802.8900000063,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria49"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 70882A3B-AA7A-496F-9CF4-C38B61EA46C5 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "7597DA2B-6D8A-44B3-A101-B5EC26C2E9C8",
+      "type": "readCompleted",
+      "timeStamp": 24332.3689609915,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "5DE008C7-B728-4A65-87D5-1C7C3DAE84BA",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"92b02911-d48c-41c0-aad2-4506846fdd4e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.376+00:00\",\"creationDate\":\"2020-12-20T23:57:37.376+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"positiveCovid\",\"text\":\"Have you, your child, or others accompanying you to today’s appointment or other recent acquaintances tested positive for or been diagnosed as having COVID-19 or any other communicable disease?\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 3DB4647C-2EDE-4208-A629-A5B26BE93864 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A3EBFE75-6B19-4FF0-89C6-C7FBE63FAE8A",
+      "type": "readCompleted",
+      "timeStamp": 24343.83119098842,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "FB8018AF-308C-4931-8316-EE7BCF257F81",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"332bb7a9-8493-426f-aa1b-7345b1f24f6c\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.38+00:00\",\"creationDate\":\"2020-12-20T23:57:37.38+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"name\":\"breathingIssues\",\"text\":\"Shortness of Breath and/or Trouble Breathing?\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria50": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "4613a992-da74-4dec-b793-39e75b2b1e8c",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "DE0602FD-DCE5-4D01-AC0C-81BB0A24C3AE",
+      "type": "read",
+      "timeStamp": 8831.919999996899,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "criteria": {"@": "criteria50"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria51": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
+      "parameters": {
+        "parameter1": "43d22e77-d205-4970-bf08-568873a53d31",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A7BB5E8D-B9C6-4D76-B06E-D68698797711",
+      "type": "read",
+      "timeStamp": 8842.264999999315,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "criteria": {"@": "criteria51"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria52": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
+      "parameters": {
+        "parameter1": "43d22e77-d205-4970-bf08-568873a53d31",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "DE4A9DF0-23AB-45E7-B52B-4C724AD7952F",
+      "type": "read",
+      "timeStamp": 8842.320000010659,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "criteria": {"@": "criteria52"},
+      "data": {}
+    }
+  }
+}
+ node_modules/phront/data/main.datareel/service/operation-coordinator.js
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} FF1E5D0F-0AC8-47FA-A3B8-F21811BDB13E {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "00441A99-3932-487D-9C00-C14C5A39CDB2",
+      "type": "readCompleted",
+      "timeStamp": 24367.697825998068,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "73CEF895-597D-4F66-A962-B868A2E23F50",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"61d513ba-625a-4e4d-a379-87d0d16b68e3\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.38+00:00\",\"creationDate\":\"2020-12-20T23:57:37.38+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"name\":\"chestPain\",\"text\":\"Persistent Pain, Pressure, or Tightness in the Chest?\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 0A4E6B85-B931-4601-ABF5-BB637CE7A14E {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "2596F085-3C3F-4C11-9769-AC3D01F38CAE",
+      "type": "readCompleted",
+      "timeStamp": 24385.116225987673,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "42FB00D1-45E0-48CB-801C-5A00D22BDFD8",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"symptomGroup\",\"text\":\"Do you, your child, or others accompanying you to today’s appointment or other recent acquaintances have:\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} B5A31D21-BCD6-433D-AFB0-0C4B3FCF9109 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "12CC647D-699E-4073-A47C-523629C9D593",
+      "type": "readCompleted",
+      "timeStamp": 24386.83389300108,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "F63718A3-DC87-44AD-9B5C-8FF4542B7B0C",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"310b01b6-ec7f-4248-869f-151ad8324ef1\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"acceptsRescheduleIfSick\",\"text\":\"I understand that if the answer to any of these questions is yes, I will be asked to reschedule today’s orthodontic appointment.\\n\\n                        Patient/Parent’s Signature\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} EC7C1953-B2CC-405C-9E8A-60F6E253074D {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "4736BFA4-3FC0-49E5-BA6C-888ED8C269B5",
+      "type": "readCompleted",
+      "timeStamp": 24411.1369509995,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "E0DAF0CE-0CEA-407B-91B9-DEDE9520234F",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"e21783b7-01d7-4692-b2cb-84c3a9ddab3a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.378+00:00\",\"creationDate\":\"2020-12-20T23:57:37.378+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"lastPositiveCovidDate\",\"text\":\"If yes, when? Date\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 3C2B5127-77C4-4AE7-AA4B-ED461F11EDBD {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B401CC94-E37E-433C-BB01-04E06674911A",
+      "type": "readCompleted",
+      "timeStamp": 24443.093892991543,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "74318678-ECB2-4059-A898-02FBBFE0DBB3",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.813+00:00\",\"creationDate\":\"2020-12-20T23:57:35.813+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"No\",\"booleanValue\":null,\"name\":null,\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 0666609E-13AD-4CE2-B277-04C9DBE12702 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6D532545-6EE3-4A22-8BAA-C282122DEFA1",
+      "type": "readCompleted",
+      "timeStamp": 24446.10186599195,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "DC758CAF-2259-4C0F-8171-0EDB7D170499",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"962b7b91-e0a9-453d-b094-2f4680dfe8da\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"name\":\"fever\",\"text\":\"A Fever? (defined as above 99.6 degrees)\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} A57E7136-6DC8-4D26-B6AA-CE63E0D3CA7D {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F9B00B9E-9C75-4335-9752-116AC21A035C",
+      "type": "readCompleted",
+      "timeStamp": 24479.47059199214,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "DE0602FD-DCE5-4D01-AC0C-81BB0A24C3AE",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"4613a992-da74-4dec-b793-39e75b2b1e8c\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.376+00:00\",\"creationDate\":\"2020-12-20T23:57:37.376+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"responsibleParty\",\"text\":\"Responsible Party\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 2FD80A71-FD5F-4185-B774-79D7187B2E86 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "00C946D5-B6D8-41EE-9CEA-36340B719E5E",
+      "type": "readCompleted",
+      "timeStamp": 24482.807847991586,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "referrerId": "DE4A9DF0-23AB-45E7-B52B-4C724AD7952F",
+      "data": []
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 703553AD-78A2-4401-B49B-798420C43B87 {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3C017F7B-13D8-4EEE-A902-2342F8AEF1DB",
+      "type": "readCompleted",
+      "timeStamp": 24485.805789992213,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire-question",
+      "referrerId": "A7BB5E8D-B9C6-4D76-B06E-D68698797711",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"1578d7d6-fc64-47a5-8d10-2b44ff1f3ee7\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":10,\"questionId\":\"c0f10cdb-b3b4-4e0a-bc8c-300cf342495c\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"97a16628-b6fa-4e08-9493-ada0bd19e0fc\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":9,\"questionId\":\"310b01b6-ec7f-4248-869f-151ad8324ef1\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"fc02c545-a298-47cf-a7ab-6d69a338b74f\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.381+00:00\",\"creationDate\":\"2020-12-20T23:57:37.381+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":8,\"questionId\":\"61d513ba-625a-4e4d-a379-87d0d16b68e3\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"442d6e0b-5458-4384-a82d-e2529e7c4050\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.38+00:00\",\"creationDate\":\"2020-12-20T23:57:37.38+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":7,\"questionId\":\"332bb7a9-8493-426f-aa1b-7345b1f24f6c\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"7183facd-ea86-4211-a56e-bc2a5afc6712\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.38+00:00\",\"creationDate\":\"2020-12-20T23:57:37.38+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":6,\"questionId\":\"a7ea72b4-7cb6-4fab-af16-f8d09dae4bad\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"512eaf3c-cf93-4110-9683-2756cc9a3731\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":5,\"questionId\":\"962b7b91-e0a9-453d-b094-2f4680dfe8da\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"2c8b9a2d-408a-4e9b-b1a0-3820de121bf2\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":4,\"questionId\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"bf2a212e-0ef8-4b91-9251-617cf3dcf79e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.378+00:00\",\"creationDate\":\"2020-12-20T23:57:37.378+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":3,\"questionId\":\"e21783b7-01d7-4692-b2cb-84c3a9ddab3a\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"5374d1e1-d3f8-4664-b627-18d401f6c91a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.378+00:00\",\"creationDate\":\"2020-12-20T23:57:37.378+00:00\",\"originId\":null,\"possibleAnswerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\",\"d3d2acb1-d0c1-40bc-83a1-a0fbe07e5e48\"],\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":2,\"questionId\":\"92b02911-d48c-41c0-aad2-4506846fdd4e\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"78cbda5f-0446-471d-8ff3-ee2103f69879\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.376+00:00\",\"creationDate\":\"2020-12-20T23:57:37.376+00:00\",\"originId\":null,\"possibleAnswerIds\":null,\"maximumNumberOfAnswer\":null,\"displayLogicExpression\":null,\"questionnaireLabel\":null,\"questionnairePosition\":1,\"questionId\":\"4613a992-da74-4dec-b793-39e75b2b1e8c\",\"questionnaireId\":\"43d22e77-d205-4970-bf08-568873a53d31\"}"
+          }
+        ]
+      ]
+    }
+  }
+}
+null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 089D09AC-2934-49A2-BEE2-BCDB40C7F2DB {
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "69529719-C085-4DB9-98B3-D6CE27C13FC6",
+      "type": "readCompleted",
+      "timeStamp": 24512.820620000362,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "E6FDD2C9-B126-4CFE-BE89-405E68E5488A",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a7ea72b4-7cb6-4fab-af16-f8d09dae4bad\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:37.379+00:00\",\"creationDate\":\"2020-12-20T23:57:37.379+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":null,\"variableIds\":null,\"superQuestionId\":\"cfd4c10d-d2a2-438f-a8c4-2f8b83b003b0\",\"name\":\"cough\",\"text\":\"A Cough?\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

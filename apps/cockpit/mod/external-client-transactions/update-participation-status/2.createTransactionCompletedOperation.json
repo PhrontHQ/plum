@@ -1,0 +1,15 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "AUsMMTVFzjPOHB1A+/dwPvykVHzMG/1WHtNnDt69Trnmjr1cFZGvjaDMbs4NCmpwni9ciiLGmRcqpv8BbGgfU1SHdKItoh75s92uXS3qBQXhSgdEG/DhcN4LrkY3jHeP2cBSu48Q53sZqHXay5KGrWbIEwU23H9+eJrCZFJ2ezDsujAWRfpHdLfKruNZpXdWz+es1KDRUE1n",
+      "type": "createTransactionCompletedOperation",
+      "timeStamp": 121631.11548900604,
+      "targetModuleId": null,
+      "referrerId": "6714C027-EE2B-47A2-B1C4-15D49CB0F3B9",
+      "data": {
+        "PhrontService": "AUsMMTVFzjPOHB1A+/dwPvykVHzMG/1WHtNnDt69Trnmjr1cFZGvjaDMbs4NCmpwni9ciiLGmRcqpv8BbGgfU1SHdKItoh75s92uXS3qBQXhSgdEG/DhcN4LrkY3jHeP2cBSu48Q53sZqHXay5KGrWbIEwU23H9+eJrCZFJ2ezDsujAWRfpHdLfKruNZpXdWz+es1KDRUE1n"
+      }
+    }
+  }
+}

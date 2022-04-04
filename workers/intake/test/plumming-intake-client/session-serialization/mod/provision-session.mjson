@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "prototype": "montage/data/model/identity",
+    "values": {
+      "applicationIdentifier": "akn7ibja16950pq2ce2h9i3bp",
+      "applicationCredentials": "r695b505umtg7sj95kmsuekihtnmha356t234bftvifckr9nd0f"
+    }
+  },
+  "root": {
+    "prototype": "phront/data/main.datareel/model/app/web-socket-session",
+    "values": {
+      "identity": {"@": "identity"}
+    }
+  }
+}

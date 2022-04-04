@@ -1,0 +1,7 @@
+.CallButton-button {
+    width: 46px;
+    height: 46px;
+    background: url("./call-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

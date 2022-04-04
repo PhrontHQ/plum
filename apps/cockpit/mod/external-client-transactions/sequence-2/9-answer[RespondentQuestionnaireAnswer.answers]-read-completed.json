@@ -1,0 +1,29 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3C6696A2-3D73-466E-A97A-36DEBB95DEE3",
+      "type": "readCompleted",
+      "timeStamp": 24093.862397000194,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "referrerId": "C3F7029A-4381-41E0-8E2F-DF9BDD767D73",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a769fca5-9c73-4fb5-9638-aeb93cad7bf8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.206+00:00\",\"creationDate\":\"2020-12-21T00:31:43.206+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":null,\"booleanValue\":null,\"name\":\"accepts\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"89e1873e-ffdb-4cd0-8dc0-88b7bf71aa67\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.207+00:00\",\"creationDate\":\"2020-12-21T00:31:43.207+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"937853,280,90,white,black\",\"booleanValue\":null,\"name\":\"acceptsSignatureSfs\",\"typeModuleId\":null}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"1a3b3edd-4a8f-4479-90d3-e42a6a542088\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.208+00:00\",\"creationDate\":\"2020-12-21T00:31:43.208+00:00\",\"originId\":null,\"objectValue\":null,\"timeRangeValue\":null,\"timeValue\":null,\"decimalRangeValue\":null,\"decimalValue\":null,\"bigIntegerRangeValue\":null,\"bigIntegerValue\":null,\"integerRangeValue\":null,\"integerValue\":null,\"textValue\":\"x937853:1017624:1042612:1039749:997165:995197:985639:1012747:1009627:1005736:963437:960869:955121:958030:953393:979661:979660:981367:981363:981363:953203:955173:965937:1006578:1014189:1032471:1017660:805200:812817:798285:842056:821526:828622:870693:869322:880374:877593:884410:883232:882487:882198:881445:880699\",\"booleanValue\":null,\"name\":\"acceptsSignature\",\"typeModuleId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}

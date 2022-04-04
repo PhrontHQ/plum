@@ -1,0 +1,14 @@
+{
+    "root": {
+        "values": {
+            "id": "384709A1-8606-4F99-B9B0-DC10CC92712B",
+            "type": "createTransactionOperation",
+            "data": {
+                "objectDescriptors": [
+                    "data/main.datareel/model/event"
+                ]
+            }
+        },
+        "prototype": "montage/data/service/data-operation"
+    }
+}

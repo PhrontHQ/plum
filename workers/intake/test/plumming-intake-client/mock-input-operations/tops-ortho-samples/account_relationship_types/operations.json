@@ -1,0 +1,15 @@
+[
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/create-transaction-operation.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-1.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-2.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-3.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-4.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-5.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-6.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-7.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-8.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-9.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-10.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/merge-operation-11.mjson",
+    "mock-input-operations/tops-ortho-samples/account_relationship_types/perform-transaction-operation.mjson"
+]

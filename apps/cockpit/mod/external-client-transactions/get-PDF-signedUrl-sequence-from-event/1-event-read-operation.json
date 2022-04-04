@@ -1,0 +1,37 @@
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && originId == $originId && parent != null",
+      "parameters": {
+        "originId": "499bd1cd-7b41-4ccb-84e8-b18c73ae2536",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "9980D7CF-F1C8-43E6-B393-B55AA0CA0966",
+      "type": "read",
+      "timeStamp": 10164.245000109076,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria"},
+      "data": {
+        "readExpressions": [
+          "participationStatus",
+          "respondentQuestionnaires",
+          "originId"
+        ]
+      }
+    }
+  }
+}

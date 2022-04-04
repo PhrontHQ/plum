@@ -1,0 +1,257 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "nextPoliciesKeyCriteria": {"@": "dataOperationTargetCriteria"},
+            "nextPoliciesMap": {"@": "targetNextPoliciesMap"}
+        }
+    },
+
+    "dataOperationTargetCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "target"
+        }
+    },
+
+    "targetNextPoliciesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "ApplicationMapEntry"},
+                {"@": "UserPoolMapEntry"},
+                {"@": "UserPoolClientMapEntry"},
+                {"@": "OrganizationMapEntry"},
+                {"@": "RoleMapEntry"},
+                {"@": "CustomerEngagementQuestionnaireEntry"},
+                {"@": "VariableMapEntry"},
+                {"@": "AnswerMapEntry"},
+                {"@": "QuestionnaireMapEntry"},
+                {"@": "QuestionMapEntry"},
+                {"@": "QuestionnaireQuestionMapEntry"},
+                {"@": "CountryMapEntry"},
+                {"@": "GenderMapEntry"}
+           ]
+        }
+    },
+
+
+    "ApplicationDescriptor": {
+        "object": "phront/data/main.datareel/model/app/application.mjson"
+    },
+    "ApplicationAccessPolicy": {
+        "object": "./application-access-policy.mjson"
+    },
+    "ApplicationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ApplicationDescriptor"},
+            "value": [
+                {"@": "ApplicationAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "UserPoolDescriptor": {
+        "object": "phront/data/main.datareel/model/app/user-pool.mjson"
+    },
+    "UserPoolAccessPolicy": {
+        "object": "./user-pool-access-policy.mjson"
+    },
+    "UserPoolMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "UserPoolDescriptor"},
+            "value": [
+                {"@": "UserPoolAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "AppClientDescriptor": {
+        "object": "phront/data/main.datareel/model/app/app-client.mjson"
+    },
+    "UserPoolClientAccessPolicy": {
+        "object": "./user-pool-client-access-policy.mjson"
+    },
+    "UserPoolClientMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "AppClientDescriptor"},
+            "value": [
+                {"@": "UserPoolClientAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.datareel/model/organization.mjson"
+    },
+    "OrganizationAccessPolicy": {
+        "object": "./organization-access-policy.mjson"
+    },
+    "OrganizationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "OrganizationDescriptor"},
+            "value": [
+                {"@": "OrganizationAccessPolicy"}
+            ]
+        }
+    },
+
+    "RoleDescriptor": {
+        "object": "phront/data/main.datareel/model/role.mjson"
+    },
+    "RoleAccessPolicy": {
+        "object": "./role-access-policy.mjson"
+    },
+    "RoleMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RoleDescriptor"},
+            "value": [
+                {"@": "RoleAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "CustomerEngagementQuestionnaireDescriptor": {
+        "object": "phront/data/main.datareel/model/customer-engagement-questionnaire.mjson"
+    },
+    "CustomerEngagementQuestionnairePolicy": {
+        "object": "./customer-engagement-questionnaire-access-policy.mjson"
+    },
+    "CustomerEngagementQuestionnaireEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "CustomerEngagementQuestionnaireDescriptor"},
+            "value": [
+                {"@": "CustomerEngagementQuestionnairePolicy"}
+            ]
+        }
+    },
+
+
+    "VariableDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/variable.mjson"
+    },
+    "VariableAccessPolicy": {
+        "object": "./variable-access-policy.mjson"
+    },
+    "VariableMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "VariableDescriptor"},
+            "value": [
+                {"@": "VariableAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "AnswerDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/answer.mjson"
+    },
+    "AnswerAccessPolicy": {
+        "object": "./answer-access-policy.mjson"
+    },
+    "AnswerMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "AnswerDescriptor"},
+            "value": [
+                {"@": "AnswerAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "QuestionnaireDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/questionnaire.mjson"
+    },
+    "QuestionnaireAccessPolicy": {
+        "object": "./questionnaire-access-policy.mjson"
+    },
+    "QuestionnaireMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "QuestionnaireDescriptor"},
+            "value": [
+                {"@": "QuestionnaireAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "QuestionDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/question.mjson"
+    },
+    "QuestionAccessPolicy": {
+        "object": "./question-access-policy.mjson"
+    },
+    "QuestionMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "QuestionDescriptor"},
+            "value": [
+                {"@": "QuestionAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "QuestionnaireQuestionDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/questionnaire-question.mjson"
+    },
+    "QuestionnaireQuestionAccessPolicy": {
+        "object": "./questionnaire-question-access-policy.mjson"
+    },
+    "QuestionnaireQuestionMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "QuestionnaireQuestionDescriptor"},
+            "value": [
+                {"@": "QuestionnaireQuestionAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "CountryDescriptor": {
+        "object": "phront/data/main.datareel/model/country.mjson"
+    },
+    "CountryAccessPolicy": {
+        "object": "./country-access-policy.mjson"
+    },
+    "CountryMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "CountryDescriptor"},
+            "value": [
+                {"@": "CountryAccessPolicy"}
+            ]
+        }
+    },
+
+    "GenderDescriptor": {
+        "object": "phront/data/main.datareel/model/gender.mjson"
+    },
+    "GenderAccessPolicy": {
+        "object": "./gender-access-policy.mjson"
+    },
+    "GenderMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "GenderDescriptor"},
+            "value": [
+                {"@": "GenderAccessPolicy"}
+            ]
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+{
+    "name": "phront-desk",
+    "version": "0.1.0",
+    "description": "application",
+    "dependencies": {
+        "launcher": "github:PhrontHQ/launcher#main",
+        "montage": "github:marchant/montage#montage-19",
+        "montage-geo": "github:marchant/montage-geo.git#montage-19",
+        "phront": "github:PhrontHQ/phront#master"
+    },
+    "devDependencies": {
+        "http-server": "^14.0.0",
+        "jshint": "^2.9.5",
+        "minit": "^0.5.7",
+        "mop": "github:marchant/mop.git#montage-19",
+        "serverless": "~3.9.0",
+        "serverless-prune-plugin": "^2.0.1",
+        "serverless-s3-sync": "^1.17.1",
+        "serverless-scriptable-plugin": "^1.2.2"
+    },
+    "scripts": {
+        "lint": "jshint .",
+        "build": "node node_modules/mop/optimize .",
+        "serve": "node_modules/http-server/bin/http-server -p 9797 -S -C node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt -K node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+        "start": "minit serve",
+        "start:dist": "minit serve -r dist",
+        "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages"
+    },
+    "exclude": [
+        "run-tests.html",
+        "dev",
+        "test",
+        "server"
+    ],
+    "bundle": [
+        "ui/plum-loader.reel",
+        "ui/main.reel",
+        "data/main.datareel/main.mjson"
+    ],
+    "shard": 2
+}

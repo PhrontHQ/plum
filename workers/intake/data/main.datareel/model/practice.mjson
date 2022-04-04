@@ -1,0 +1,26 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/object-descriptor",
+        "values": {
+            "name": "practice",
+            "propertyDescriptors": [
+                {"@": "practice_id"},
+                {"@": "practice_name"}
+            ]
+        }
+    },
+    "practice_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_id",
+            "valueType": "string"
+        }
+    },
+    "practice_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_name",
+            "valueType": "string"
+        }
+    }
+}

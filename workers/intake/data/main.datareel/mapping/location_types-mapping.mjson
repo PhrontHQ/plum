@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "location_typesDescriptor"},
+            "rawDataPrimaryKeys":["type_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "location_typesDescriptor": {
+        "object": "data/main.datareel/model/location_types.mjson"
+    }
+
+}

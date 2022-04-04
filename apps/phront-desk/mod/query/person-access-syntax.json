@@ -1,0 +1,88 @@
+
+/*
+
+    "matchServiceEngagementIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "events.filter{originId == $.serviceEngagementOriginId}",
+            "parameters": {
+                "<-": "{serviceEngagementOriginId: @root.dataOperation.identity.scope.0.criteria.parameters.originId}"
+            }
+        }
+    },
+
+    "matchServiceEngagementIdentityCriteriaRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(@matchServiceEngagementIdentityCriteria)"
+                }
+            }
+        }
+    },
+
+
+*/
+
+
+{
+    "type": "and",
+    "args": [{
+        "type": "equals",
+        "args": [{
+            "type": "property",
+            "args": [{
+                "type": "value"
+            }, {
+                "type": "literal",
+                "value": "id"
+            }]
+        }, {
+            "type": "property",
+            "args": [{
+                "type": "parameters"
+            }, {
+                "type": "literal",
+                "value": "parameter1"
+            }]
+        }]
+    }, {
+        "type": "filterBlock",
+        "args": [{
+            "type": "property",
+            "args": [{
+                "type": "value"
+            }, {
+                "type": "literal",
+                "value": "events"
+            }]
+        }, {
+            "type": "equals",
+            "args": [{
+                "type": "property",
+                "args": [{
+                    "type": "value"
+                }, {
+                    "type": "literal",
+                    "value": "originId"
+                }]
+            }, {
+                "type": "property",
+                "args": [{
+                    "type": "parameters"
+                }, {
+                    "type": "literal",
+                    "value": "serviceEngagementOriginId"
+                }]
+            }]
+        }]
+    }]
+}
+
+----
+
+{
+    "serviceEngagementOriginId": "5211a03d-37f4-42cd-bd6a-c9d7a947c45b", 
+    "parameter1": "adb13cea-3c8c-4b18-a22f-2c55c2456bba"
+}

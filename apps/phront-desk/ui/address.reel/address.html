@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "streetAddress": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "streetAddress"},
+                "value": {
+                    "<-": "@owner.data.streetAddress"
+                }
+            }
+        },
+
+        "locality": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "locality"},
+                "value": {
+                    "<-": "@owner.data.locality"
+                }
+            }
+        },
+
+        "administrativeArea": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "administrativeArea"},
+                "value": {
+                    "<-": "@owner.data.administrativeArea"
+                }
+            }
+        },
+
+        "primaryPostalCode": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "primaryPostalCode"},
+                "value": {
+                    "<-": "@owner.data.primaryPostalCode"
+                }
+            }
+        }
+
+
+    }
+    </script>
+</head>
+<body>
+    <address data-montage-id="owner" class="Address">
+        <div data-montage-id="streetAddress">5555 Peachtree Dunwoody Rd NE</div>
+        <div>
+            <span data-montage-id="locality">Atlanta</span>
+            <span data-montage-id="administrativeArea">GA</span>
+            <span data-montage-id="primaryPostalCode">30342</span>
+        </div>
+    </address>
+</body>
+</html>

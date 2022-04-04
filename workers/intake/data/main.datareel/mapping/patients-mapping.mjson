@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "patientsDescriptor"},
+            "rawDataPrimaryKeys":["person_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "patientsDescriptor": {
+        "object": "data/main.datareel/model/patients.mjson"
+    }
+
+}

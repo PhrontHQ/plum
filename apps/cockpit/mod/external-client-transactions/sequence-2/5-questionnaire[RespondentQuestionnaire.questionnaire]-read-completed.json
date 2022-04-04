@@ -1,0 +1,19 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "19FF7509-148E-49C9-8B30-2D5DA710E41F",
+      "type": "readCompleted",
+      "timeStamp": 23657.91117300093,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "referrerId": "28FDACE6-397F-46EA-8B0D-40C190063523",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"f7eb9340-3075-4f21-84ca-575278cc9c76\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.813+00:00\",\"creationDate\":\"2020-12-20T23:57:35.813+00:00\",\"originId\":null,\"referrerQuestionnaireId\":null,\"userContextVariableIds\":[\"9e5bb4d6-8d2e-47ac-a09c-4862252fc13c\",\"f9ddc4a2-5a3a-44db-a60b-ce02af2a0066\",\"b52ee5b6-260f-457c-99a4-2db109ee0bf6\",\"aaff241a-8651-46aa-98c8-46f93db5b0c0\",\"055b96b3-3d79-47ee-9377-f2b746c1ac79\",\"2349fd5f-dd4b-44fc-b20d-dcce75b15eb4\"],\"description\":\"Thank you for your continued trust in our practice. As with the transmission of any communicable disease like a cold or the flu, you may be exposed to COVID-19, also known as “Coronavirus,” at any time or in any place. Be assured that we have always followed state and federal regulations and recommended universal personal protection and disinfection protocols to limit transmission of all diseases in our office and continue to do so.\\n                        Despite our careful attention to sterilization, disinfection, and use of personal barriers, there is still a chance that you could be exposed to an illness in our office, just as you might be at your gym, grocery store, or favorite restaurant. “Social Distancing” nationwide has reduced the transmission of the Coronavirus. Although we have taken measures to provide social distancing in our practice, due to the nature of the procedures we provide, it is not possible to maintain social distancing between the patient, orthodontist, orthodontic staff and sometimes other patients at all times.\",\"headerVisualId\":null,\"title\":\"AAOIC SUPPLEMENTAL INFORMED CONSENT Orthodontic Treatment in the Era of COVID-19\",\"name\":\"AAOIC Consent Questionnaire\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

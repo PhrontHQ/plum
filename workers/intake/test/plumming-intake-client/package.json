@@ -1,0 +1,33 @@
+{
+  "_comment": [
+    "# If you use npm to generate or modify this file, make sure",
+    "# to restore the file's 4 space indents after the generation",
+    "# or modification so it matches other source files in the",
+    "# project. npm only generates files with 2 space indents",
+    "# (see https://github.com/npm/npm/pull/3180#issuecomment-16336516)."
+  ],
+  "name": "plumming-intake-client",
+  "main": "index.js",
+  "version": "1.0.0-alpha.1",
+  "license": "BSD-3-Clause",
+  "author": "Phront. (https://phront.com/)",
+  "repository": {
+    "type": "git",
+    "url": "PhrontHQ/phront/tree/master/test"
+  },
+  
+ "scripts": {},
+  "mappings": {
+    "plumming-intake": "../..",
+    "montage": "../../node_modules/montage",
+    "montage-geo": "../../../node_modules/montage-geo",
+    "montage-testing": "../../../node_modules/montage-testing",
+    "object-sizeof": "../../../node_modules/object-sizeof",
+    "phront": "../../node_modules/phront",
+    "tiny-worker": "../../../node_modules/tiny-worker",
+    "esm": "../../../node_modules/esm",
+    "commander": "../../node_modules/commander",
+    "ws": "../../node_modules/ws"
+},
+  "private": true
+}

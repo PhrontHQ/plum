@@ -1,0 +1,59 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },    
+
+
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "readOperationRulesForApplicationIdentityMapEntry"}
+            ]
+        }
+    },
+
+    "readOperationRulesForApplicationIdentityMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "value": [
+                {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+    "matchOrganizationIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "organizationParty.id == $organizationId || personParty.customerEngagementQuestionnaires.filter{organizations.filter{id == $.organizationId}}",
+            "parameters": {
+                "<-": "{organizationId: @root.dataOperation.identity.scope.0.criteria.parameters.id}"
+            }
+
+        }
+    },
+    "matchOrganizationIdentityCriteriaRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(@matchOrganizationIdentityCriteria)"
+                }
+            }
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "true"
+                }
+            }
+        }
+    }
+
+}

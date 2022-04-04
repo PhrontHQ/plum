@@ -1,0 +1,19 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "FF350713-6E3B-43BD-9A4F-37C972492427",
+      "type": "readCompleted",
+      "timeStamp": 15756421.52232027,
+      "targetModuleId": "data/main.datareel/model/asset",
+      "referrerId": "F4EDA64A-5981-4E7F-81BE-A1171CC9DEE4",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"a15ac57b-3147-4e9d-a63b-bdba74e8e952\",\"publicationDate\":null,\"modificationDate\":\"2021-01-20T19:29:16.45+00:00\",\"creationDate\":\"2021-01-20T19:29:16.45+00:00\",\"originId\":null,\"originLocation\":null,\"s3Location\":\"https://plumming-staging.s3.us-west-2.amazonaws.com/RespondentQuestionnaire/pdfExport/tops-aaoic-form-499bd1cd-7b41-4ccb-84e8-b18c73ae2536.pdf\",\"description\":null,\"s3ObjectKey\":\"RespondentQuestionnaire/pdfExport/tops-aaoic-form-499bd1cd-7b41-4ccb-84e8-b18c73ae2536.pdf\",\"s3BucketName\":\"plumming-staging\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

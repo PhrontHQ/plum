@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" type="text/css" href="chat-message.css"> -->
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "text"},
+                "value": {"<-": "@owner.data.text"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ChatTextMessage">
+        <span data-montage-id="text"></span>
+    </div>
+</body>
+</html>
+ 

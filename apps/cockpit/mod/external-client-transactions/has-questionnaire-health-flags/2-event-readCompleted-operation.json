@@ -1,0 +1,19 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "35B19F19-7D61-49B1-B5C6-78FCCCD27285",
+      "type": "readCompleted",
+      "timeStamp": 29355.951246008277,
+      "targetModuleId": "data/main.datareel/model/event",
+      "referrerId": "09B2C062-62E1-4379-8C9B-B7F0EEA7021B",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"cc54e931-816c-4b90-9de5-3e9d4f357338\",\"publicationDate\":null,\"modificationDate\":\"2021-01-27T06:36:33.623+00:00\",\"creationDate\":\"2021-01-27T06:36:33.623+00:00\",\"originId\":\"8ec76eee-efb8-4af9-95b1-25cba43c185e\",\"respondentQuestionnaireIds\":[\"021e112c-952d-4f1c-87a9-1265787b9893\",\"9d8455f1-6de9-4449-956a-b98c35847481\"],\"attachments\":null,\"locked\":null,\"privateCopy\":null,\"guestsCanSeeOtherGuests\":null,\"guestsCanModify\":null,\"guestsCanInviteOthers\":null,\"anyoneCanAddSelf\":null,\"conferenceData\":null,\"sequence\":null,\"iCalUID\":null,\"visibility\":null,\"recurringEventId\":null,\"recurrenceRule\":null,\"isAllDay\":null,\"colorId\":null,\"locationId\":null,\"description\":null,\"summary\":null,\"eventURL\":null,\"reminderIds\":null,\"participationStatusLogKeys\":null,\"participationStatusLogValues\":null,\"participationStatus\":\"Accepted\",\"participationRoleIds\":[\"b0ef5866-2bb2-4ecd-9586-585fe7b7107f\",\"9a030193-7448-449d-b53c-649a0953bdc5\"],\"participation\":0,\"isBlocking\":null,\"parentId\":\"c5380f95-e7d0-4a86-b69c-19a46acdd6fb\",\"actualTimeRange\":null,\"scheduledTimeRange\":\"[\\\"2016-05-07 23:00:00+00\\\",\\\"2016-05-07 23:30:00+00\\\"]\",\"calendarId\":null,\"participatingPersonId\":\"ea97e476-28a3-4ebc-be2d-53e720976939\",\"participatingResourceId\":null}"
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+      "prototype": "montage/core/criteria",
+      "values": {
+        "expression": "originId == $.originId",
+        "parameters": {
+          "originId": "187cfa9a-c303-4737-a770-17d46e7524a4"
+        }
+      }
+    },
+    "ServiceEngagement": {
+      "object": "phront/data/main.datareel/model/service-engagement.mjson"
+    },
+    "dataquery": {
+      "prototype": "montage/data/model/data-query",
+      "values": {
+        "criteria": {"@": "criteria"},
+        "type": {"@": "ServiceEngagement"}
+      }
+    },
+    "identity": {
+      "prototype": "montage/data/model/identity",
+      "values": {
+        "scope": [
+          {"@": "dataquery"}
+        ]
+      }
+    },
+    "root": {
+      "prototype": "phront/data/main.datareel/model/app/web-socket-session",
+      "values": {
+        "identity": {"@": "identity"}
+      }
+    }
+  }

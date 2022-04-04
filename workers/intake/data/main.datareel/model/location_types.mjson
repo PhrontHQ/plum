@@ -1,0 +1,178 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/object-descriptor",
+        "values": {
+            "name": "location_types",
+            "propertyDescriptors": [
+                {"@": "type_id"},
+                {"@": "practice_id"},
+                {"@": "type_label"},
+                {"@": "permanent_label"},
+                {"@": "short_label"},
+                {"@": "is_visible"},
+                {"@": "street_address"},
+                {"@": "city"},
+                {"@": "state_province"},
+                {"@": "post_code"},
+                {"@": "country_object_id"},
+                {"@": "phone_country_code"},
+                {"@": "phone"},
+                {"@": "email"},
+                {"@": "website"},
+                {"@": "use_own_mailing_address"},
+                {"@": "timezone_name"},
+                {"@": "created_date"},
+                {"@": "last_modified_date"}
+            ]
+        }
+    },
+    "type_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "type_id",
+            "valueType": "string"
+        }
+    },
+    "practice_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_id",
+            "valueType": "string"
+        }
+    },
+    "type_label": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "type_label",
+            "valueType": "string"
+        }
+    },
+    "permanent_label": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "permanent_label",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "short_label": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "short_label",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "is_visible": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_visible",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "street_address": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "street_address",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "city": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "city",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "state_province": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "state_province",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "post_code": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "post_code",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "country_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "country_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_country_code": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_country_code",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "email": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "email",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "website": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "website",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "use_own_mailing_address": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "use_own_mailing_address",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "timezone_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "timezone_name",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "created_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "created_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "last_modified_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "last_modified_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    }
+}

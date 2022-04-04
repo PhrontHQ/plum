@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="call-button.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+        "button": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "button"},
+                "label": ""
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="CallButton">
+        <div data-montage-id="button" class="CallButton-button"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "root": {
+      "prototype": "montage/data/service/data-operation",
+      "values": {
+        "id": "F858EFD8-8916-43EC-A287-45216F6B5C5E",
+        "type": "commitTransactionProgressOperation",
+        "timeStamp": 177343.563234,
+        "clientId": "BVovteFrvHcCEfw=",
+        "targetModuleId": null,
+        "referrerId": "2AAD80AF-F5F4-4784-A669-CA2783E285BE",
+        "data": 0.04
+      }
+    }
+  }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="read-event-status.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "appointmentOriginIdField": {
+            "prototype": "phront/ui/controls/field-text-input.reel",
+            "values": {
+                "element": {"#": "appointmentOriginIdField"},
+                "label": "Appointment OriginId:",
+                "value": {"<->": "@owner.appointmentOriginId"}
+            }
+        },
+        "formSignedDateField": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "formSignedDateField"},
+                "label": "Consentment Form Completion Date:",
+                "value": {
+                    "<-": "@owner.data.0.respondentQuestionnaires.1.completionDate",
+                    "converter": {"@": "completionDateConverter"}
+                }
+            }
+        },
+        "completionDateConverter": {
+            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "values": {
+                "options": {
+                    "month": "long",
+                    "weekday": "long",
+                    "day": "numeric"
+                }
+            }
+        },
+        "ArrivedField": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "ArrivedField"},
+                "label": "Patient Arrived:",
+                "value": {
+                    "<-": "@owner.data.0.participationStatusLog.defined() && @owner.data.0.participationStatusLog.has(@owner.data.0.constructor.participationStatusEmum.Arrived) ? 'Yes' : 'No'"
+                }
+            }
+        },
+        "CheckedInField": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "CheckedInField"},
+                "label": "Patient checked-in:",
+                "value": {
+                    "<-": "@owner.data.0.participationStatusLog.defined() && @owner.data.0.participationStatusLog.has(@owner.data.0.constructor.participationStatusEmum.CheckedIn) ? 'Yes' : 'No'"
+                }
+            }
+        },
+        "HasPatientConsented": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "HasPatientConsentedField"},
+                "label": "Has Patient consented:",
+                "value": {
+                    "<-": "@owner.hasPatientConsented.defined() ? @owner.hasPatientConsented ? 'Yes' : 'No' : '?'"
+                }
+            }
+        },
+        "HasPatientHealthFlag": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "HasPatientHealthFlagField"},
+                "label": "Has Patient Health Flag:",
+                "value": {
+                    "<-": "@owner.hasPatientHealthFlag.defined() ? @owner.hasPatientHealthFlag ? 'Yes' : 'No' : '?'"
+                }
+            }
+        },
+
+        "PDFURLField": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "PDFURLField"},
+                "label": "PDF URL:",
+                "value": {
+                    "<-": "@owner.data.one().respondentQuestionnaires.filter{pdfExport.defined()}.one().pdfExport.s3Location"
+                }
+            }
+        },
+        "PDFSignedURLField": {
+            "prototype": "phront/ui/controls/field-text.reel",
+            "values": {
+                "element": {"#": "PDFSignedURLField"},
+                "label": "PDF Signed URL:",
+                "value": {
+                    "<-": "@owner.expiringAssetDownload.signedUrl"
+                }
+            }
+        },
+        "patientInvitedInField": {
+            "prototype": "phront/ui/controls/field-checkbox.reel",
+            "values": {
+                "element": {"#": "patientInvitedInField"},
+                "label": "Patient Invited In:",
+                "checked": {
+                    "<-": "@owner.data.0 == undefined ? false : @owner.data.0.participationStatus == @owner.data.0.constructor.participationStatusEmum.InvitedIn || @owner.data.0.participationStatusLog.has(@owner.data.0.constructor.participationStatusEmum.InvitedIn)"
+                }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": { "@": "owner" }
+                }
+            ]
+        },
+        "InvitePatientField": {
+            "prototype": "phront/ui/controls/field.reel",
+            "values": {
+                "element": {"#": "InvitePatientField"},
+                "label": "Invite Patient:"
+            }
+        },
+        "InvitePatientButton": {
+            "prototype": "phront/ui/controls/button.reel",
+            "values": {
+                "element": {"#": "InvitePatientButton"},
+                "value": "Invite Patient In"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": { "@": "owner" }
+                }
+            ]
+        },
+        "resetField": {
+            "prototype": "phront/ui/controls/field.reel",
+            "values": {
+                "element": {"#": "resetField"},
+                "label": "Reset Staging Appointments:"
+            }
+        },
+        "resetAppointmentsButton": {
+            "prototype": "phront/ui/controls/button.reel",
+            "values": {
+                "element": {"#": "resetAppointmentsButton"},
+                "value": "Reset"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": { "@": "owner" }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Main">
+            <div data-montage-id="appointmentOriginIdField"></div>
+            <div data-montage-id="formSignedDateField"></div>
+            <div data-montage-id="ArrivedField"></div>
+            <div data-montage-id="CheckedInField"></div>
+            <div data-montage-id="HasPatientConsentedField"></div>
+            <div data-montage-id="HasPatientHealthFlagField"></div>
+            <div data-montage-id="PDFURLField"></div>
+            <div data-montage-id="PDFSignedURLField"></div>
+            <div data-montage-id="patientInvitedInField"></div>
+            <div data-montage-id="InvitePatientField">
+                <div data-montage-id="InvitePatientButton"></div>
+            </div>
+            <div data-montage-id="resetField">
+                <div data-montage-id="resetAppointmentsButton"></div>
+            </div>
+    </div>
+</body>
+</html>

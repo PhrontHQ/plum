@@ -1,0 +1,1 @@
+select * from phront."Event" where "parentId" is not null and "respondentQuestionnaireIds" is null order by "scheduledTimeRange"

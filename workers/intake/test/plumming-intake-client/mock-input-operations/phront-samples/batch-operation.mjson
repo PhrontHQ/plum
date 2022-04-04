@@ -1,0 +1,308 @@
+{
+  "dataoperation31": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3DC7E527-5F7C-41BD-91AC-C4778B76DE6A",
+      "type": 1,
+      "timeStamp": 71143.94226998091,
+      "target": "data/main.datareel/model/contact-information",
+      "data": {
+        "id": "47C49087-413D-4776-BD36-CD5390D51371",
+        "modificationDate": "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z"
+      }
+    }
+  },
+  "fr": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "fr"
+    }
+  },
+  "criteria8877": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales",
+      "parameters": {
+        "DataServiceUserLocales": {"@": "array"}
+      }
+    }
+  },
+  "dataoperation32": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E1243CB9-E932-492B-A4A8-0B7004FF1FC1",
+      "type": 1,
+      "timeStamp": 71143.48667398095,
+      "target": "data/main.datareel/model/position",
+      "criteria": {"@": "criteria8877"},
+      "data": {
+        "id": "58655E8E-B55F-4EA0-80A0-41C5BBD32113",
+        "modificationDate": "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z",
+        "name": "Médecin du travail",
+        "roleId": "0f08038f-d28b-46e6-b6c7-e7d567ed2b0f"
+      }
+    }
+  },
+  "dataoperation33": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "07E5A632-F566-4370-9DAD-FED5E19F5E84",
+      "type": 1,
+      "timeStamp": 71143.58761698008,
+      "target": "data/main.datareel/model/employment-position",
+      "data": {
+        "id": "CD8B2230-1C95-42D2-8EA4-E95A6EE80740",
+        "modificationDate": "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z",
+        "allowedEmploymentTypeIds": [
+          "2c645ae6-a52b-4e2a-8e4b-2c092ce53ab7"
+        ],
+        "employerId": "c8b9ce17-fdd6-4328-85c6-e9397232068c",
+        "positionId": "58655E8E-B55F-4EA0-80A0-41C5BBD32113"
+      }
+    }
+  },
+  "dataoperation34": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6C38B538-2E5D-4D9A-9BA2-D27ECD1FD833",
+      "type": 1,
+      "timeStamp": 71143.70776697993,
+      "target": "data/main.datareel/model/employment-position-staffing",
+      "data": {
+        "id": "16E1B719-B8C9-4DB0-AD2D-AFA24624338C",
+        "modificationDate": "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z",
+        "employmentTypeId": "2c645ae6-a52b-4e2a-8e4b-2c092ce53ab7",
+        "employmentPositionId": "CD8B2230-1C95-42D2-8EA4-E95A6EE80740",
+        "employeeId": "7D8A5E65-D3C6-4B02-A700-4CF503B95D5F"
+      }
+    }
+  },
+  "array": {
+    "value": [
+      {"@": "fr"}
+    ]
+  },
+  "criteria8878": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales",
+      "parameters": {
+        "DataServiceUserLocales": {"@": "array"}
+      }
+    }
+  },
+  "dataoperation35": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "45427ABF-A32E-4910-BD16-9705490E65A5",
+      "type": 1,
+      "timeStamp": 71143.99805000424,
+      "target": "data/main.datareel/model/position",
+      "criteria": {"@": "criteria8878"},
+      "data": {
+        "id": "5F897485-546D-4FED-A32B-F9E2DE11AD5B",
+        "modificationDate": "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z",
+        "name": "Secrétaire médicale",
+        "roleId": "ec3d54da-2913-40a0-9934-06752c433c60"
+      }
+    }
+  },
+  "dataoperation36": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6D9DC11E-3FEF-4392-A0A3-D8429B8FBFAB",
+      "type": 1,
+      "timeStamp": 71144.10947799683,
+      "target": "data/main.datareel/model/employment-position",
+      "data": {
+        "id": "32B0EFA0-FC26-45A8-BB31-9ED0F38388AC",
+        "modificationDate": "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z",
+        "allowedEmploymentTypeIds": [
+          "2c645ae6-a52b-4e2a-8e4b-2c092ce53ab7"
+        ],
+        "employerId": "c8b9ce17-fdd6-4328-85c6-e9397232068c",
+        "positionId": "5F897485-546D-4FED-A32B-F9E2DE11AD5B"
+      }
+    }
+  },
+  "dataoperation37": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6A9D15D4-4DC0-4BAD-9A41-F428B42610A3",
+      "type": 1,
+      "timeStamp": 71144.22417798638,
+      "target": "data/main.datareel/model/employment-position-staffing",
+      "data": {
+        "id": "D1FB1B94-39E8-4B8A-886B-611CADF1186E",
+        "modificationDate": "2020-09-24T08:20:35.789Z",
+        "creationDate": "2020-09-24T08:20:35.789Z",
+        "employmentTypeId": "2c645ae6-a52b-4e2a-8e4b-2c092ce53ab7",
+        "employmentPositionId": "32B0EFA0-FC26-45A8-BB31-9ED0F38388AC",
+        "employeeId": "84138F64-6E5C-4C9D-A501-8161F743D6…: "2020-09-24T08:20:35.788Z",
+        "creationDate": "2020-09-24T08:20:35.788Z",
+        "contactInformationId": "47C49087-413D-4776-BD36-CD5390D51371",
+        "name": {
+          "givenName": "Mere",
+          "familyName": "Tata"
+        }
+      }
+    }
+  },
+  "dataoperation41": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "7C336DC4-A51F-4B03-B356-0307B0676A6D",
+      "type": 1,
+      "timeStamp": 71144.45405098796,
+      "target": "data/main.datareel/model/calendar",
+      "data": {
+        "id": "7688D74B-222B-42D5-B310-2B35F9292F93",
+        "modificationDate": "2020-09-24T08:20:35.789Z",
+        "creationDate": "2020-09-24T08:20:35.789Z",
+        "employmentPositionStaffingId": "16E1B719-B8C9-4DB0-AD2D-AFA24624338C"
+      }
+    }
+  },
+  "dataoperation42": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A97C9CB6-0D49-4635-B922-E25FDDA2ECE4",
+      "type": 1,
+      "timeStamp": 71144.53752598166,
+      "target": "data/main.datareel/model/calendar",
+      "data": {
+        "id": "20AC36B6-56D4-4C70-A4FE-34E2627E51D5",
+        "modificationDate": "2020-09-24T08:20:35.789Z",
+        "creationDate": "2020-09-24T08:20:35.789Z",
+        "employmentPositionStaffingId": "D1FB1B94-39E8-4B8A-886B-611CADF1186E"
+      }
+    }
+  },
+  "criteria8879": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "id == $id",
+      "parameters": {
+        "id": "7310ce94-6a62-45a7-96ca-5fc47210ca8e"
+      }
+    }
+  },
+  "dataoperation43": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "236D5FFA-3B58-4B17-BBFB-D1192E177478",
+      "type": 16,
+      "timeStamp": 71144.65506199002,
+      "target": "data/main.datareel/model/service",
+      "criteria": {"@": "criteria8879"},
+      "data": {
+        "providerIds": {
+          "addedValues": [
+            "7D8A5E65-D3C6-4B02-A700-4CF503B95D5F"
+          ]
+        }
+      },
+      "snapshot": {}
+    }
+  },
+  "criteria8880": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "id == $id",
+      "parameters": {
+        "id": "93c5be65-66f5-4c65-afdb-7e85fe19e6a5"
+      }
+    }
+  },
+  "dataoperation44": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "DA4C3904-242B-4ED6-B9AA-9CDEFDA56C46",
+      "type": 16,
+      "timeStamp": 71144.6766769886,
+      "target": "data/main.datareel/model/service",
+      "criteria": {"@": "criteria8880"},
+      "data": {
+        "providerIds": {
+          "addedValues": [
+            "7D8A5E65-D3C6-4B02-A700-4CF503B95D5F"
+          ]
+        }
+      },
+      "snapshot": {}
+    }
+  },
+  "criteria8881": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "id == $id",
+      "parameters": {
+        "id": "6b2840da-a8e3-46b8-84db-6e3a73b0ba09"
+      }
+    }
+  },
+  "dataoperation45": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0C28C29E-C1B0-49A3-A999-EB328024D542",
+      "type": 16,
+      "timeStamp": 71144.69444400072,
+      "target": "data/main.datareel/model/service",
+      "criteria": {"@": "criteria8881"},
+      "data": {
+        "providerIds": {
+          "addedValues": [
+            "7D8A5E65-D3C6-4B02-A700-4CF503B95D5F"
+          ]
+        }
+      },
+      "snapshot": {}
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E2B8C89F-0DE2-4F9B-90EC-C82E809337D7",
+      "type": 33,
+      "timeStamp": 71152.07305899262,
+      "target": [
+        "data/main.datareel/model/person",
+        "data/main.datareel/model/position",
+        "data/main.datareel/model/employment-position",
+        "data/main.datareel/model/employment-position-staffing",
+        "data/main.datareel/model/contact-information",
+        "data/main.datareel/model/employment-position-relationship",
+        "data/main.datareel/model/calendar",
+        "data/main.datareel/model/organization",
+        "data/main.datareel/model/service"
+      ],
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "data": {
+        "batchedOperations": [
+          {"@": "dataoperation31"},
+          {"@": "dataoperation32"},
+          {"@": "dataoperation33"},
+          {"@": "dataoperation34"},
+          {"@": "dataoperation35"},
+          {"@": "dataoperation36"},
+          {"@": "dataoperation37"},
+          {"@": "dataoperation38"},
+          {"@": "dataoperation39"},
+          {"@": "dataoperation40"},
+          {"@": "dataoperation41"},
+          {"@": "dataoperation42"},
+          {"@": "dataoperation43"},
+          {"@": "dataoperation44"},
+          {"@": "dataoperation45"}
+        ],
+        "transactionId": "AQlN4l5cd0+U0sXHEoiax/JrtdrH20cQYMSOmN7tyzJr6QjQsOgEBYKxTQKrOFlIjt+wW4+aXbEo/vu1OyCOXnKo5xSPSwtLg78HGfTyXFsB9DTVolmqFawHilIV1obtllRJegBssRgSthnn+UFVowh6bbCugF97zcKTWGTP/0RHDfNJQ5POczo="
+      }
+    }
+  }
+}…

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5 Copy</title>
+    <defs>
+        <circle id="path-1" cx="13.25" cy="13" r="12.5"></circle>
+        <filter x="-16.0%" y="-14.0%" width="132.0%" height="132.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.75" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0.5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0.5" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M12.5336914,19.6049805 C14.1450195,19.6049805 15.387207,19.2695312 16.2602539,18.5986328 C17.1333008,17.9277344 17.5698242,16.9741211 17.5698242,15.737793 C17.5698242,14.8881836 17.3120117,14.2070312 16.7963867,13.6943359 C16.2807617,13.1816406 15.5073242,12.8608398 14.4760742,12.7319336 L14.4760742,12.7319336 L14.4760742,12.6616211 C15.3374023,12.4741211 16.0053711,12.109375 16.4799805,11.5673828 C16.9545898,11.0253906 17.1918945,10.347168 17.1918945,9.53271484 C17.1918945,8.55419922 16.8286133,7.78662109 16.1020508,7.22998047 C15.3754883,6.67333984 14.3647461,6.39501953 13.0698242,6.39501953 C11.5112305,6.39501953 10.1430664,6.82861328 8.96533203,7.69580078 L8.96533203,7.69580078 L9.97607422,9.13720703 C10.5913086,8.73876953 11.1245117,8.47070312 11.5756836,8.33300781 C12.0268555,8.1953125 12.4956055,8.12646484 12.9819336,8.12646484 C13.6791992,8.12646484 14.206543,8.27587891 14.5639648,8.57470703 C14.9213867,8.87353516 15.1000977,9.29833984 15.1000977,9.84912109 C15.1000977,11.2670898 14.074707,11.9760742 12.0239258,11.9760742 L12.0239258,11.9760742 L10.8901367,11.9760742 L10.8901367,13.6547852 L12.0063477,13.6547852 C13.1723633,13.6547852 14.027832,13.815918 14.5727539,14.1381836 C15.1176758,14.4604492 15.3901367,14.9643555 15.3901367,15.6499023 C15.3901367,16.4233398 15.144043,16.9946289 14.6518555,17.3637695 C14.159668,17.7329102 13.4155273,17.9174805 12.4194336,17.9174805 C11.8569336,17.9174805 11.2709961,17.8442383 10.6616211,17.6977539 C10.0522461,17.5512695 9.47509766,17.3432617 8.93017578,17.0737305 L8.93017578,17.0737305 L8.93017578,18.9106445 C9.90869141,19.3735352 11.1098633,19.6049805 12.5336914,19.6049805 Z" id="path-3"></path>
+        <filter x="-37.6%" y="-20.8%" width="175.2%" height="149.2%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.72 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Larger-Button-Call-to-action-Copy-7" transform="translate(-63.066546, -639.113420)">
+            <g id="Group-5-Copy" transform="translate(65.293762, 641.084078)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#FFFFFF" stroke-width="1.5" xlink:href="#path-1"></use>
+                </g>
+                <g id="3" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

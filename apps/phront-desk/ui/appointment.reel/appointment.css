@@ -1,0 +1,182 @@
+.Appointment {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: hsl(265, 43%, 16%, 0.96);
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .72);
+    border-radius: .15em;
+    padding: .15em;
+    opacity: .99;
+    margin-top: .35em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    touch-action: pan-y;
+    box-sizing: border-box;
+    max-height: calc(100% - 1em);
+}
+
+.Appointment-rescheduled {
+    position: relative;
+    top: -0.7em;
+    font-size: .133em;
+    font-weight: 400;
+    font-style: italic;
+    text-align: right;
+}
+
+.Appointment-rescheduled.On {
+    color: rgba(255, 207, 0, .9);
+}
+
+.Appointment-Canceled {
+    font-size: .26em;
+    font-weight: bold;
+    color:rgba(255, 207, 0, .9);
+}
+
+.Appointment-rescheduledLocationChanged {
+    font-size: .73889em;
+    color:rgba(255, 207, 0, .9);
+    font-style: italic;
+    text-align: left;
+}
+
+.Appointment-rescheduled.OriginallyOn {
+    color: hsl(275deg 100% 71% / 50%);
+}
+
+.Appointment-header {
+    position: relative;
+    margin: -.2em 0 0 0;
+    padding: 0 0 0 0;
+    font-size: .26em;
+    text-align: right;
+    font-weight: normal;
+}
+
+.Appointment-patientName {
+    position: absolute;
+    color: #C069FF;
+    right: 90px;
+    left: 0;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.Appointment-timeHeader {
+    font-size: .73em;
+    color: #33C7FF;
+}
+
+.Appointment.Canceled .Appointment-timeHeader,
+.Appointment.Expired .Appointment-timeHeader,
+.Appointment.Rescheduled .Appointment-timeHeader {
+    color: rgba(255, 207, 0, .9);
+}
+
+.Appointment-steps {
+    counter-reset: steps;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Appointment-step {
+    padding: 1.3em 0 0 0;
+    font-size: .18em;
+    color: white;
+}
+
+.Appointment-stepTitle {
+    counter-increment: steps;
+    font-size: inherit;
+    margin: 0;
+    padding-bottom: 0.6em;
+    position: relative;
+}
+
+.Appointment-stepTitle:before {
+    content: counter(steps) ". ";
+}
+
+.Appointment.Rescheduled .Appointment-stepTitle, .Rescheduled .Appointment-stepDetails {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(255, 207, 0, .9);
+}
+
+.Appointment-arrivalTime {
+    color: #C069FF;
+}
+
+.Appointment-stepDetails {
+    font-size: .85em;
+    font-style: normal;
+    color: rgba(255, 255, 255, .7);
+}
+
+.Appointment-Button {
+    position: absolute;
+    top: .75em;
+    right: -4px;
+    transform: translate(0, -50%);
+    padding: 0;
+    border: 0;
+}
+
+.Appointment.Rescheduled .Appointment-Button {
+    opacity: 0.5;
+}
+
+.Appointment-fillOutFormButton {
+    min-width: 0;
+}
+
+.Appointment-fillOutFormButton.hasPatientFormToFillBeforeAppointment, .Appointment-fillOutFormButton.hasPatientFormToFillBeforeAppointment:hover {
+    width: 46px;
+    height: 46px;
+    background-image: url(./fill-out-form-button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.Appointment-fillOutFormButton.hasPatientFilledForms {
+    background-image: url(./checked.svg);
+}   
+
+.Appointment-fillOutFormButton.hasPatientFilledForms[disabled="disabled"] {
+    opacity:1;
+}   
+
+.Appointment-fillOutFormButton[disabled="disabled"] {
+    opacity:0.5;
+}   
+
+.Appointment-chat {
+    font-size: .85em;
+    height: 138px;
+    margin-top: 0.5em;
+}
+
+.Appointment.Expired .Appointment-chat{
+    height: 200px;
+}
+
+.Chat-Button[disabled="disabled"] {
+    opacity:0.5;
+}
+
+.Chat-Button {
+    width: 46px;
+    height: 46px;
+    background: url(./check-in-button.svg) no-repeat center/contain;
+}
+
+.Chat-Button.hasPatientArrived {
+    background-image: url(./checked.svg);
+    opacity:1;
+}

@@ -1,0 +1,15 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "4DB12DC7-2715-41CE-A7CD-2BD42051CF3D",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/patients"
+        ]
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

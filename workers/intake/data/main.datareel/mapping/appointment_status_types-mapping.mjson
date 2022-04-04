@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "appointmentStatusTypesDescriptor"},
+            "rawDataPrimaryKeys":["type_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "appointmentStatusTypesDescriptor": {
+        "object": "data/main.datareel/model/appointment_status_types.mjson"
+    }
+
+}

@@ -1,0 +1,132 @@
+{
+    "type": "and",
+    "args": [{
+        "type": "equals",
+        "args": [{
+            "type": "property",
+            "args": [{
+                "type": "value"
+            }, {
+                "type": "literal",
+                "value": "id"
+            }]
+        }, {
+            "type": "property",
+            "args": [{
+                "type": "parameters"
+            }, {
+                "type": "literal",
+                "value": "parameter1"
+            }]
+        }]
+    }, {
+        "type": "or",
+        "args": [{
+            "type": "equals",
+            "args": [{
+                "type": "property",
+                "args": [{
+                    "type": "value"
+                }, {
+                    "type": "literal",
+                    "value": "originId"
+                }]
+            }, {
+                "type": "property",
+                "args": [{
+                    "type": "parameters"
+                }, {
+                    "type": "literal",
+                    "value": "originId"
+                }]
+            }]
+        }, {
+            "type": "and",
+            "args": [{
+                "type": "equals",
+                "args": [{
+                    "type": "property",
+                    "args": [{
+                        "type": "value"
+                    }, {
+                        "type": "literal",
+                        "value": "isTemplate"
+                    }]
+                }, {
+                    "type": "literal",
+                    "value": true
+                }]
+            }, {
+                "type": "filterBlock",
+                "args": [{
+                    "type": "property",
+                    "args": [{
+                        "type": "property",
+                        "args": [{
+                            "type": "property",
+                            "args": [{
+                                "type": "property",
+                                "args": [{
+                                    "type": "value"
+                                }, {
+                                    "type": "literal",
+                                    "value": "calendar"
+                                }]
+                            }, {
+                                "type": "literal",
+                                "value": "b2cCustomerSupplierRelationshipOwner"
+                            }]
+                        }, {
+                            "type": "literal",
+                            "value": "supplier"
+                        }]
+                    }, {
+                        "type": "literal",
+                        "value": "parent"
+                    }]
+                }, {
+                    "type": "filterBlock",
+                    "args": [{
+                        "type": "property",
+                        "args": [{
+                            "type": "value"
+                        }, {
+                            "type": "literal",
+                            "value": "variants"
+                        }]
+                    }, {
+                        "type": "filterBlock",
+                        "args": [{
+                            "type": "property",
+                            "args": [{
+                                "type": "value"
+                            }, {
+                                "type": "literal",
+                                "value": "serviceEngagements"
+                            }]
+                        }, {
+                            "type": "equals",
+                            "args": [{
+                                "type": "property",
+                                "args": [{
+                                    "type": "value"
+                                }, {
+                                    "type": "literal",
+                                    "value": "originId"
+                                }]
+                            }, {
+                                "type": "property",
+                                "args": [{
+                                    "type": "parameters"
+                                }, {
+                                    "type": "literal",
+                                    "value": "serviceEngagementOriginId"
+                                }]
+                            }]
+                        }]
+                    }]
+                }]
+            }]
+        }]
+    }]
+}

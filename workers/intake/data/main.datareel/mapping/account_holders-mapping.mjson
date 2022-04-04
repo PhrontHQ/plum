@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "account_holdersDescriptor"},
+            "rawDataPrimaryKeys":["person_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "account_holdersDescriptor": {
+        "object": "data/main.datareel/model/account_holders.mjson"
+    }
+
+}

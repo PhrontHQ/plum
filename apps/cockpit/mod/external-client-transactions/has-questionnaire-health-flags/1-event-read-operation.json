@@ -1,0 +1,26 @@
+{
+  "criteria2": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "originId == $.originId && parent != null && respondentQuestionnaires.filter{questionnaire.name == $.questionnaireName && respondentAnswers.filter{questionnaireQuestion.question.isOpenEnded == false && answers.filter{booleanValue == true}}}",
+      "parameters": {
+        "originId": "8ec76eee-efb8-4af9-95b1-25cba43c185e",
+        "questionnaireName": "AAOIC Supplemental Health Questionnaire"
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "09B2C062-62E1-4379-8C9B-B7F0EEA7021B",
+      "type": "read",
+      "timeStamp": 2219.36000000278,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria2"},
+      "locales": [
+        "en-US"
+      ],
+      "data": {}
+    }
+  }
+}

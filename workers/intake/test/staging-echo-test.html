@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staging Echo Test</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+<script type="text/javascript">
+    var socket = new WebSocket("wss://5fvrn782kl.execute-api.us-west-2.amazonaws.com/staging"),
+    //var socket = new WebSocket("ws://127.0.0.1:7373"),
+        echoData = "echo-"+Date.now();
+
+    socket.addEventListener("open", function(event) {
+        console.log("WebSocket opened");
+        socket.send(echoData);
+        console.log("Echo data sent");
+    });
+    socket.addEventListener("error", function(event) {
+        console.error("WebSocket Error:",event);
+    });
+    socket.addEventListener("close", function(event) {
+        console.warn("WebSocket closed:",event);
+    });
+    socket.addEventListener("message", function(event) {
+        console.log("WebSocket message received:",event);
+        if(event.data === echoData) {
+            console.log("WebSocket echo complete");
+        } else {
+            console.error("WebSocket echo failed");
+        }
+    });
+
+
+
+    
+</script>
+
+</html>

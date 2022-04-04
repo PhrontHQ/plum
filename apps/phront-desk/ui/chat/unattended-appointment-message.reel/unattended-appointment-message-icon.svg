@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>canceled-event-icon</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24.0022803" height="24.0022803" rx="5"></rect>
+        <filter x="-9.0%" y="-4.8%" width="117.9%" height="117.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.05" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.0833151224 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-11.0%" y="-6.9%" width="122.1%" height="122.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.1" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="1" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M2.84722081,0 L17.5572671,0 C19.0822372,2.78413604e-15 20.3184698,1.23623259 20.3184698,2.76120277 L20.3184698,5.52240554 L20.3184698,10.1158092 L20.3184698,17.2316184 C20.3184698,18.8884727 18.9753241,20.2316184 17.3184698,20.2316184 L3.0868514,20.2316184 C1.42999715,20.2316184 0.0868514013,18.8884727 0.0868514013,17.2316184 L0.0868514013,5.52073881 L0.0868514013,2.76036941 C0.0868514013,1.23585948 1.32271088,-1.64041279e-16 2.84722081,0 Z M0.0868514013,4.76764002 L20.3184698,4.76764002" id="path-4"></path>
+        <filter x="-5.7%" y="-6.2%" width="110.8%" height="112.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="0.1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0.8" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.25237653 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="0.05" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="0.1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.250109266 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-32" transform="translate(-2473.343762, -1105.600000)">
+            <g id="Fill-Form-Pressed-/-Check-in-chat-Copy-16" transform="translate(2384.700000, 888.000000)">
+                <g id="Group-29" transform="translate(69.993762, 193.715788)">
+                    <g id="Rectangle" transform="translate(5.524687, 15.440302)">
+                        <g id="Form-filled-checked" transform="translate(14.768616, 9.189948)">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                            </g>
+                            <g id="Combined-Shape" transform="translate(1.739297, 1.885331)">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                <use stroke="#6AC3F6" stroke-width="1.5" xlink:href="#path-4"></use>
+                            </g>
+                            <path d="M14.6808401,9.8626255 L14.692834,9.87065216 L14.692834,9.87065216 C15.1178073,10.1599487 15.2320945,10.7366853 14.9495587,11.1661831 L13.109718,13.9624401 L14.9495587,16.7586971 C15.210361,17.1551565 15.1330419,17.677074 14.7853505,17.9825626 L14.692834,18.054228 L14.692834,18.054228 L14.6808401,18.0622547 C14.2600218,18.3390808 13.6944693,18.2223521 13.4176431,17.8015339 L13.4176431,17.8015339 L12.000718,15.6474401 L10.5846372,17.8015339 C10.307811,18.2223521 9.74225848,18.3390808 9.32144023,18.0622547 L9.30944625,18.054228 L9.30944625,18.054228 C8.88447294,17.7649315 8.77018578,17.1881948 9.05272155,16.7586971 L10.891718,13.9624401 L9.05272155,11.1661831 C8.7919193,10.7697236 8.86923837,10.2478061 9.21692983,9.94231753 L9.30944625,9.87065216 L9.30944625,9.87065216 L9.32144023,9.8626255 C9.74225848,9.58579935 10.307811,9.70252801 10.5846372,10.1233463 L10.5846372,10.1233463 L12.000718,12.2764401 L13.4176431,10.1233463 C13.6944693,9.70252801 14.2600218,9.58579935 14.6808401,9.8626255 Z" id="Combined-Shape" fill="#6AC3F6"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

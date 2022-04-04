@@ -1,0 +1,116 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "nextPoliciesKeyCriteria": {"@": "typeCriteria"},
+            "nextPoliciesMap": {"@": "rootNextPolicyMap"}
+        }
+    },
+
+    "typeCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "type"
+        }
+    },
+
+    "rootNextPolicyMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "authorizeConnectionOperationMapEntry"},
+                {"@": "readOperationMapEntry"},
+                {"@": "createTransactionOperationMapEntry"},
+                {"@": "updateOperationMapEntry"},
+                {"@": "createOperationMapEntry"},
+                {"@": "deleteOperationMapEntry"}
+            ]
+        }
+    },
+
+    "authorizeConnectionOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "authorizeConnectionOperation",
+            "value": [
+                {"@": "IdentityAccessPolicy"}
+            ]
+        }
+    },
+    "IdentityAccessPolicy": {
+        "object": "./authorize-connection/identity-access-policy.mjson"
+    },
+
+    "readOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "readOperation",
+            "value": [
+                {"@": "DataOperationIdentityReadAccessPolicy"}
+            ]
+        }
+    },
+
+    "DataOperationIdentityReadAccessPolicy": {
+        "object": "data/main.datareel/access-control/read/identity-criteria-access-policy.mjson"
+    },
+
+    "createTransactionOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "createTransactionOperation",
+            "value": [
+                {"@": "DataOperationIdentityCreateTransactionAccessPolicy"}
+            ]
+        }
+    },
+
+    "DataOperationIdentityCreateTransactionAccessPolicy": {
+        "object": "data/main.datareel/access-control/create-transaction/identity-criteria-access-policy.mjson"
+    },
+
+
+    "updateOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "updateOperation",
+            "value": [
+                {"@": "DataOperationIdentityUpdateAccessPolicy"}
+            ]
+        }
+    },
+
+    "DataOperationIdentityUpdateAccessPolicy": {
+        "object": "data/main.datareel/access-control/update/identity-criteria-access-policy.mjson"
+    },
+
+    "createOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "createOperation",
+            "value": [
+                {"@": "DataOperationIdentityCreateAccessPolicy"}
+            ]
+        }
+    },
+
+    "DataOperationIdentityCreateAccessPolicy": {
+        "object": "data/main.datareel/access-control/create/identity-criteria-access-policy.mjson"
+    },
+
+    "deleteOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "deleteOperation",
+            "value": [
+                {"@": "DataOperationIdentityDeleteAccessPolicy"}
+            ]
+        }
+    },
+
+    "DataOperationIdentityDeleteAccessPolicy": {
+        "object": "data/main.datareel/access-control/delete/identity-criteria-access-policy.mjson"
+    }
+
+
+}

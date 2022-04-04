@@ -1,0 +1,47 @@
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria6": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "20d67459-9c79-4f2e-85e3-d6342a6037ce",
+          "fe9e92bc-e8b2-42e5-bfad-775303e04e8a",
+          "f27e0891-22be-4a2a-bbe9-e0ab20c23714",
+          "39f83343-84e7-4851-bbca-6ac17d74c268",
+          "6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb",
+          "9a593094-8382-4702-920a-5ef1fcfed0ab",
+          "3ee3a24d-9898-4aca-b791-b15c323f47ef",
+          "dcb5b8dd-5c36-4b71-becb-35962e4e339d",
+          "e96a8868-e3e4-4e04-8310-b9e5667e1e9a",
+          "fca6798f-462f-42bf-9622-7f1f95c16c2e",
+          "58d7369a-7a6d-4c66-971d-cb3f46703b7a",
+          "1f57b7eb-3e37-4fa6-ad79-7d72caee0670",
+          "479aeda9-3263-4f6c-a960-2e95a7c28e8e",
+          "aa5c2446-8c19-40e8-8f3c-e94f87567702",
+          "4e533f62-5d00-436c-8d20-1a2238f1b7f8"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3EA6FAF5-7A04-4F4E-8BDA-DEBB5CAA327E",
+      "type": "read",
+      "timeStamp": 7854.944999999134,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire-answer",
+      "criteria": {"@": "criteria6"},
+      "data": {}
+    }
+  }
+}

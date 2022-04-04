@@ -1,0 +1,28 @@
+PlumLoader.value() enterDocument
+PlumLoader.value() _loadMainComponent
+PlumLoader.value() _revealLoader
+PlumLoader.set() CURRENT STAGE: 1
+PlumLoader.value() _mainLoadedCallback
+>>>>>> DateHeader inDocument:false —— set data: undefined
+>>>>>> Appointments inDocument:false —— set data: undefined
+>>>>>> ConsentmentForm inDocument:false —— set data: undefined
+>>>>>> Appointment inDocument:false —— set data: undefined
+>>>>>> Address inDocument:false —— set data: undefined
+
+PlumLoader.value() main preparing to draw
+PlumLoader.value() _revealMainComponent
+PlumLoader.set() CURRENT STAGE: 2
+>>>>>> Appointment inDocument:false —— set data: undefined
+>>>>>> Address inDocument:false —— set data: undefined
+
+Questionnaire: fetchObjectProperty  -followUpQuestionnaires
+
+>>>>>> Appointments inDocument:true —— set data: [constructor, objectDescriptor: constructor]
+>>>>>> Appointment inDocument:true —— set data: constructor {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _serviceVariant: constructor, _event: Event}
+Event: fetchObjectProperty  -respondentQuestionnaires
+Organization: fetchObjectProperty  -parent
+>>>>>> Address inDocument:true —— set data: constructor {_montage_metadata: {…}, _originId: "c2e1101c-25c9-42bb-9822-f99840ad48db", _creationDate: Sun Nov 22 2020 12:02:01 GMT-0800 (Pacific Standard Time), _modificationDate: Wed Mar 28 2018 13:44:33 GMT-0700 (Pacific Daylight Time), _description: null, …}
+
+>>>>>> DateHeader inDocument:true —— set data: constructor {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _serviceVariant: constructor, _event: Event, …}creationDate: (...)dataIdentifier: (...)event: (...)isActiveTarget: (...)modificationDate: (...)name: (...)nextTarget: (...)originId: (...)participants: (...)publicationDate: (...)serviceVariant: (...)_creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time) {}_event: Event {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _scheduledTimeRange: Range, _actualTimeRange: null, …}_modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time) {}_montage_metadata: {isInstance: true}_participants: (2) [constructor, constructor]_serviceVariant: constructor {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:01:58 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:01:58 GMT-0800 (Pacific Standard Time), _title: "Development Ck", _price: null, …}get event: ƒ (shouldFetch)set event: ƒ dispatchingSetter()get participants: ƒ (shouldFetch)set participants: ƒ dispatchingSetter()__proto__: constructor
+
+>>>>>> ConsentmentForm inDocument:true —— set data: constructor {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _serviceVariant: constructor, _event: Event, …}creationDate: (...)dataIdentifier: (...)event: (...)isActiveTarget: (...)modificationDate: (...)name: (...)nextTarget: (...)originId: (...)participants: (...)publicationDate: (...)serviceVariant: (...)_creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time) {}_event: Event {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time), _scheduledTimeRange: Range, _actualTimeRange: null, …}_modificationDate: Sun Nov 22 2020 12:02:08 GMT-0800 (Pacific Standard Time) {}_montage_metadata: {isInstance: true}_participants: (2) [constructor, constructor]_serviceVariant: constructor {_montage_metadata: {…}, _creationDate: Sun Nov 22 2020 12:01:58 GMT-0800 (Pacific Standard Time), _modificationDate: Sun Nov 22 2020 12:01:58 GMT-0800 (Pacific Standard Time), _title: "Development Ck", _price: null, …}get event: ƒ (shouldFetch)set event: ƒ dispatchingSetter()get participants: ƒ (shouldFetch)set participants: ƒ dispatchingSetter()__proto__: constructor

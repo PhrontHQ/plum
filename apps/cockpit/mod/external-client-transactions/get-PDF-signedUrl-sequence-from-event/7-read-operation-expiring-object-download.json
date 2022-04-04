@@ -1,0 +1,37 @@
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria80": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && Key == $Key && Bucket == $Bucket && expirationDelay == $expirationDelay",
+      "parameters": {
+        "Key": "RespondentQuestionnaire/pdfExport/tops-aaoic-form-499bd1cd-7b41-4ccb-84e8-b18c73ae2536.pdf",
+        "Bucket": "plumming-staging",
+        "expirationDelay": 800,
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "175961A6-2C7A-4991-8EC2-1F9093211F40",
+      "type": "read",
+      "timeStamp": 32351.230000145733,
+      "targetModuleId": "data/main.datareel/model/aws/s3/expiring-object-download",
+      "criteria": {"@": "criteria80"},
+      "data": {
+        "readExpressions": [
+          "signedUrl"
+        ]
+      }
+    }
+  }
+}

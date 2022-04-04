@@ -1,0 +1,15 @@
+{
+    "root": {
+      "prototype": "montage/data/service/data-operation",
+      "values": {
+        "id": "9EF4C55A-8A69-44A7-AB1D-3EBA10287FC7",
+        "type": "performTransactionOperation",
+        "timeStamp": 46727.84999999567,
+        "targetModuleId": null,
+        "referrerId": "C7C0DFB8-0D8A-4702-AF6D-BF2DF2F6E776",
+        "data": {
+          "transactionId": "ARSft7aaYgMhyL8dI0S39wzpl4ZCnVtFgIK8lzXUI5CzKWvu7R8W3Hv345GL4YxsJl2oAW2bA1zzRwCDo2NgCxp/k8Pe7Pyhln2b/CuWq1vkW4YHgEAslR06x6bxUWGIkMQzfO6MR4hbW7kh7iOfcxSWIp49CJwxOLRHf94ecTgPLL1ZTQiW2G0="
+        }
+      }
+    }
+  }

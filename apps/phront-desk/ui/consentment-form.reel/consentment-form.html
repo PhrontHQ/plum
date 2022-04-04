@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="consentment-form.css">
+    <script type="text/montage-serialization">
+    {
+  
+        "owner": {
+            "prototype": "ui/consentment-form.reel",
+            "values": {
+                "element": {"#": "consentmentForm"},
+                "overlay": {"@": "overlay"},
+                "iFrameElement": {"#":"iframe"},
+                "closeButton": {"@": "closeButton"}    
+            }
+        },
+
+        "closeButton": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "closeButton"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+
+        "overlay": {
+            "prototype": "montage/ui/overlay.reel",
+            "values": {
+                "element": {"#": "overlay"},
+                "delegate": {"@": "owner"},
+                "position": {
+                    "top": 0,
+                    "left": 0
+                },
+                "dismissOnExternalInteraction":{"<-": "environment.isMobileDevice ? false : true"}
+            }
+        }
+
+    }
+    </script>
+
+</head>
+<body>
+    <div data-montage-id="consentmentForm" class="ConsentmentForm">
+        <div data-montage-id="overlay" class="Formpopup">
+            <button data-montage-id="closeButton" class="button button-close">
+                ✕
+            </button>
+            <iframe data-montage-id="iframe" src="iframe-consentment-form.html" sandbox="allow-same-origin allow-forms allow-scripts" allowtransparency="true" class="consentmentForm--container" type="text/html" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+
+</body>
+</html>

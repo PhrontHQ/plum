@@ -1,0 +1,98 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "nextPoliciesKeyCriteria": {"@": "dataOperationTargetCriteria"},
+            "nextPoliciesMap": {"@": "targetNextPoliciesMap"}
+        }
+    },
+
+    "dataOperationTargetCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "target"
+        }
+    },
+
+    "targetNextPoliciesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "AnswerMapEntry"},
+                {"@": "RespondentQuestionnaireMapEntry"},
+                {"@": "RespondentQuestionnaireAnswerMapEntry"},
+                {"@": "RespondentQuestionnaireVariableValueMapEntry"}
+           ]
+        }
+    },
+
+
+    "AnswerDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/answer.mjson"
+    },
+    "AnswerAccessPolicy": {
+        "object": "./answer-access-policy.mjson"
+    },
+    "AnswerMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "AnswerDescriptor"},
+            "value": [
+                {"@": "AnswerAccessPolicy"}
+            ]
+        }
+    },
+
+
+
+    "RespondentQuestionnaireDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/respondent-questionnaire.mjson"
+    },
+    "RespondentQuestionnaireAccessPolicy": {
+        "object": "./respondent-questionnaire-access-policy.mjson"
+    },
+    "RespondentQuestionnaireMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RespondentQuestionnaireDescriptor"},
+            "value": [
+                {"@": "RespondentQuestionnaireAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "RespondentQuestionnaireAnswerDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/respondent-questionnaire-answer.mjson"
+    },
+    "RespondentQuestionnaireAnswerAccessPolicy": {
+        "object": "./respondent-questionnaire-answer-access-policy.mjson"
+    },
+    "RespondentQuestionnaireAnswerMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RespondentQuestionnaireAnswerDescriptor"},
+            "value": [
+                {"@": "RespondentQuestionnaireAnswerAccessPolicy"}
+            ]
+        }
+    },
+
+    "RespondentQuestionnaireVarialeValueDescriptor": {
+        "object": "phront/data/main.datareel/model/questionnaire/respondent-questionnaire-variable-value.mjson"
+    },
+    "RespondentQuestionnaireVarialeValueAccessPolicy": {
+        "object": "./respondent-questionnaire-variable-value-access-policy.mjson"
+    },
+    "RespondentQuestionnaireVariableValueMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RespondentQuestionnaireVarialeValueDescriptor"},
+            "value": [
+                {"@": "RespondentQuestionnaireVarialeValueAccessPolicy"}
+            ]
+        }
+    }
+    
+
+}

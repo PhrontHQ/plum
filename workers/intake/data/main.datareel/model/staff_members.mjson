@@ -1,0 +1,117 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/object-descriptor",
+        "values": {
+            "name": "staff_members",
+            "propertyDescriptors": [
+                {"@": "person_id"},
+                {"@": "practice_id"},
+                {"@": "staff_type_id"},
+                {"@": "title"},
+                {"@": "first_name"},
+                {"@": "middle_initial"},
+                {"@": "last_name"},
+                {"@": "short_name"},
+                {"@": "active_flag"},
+                {"@": "created_date"},
+                {"@": "last_modified_date"},
+                {"@": "treatment_coordinator_flag"}
+            ]
+        }
+    },
+    "person_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "person_id",
+            "valueType": "string"
+        }
+    },
+    "practice_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_id",
+            "valueType": "string"
+        }
+    },
+    "staff_type_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "staff_type_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "title": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "title",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "first_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "first_name",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "middle_initial": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "middle_initial",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "last_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "last_name",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "short_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "short_name",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "active_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "active_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "created_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "created_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "last_modified_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "last_modified_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "treatment_coordinator_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "treatment_coordinator_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    }
+
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "_scrollingElement": {"#": "repetition"},
+                "_repetition": {"@": "repetition"}
+            }
+        },
+        "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "values": {
+                "element": {"#": "repetition"},
+                "content": {"<-": "@owner.conversation"}
+            }
+        },
+        "message": {
+            "prototype": "../chat-message.reel",
+            "values": {
+                "element": {"#": "message"},
+                "iteration": {"<-": "@repetition:iteration"},
+                "data": {"<-": "iteration.object"},
+                "isMainSender": {"<-": "iteration.object.sender == @owner.mainSender"},
+                "isFirstInGroup": {"<-": "@owner.conversation[iteration.index - 1].sender != iteration.object.sender"},
+                "isLastInGroup": {"<-": "@owner.conversation[iteration.index + 1].sender != iteration.object.sender"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Chat">
+        <div data-montage-id="repetition" class="Chat-repetition">
+            <div>
+                <div data-montage-id="message"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

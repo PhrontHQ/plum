@@ -1,0 +1,44 @@
+{
+    "root": {
+        "prototype": "./plumming-data-worker",
+        "values": {
+            "name": "PlummingDataWorker",
+            "apiGateway": {"@": "aws-api-gateway"},
+            "mainService": {"@": "mainDataService"}
+        }
+    },
+
+    "aws-api-gateway": {
+        "object": "phront/serverles/a-w-s-a-p-i-gateway"
+    },
+
+    "mainDataService": {
+        "object": "./data/main.datareel/main.mjson",
+        "listeners": [
+            {
+                "type": "batchOperation",
+                "listener": {"@": "pdfFormHandler"},
+                "options": {
+                    "capture": true
+                }
+            }
+        ]
+    },
+
+    "RespondentQuestionnaire": {
+        "object": "phront/data/main.datareel/model/questionnaire/respondent-questionnaire.mjson",
+        "listeners": [
+            {
+                "type": "readCompletedOperation",
+                "listener": {"@": "pdfFormHandler"},
+                "options": {
+                    "capture": true
+                }
+            }
+        ]
+    },
+
+    "pdfFormHandler": {
+        "object": "./pdf-form-handler[handleRespondentQuestionnaireReadCompletedOperation]"
+    }
+}

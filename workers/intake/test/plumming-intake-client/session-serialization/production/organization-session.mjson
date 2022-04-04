@@ -1,0 +1,9 @@
+{
+  "root": {
+    "prototype": "montage/data/model/identity",
+    "values": {
+      "applicationIdentifier": "6t5hnnqcjbbta950idjbnveuh1",
+      "applicationCredentials": "9bug70ohjd9ns4ntkotdlf6hdd7af3u2u911vik3tr02bhf83an"
+    }
+  }
+}

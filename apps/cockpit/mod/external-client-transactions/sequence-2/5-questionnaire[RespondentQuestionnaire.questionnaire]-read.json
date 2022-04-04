@@ -1,0 +1,31 @@
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria5": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "f7eb9340-3075-4f21-84ca-575278cc9c76",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "28FDACE6-397F-46EA-8B0D-40C190063523",
+      "type": "read",
+      "timeStamp": 7854.795000006561,
+      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "criteria": {"@": "criteria5"},
+      "data": {}
+    }
+  }
+}

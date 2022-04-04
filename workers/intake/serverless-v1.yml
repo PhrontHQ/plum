@@ -1,0 +1,208 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: plumming-intake
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+package:
+  individually: false
+
+  excludeDevDependencies: false
+  patterns:
+    - '!~/**'
+    - '!tools/**'
+    - '!test/**'
+    - '!builds/**'
+    - '!dev/**'
+    - '!.vscode/**'
+    - '!node_modules/montage/demo/**'
+    - '!node_modules/montage/.git/**'
+    - '!node_modules/montage/ui/**'
+    - '!node_modules/montage/test/**'
+    - '!node_modules/montage/testing/**'
+    - '!node_modules/montage/tools/**'
+    - '!node_modules/montage/node_modules/**'
+    - '!node_modules/montage/.vscode/**'
+    - '!node_modules/phront/dev/**'
+    - '!node_modules/phront/test/**'
+    - '!node_modules/phront/sandbox/**'
+    - '!node_modules/phront/node_modules/**'
+    - '!node_modules/phront/.git/**'
+    - '!node_modules/phront/.vscode/**'
+    - '!node_modules/montage-geo/ui/**'
+    - '!node_modules/montage-geo/test/**'
+    - '!node_modules/montage-geo/.git/**'
+    - '!node_modules/local-websocket-server/**'
+    - '!node_modules/serverless/**'
+    - '!node_modules/serverless-offline/**'
+    - '!node_modules/serverless-plugin-common-excludes/**'
+    - '!node_modules/serverless-plugin-include-dependencies/**'
+    - '!node-build*'
+    - '!node_modules/@aws-sdk/**/dist-es/**'
+    - '!node_modules/@aws-sdk/**/dist-types/**'
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '2'
+
+
+#setup for environements and accounts to use so we cand do
+# $ serverless deploy --stage mod
+# $ serverless deploy --stage test
+# $ serverless deploy --stage live
+# more at https://serverless-stack.com/chapters/configure-multiple-aws-profiles.html
+custom:
+  myStage: ${opt:stage, self:provider.stage}
+  myRegion: ${opt:region, self:provider.region}
+  myProfile:
+    mod: cogent-mod
+    test: cogent-test
+    live: cogent-live
+  myAccount:
+    mod: 006408448862
+    test: 545740467277
+    live: 540973189736
+  myRole:
+    mod: arn:aws:iam::006408448862:role/lambda-runner
+    test: arn:aws:iam::545740467277:role/lambda-runner
+    live: arn:aws:iam::540973189736:role/lambda-runner
+  myCfnRole:
+    mod: arn:aws:iam::006408448862:role/cloudformation-manager
+    test: arn:aws:iam::545740467277:role/cloudformation-manager
+    live: arn:aws:iam::540973189736:role/cloudformation-manager
+
+  distill:
+    include:
+      - 'node_modules/montage/core/date/time-zone-data'
+      - 'data/main.datareel/raw-data'
+
+    minifyPatterns:
+      - 'node_modules/**'
+      - '!node_modules/montage/**'
+      - '!node_modules/montage-geo/**'
+      - '!node_modules/phront/**'
+      - 'data/main.datareel/raw-data/**'
+      # - '!*/**'
+  
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: mod
+  profile: ${self:custom.myProfile.${self:custom.myStage}}
+  role: ${self:custom.myRole.${self:custom.myStage}} 
+  cfnRole: ${self:custom.myCfnRole.${self:custom.myStage}}  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
+  region: us-west-2 # Overwrite the default region used. Default is us-east-1
+  websocketsApiName: plumming-websocket-intake
+  websocketsApiRouteSelectionExpression: $request.body.action # custom routes are selected by the value of the action property in the body
+  environment:
+    APIG_ENDPOINT:
+      Fn::Join:
+        - ''
+        - - Ref: WebsocketsApi
+          - .execute-api.
+          # - Ref: AWS::Region
+          - ${self:custom.myRegion}
+          - .amazonaws.com/
+          - ${self:custom.myStage}
+
+  # http:
+  #   authorizers:
+  #     customAuthorizer:
+  #       type: request
+  #       functionName: authorize # Mutually exclusive with `functionArn`
+  #       name: httpIntakeAuthorizer
+
+# you can overwrite defaults here
+#  stage: dev
+#  region: us-east-1
+
+# you can add statements to the Lambda function's IAM Role here
+#  iamRoleStatements:
+#    - Effect: "Allow"
+#      Action:
+#        - "s3:ListBucket"
+#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
+#    - Effect: "Allow"
+#      Action:
+#        - "s3:PutObject"
+#      Resource:
+#        Fn::Join:
+#          - ""
+#          - - "arn:aws:s3:::"
+#            - "Ref" : "ServerlessDeploymentBucket"
+#            - "/*"
+
+# you can define service wide environment variables here
+#  environment:
+#    variable1: value1
+
+# you can add packaging information here
+#package:
+#  include:
+#    - include-me.js
+#    - include-me-dir/**
+#  exclude:
+#    - exclude-me.js
+#    - exclude-me-dir/**
+
+functions:
+  connect:
+    handler: main.connect
+    events:
+      - websocket:
+          route: $connect # authorizers are only for connect routes
+          authorizer: # references the auth function below
+            name: authorize
+            # resultTtlInSeconds: 3600
+            identitySource:
+              - 'route.request.querystring.session'
+
+  authorize:
+    handler: main.authorize
+
+  default:
+    handler: main.default
+    events:
+      - websocket:
+          route: $default
+
+
+  authorizeSend:
+    handler: main.authorizeSend
+
+  send:
+    handler: main.send
+    events:
+      - http:
+          path: /
+          method: post
+          authorizer:
+            name: authorizeSend
+            type: request
+            identitySource:
+              - 'method.request.querystring.session'
+          cors: true # <-- CORS!
+
+  disconnect:
+    handler: main.disconnect
+    events:
+      - websocket:
+          route: $disconnect
+        
+
+plugins:
+  - serverless-plugin-common-excludes
+  - distill
+  - serverless-offline

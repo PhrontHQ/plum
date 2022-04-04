@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+    <textarea rows="50" cols="80" style="font-size: 16; resize:none; border: none;" id="log"></textarea>
+
+    <script type="text/javascript">
+
+        if (!RegExp.escape) {
+            var special = /[-[\]{}()*+?.\\^$|,#\s]/g,
+                replacePattern = "\\$&";
+            RegExp.escape = function RegExp_escape (string) {
+                return string.replace(special, "\\$&");
+            };
+        }
+
+
+        function log(data) {
+            document.getElementById("log").textContent += data + "\n";
+          }
+          
+          benchmark = (() => {
+          
+            time_function = function(ms, f, num) {
+              var z;
+              var t = new Date().getTime();
+              for (z = 0;
+                ((new Date().getTime() - t) < ms); z++) f(num);
+              return (z / ms)
+            } // returns how many times the function was run in "ms" milliseconds.
+          
+          
+            function benchmark() {
+              function compare(a, b) {
+                if (a[1] > b[1]) {
+                  return -1;
+                }
+                if (a[1] < b[1]) {
+                  return 1;
+                }
+                return 0;
+              }
+          
+
+
+
+              var fooTest = /foo/,
+                    fooReplace = /foo/g,
+                    foo = "foo";
+
+                function contains0(b) {
+                    return b.indexOf("bar") !== -1;
+                }
+
+                function contains1(b) {
+                    var expression = new RegExp(RegExp.escape("bar"));
+                    return expression.test(b);
+                };
+
+                function contains2(b) {
+                    return (b.indexOf("bar") !== -1) || (new RegExp(RegExp.escape("bar"))).test(b);
+                };
+
+                function contains3(b) {
+                    return b.includes("bar");
+                };
+
+
+            function replace00(s) {
+                var result;
+                if(s.indexOf(foo) !== -1) {
+                    result = s.replace(fooReplace, "bar")
+                }
+                else {
+                    result = s;
+                }
+                return result;
+              }
+
+
+              function replace0(s) {
+                var result;
+                if(fooTest.test(s)) {
+                    result = s.replace(fooReplace, "bar")
+                }
+                else {
+                    result = s;
+                }
+                return result;
+              }
+
+              // functions
+          
+              function replace1(s) {
+                var result = s.replace(fooReplace, "bar");
+                return result;
+              }
+          
+          String.prototype.replaceAll2 = function(_f, _r){ 
+          
+            var o = this.toString();
+            var r = '';
+            var s = o;
+            var b = 0;
+            var e = -1;
+          //      if(_c){ _f = _f.toLowerCase(); s = o.toLowerCase(); }
+          
+            while((e=s.indexOf(_f)) > -1)
+            {
+              r += o.substring(b, b+e) + _r;
+              s = s.substring(e+_f.length, s.length);
+              b += e+_f.length;
+            }
+          
+            // Add Leftover
+            if(s.length>0){ r+=o.substring(o.length-s.length, o.length); }
+          
+            // Return New String
+            return r;
+          };
+          
+          String.prototype.replaceAll = function(str1, str2, ignore) {
+                return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, "\\$&"), (ignore ? "gi" : "g")), (typeof(str2) == "string") ? str2.replace(/\$/g, "$$$$") : str2);
+              }
+          
+              function replace2(s) {
+                return s.replaceAll("foo", "bar")
+              }
+          
+              function replace3(s) {
+                return s.split('foo').join('bar');
+              }
+          
+              function replace4(s) {
+                return s.replaceAll2("foo", "bar")
+              }
+          
+          
+            //   funcs = [
+            //     [replace00, 0],
+            //     [replace0, 0],
+            //     [replace1, 0],
+            //     [replace2, 0],
+            //     [replace3, 0],
+            //     [replace4, 0]
+            //   ];
+              funcs = [
+                [contains0, 0],
+                [contains1, 0],
+                [contains2, 0],
+                [contains3, 0]
+              ];
+          
+              funcs.forEach((ff) => {
+                console.log("Benchmarking: " + ff[0].name);
+                ff[1] = time_function(2500, ff[0], "foOfoobarBaR barbarfoobarf00".repeat(10));
+                ff[1] = time_function(2500, ff[0], "foOfoabarBaR barbarfobarf00".repeat(10));
+                console.log("Score: " + ff[1]);
+              })
+              return funcs.sort(compare);
+            }
+          
+            return benchmark;
+          })()
+          log("Starting benchmark...\n");
+          res = benchmark();
+          console.log("Winner: " + res[0][0].name + " !!!");
+          count = 1;
+          res.forEach((r) => {
+            log((count++) + ". " + r[0].name + " score: " + Math.floor(10000 * r[1] / res[0][1]) / 100 + ((count == 2) ? "% *winner*" : "% speed of winner.") + " (" + Math.round(r[1] * 100) / 100 + ")");
+          });
+          log("\nWinner code:\n");
+          log(res[0][0].toString());
+        
+          </script>
+        
+</body>
+</html>

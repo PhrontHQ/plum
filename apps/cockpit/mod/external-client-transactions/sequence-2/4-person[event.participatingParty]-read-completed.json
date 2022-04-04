@@ -1,0 +1,19 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0FB71667-193D-44CC-A263-C89E1A15DB5B",
+      "type": "readCompleted",
+      "timeStamp": 23661.706396996975,
+      "targetModuleId": "data/main.datareel/model/person",
+      "referrerId": "C3C68FDE-5E05-4D11-9D61-5622D10989D8",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"8a92e0b9-271b-4451-8fdf-4102ae6cc441\",\"publicationDate\":null,\"modificationDate\":\"2017-01-21T06:14:12.1+00:00\",\"creationDate\":\"2018-02-01T05:35:35.022+00:00\",\"originId\":\"932f35e3-8004-445d-a951-9767f39f4e72\",\"imageIds\":null,\"socialProfileIds\":null,\"urlAddresses\":null,\"existenceTimeRange\":null,\"addressIds\":null,\"phone\":null,\"email\":null,\"lastName\":null,\"firstName\":null,\"userIdentityIds\":null,\"tags\":null,\"preferredLocales\":[\"en\"],\"aliases\":null,\"genderID\":null,\"name\":{\"givenName\": \"Steven\", \"familyName\": \"Rogers\", \"namePrefix\": \"\"}}"
+          }
+        ]
+      ]
+    }
+  }
+}

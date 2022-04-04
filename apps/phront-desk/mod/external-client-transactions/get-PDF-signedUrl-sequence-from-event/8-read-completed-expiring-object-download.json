@@ -1,0 +1,17 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "74120460-ECB7-4CBC-B8A8-0393E1171EAC",
+      "type": "readCompleted",
+      "timeStamp": 15813026.55089426,
+      "targetModuleId": "data/main.datareel/model/aws/s3/expiring-object-download",
+      "referrerId": "175961A6-2C7A-4991-8EC2-1F9093211F40",
+      "data": [
+        {
+          "signedUrl": "https://plumming-staging.s3.us-west-2.amazonaws.com/RespondentQuestionnaire/pdfExport/tops-aaoic-form-499bd1cd-7b41-4ccb-84e8-b18c73ae2536.pdf?AWSAccessKeyId=AKIAX6EFKVRGRSB6LDPX&Expires=1611646934&Signature=nZ8urBda7nqD4JOaWiHsNOPNkBY%3D"
+        }
+      ]
+    }
+  }
+}

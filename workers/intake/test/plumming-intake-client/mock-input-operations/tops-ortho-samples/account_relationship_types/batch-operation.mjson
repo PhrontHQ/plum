@@ -1,0 +1,198 @@
+{
+  "dataoperation31": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3DC7E527-5F7C-41BD-91AC-C4778B76DE6A",
+      "type": "merge",
+      "timeStamp": 71143.94226998091,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "47C49087-413D-4776-BD36-CD5390D51371",
+        "type_label": "Mother",
+        "permanent_label": "Mother"
+      }
+    }
+  },
+  "dataoperation32": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E1243CB9-E932-492B-A4A8-0B7004FF1FC1",
+      "type": "merge",
+      "timeStamp": 71143.48667398095,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "58655E8E-B55F-4EA0-80A0-41C5BBD32113",
+        "type_label": "Father",
+        "permanent_label": "Father"
+      }
+    }
+  },
+  "dataoperation33": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "07E5A632-F566-4370-9DAD-FED5E19F5E84",
+      "type": "merge",
+      "timeStamp": 71143.58761698008,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "CD8B2230-1C95-42D2-8EA4-E95A6EE80740",
+        "type_label": "Self",
+        "permanent_label": "Self"
+      }
+    }
+  },
+  "dataoperation34": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6C38B538-2E5D-4D9A-9BA2-D27ECD1FD833",
+      "type": "merge",
+      "timeStamp": 71143.70776697993,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "16E1B719-B8C9-4DB0-AD2D-AFA24624338C",
+        "type_label": "Spouse",
+        "permanent_label": "Spouse"
+      }
+    }
+  },
+  "array": {
+    "value": [
+      {"@": "en"}
+    ]
+  },
+  "criteria8878": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales",
+      "parameters": {
+        "DataServiceUserLocales": {"@": "array"}
+      }
+    }
+  },
+  "dataoperation35": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "45427ABF-A32E-4910-BD16-9705490E65A5",
+      "type": "merge",
+      "timeStamp": 71143.99805000424,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "criteria": {"@": "criteria8878"},
+      "data": {
+        "type_id": "5F897485-546D-4FED-A32B-F9E2DE11AD5B",
+        "type_label": "Step-Mother",
+        "permanent_label": "Step-Mother"
+      }
+    }
+  },
+  "dataoperation36": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6D9DC11E-3FEF-4392-A0A3-D8429B8FBFAB",
+      "type": "merge",
+      "timeStamp": 71144.10947799683,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "32B0EFA0-FC26-45A8-BB31-9ED0F38388AC",
+        "type_label": "Step-Father",
+        "permanent_label": "Step-Father"
+      }
+    }
+  },
+  "dataoperation37": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6A9D15D4-4DC0-4BAD-9A41-F428B42610A3",
+      "type": "merge",
+      "timeStamp": 71144.22417798638,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "D1FB1B94-39E8-4B8A-886B-611CADF1186E",
+        "type_label": "Grand-mother",
+        "permanent_label": "Grand-mother"
+      }
+    }
+  },
+  "dataoperation41": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "7C336DC4-A51F-4B03-B356-0307B0676A6D",
+      "type": "merge",
+      "timeStamp": 71144.45405098796,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "7688D74B-222B-42D5-B310-2B35F9292F93",
+        "type_label": "Grand-father",
+        "permanent_label": "Grand-father"
+      }
+    }
+  },
+  "dataoperation42": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A97C9CB6-0D49-4635-B922-E25FDDA2ECE4",
+      "type": "merge",
+      "timeStamp": 71144.53752598166,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "20AC36B6-56D4-4C70-A4FE-34E2627E51D5",
+        "type_label": "Aunt",
+        "permanent_label": "Aunt"
+      }
+    }
+  },
+  "dataoperation43": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "236D5FFA-3B58-4B17-BBFB-D1192E177478",
+      "type": "merge",
+      "timeStamp": 71144.65506199002,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "7310ce94-6a62-45a7-96ca-5fc47210ca8e",
+        "type_label": "Uncle",
+        "permanent_label": "Uncle"
+      }
+    }
+  },
+  "dataoperation44": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "DA4C3904-242B-4ED6-B9AA-9CDEFDA56C46",
+      "type": "merge,
+      "timeStamp": 71144.6766769886,
+      "targetModuleId": "data/main.datareel/model/account_relationship_types",
+      "data": {
+        "type_id": "93c5be65-66f5-4c65-afdb-7e85fe19e6a5",
+        "type_label": "Other",
+        "permanent_label": "Other"
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E2B8C89F-0DE2-4F9B-90EC-C82E809337D7",
+      "type": "batch",
+      "timeStamp": 71152.07305899262,
+      "targetModuleId": [
+        "data/main.datareel/model/account_relationship_types"
+      ],
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "data": {
+        "batchedOperations": [
+          {"@": "dataoperation31"},
+          {"@": "dataoperation32"},
+          {"@": "dataoperation33"},
+          {"@": "dataoperation34"},
+          {"@": "dataoperation35"},
+          {"@": "dataoperation36"},
+          {"@": "dataoperation37"},
+          {"@": "dataoperation41"},
+          {"@": "dataoperation42"},
+          {"@": "dataoperation43"},
+          {"@": "dataoperation44"}
+        ]
+      }
+    }
+  }
+}…

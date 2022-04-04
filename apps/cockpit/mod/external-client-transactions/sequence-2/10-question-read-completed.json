@@ -1,0 +1,19 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "0DABA192-4372-4132-8C40-E4FAE23342AD",
+      "type": "readCompleted",
+      "timeStamp": 24167.370992988348,
+      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "referrerId": "F1EC98BF-96E5-464C-B027-D661A2B0B1F6",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"5239da47-90d1-41fa-9d8d-480fe272f3d8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-20T23:57:35.817+00:00\",\"creationDate\":\"2020-12-20T23:57:35.817+00:00\",\"originId\":null,\"notes\":null,\"isOpenEnded\":true,\"variableIds\":null,\"superQuestionId\":null,\"name\":\"acceptsSignature\",\"text\":\"Patient/Parent’s Signature\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

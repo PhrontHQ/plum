@@ -1,0 +1,71 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+    
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "readOperationRulesForApplicationIdentityMapEntry"}
+            ]
+        }
+    },
+
+    "readOperationRulesForApplicationIdentityMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "value": [
+                {"@": "matchOrganizationIdentityParametersRule"},
+                {"@": "matchOrganizationIdentityCriteriaRule"},
+                {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+
+    "matchOrganizationIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "secondPerson.supplierRelationships.filter{supplier.id == $.organizationId} || firstPerson.supplierRelationships.filter{supplier.id == $.organizationId}",
+            "parameters": {
+                "organizationId": ""
+            }
+        }
+    },
+
+    "matchOrganizationIdentityCriteriaRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(@matchOrganizationIdentityCriteria)"
+                }
+            }
+        }
+    },
+
+    "matchOrganizationIdentityParametersRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "@matchOrganizationIdentityCriteria.parameters.organizationId": {
+                    "=": "identity.scope.0.criteria.parameters.id"
+                }
+            }
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "true"
+                }
+            }
+        }
+    }
+}

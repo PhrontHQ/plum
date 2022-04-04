@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="unattended-appointment-message.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "title"},
+                "value": {"<-": "@owner.data.context.title"}
+            }
+        },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "text"},
+                "value": {"<-": "@owner.data.text"}
+            }
+        },
+        "CallButton": { 
+            "prototype": "../../call-button.reel",
+            "values": {
+                "element": {"#": "CallButton"},
+                "label": "",
+                "phoneNumber": {"<-": "@owner.data.context.organization.phoneNumbers.0.messagingChannel"}
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="UnattendedAppointmentMessage">
+        <div class="UnattendedAppointmentMessage-header">
+            <img src="./unattended-appointment-message-icon.svg" data-montage-id="directionsButton" height="32" width="32"/>
+            <span data-montage-id="title">Message Title</span>
+        </div>
+        <span data-montage-id="text" class="ChatMessage-text montage-Text">Ok, give us a call</span>
+        <div data-montage-id="CallButton" class="ChatMessage-component"></div>
+    </div>
+</body>
+</html>

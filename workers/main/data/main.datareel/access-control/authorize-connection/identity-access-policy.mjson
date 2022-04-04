@@ -1,0 +1,236 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+
+    "appointmentIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "target == @IdentityDescriptor && data.scope.0.type == @ServiceEngagementDescriptor && data.scope.0.criteria.expression == 'originId == $.originId' && data.scope.0.criteria.parameters.originId.defined()"
+        }
+    },
+
+    "authorizeConnectionOperationAppointmentIdentityCriteria": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "@appointmentIdentityCriteria"
+                }
+            }
+        }
+    },
+
+    "appointmentIdentityRulesMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {
+                "=": "@appointmentIdentityCriteria"
+            },
+            "value": [
+                {"@": "restrictReadExpressionRule"},
+                {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+
+    "applicationIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "target == @IdentityDescriptor && data.applicationIdentifier.defined() && data.applicationCredentials.defined()"
+        }
+    },
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.datareel/model/organization.mjson"
+    },
+
+    "applicationIdentityOrganizationAuthorizationQueryCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "applications.filter{userPoolClients.filter{identifier == $.identifier && credentials == $.credentials}}",
+            "parameters": {"@": "applicationIdentityOrganizationAuthorizationQueryCriteriaParameters"}
+        }
+    },
+    "applicationIdentityOrganizationAuthorizationQueryCriteriaParameters": {
+        "prototype": "global[Object]",
+        "values": {
+            "identifier": {
+                "<-": "@root.dataOperation.data.applicationIdentifier"
+            },
+            "credentials": {
+                "<-": "@root.dataOperation.data.applicationCredentials"
+            }
+        }
+    },
+
+    "applicationIdentityOrganizationAuthorizationQuery": {
+        "prototype": "montage/data/model/data-query",
+        "values": {
+            "type": {"@": "OrganizationDescriptor"},
+            "criteria": {"@": "applicationIdentityOrganizationAuthorizationQueryCriteria"}
+        }
+    },
+
+    "applicationIdentityOrganizationScopeQueryCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "id == $.id",
+            "parameters": {
+                "id": ""
+            }
+        }
+    },
+
+    "applicationIdentityOrganizationScopeQuery": {
+        "prototype": "montage/data/model/data-query",
+        "values": {
+            "type": {"@": "OrganizationDescriptor"},
+            "criteria": {"@": "applicationIdentityOrganizationScopeQueryCriteria"}
+        }
+    },
+
+    "isApplicationAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "@applicationIdentityOrganizationScopeQueryCriteria.parameters.id.defined()"
+                }
+            }
+        }
+    },
+
+    "scopeQueryExpressionConverter": {
+        "prototype": "montage/core/converter/expression-converter",
+        "properties": {
+            "convertExpression": ".0.dataIdentifier.primaryKey"
+        }
+    },
+
+    "organizationScopeQueryResultConverter": {
+        "prototype": "montage/core/converter/pipeline-converter",
+        "properties": {
+            "converters": [
+                {"@": "queryToDataStreamConverter"},
+                {"@": "scopeQueryExpressionConverter"}
+            ]
+        }
+    },
+
+    "setApplicationIdentityScopeOrganizationCriteriaParameterRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "@applicationIdentityOrganizationScopeQueryCriteria.parameters.id": {
+                    "=": "@applicationIdentityOrganizationAuthorizationQuery",
+                    "converter": {"@": "organizationScopeQueryResultConverter"}
+                }
+            }
+        }
+    },
+
+    "setApplicationIdentityScopeOrganizationRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "data.scope": {
+                    "=": "[@applicationIdentityOrganizationScopeQuery]"
+                }
+            }
+        }
+    },
+
+    "applicationIdentityOrganizationScopeQueryCriteriaResetRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "@applicationIdentityOrganizationScopeQueryCriteria.parameters.id": {
+                    "=": ""
+                }
+            }
+        }
+    },
+
+    "applicationIdentityRulesMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {
+                "=": "@applicationIdentityCriteria"
+            },
+            "value": [
+                {"@": "applicationIdentityOrganizationScopeQueryCriteriaResetRule"},
+                {"@": "setApplicationIdentityScopeOrganizationCriteriaParameterRule"},
+                {"@": "setApplicationIdentityScopeOrganizationRule"},
+                {"@": "isApplicationAuthorizedRule"}
+            ]
+        }
+    },
+
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "appointmentIdentityRulesMapEntry"},
+                {"@": "applicationIdentityRulesMapEntry"}
+            ]
+        }
+    },
+
+    "restrictReadExpressionRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "data.scope.0.readExpressions": {
+                    "=": "['id', 'originId']"
+                }
+            }
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "data.scope.0",
+                    "converter": {"@": "hasQueryResultConverter"}
+                }
+            }
+        }
+    },
+
+    "queryToDataStreamConverter": {
+        "prototype": "montage/data/converter/query-to-data-stream-converter",
+        "values": {
+        }
+    },
+
+    "hasResultExpressionConverter": {
+        "prototype": "montage/core/converter/expression-converter",
+        "properties": {
+            "convertExpression": "length > 0"
+        }
+    },
+
+    "hasQueryResultConverter": {
+        "prototype": "montage/core/converter/pipeline-converter",
+        "properties": {
+            "converters": [
+                {"@": "queryToDataStreamConverter"},
+                {"@": "hasResultExpressionConverter"}
+            ]
+        }
+    },
+
+    "IdentityDescriptor": {
+        "object": "montage/data/model/identity.mjson"
+    },
+
+    "ServiceEngagementDescriptor": {
+        "object": "phront/data/main.datareel/model/service-engagement.mjson"
+    }
+}

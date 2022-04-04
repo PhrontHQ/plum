@@ -1,0 +1,31 @@
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria7": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && id == $parameter1",
+      "parameters": {
+        "parameter1": "a15ac57b-3147-4e9d-a63b-bdba74e8e952",
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "F4EDA64A-5981-4E7F-81BE-A1171CC9DEE4",
+      "type": "read",
+      "timeStamp": 6846.390000078827,
+      "targetModuleId": "data/main.datareel/model/asset",
+      "criteria": {"@": "criteria7"},
+      "data": {}
+    }
+  }
+}

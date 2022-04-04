@@ -1,0 +1,62 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "nextPoliciesKeyCriteria": {"@": "DataOperationIdentityReadAccessPolicyCriteria"},
+            "nextPoliciesMap": {"@": "DataOperationIdentityReadAccessNextPolicyMap"}
+        }
+    },
+
+    "DataOperationIdentityReadAccessPolicyCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "identity.scope.0.type"
+        }
+    },
+
+    "DataOperationIdentityReadAccessNextPolicyMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                 {"@": "ServiceEngagementDescriptorMapEntry"},
+                 {"@": "OrganizationDescriptorMapEntry"}
+           ]
+        }
+    },
+
+    "ServiceEngagementDescriptor": {
+        "object": "phront/data/main.datareel/model/service-engagement.mjson"
+    },
+    "ServiceEngagementDescriptorMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ServiceEngagementDescriptor"},
+            "value": [
+                {"@": "ServiceEngagementIdentityReadAccessPolicy"}
+            ]
+        }
+    },
+    "ServiceEngagementIdentityReadAccessPolicy": {
+        "object": "../create-transaction/service-engagement-identity-access-policies/object-descriptor-criteria-access-policy.mjson"
+    },
+
+
+
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.datareel/model/organization.mjson"
+    },
+    "OrganizationDescriptorMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "OrganizationDescriptor"},
+            "value": [
+                {"@": "OrganizationIdentityReadAccessPolicy"}
+            ]
+        }
+    },
+    "OrganizationIdentityReadAccessPolicy": {
+        "object": "../create-transaction/organization-identity-access-policies/object-descriptor-criteria-access-policy.mjson"
+    }
+
+}

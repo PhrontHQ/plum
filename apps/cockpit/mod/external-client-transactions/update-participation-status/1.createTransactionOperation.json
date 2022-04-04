@@ -1,0 +1,16 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6714C027-EE2B-47A2-B1C4-15D49CB0F3B9",
+      "type": "createTransactionOperation",
+      "timeStamp": 37210.87999991141,
+      "targetModuleId": null,
+      "data": {
+        "objectDescriptors": [
+          "data/main.datareel/model/event"
+        ]
+      }
+    }
+  }
+}

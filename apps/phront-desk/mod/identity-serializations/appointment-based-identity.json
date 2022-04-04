@@ -1,0 +1,29 @@
+{
+    "criteria": {
+      "prototype": "montage/core/criteria",
+      "values": {
+        "expression": "originId == $.originId",
+        "parameters": {
+          "originId": "1456a59e-b57b-46ee-b72e-a2338a3cbcfd"
+        }
+      }
+    },
+    "ServiceEngagement": {
+      "object": "phront/data/main.datareel/model/service-engagement.mjson"
+    },
+    "dataquery": {
+      "prototype": "montage/data/model/data-query",
+      "values": {
+        "criteria": {"@": "criteria"},
+        "type": {"@": "ServiceEngagement"}
+      }
+    },
+    "root": {
+      "prototype": "montage/data/model/identity",
+      "values": {
+        "scope": [
+          {"@": "dataquery"}
+        ]
+      }
+    }
+  }

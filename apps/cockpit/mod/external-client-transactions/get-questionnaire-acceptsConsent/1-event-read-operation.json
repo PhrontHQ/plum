@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "respondentQuestionnaires.filter{questionnaire.name == $.questionnaireName && respondentAnswers.some{questionnaireQuestion.question.name == $.questionName && answers.some{booleanValue == true}}} && originId == $.originId && parent != null",
+      "parameters": {
+        "originId": "8ec76eee-efb8-4af9-95b1-25cba43c185e",
+        "questionnaireName": "AAOIC Consent Questionnaire",
+        "questionName": "acceptsConsent"
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "B6A46489-35E8-4FCD-BE21-3121722D72CF",
+      "type": "read",
+      "timeStamp": 2218.489999999292,
+      "targetModuleId": "data/main.datareel/model/event",
+      "criteria": {"@": "criteria"},
+      "locales": [
+        "en-US"
+      ],
+      "data": {}
+    }
+  }
+}

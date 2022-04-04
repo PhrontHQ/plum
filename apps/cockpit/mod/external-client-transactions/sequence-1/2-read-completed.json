@@ -1,0 +1,19 @@
+{
+    "root": {
+      "prototype": "montage/data/service/data-operation",
+      "values": {
+        "id": "0E56ADE3-96D6-42A2-A2F8-43FD9E9BB295",
+        "type": "readCompleted",
+        "timeStamp": 11288.763630986214,
+        "targetModuleId": "data/main.datareel/model/event",
+        "referrerId": "1223FB10-1C10-4974-B8E7-E10750EC2F64",
+        "data": [
+          [
+            {
+              "stringValue": "{\"participationStatus\":null,\"respondentQuestionnaireIds\":[\"107927da-4437-4969-9b8b-68e2f77ed484\",\"3052e7f0-28f9-4ef0-a59f-992d5fb3bf85\"],\"id\":\"1f9bc877-0df2-4f45-8fa3-dbe4ef615e47\"}"
+            }
+          ]
+        ]
+      }
+    }
+  }

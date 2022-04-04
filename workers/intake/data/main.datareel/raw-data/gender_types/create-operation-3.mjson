@@ -1,0 +1,18 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "3DC7E527-5F7C-41BD-91AC-C4778B76DE6A",
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "type": "createOperation",
+      "timeStamp": 71143.94226998091,
+      "targetModuleId": "data/main.datareel/model/gender_types",
+      "data": {
+        "type_id": "3",
+        "type_label": "Other",
+        "permanent_label": "Other",
+        "is_visible": true
+      }
+    }
+  }
+}

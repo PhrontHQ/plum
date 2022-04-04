@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "staff_membersDescriptor"},
+            "rawDataPrimaryKeys":["person_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "staff_membersDescriptor": {
+        "object": "data/main.datareel/model/staff_members.mjson"
+    }
+
+}

@@ -1,0 +1,36 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "rulesForApplicationIdentityMapEntry"}
+            ]
+        }
+    },
+
+    "rulesForApplicationIdentityMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "value": [
+                    {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "true"
+                }
+            }
+        }
+    }
+}

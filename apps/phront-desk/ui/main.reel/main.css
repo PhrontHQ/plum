@@ -1,0 +1,40 @@
+.Main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: env(safe-area-inset-top);
+    left: env(safe-area-inset-left);
+    right: env(safe-area-inset-right);
+    bottom: env(safe-area-inset-bottom);
+    overflow: hidden;
+    font-size: 100px;
+}
+
+.Appointment,
+.Appointments-dateHeader {
+    width: 94vw;
+    max-width: 380px;
+}
+
+@media (max-height: 620px) { .Main { font-size: 99px } }
+@media (max-height: 615px) { .Main { font-size: 98px } }
+@media (max-height: 610px) { .Main { font-size: 97px } }
+@media (max-height: 605px) { .Main { font-size: 96px } }
+@media (max-height: 600px) { .Main { font-size: 95px } }
+@media (max-height: 595px) { .Main { font-size: 94px } }
+@media (max-height: 590px) { .Main { font-size: 93px } }
+@media (max-height: 585px) { .Main { font-size: 92px } }
+@media (max-height: 580px) { .Main { font-size: 91px } }
+@media (max-height: 575px) { .Main { font-size: 90px } }
+@media (max-height: 570px) { .Main { font-size: 89px } }
+@media (max-height: 565px) { .Main { font-size: 88px } }
+@media (max-height: 560px) { .Main { font-size: 87px } }
+@media (max-height: 555px) { .Main { font-size: 86px } }
+@media (max-height: 550px) { .Main { font-size: 85px } }
+@media (max-height: 545px) { .Main { font-size: 84px } }
+@media (max-height: 540px) { .Main { font-size: 83px } }
+@media (max-height: 535px) { .Main { font-size: 82px } }
+@media (max-height: 530px) { .Main { font-size: 81px } }
+@media (max-height: 525px) { .Main { font-size: 80px } }

@@ -1,0 +1,333 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/object-descriptor",
+        "values": {
+            "name": "patients",
+            "propertyDescriptors": [
+                {"@": "person_id"},
+                {"@": "practice_id"},
+                {"@": "created_date"},
+                {"@": "last_modified_date"},
+                {"@": "archived_flag"},
+                {"@": "title"},
+                {"@": "first_name"},
+                {"@": "middle_initial"},
+                {"@": "last_name"},
+                {"@": "street_address"},
+                {"@": "city"},
+                {"@": "state_province"},
+                {"@": "post_code"},
+                {"@": "country_object_id"},
+                {"@": "phone_label_a_object_id"},
+                {"@": "phone_country_code_a"},
+                {"@": "phone_a"},
+                {"@": "phone_label_b_object_id"},
+                {"@": "phone_country_code_b"},
+                {"@": "phone_b"},
+                {"@": "email"},
+                {"@": "gender_object_id"},
+                {"@": "entry_date"},
+                {"@": "account_holder_a_object_id"},
+                {"@": "account_relationship_a_object_id"},
+                {"@": "account_holder_b_object_id"},
+                {"@": "account_relationship_b_object_id"},
+                {"@": "orthodontist_object_id"},
+                {"@": "treatment_coordinator_object_id"},
+                {"@": "clinical_assistant_object_id"},
+                {"@": "location_object_id"},
+                {"@": "language_object_id"},
+                {"@": "hidden_flag"},
+                {"@": "wants_phone_reminders_flag"},
+                {"@": "wants_email_reminders_flag"},
+                {"@": "wants_sms_reminders_flag"}
+            ]
+        }
+    },
+    "person_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "person_id",
+            "valueType": "string"
+        }
+    },
+    "practice_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_id",
+            "valueType": "string"
+        }
+    },
+    "created_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "created_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "last_modified_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "last_modified_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "archived_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "archived_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "title": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "title",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "first_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "first_name",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "middle_initial": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "middle_initial",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "last_name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "last_name",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "street_address": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "street_address",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "city": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "city",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "state_province": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "state_province",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "post_code": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "post_code",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "country_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "country_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_label_a_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_label_a_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_country_code_a": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_country_code_a",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_a": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_a",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_label_b_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_label_b_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_country_code_b": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_country_code_b",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "phone_b": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "phone_b",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },    
+    "email": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "email",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "gender_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "gender_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "entry_date": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "entry_date",
+            "valueType": "date",
+            "mandatory": true
+        }
+    },
+    "account_holder_a_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "account_holder_a_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "account_relationship_a_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "account_relationship_a_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "account_holder_b_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "account_holder_b_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "account_relationship_b_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "account_relationship_b_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "orthodontist_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "orthodontist_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "treatment_coordinator_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "treatment_coordinator_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "clinical_assistant_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "clinical_assistant_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "location_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "location_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "language_object_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "language_object_id",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "hidden_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "hidden_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "wants_phone_reminders_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "wants_phone_reminders_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "wants_email_reminders_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "wants_email_reminders_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "wants_sms_reminders_flag": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "wants_sms_reminders_flag",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    }
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="date-header.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "month": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "month"},
+                "value": {
+                    "<-": "@owner.data.event.scheduledTimeRange.begin",
+                    "converter": {"@": "monthConverter"}
+                }
+            }
+        },
+
+        "monthConverter": {
+            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "values": {
+                "options": {
+                    "month": "long"
+                }
+            }
+        },
+
+        "day": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "day"},
+                "value": {
+                    "<-": "@owner.data.event.scheduledTimeRange.begin",
+                    "converter": {"@": "dayConverter"}
+                }
+            }
+        },
+
+        "dayConverter": {
+            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "values": {
+                "options": {
+                    "day": "numeric"
+                }
+            }
+        },
+
+        "weekDay": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "weekDay"},
+                "value": {
+                    "<-": "@owner.data.event.scheduledTimeRange.begin",
+                    "converter": {"@": "weekDayConverter"}
+                }
+            }
+        },
+
+        "weekDayConverter": {
+            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "values": {
+                "options": {
+                    "weekday": "long"
+                }
+            }
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="DateHeader">
+        <div data-montage-id="day" class="DateHeader-day"></div>
+        <div data-montage-id="month" class="DateHeader-month"></div>
+        <div data-montage-id="weekDay" class="DateHeader-weekDay"></div>
+    </div>
+</body>
+</html>

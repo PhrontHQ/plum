@@ -1,0 +1,15 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "25478358-15BB-4998-B466-09E300722CE3",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/account_holders"
+        ]
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

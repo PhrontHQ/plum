@@ -1,0 +1,77 @@
+hasPatientFormToFill <- if()
+
+
+hasPatientFormToFill <- "organization.customerEngagementQuestionnaires.filter{((rolesRequiredToComplete.filter{name == ‘Patient’}.length > 0) || (rolesOptionalToComplete.filter{name == ‘Patient’}.length > 0))}.length > 0"
+
+/* 
+    hasPatientFormToFill might need to be inlined for perf reasons, but we should be able to optimize expresssions at sme point 
+*/
+hasPatientFormToFillBeforeAppointment <- "hasPatientFormToFill && (organization.customerEngagementQuestionnaires.filter{((participationStatusRequiredByEvent == 'InvitedIn') || (participationStatusOptionalForEvent == 'InvitedIn'))}.length > 0)"
+
+
+
+/*
+    part of hasPatientFormToFill and hasPatientFormToFillBeforeAppointment
+*/
+hasPatientRequiredFormToFillBeforeAppointment <- "organization.customerEngagementQuestionnaires.filter{((rolesRequiredToComplete.filter{name == ‘Patient’}.length > 0) && ((participationStatusRequiredByEvent == 'InvitedIn'))}.length > 0"
+
+
+
+if hasPatientFormToFill is true, we show a section 2
+    if hasPatientFormToFill is true, we show a fill-form buton in section 2
+
+
+hasPatientMandatoryFormToFill = organization.customerEngagementQuestionnaires.filter{rolesRequiredToComplete.filter{name==‘Patient’}.length > 0}.length > 0
+
+
+- The time range when patient has to fill a mandatory form:
+patientMandatoryFormFillingTimeRange = [@owner.data.event.scheduledTimeRange.begin + defaultParticipationStatusExpectedTimeOffsets.get('AdmittanceRequirementsCompleted').begin, @owner.data.event.scheduledTimeRange.begin + defaultParticipationStatusExpectedTimeOffsets.get('AdmittanceRequirementsCompleted').end]
+hasPatientFormToFill
+
+
+- has the patient filled the form?
+    -> Yes, the icon is the check mark
+    -> No 
+
+hasPatientFilledForms "<-": "@owner.data.event.children.0.respondentQuestionnaires && @owner.data.event.children.0.respondentQuestionnaires.every{completionDate.defined()}"
+
+
+- Can the patient fill the form? 
+    - Yes -> the pen button is active
+    - No
+
+canPatientFillForm "<-": "hasPatientFormToFillBeforeAppointment && !hasPatientFilledForms && now in patientMandatoryFormFillingTimeRange"
+
+
+
+- The time when patient has to be at the office:
+appointmentArrivalTime = data.event.scheduledTimeRange.begin + defaultParticipationStatusExpectedTimeOffsets.get('Arrived').begin;
+
+
+- Can the patient says he/she arrived
+- ckeck-in button.disabled <-  now in [@owner.data.event.scheduledTimeRange.begin + defaultParticipationStatusExpectedTimeOffsets.get('Arrived').begin, @owner.data.event.scheduledTimeRange.end]
+
+
+- can the patient be invited in
+canPatientBeInvitedIn <- "!hasPatientFormToFill || (hasPatientRequiredFormToFillBeforeAppointment && hasPatientFilledForms)"
+
+
+- When should the patient be automatically invited?
+automaticPatientInvitationTimeRange = [@owner.data.event.children.0.participationStatusLog.get('Arrived') + defaultParticipationStatusExpectedTimeOffsets.get('InvitedIn').begin, @owner.data.event.scheduledTimeRange.end + defaultParticipationStatusExpectedTimeOffsets.get('InvitedIn').end]
+
+
+- shouldDisplay "please come in"
+shouldInvitePatientInAutomatically <- @owner.data.event.children.0.participationStatusLog.get('Arrived').defined() && automaticPatientInvitationTimeRange.begin = 0;
+
+
+-> schedule timer for automaticPatientInvitationTimeRange.begin
+shouldInvitePatientToCall <- "!@owner.data.event.children.0.participationStatusLog.get('InvitedIn').defined() && canPatientBeInvitedIn && now in automaticPatientInvitationTimeRange"
+
+
+form button.showPen = canPatientFillForm
+form button.diabled = !canPatientFillForm
+
+form button.showCheckMark = 
+
+
+

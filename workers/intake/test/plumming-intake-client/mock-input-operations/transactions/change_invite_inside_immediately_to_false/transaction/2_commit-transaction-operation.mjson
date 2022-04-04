@@ -1,0 +1,47 @@
+{
+  "criteria0" : {
+    "values" : {
+      "expression" : "practice_id == $practice_id",
+      "parameters" : {
+        "practice_id" : 1000
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "root" : {
+    "values" : {
+      "id" : "A4206266-4257-4D78-AC83-23809A76A72A",
+      "data" : {
+        "operations" : {
+          "data/main.datareel/model/practice" : {
+            "mergeOperations" : [
+              {
+                "@" : "dataOperation0"
+              }
+            ]
+          }
+        }
+      },
+      "referrerId" : "A0233AF4-1904-4579-A9D9-5F395B56623A",
+      "type" : "commitTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation0" : {
+    "values" : {
+      "id" : "D40D68A0-C2DF-45C8-A474-C84FC45B6CFC",
+      "data" : {
+        "invite_inside_immediately" : false,
+        "practice_id" : 1000
+      },
+      "referrerId" : "A0233AF4-1904-4579-A9D9-5F395B56623A",
+      "type" : "mergeOperation",
+      "target" : "data/main.datareel/model/practice",
+      "criteria" : {
+        "@" : "criteria0"
+      }
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

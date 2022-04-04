@@ -1,0 +1,70 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/object-descriptor",
+        "values": {
+            "name": "language_types",
+            "propertyDescriptors": [
+                {"@": "type_id"},
+                {"@": "practice_id"},
+                {"@": "type_label"},
+                {"@": "permanent_label"},
+                {"@": "is_visible"},
+                {"@": "iso_language_code"},
+                {"@": "iso_language_code_3"}
+            ]
+        }
+    },
+    "type_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "type_id",
+            "valueType": "string"
+        }
+    },
+    "practice_id": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "practice_id",
+            "valueType": "string"
+        }
+    },
+    "type_label": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "type_label",
+            "valueType": "string"
+        }
+    },
+    "permanent_label": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "permanent_label",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "is_visible": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "is_visible",
+            "valueType": "boolean",
+            "cardinality": 1
+        }
+    },
+    "iso_language_code": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "iso_language_code",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    },
+    "iso_language_code_3": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "iso_language_code_3",
+            "valueType": "string",
+            "cardinality": 1
+        }
+    }
+}

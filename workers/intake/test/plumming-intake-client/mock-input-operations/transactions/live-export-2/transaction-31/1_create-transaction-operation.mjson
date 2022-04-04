@@ -1,0 +1,15 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "EAE5D865-B121-4ACE-8F62-A085F097D0FB",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/patients"
+        ]
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

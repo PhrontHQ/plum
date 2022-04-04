@@ -1,0 +1,13 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "A20937D5-9AFC-4CFC-AC35-A4A54DD0D499",
+      "type": "appendTransactionCompletedOperation",
+      "timeStamp": 287221.64852404594,
+      "targetModuleId": null,
+      "referrerId": "BA3A6F59-ADC6-44E6-8600-675645B8DC90",
+      "data": []
+    }
+  }
+}

@@ -1,0 +1,2038 @@
+2021-10-05T19:03:59.175Z	undefined	INFO	[Object: null prototype] {
+  '/var/runtime/index.js': Module {
+    id: '.',
+    path: '/var/runtime',
+    exports: {},
+    parent: null,
+    filename: '/var/runtime/index.js',
+    loaded: false,
+    children: [ [Module], [Module], [Module], [Module], [Module], [Module] ],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/RAPIDClient.js': Module {
+    id: '/var/runtime/RAPIDClient.js',
+    path: '/var/runtime',
+    exports: [class RAPIDClient],
+    parent: Module {
+      id: '.',
+      path: '/var/runtime',
+      exports: {},
+      parent: null,
+      filename: '/var/runtime/index.js',
+      loaded: false,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/RAPIDClient.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/Errors.js': Module {
+    id: '/var/runtime/Errors.js',
+    path: '/var/runtime',
+    exports: {
+      toRapidResponse: [Function: toRapidResponse],
+      toFormatted: [Function (anonymous)],
+      ImportModuleError: [class ImportModuleError extends Error],
+      HandlerNotFound: [class HandlerNotFound extends Error],
+      MalformedHandlerName: [class MalformedHandlerName extends Error],
+      UserCodeSyntaxError: [class UserCodeSyntaxError extends Error],
+      UnhandledPromiseRejection: [class UnhandledPromiseRejection extends Error]
+    },
+    parent: Module {
+      id: '/var/runtime/RAPIDClient.js',
+      path: '/var/runtime',
+      exports: [class RAPIDClient],
+      parent: [Module],
+      filename: '/var/runtime/RAPIDClient.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/Errors.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/XRayError.js': Module {
+    id: '/var/runtime/XRayError.js',
+    path: '/var/runtime',
+    exports: { formatted: [Function (anonymous)] },
+    parent: Module {
+      id: '/var/runtime/RAPIDClient.js',
+      path: '/var/runtime',
+      exports: [class RAPIDClient],
+      parent: [Module],
+      filename: '/var/runtime/RAPIDClient.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/XRayError.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/Runtime.js': Module {
+    id: '/var/runtime/Runtime.js',
+    path: '/var/runtime',
+    exports: [class Runtime],
+    parent: Module {
+      id: '.',
+      path: '/var/runtime',
+      exports: {},
+      parent: null,
+      filename: '/var/runtime/index.js',
+      loaded: false,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/Runtime.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/InvokeContext.js': Module {
+    id: '/var/runtime/InvokeContext.js',
+    path: '/var/runtime',
+    exports: [class InvokeContext],
+    parent: Module {
+      id: '/var/runtime/Runtime.js',
+      path: '/var/runtime',
+      exports: [class Runtime],
+      parent: [Module],
+      filename: '/var/runtime/Runtime.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/InvokeContext.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/LogPatch.js': Module {
+    id: '/var/runtime/LogPatch.js',
+    path: '/var/runtime',
+    exports: {
+      setCurrentRequestId: [Function: set],
+      patchConsole: [Function: _patchConsole]
+    },
+    parent: Module {
+      id: '/var/runtime/InvokeContext.js',
+      path: '/var/runtime',
+      exports: [class InvokeContext],
+      parent: [Module],
+      filename: '/var/runtime/InvokeContext.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/LogPatch.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/CallbackContext.js': Module {
+    id: '/var/runtime/CallbackContext.js',
+    path: '/var/runtime',
+    exports: { build: [Function (anonymous)] },
+    parent: Module {
+      id: '/var/runtime/Runtime.js',
+      path: '/var/runtime',
+      exports: [class Runtime],
+      parent: [Module],
+      filename: '/var/runtime/Runtime.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/CallbackContext.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/BeforeExitListener.js': Module {
+    id: '/var/runtime/BeforeExitListener.js',
+    path: '/var/runtime',
+    exports: {
+      invoke: [Function: invoke],
+      reset: [Function: reset],
+      set: [Function: set]
+    },
+    parent: Module {
+      id: '/var/runtime/CallbackContext.js',
+      path: '/var/runtime',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/runtime/CallbackContext.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/BeforeExitListener.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/UserFunction.js': Module {
+    id: '/var/runtime/UserFunction.js',
+    path: '/var/runtime',
+    exports: { load: [Function (anonymous)] },
+    parent: Module {
+      id: '.',
+      path: '/var/runtime',
+      exports: {},
+      parent: null,
+      filename: '/var/runtime/index.js',
+      loaded: false,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/UserFunction.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/runtime/build/Release/rapid-client.node': Module {
+    id: '/var/runtime/build/Release/rapid-client.node',
+    path: '/var/runtime/build/Release',
+    exports: {
+      next: [Function (anonymous)],
+      done: [Function (anonymous)],
+      error: [Function (anonymous)]
+    },
+    parent: Module {
+      id: '/var/runtime/RAPIDClient.js',
+      path: '/var/runtime',
+      exports: [class RAPIDClient],
+      parent: [Module],
+      filename: '/var/runtime/RAPIDClient.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/runtime/build/Release/rapid-client.node',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/runtime/build/Release/node_modules',
+      '/var/runtime/build/node_modules',
+      '/var/runtime/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/main.js': Module {
+    id: '/var/task/main.js',
+    path: '/var/task',
+    exports: {
+      worker: [Promise [Object]],
+      connect: [Function (anonymous)],
+      default: [AsyncFunction (anonymous)],
+      handlePerformTransaction: [AsyncFunction (anonymous)],
+      authorizeSend: [AsyncFunction (anonymous)],
+      send: [AsyncFunction (anonymous)],
+      disconnect: [Function (anonymous)],
+      authorize: [AsyncFunction (anonymous)]
+    },
+    parent: Module {
+      id: '/var/runtime/UserFunction.js',
+      path: '/var/runtime',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/runtime/UserFunction.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/main.js',
+    loaded: false,
+    children: [ [Module] ],
+    paths: [ '/var/task/node_modules', '/var/node_modules', '/node_modules' ]
+  },
+  '/var/task/node_modules/phront/serverles/main.js': Module {
+    id: '/var/task/node_modules/phront/serverles/main.js',
+    path: '/var/task/node_modules/phront/serverles',
+    exports: {
+      worker: [Promise [Object]],
+      connect: [Function (anonymous)],
+      default: [AsyncFunction (anonymous)],
+      handlePerformTransaction: [AsyncFunction (anonymous)],
+      authorizeSend: [AsyncFunction (anonymous)],
+      send: [AsyncFunction (anonymous)],
+      disconnect: [Function (anonymous)],
+      authorize: [AsyncFunction (anonymous)]
+    },
+    parent: Module {
+      id: '/var/task/main.js',
+      path: '/var/task',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/main.js',
+      loaded: false,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/phront/serverles/main.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/phront/serverles/node_modules',
+      '/var/task/node_modules/phront/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/montage.js': Module {
+    id: '/var/task/node_modules/montage/montage.js',
+    path: '/var/task/node_modules/montage',
+    exports: {
+      MJSONCompilerFactory: [Function: MJSONCompilerFactory],
+      parseMJSONDependencies: [Function: parseMJSONDependencies],
+      Compiler: [Function (anonymous)],
+      initMontageCustomElement: [Function (anonymous)],
+      initMontage: [Function (anonymous)],
+      getPlatform: [Function (anonymous)],
+      loadPackage: [Function (anonymous)],
+      TemplateLoader: [Function (anonymous)]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/phront/serverles/main.js',
+      path: '/var/task/node_modules/phront/serverles',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/phront/serverles/main.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/montage.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/node.js': Module {
+    id: '/var/task/node_modules/montage/node.js',
+    path: '/var/task/node_modules/montage',
+    exports: { bootstrap: [Function (anonymous)] },
+    parent: Module {
+      id: '/var/task/node_modules/montage/montage.js',
+      path: '/var/task/node_modules/montage',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/montage.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/node.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/mr/require.js': Module {
+    id: '/var/task/node_modules/montage/core/mr/require.js',
+    path: '/var/task/node_modules/montage/core/mr',
+    exports: {
+      lowercaseModuleId: [Function: lowercaseModuleId],
+      makeRequire: [Function (anonymous)],
+      injectPackageDescription: [Function (anonymous)],
+      injectLoadedPackageDescription: [Function (anonymous)],
+      injectPackageDescriptionLocation: [Function (anonymous)],
+      loadPackageDescription: [Function (anonymous)],
+      loadPackageLock: [Function (anonymous)],
+      loadPackage: [Function (anonymous)],
+      resolve: [Function: resolve],
+      extension: [Function (anonymous)],
+      isAbsolute: [Function: isAbsolute],
+      parseDependencies: [Function: parseDependencies],
+      DependenciesCompiler: [Function (anonymous)],
+      ShebangCompiler: [Function (anonymous)],
+      LintCompiler: [Function (anonymous)],
+      exposedConfigs: [Array],
+      makeCompiler: [Function (anonymous)],
+      DelegateCompiler: [Function (anonymous)],
+      JsonCompiler: [Function (anonymous)],
+      TemplateCompiler: [Function (anonymous)],
+      executeCompiler: [Function (anonymous)],
+      SerializationCompiler: [Function (anonymous)],
+      MappingsLoader: [Function (anonymous)],
+      LocationLoader: [Function (anonymous)],
+      MemoizedLoader: [Function (anonymous)],
+      ReelLoader: [Function (anonymous)],
+      ES_MODULE_TYPE: 'javascript-module',
+      getLocation: [Function: getLocation],
+      locationToPath: [Function: locationToPath],
+      filePathToLocation: [Function: filePathToLocation],
+      directoryPathToLocation: [Function: directoryPathToLocation],
+      read: [Function: read],
+      Compiler: [Function: Compiler],
+      detect_ES6_export_regex: /(?<=^([^"]|"[^"]*")*)export /,
+      Loader: [Function: Loader],
+      NodeLoader: [Function: NodeLoader],
+      makeLoader: [Function (anonymous)],
+      findPackagePath: [Function: findPackagePath],
+      findPackageLocationAndModuleId: [Function: findPackageLocationAndModuleId],
+      delegate: [Object]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/node.js',
+      path: '/var/task/node_modules/montage',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/node.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/mr/require.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/mr/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/bluebird.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/bluebird.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: <ref *1> [Function: Promise] {
+      TypeError: [Function: TypeError],
+      RangeError: [Function: RangeError],
+      CancellationError: [Function: SubError],
+      TimeoutError: [Function: SubError],
+      OperationalError: [Function: OperationalError],
+      RejectionError: [Function: OperationalError],
+      AggregateError: [Function: SubError],
+      _peekContext: [Function (anonymous)],
+      onPossiblyUnhandledRejection: [Function (anonymous)],
+      onUnhandledRejectionHandled: [Function (anonymous)],
+      longStackTraces: [Function (anonymous)],
+      hasLongStackTraces: [Function (anonymous)],
+      config: [Function (anonymous)],
+      getNewLibraryCopy: [Function (anonymous)],
+      is: [Function (anonymous)],
+      fromCallback: [Function (anonymous)],
+      fromNode: [Function (anonymous)],
+      all: [Function (anonymous)],
+      cast: [Function (anonymous)],
+      fulfilled: [Function (anonymous)],
+      resolve: [Function (anonymous)],
+      rejected: [Function (anonymous)],
+      reject: [Function (anonymous)],
+      setScheduler: [Function (anonymous)],
+      pending: [Function (anonymous)],
+      defer: [Function (anonymous)],
+      method: [Function (anonymous)],
+      try: [Function (anonymous)],
+      attempt: [Function (anonymous)],
+      bind: [Function (anonymous)],
+      PromiseInspection: [Function: PromiseInspection],
+      join: [Function (anonymous)],
+      Promise: [Circular *1],
+      version: '3.5.5',
+      coroutine: [Function],
+      spawn: [Function (anonymous)],
+      map: [Function (anonymous)],
+      promisify: [Function (anonymous)],
+      promisifyAll: [Function (anonymous)],
+      props: [Function (anonymous)],
+      race: [Function (anonymous)],
+      reduce: [Function (anonymous)],
+      settle: [Function (anonymous)],
+      some: [Function (anonymous)],
+      _SomePromiseArray: [Function: SomePromiseArray],
+      delay: [Function (anonymous)],
+      using: [Function (anonymous)],
+      any: [Function (anonymous)],
+      each: [Function (anonymous)],
+      mapSeries: [Function: PromiseMapSeries],
+      filter: [Function (anonymous)],
+      noConflict: [Function: noConflict]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/mr/require.js',
+      path: '/var/task/node_modules/montage/core/mr',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/mr/require.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/bluebird.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/promise.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/promise.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/bluebird.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/bluebird.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+    loaded: true,
+    children: [
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module], [Module],
+      [Module], [Module]
+    ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/util.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/util.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: {
+      isClass: [Function: isClass],
+      isIdentifier: [Function: isIdentifier],
+      inheritedDataKeys: [Function (anonymous)],
+      getDataPropertyOrDefault: [Function: getDataPropertyOrDefault],
+      thrower: [Function: thrower],
+      isArray: [Function: isArray],
+      asArray: [Function: asArray],
+      notEnumerableProp: [Function: notEnumerableProp],
+      isPrimitive: [Function: isPrimitive],
+      isObject: [Function: isObject],
+      isError: [Function: isError],
+      canEvaluate: true,
+      errorObj: [Object],
+      tryCatch: [Function: tryCatch],
+      inherits: [Function: inherits],
+      withAppended: [Function: withAppended],
+      maybeWrapAsError: [Function: maybeWrapAsError],
+      toFastProperties: [Function: toFastProperties],
+      filledRange: [Function: filledRange],
+      toString: [Function: safeToString],
+      canAttachTrace: [Function: canAttachTrace],
+      ensureErrorObject: [Function (anonymous)],
+      originatesFromRejection: [Function: originatesFromRejection],
+      markAsOriginatingFromRejection: [Function: markAsOriginatingFromRejection],
+      classString: [Function: classString],
+      copyDescriptors: [Function: copyDescriptors],
+      hasDevTools: false,
+      isNode: true,
+      hasEnvVariables: true,
+      env: [Function: env],
+      global: [Object [global]],
+      getNativePromise: [Function: getNativePromise],
+      domainBind: [Function: domainBind],
+      isRecentNode: true,
+      lastLineError: Error
+          at Object.<anonymous> (/var/task/node_modules/bluebird/js/release/util.js:388:12)
+          at Module._compile (internal/modules/cjs/loader.js:1072:14)
+          at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+          at Module.load (internal/modules/cjs/loader.js:937:32)
+          at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+          at Module.require (internal/modules/cjs/loader.js:961:19)
+          at require (internal/modules/cjs/helpers.js:92:18)
+          at module.exports (/var/task/node_modules/bluebird/js/release/promise.js:14:12)
+          at Object.<anonymous> (/var/task/node_modules/bluebird/js/release/bluebird.js:9:36)
+          at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    },
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/util.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/es5.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/es5.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: {
+      freeze: [Function: freeze],
+      defineProperty: [Function: defineProperty],
+      getDescriptor: [Function: getOwnPropertyDescriptor],
+      keys: [Function: keys],
+      names: [Function: getOwnPropertyNames],
+      getPrototypeOf: [Function: getPrototypeOf],
+      isArray: [Function: isArray],
+      isES5: true,
+      propertyIsWritable: [Function: propertyIsWritable]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/util.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/util.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/es5.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/async.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/async.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function: Async] {
+      firstLineError: Error
+          at Object.<anonymous> (/var/task/node_modules/bluebird/js/release/async.js:3:12)
+          at Module._compile (internal/modules/cjs/loader.js:1072:14)
+          at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+          at Module.load (internal/modules/cjs/loader.js:937:32)
+          at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+          at Module.require (internal/modules/cjs/loader.js:961:19)
+          at require (internal/modules/cjs/helpers.js:92:18)
+          at module.exports (/var/task/node_modules/bluebird/js/release/promise.js:31:13)
+          at Object.<anonymous> (/var/task/node_modules/bluebird/js/release/bluebird.js:9:36)
+          at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    },
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/async.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/schedule.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/schedule.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/async.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/async.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/schedule.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/queue.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/queue.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function: Queue],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/async.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/async.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/queue.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/errors.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/errors.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: {
+      Error: [Function],
+      TypeError: [Function: TypeError],
+      RangeError: [Function: RangeError],
+      CancellationError: [Function: SubError],
+      OperationalError: [Function: OperationalError],
+      TimeoutError: [Function: SubError],
+      AggregateError: [Function: SubError],
+      Warning: [Function: SubError]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/errors.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/thenables.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/thenables.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/thenables.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/promise_array.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/promise_array.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/promise_array.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/context.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/context.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/context.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/debuggability.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/debuggability.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/debuggability.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/finally.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/finally.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/finally.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/catch_filter.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/catch_filter.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/finally.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/finally.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/catch_filter.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/nodeback.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/nodeback.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function: nodebackForPromise],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/nodeback.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/method.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/method.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/method.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/bind.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/bind.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/bind.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/cancel.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/cancel.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/cancel.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/direct_resolve.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/direct_resolve.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/direct_resolve.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/synchronous_inspection.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/synchronous_inspection.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/synchronous_inspection.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/join.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/join.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/join.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/call_get.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/call_get.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/call_get.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/generators.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/generators.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/generators.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/map.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/map.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/map.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/nodeify.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/nodeify.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/nodeify.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/promisify.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/promisify.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/promisify.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/props.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/props.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/props.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/race.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/race.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/race.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/reduce.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/reduce.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/reduce.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/settle.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/settle.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/settle.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/some.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/some.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/some.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/timers.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/timers.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/timers.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/using.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/using.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/using.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/any.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/any.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/any.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/each.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/each.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/each.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/bluebird/js/release/filter.js': Module {
+    id: '/var/task/node_modules/bluebird/js/release/filter.js',
+    path: '/var/task/node_modules/bluebird/js/release',
+    exports: [Function (anonymous)],
+    parent: Module {
+      id: '/var/task/node_modules/bluebird/js/release/promise.js',
+      path: '/var/task/node_modules/bluebird/js/release',
+      exports: [Function (anonymous)],
+      parent: [Module],
+      filename: '/var/task/node_modules/bluebird/js/release/promise.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/bluebird/js/release/filter.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/bluebird/js/release/node_modules',
+      '/var/task/node_modules/bluebird/js/node_modules',
+      '/var/task/node_modules/bluebird/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/mr/node.js': Module {
+    id: '/var/task/node_modules/montage/core/mr/node.js',
+    path: '/var/task/node_modules/montage/core/mr',
+    exports: {},
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/mr/require.js',
+      path: '/var/task/node_modules/montage/core/mr',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/mr/require.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/mr/node.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/mr/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/fs.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/fs.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: {
+      SEPARATOR: '/',
+      ROOT: '/',
+      ALT_SEPARATOR: undefined,
+      SEPARATORS_RE: [Function (anonymous)],
+      split: [Function (anonymous)],
+      join: [Function (anonymous)],
+      resolve: [Function (anonymous)],
+      normal: [Function (anonymous)],
+      isAbsolute: [Function (anonymous)],
+      isRelative: [Function (anonymous)],
+      isRoot: [Function (anonymous)],
+      root: [Function (anonymous)],
+      directory: [Function (anonymous)],
+      base: [Function (anonymous)],
+      extension: [Function (anonymous)],
+      read: [Function (anonymous)],
+      write: [Function (anonymous)],
+      append: [Function (anonymous)],
+      move: [Function (anonymous)],
+      copy: [Function (anonymous)],
+      copyTree: [Function (anonymous)],
+      listTree: [Function (anonymous)],
+      listDirectoryTree: [Function (anonymous)],
+      makeTree: [Function (anonymous)],
+      removeTree: [Function (anonymous)],
+      symbolicCopy: [Function (anonymous)],
+      exists: [Function (anonymous)],
+      isFile: [Function (anonymous)],
+      isDirectory: [Function (anonymous)],
+      isSymbolicLink: [Function (anonymous)],
+      lastModified: [Function (anonymous)],
+      lastAccessed: [Function (anonymous)],
+      absolute: [Function (anonymous)],
+      relative: [Function (anonymous)],
+      relativeFromFile: [Function (anonymous)],
+      relativeFromDirectory: [Function (anonymous)],
+      contains: [Function (anonymous)],
+      reroot: [Function: reroot],
+      toObject: [Function (anonymous)],
+      merge: [Function (anonymous)],
+      Stats: [Function: Stats],
+      Mock: [Function],
+      Root: [Function: RootFs],
+      open: [Function: retry],
+      remove: [Function (anonymous)],
+      rename: [Function (anonymous)],
+      makeDirectory: [Function (anonymous)],
+      removeDirectory: [Function (anonymous)],
+      list: [Function: retry],
+      stat: [Function (anonymous)],
+      statLink: [Function (anonymous)],
+      statFd: [Function (anonymous)],
+      link: [Function (anonymous)],
+      symbolicLink: [Function (anonymous)],
+      chown: [Function (anonymous)],
+      chmod: [Function (anonymous)],
+      canonical: [Function (anonymous)],
+      readLink: [Function (anonymous)],
+      mock: [Function (anonymous)]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/node.js',
+      path: '/var/task/node_modules/montage',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/node.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/fs.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module], [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/q.js': Module {
+    id: '/var/task/node_modules/montage/core/q.js',
+    path: '/var/task/node_modules/montage/core',
+    exports: [Function: Q] {
+      reject: [Function (anonymous)],
+      defer: [Function (anonymous)],
+      all: [Function (anonymous)],
+      allSettled: undefined,
+      delay: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      spread: [Function (anonymous)],
+      join: [Function (anonymous)],
+      race: [Function (anonymous)],
+      try: [Function (anonymous)],
+      fapply: [Function (anonymous)],
+      fcall: [Function (anonymous)],
+      fbind: [Function (anonymous)],
+      async: [Function],
+      spawn: [Function (anonymous)],
+      cast: [Function (anonymous)],
+      isPromise: [Function (anonymous)],
+      promised: [Function: promised],
+      isThenable: [Function (anonymous)],
+      Promise: [Function (anonymous)],
+      nextTick: [Function (anonymous)],
+      resolve: [Function (anonymous)],
+      fulfill: [Function (anonymous)],
+      isPromiseAlike: [Function (anonymous)],
+      when: [Function (anonymous)],
+      fail: [Function (anonymous)],
+      fin: [Function (anonymous)],
+      progress: [Function (anonymous)],
+      thenResolve: [Function (anonymous)],
+      thenReject: [Function (anonymous)],
+      isPending: [Function (anonymous)],
+      isFulfilled: [Function (anonymous)],
+      isRejected: [Function (anonymous)],
+      master: [Function (anonymous)],
+      makePromise: [Function (anonymous)],
+      dispatch: [Function (anonymous)],
+      get: [Function (anonymous)],
+      keys: [Function (anonymous)],
+      post: [Function (anonymous)],
+      mapply: [Function (anonymous)],
+      send: [Function (anonymous)],
+      set: [Function (anonymous)],
+      delete: [Function (anonymous)],
+      nearer: [Function (anonymous)],
+      done: [Function (anonymous)],
+      nfapply: [Function (anonymous)],
+      resetUnhandledRejections: [Function: resetUnhandledRejections],
+      getUnhandledReasons: [Function (anonymous)],
+      stopUnhandledRejectionTracking: [Function (anonymous)]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/q.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/reader.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/reader.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: [Function: Reader] {
+      read: [Function: read],
+      join: [Function: join]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/reader.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/writer.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/writer.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: [Function: Writer],
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/writer.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/fs-common.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: { update: [Function (anonymous)] },
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/fs-boot.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/fs-boot.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: {
+      SEPARATOR: '/',
+      ROOT: '/',
+      ALT_SEPARATOR: undefined,
+      SEPARATORS_RE: [Function (anonymous)],
+      split: [Function (anonymous)],
+      join: [Function (anonymous)],
+      resolve: [Function (anonymous)],
+      normal: [Function (anonymous)],
+      isAbsolute: [Function (anonymous)],
+      isRelative: [Function (anonymous)],
+      isRoot: [Function (anonymous)],
+      root: [Function (anonymous)],
+      directory: [Function (anonymous)],
+      base: [Function (anonymous)],
+      extension: [Function (anonymous)]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/fs-boot.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/fs-root.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/fs-root.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: [Function: RootFs],
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/fs-root.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/fs-mock.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/fs-mock.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: [Function: MockFs] { mock: [Function: mock] },
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs-common.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/fs-mock.js',
+    loaded: true,
+    children: [ [Module], [Module], [Module], [Module], [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/montage/core/promise-io/buffer-stream.js': Module {
+    id: '/var/task/node_modules/montage/core/promise-io/buffer-stream.js',
+    path: '/var/task/node_modules/montage/core/promise-io',
+    exports: [Function: BufferStream],
+    parent: Module {
+      id: '/var/task/node_modules/montage/core/promise-io/fs-mock.js',
+      path: '/var/task/node_modules/montage/core/promise-io',
+      exports: [Function],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/core/promise-io/fs-mock.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/montage/core/promise-io/buffer-stream.js',
+    loaded: true,
+    children: [ [Module], [Module] ],
+    paths: [
+      '/var/task/node_modules/montage/core/promise-io/node_modules',
+      '/var/task/node_modules/montage/core/node_modules',
+      '/var/task/node_modules/montage/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/htmlparser2/lib/index.js': Module {
+    id: '/var/task/node_modules/htmlparser2/lib/index.js',
+    path: '/var/task/node_modules/htmlparser2/lib',
+    exports: {
+      Parser: [Getter],
+      DomHandler: [Getter],
+      FeedHandler: [Getter],
+      Tokenizer: [Getter],
+      ElementType: [Getter],
+      Stream: [Getter],
+      WritableStream: [Getter],
+      ProxyHandler: [Getter],
+      CollectingHandler: [Getter],
+      DefaultHandler: [Getter],
+      RssHandler: [Getter],
+      createDomStream: [Function: createDomStream],
+      EVENTS: [Object],
+      DomUtils: [Object]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/montage/node.js',
+      path: '/var/task/node_modules/montage',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/montage/node.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/htmlparser2/lib/index.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/htmlparser2/lib/node_modules',
+      '/var/task/node_modules/htmlparser2/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/domutils/index.js': Module {
+    id: '/var/task/node_modules/domutils/index.js',
+    path: '/var/task/node_modules/domutils',
+    exports: {
+      isTag: [Function: isTag],
+      getChildren: [Function: getChildren],
+      getParent: [Function: getParent],
+      getAttributeValue: [Function: getAttributeValue],
+      hasAttrib: [Function: hasAttrib],
+      getName: [Function: getName],
+      getSiblings: [Function: getSiblings],
+      findOne: [Function: findOne],
+      findAll: [Function: findAll],
+      filter: [Function: filter],
+      testElement: [Function (anonymous)],
+      getElements: [Function (anonymous)],
+      getElementById: [Function (anonymous)],
+      getElementsByTagName: [Function (anonymous)],
+      getElementsByTagType: [Function (anonymous)],
+      removeElement: [Function (anonymous)],
+      replaceElement: [Function (anonymous)],
+      getInnerHTML: [Function (anonymous)],
+      getOuterHTML: [Function (anonymous)],
+      getText: [Function: getText]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/htmlparser2/lib/index.js',
+      path: '/var/task/node_modules/htmlparser2/lib',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/htmlparser2/lib/index.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/domutils/index.js',
+    loaded: true,
+    children: [ [Module] ],
+    paths: [
+      '/var/task/node_modules/domutils/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  },
+  '/var/task/node_modules/domelementtype/index.js': Module {
+    id: '/var/task/node_modules/domelementtype/index.js',
+    path: '/var/task/node_modules/domelementtype',
+    exports: {
+      Text: 'text',
+      Directive: 'directive',
+      Comment: 'comment',
+      Script: 'script',
+      Style: 'style',
+      Tag: 'tag',
+      CDATA: 'cdata',
+      Doctype: 'doctype',
+      isTag: [Function: isTag]
+    },
+    parent: Module {
+      id: '/var/task/node_modules/domutils/index.js',
+      path: '/var/task/node_modules/domutils',
+      exports: [Object],
+      parent: [Module],
+      filename: '/var/task/node_modules/domutils/index.js',
+      loaded: true,
+      children: [Array],
+      paths: [Array]
+    },
+    filename: '/var/task/node_modules/domelementtype/index.js',
+    loaded: true,
+    children: [],
+    paths: [
+      '/var/task/node_modules/domelementtype/node_modules',
+      '/var/task/node_modules',
+      '/var/node_modules',
+      '/node_modules'
+    ]
+  }
+}

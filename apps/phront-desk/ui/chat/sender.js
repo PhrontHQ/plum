@@ -1,0 +1,1 @@
+exports.Sender = function Sender() {};

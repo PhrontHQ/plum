@@ -1,0 +1,89 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "9DB9FF1D-0A63-4FA9-8682-54A907A0D8BD",
+      "type": "readCompleted",
+      "timeStamp": 23734.844546988606,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire-answer",
+      "referrerId": "3EA6FAF5-7A04-4F4E-8BDA-DEBB5CAA327E",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"20d67459-9c79-4f2e-85e3-d6342a6037ce\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.206+00:00\",\"creationDate\":\"2020-12-21T00:31:43.206+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"a769fca5-9c73-4fb5-9638-aeb93cad7bf8\",\"89e1873e-ffdb-4cd0-8dc0-88b7bf71aa67\",\"1a3b3edd-4a8f-4479-90d3-e42a6a542088\"],\"questionnaireQuestionId\":\"39019543-fa77-4fbe-8ac3-98c0601b141e\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"fe9e92bc-e8b2-42e5-bfad-775303e04e8a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.208+00:00\",\"creationDate\":\"2020-12-21T00:31:43.208+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"127099ab-005c-4ee2-a77a-f65bc1fc8a98\"],\"questionnaireQuestionId\":\"99c48a31-18d3-4600-ab6e-106a0446246e\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"f27e0891-22be-4a2a-bbe9-e0ab20c23714\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.209+00:00\",\"creationDate\":\"2020-12-21T00:31:43.209+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"52a805f8-99a4-485b-93e5-38cfacb99b27\"],\"questionnaireQuestionId\":\"7ede236f-d394-4f6d-b4da-1dcf690e0aa1\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"39f83343-84e7-4851-bbca-6ac17d74c268\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.211+00:00\",\"creationDate\":\"2020-12-21T00:31:43.211+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"2b7b4122-43f3-4a29-b868-bec99021c316\"],\"questionnaireQuestionId\":\"33441479-6116-4b57-be6e-5e109bb1c0a3\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"6d2f2b1f-51b9-4d6d-a193-eb38a8908dbb\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:43.213+00:00\",\"creationDate\":\"2020-12-21T00:31:43.213+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"4f6074dd-4d6d-49dc-a005-0d423f4ca91a\"],\"questionnaireQuestionId\":\"5e21b5df-9b1a-42fd-9401-b2489b473558\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"9a593094-8382-4702-920a-5ef1fcfed0ab\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.212+00:00\",\"creationDate\":\"2020-12-21T00:31:45.212+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"b3051722-347d-4113-b34f-2ba8d5e0a371\"],\"questionnaireQuestionId\":\"1578d7d6-fc64-47a5-8d10-2b44ff1f3ee7\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"3ee3a24d-9898-4aca-b791-b15c323f47ef\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.213+00:00\",\"creationDate\":\"2020-12-21T00:31:45.213+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"442d6e0b-5458-4384-a82d-e2529e7c4050\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"dcb5b8dd-5c36-4b71-becb-35962e4e339d\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.215+00:00\",\"creationDate\":\"2020-12-21T00:31:45.215+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"7183facd-ea86-4211-a56e-bc2a5afc6712\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"e96a8868-e3e4-4e04-8310-b9e5667e1e9a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.216+00:00\",\"creationDate\":\"2020-12-21T00:31:45.216+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"2c8b9a2d-408a-4e9b-b1a0-3820de121bf2\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"fca6798f-462f-42bf-9622-7f1f95c16c2e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.218+00:00\",\"creationDate\":\"2020-12-21T00:31:45.218+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"2a4a60cc-5c5a-4d25-aa13-a5a64dd8255f\",\"823a7378-f3c2-4e6a-9582-9f3d3baee50f\",\"acda2c6c-bec8-4913-a4bc-ff029d1ad3f8\"],\"questionnaireQuestionId\":\"97a16628-b6fa-4e08-9493-ada0bd19e0fc\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"58d7369a-7a6d-4c66-971d-cb3f46703b7a\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.22+00:00\",\"creationDate\":\"2020-12-21T00:31:45.22+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"bf2a212e-0ef8-4b91-9251-617cf3dcf79e\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"1f57b7eb-3e37-4fa6-ad79-7d72caee0670\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.221+00:00\",\"creationDate\":\"2020-12-21T00:31:45.221+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":[\"8b7ce088-9367-4b53-9811-9ef7be289693\"],\"questionnaireQuestionId\":\"78cbda5f-0446-471d-8ff3-ee2103f69879\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"479aeda9-3263-4f6c-a960-2e95a7c28e8e\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.223+00:00\",\"creationDate\":\"2020-12-21T00:31:45.223+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"fc02c545-a298-47cf-a7ab-6d69a338b74f\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"aa5c2446-8c19-40e8-8f3c-e94f87567702\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.224+00:00\",\"creationDate\":\"2020-12-21T00:31:45.224+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"512eaf3c-cf93-4110-9683-2756cc9a3731\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"4e533f62-5d00-436c-8d20-1a2238f1b7f8\",\"publicationDate\":null,\"modificationDate\":\"2020-12-21T00:31:45.225+00:00\",\"creationDate\":\"2020-12-21T00:31:45.225+00:00\",\"originId\":null,\"respondentNotes\":null,\"completionDate\":\"2020-12-21T00:31:00+00:00\",\"answerIds\":null,\"questionnaireQuestionId\":\"5374d1e1-d3f8-4664-b627-18d401f6c91a\",\"respondentQuestionnaireId\":\"a024408f-eed0-4de2-84a9-ada6e129877d\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E221085A-D428-4174-BB5E-D0AA932FDD26",
+      "type": "readCompleted",
+      "timeStamp": 32848.342525959015,
+      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "referrerId": "5AFD9480-DD09-4E1E-89C8-02AF7D7A98FA",
+      "data": [
+        [
+          {
+            "stringValue": "{\"id\":\"8f1d90c4-cc68-4984-ab65-0a14f7ab4ba2\",\"publicationDate\":null,\"modificationDate\":\"2021-01-20T19:29:14.82+00:00\",\"creationDate\":\"2021-01-20T19:29:14.82+00:00\",\"originId\":\"499bd1cd-7b41-4ccb-84e8-b18c73ae2536\",\"notes\":null,\"pdfExportId\":\"a15ac57b-3147-4e9d-a63b-bdba74e8e952\",\"isMandatory\":null,\"completionDate\":\"2021-01-20T19:29:00+00:00\",\"questionnaireId\":\"396d1ccd-e22c-45ab-ae70-a54291ea1332\",\"respondentId\":\"73d0210e-7e85-4d1d-acd6-f58b3ba8cec5\"}"
+          }
+        ],
+        [
+          {
+            "stringValue": "{\"id\":\"e4d82592-1c07-491c-a9f7-57e8e24d135f\",\"publicationDate\":null,\"modificationDate\":\"2021-01-20T19:29:16.451+00:00\",\"creationDate\":\"2021-01-20T19:29:16.451+00:00\",\"originId\":\"499bd1cd-7b41-4ccb-84e8-b18c73ae2536\",\"notes\":null,\"pdfExportId\":null,\"isMandatory\":null,\"completionDate\":\"2021-01-20T08:00:00+00:00\",\"questionnaireId\":\"c93b3acc-23ab-4237-bc62-74a7435f7573\",\"respondentId\":\"73d0210e-7e85-4d1d-acd6-f58b3ba8cec5\"}"
+          }
+        ]
+      ]
+    }
+  }
+}

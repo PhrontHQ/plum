@@ -1,0 +1,35 @@
+{
+  "locale": {
+    "prototype": "montage/core/locale",
+    "values": {
+      "identifier": "en-US"
+    }
+  },
+  "criteria12": {
+    "prototype": "montage/core/criteria",
+    "values": {
+      "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
+      "parameters": {
+        "parameter1": [
+          "a769fca5-9c73-4fb5-9638-aeb93cad7bf8",
+          "89e1873e-ffdb-4cd0-8dc0-88b7bf71aa67",
+          "1a3b3edd-4a8f-4479-90d3-e42a6a542088"
+        ],
+        "DataServiceUserLocales": [
+          {"@": "locale"}
+        ]
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "C3F7029A-4381-41E0-8E2F-DF9BDD767D73",
+      "type": "read",
+      "timeStamp": 8270.239999998012,
+      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "criteria": {"@": "criteria12"},
+      "data": {}
+    }
+  }
+}
