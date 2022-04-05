@@ -2898,6 +2898,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             .then(function(dataObject) {
                 if(!dataObject.userPools) {
                     self.updatePracticeAuthenticationIfNeeded(dataObject);
+                    return dataObject;
                 } else {
                     return dataObject;
                 }
