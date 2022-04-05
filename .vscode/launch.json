@@ -560,7 +560,7 @@
                 // "--prof",
                 "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
                 "--function",
-                "${workspaceFolder}/workers/intake/.serverless/plumming-intake/main.js",
+                "${workspaceFolder}/workers/intake/.serverless/intake/main.js",
                 "-p",
                 "7373",
                 "-s",
