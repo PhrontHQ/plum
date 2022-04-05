@@ -2884,7 +2884,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             var mainService = this.rootService,
                 self = this;
 
-            return mainService.getObjectProperties(dataObject, "parent", "userPools")
+            return mainService.getObjectProperties(dataObject, "parent"/*, "userPools"*/)
             .then(function() {
                 if(!dataObject.parent) {
                     return self.cogentDesignOrganization()
@@ -2895,14 +2895,18 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 }
                 return dataObject;
             })
-            .then(function(dataObject) {
-                if(!dataObject.userPools) {
-                    self.updatePracticeAuthenticationIfNeeded(dataObject);
-                    return dataObject;
-                } else {
-                    return dataObject;
-                }
-            })
+            /*
+                Taking that out as we shouldn't be updating these aspects on merge, 
+                thiis is all done at creation / provision time
+            */
+            // .then(function(dataObject) {
+            //     if(!dataObject.userPools) {
+            //         self.updatePracticeAuthenticationIfNeeded(dataObject);
+            //         return dataObject;
+            //     } else {
+            //         return dataObject;
+            //     }
+            // })
             .then(function(dataObject){
                 return self.processPracticeCustomerEngagementQuestionnaires(dataObject, rawData);
             })
