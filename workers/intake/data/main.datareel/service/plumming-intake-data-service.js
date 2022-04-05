@@ -4341,9 +4341,13 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 customerPreferenceRoleRanking,
                 customerPreferenceSMSRoleRanking;
 
+                if(!rawPhoneLabelObjectDescriptor) {
+                    throw "rawPhoneLabelObjectDescriptor with moduleId: 'data/main.datareel/model/phone_label_types'";
+                }
+
                 rawDataObjectsByType = rawDataObjectsByTypeByOriginId.get(rawPhoneLabelObjectDescriptor);
                 if(!rawDataObjectsByType) {
-                    throw "Missing raw Phone Label data";
+                    console.warn("Missing raw Phone Label data: party.originId: "+ party.originId+", labelId: "+labelId+", countryCode: "+countryCode+", rawPhoneNumber: "+rawPhoneNumber+ ", originId: ",originId);
                 } else {
                     rawPhoneLabelType = rawDataObjectsByType.get(labelId.toString());
                     if(rawPhoneLabelType) {
@@ -4355,15 +4359,22 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             //Check if we have one
             if(partyPhoneNumbers && partyPhoneNumbers.length > 0) {
 
-                partyPhoneNumberCriteria = new Criteria().initWithExpression("label == $label && originId == $originId", {
-                    label: label,
-                    originId: originId
-                });
+                if(label) {
+                    partyPhoneNumberCriteria = new Criteria().initWithExpression("label == $label && originId == $originId", {
+                        label: label,
+                        originId: originId
+                    });    
+                } else {
+                    partyPhoneNumberCriteria = new Criteria().initWithExpression("originId == $originId", {
+                        originId: originId
+                    });    
+                }
+
 
                 filteredPartyPhoneNumbers = partyPhoneNumbers.filter(partyPhoneNumberCriteria.predicateFunction);
 
                 if(filteredPartyPhoneNumbers && filteredPartyPhoneNumbers.length) {
-                    if(filteredPartyPhoneNumbers.length > 1) {
+                    if(label && filteredPartyPhoneNumbers.length > 1) {
                         throw "More than one PartyPhoneNumber with label: '"+label+"' and originId: '"+originId+"'";
                     }
                     partyPhoneNumber = filteredPartyPhoneNumbers[0];
@@ -4373,7 +4384,9 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
             if(!partyPhoneNumber) {
                 partyPhoneNumber = mainService.createDataObject(PartyPhoneNumber);
-                partyPhoneNumber.label = label;
+                if(label) {
+                    partyPhoneNumber.label = label;
+                }
                 partyPhoneNumber.originId = originId;
 
                 //Capturing the original ranking a/b/c/d
@@ -5352,7 +5365,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 practice = _practice;
 
                 if(!practice) {
-                    throw `performAppointmentsMergeOperation Error:, no practice found for rawData: ${rawData}`;
+                    throw `performAppointmentsMergeOperation Error:, no practice found for rawData: ${JSON.stringify(rawData)}`;
                 }
 
                 return self.phrontDataObjectWithDescriptorAndOriginIdInTransaction(serviceObjectDescriptor, rawData.procedure_id, createTransactionOperation,null,["variants"]);
@@ -5361,7 +5374,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 procedureService = _procedureService;
 
                 if(!procedureService) {
-                    throw `performAppointmentsMergeOperation Error:, no procedureService found for rawData: ${rawData}`;
+                    throw `performAppointmentsMergeOperation Error:, no procedureService found for rawData: ${JSON.stringify(rawData)}`;
                 }
 
                 return self.phrontDataObjectWithDescriptorAndOriginIdInTransaction(phrontPersonObjectDescriptor, rawData.orthodontist_id, createTransactionOperation, null, ["employmentHistory"]);
@@ -5370,7 +5383,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 orthodontist = _orthodontist;
 
                 if(!orthodontist) {
-                    throw `performAppointmentsMergeOperation Error:, no orthodentist found for rawData: ${rawData}`;
+                    throw `performAppointmentsMergeOperation Error:, no orthodentist found for rawData: ${JSON.stringify(rawData)}`;
                 }
 
                 return self.phrontDataObjectWithDescriptorAndOriginIdInTransaction(phrontPersonObjectDescriptor, rawData.patient_id, createTransactionOperation);
@@ -5379,14 +5392,14 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 patient = _patient;
 
                 if(!patient) {
-                    throw `performAppointmentsMergeOperation Error:, no patient found for rawData: ${rawData}`;
+                    throw `performAppointmentsMergeOperation Error:, no patient found for rawData: ${JSON.stringify(rawData)}`;
                 }
 
                 return mainService.getObjectProperties(patient,"supplierRelationships");
             })
             .then(function() {
                 if(!patient.supplierRelationships) {
-                    throw `supplierRelationships Error:, no patient.supplierRelationships found for rawData: ${rawData}`;
+                    throw `supplierRelationships Error:, no patient.supplierRelationships found for rawData: ${JSON.stringify(rawData)}`;
                 }
                 return mainService.getObjectsProperties(patient.supplierRelationships,"calendars");
             })
