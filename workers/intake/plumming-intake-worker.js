@@ -112,7 +112,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
     provisionRootIdentity: {
         value: function(identity) {
 
-            console.log("provisionRootIdentity()");
+            console.log("provisionRootIdentity()",identity);
 
             // var UserPoolClientCriteria = new Criteria().initWithExpression("controllingOrganization == $.controllingOrganization", {
             //     controllingOrganization: organization
@@ -194,7 +194,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
         
                     })
                     .catch(function(error) {
-                        console.error("Error fetching UserPool App clients");
+                        console.error("Error fetching UserPool App clients:",error);
                         return Promise.reject(error);
                     });
 
