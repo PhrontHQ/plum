@@ -334,6 +334,7 @@ functions:
   default:
     name: ${self:custom.myServiceObjectVersionedName}-default
     handler: main.default
+    timeout: 12 # optional, in seconds, default is 6
     events:
       - websocket:
           route: $default
