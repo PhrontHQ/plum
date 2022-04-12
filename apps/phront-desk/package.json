@@ -14,7 +14,11 @@
         "minit": "^0.5.7",
         "mop": "github:marchant/mop.git#montage-19",
         "serverless": "~3.9.0",
+        "serverless-hosted-zone": "^0.0.8",
+        "@dezeroku/serverless-certificate-creator": "^1.6.0",
+        "serverless-deployment-bucket": "^1.5.2",
         "serverless-prune-plugin": "^2.0.1",
+        "serverless-website-domain": "github:PhrontHQ/serverless-website-domain#master",
         "serverless-s3-sync": "^1.17.1",
         "serverless-scriptable-plugin": "^1.2.2"
     },
