@@ -51,7 +51,7 @@
     "applicationIdentityOrganizationAuthorizationQueryCriteria": {
         "prototype": "montage/core/criteria",
         "values": {
-            "expression": "applications.filter{userPoolClients.filter{identifier == $.identifier && credentials == $.credentials}}",
+            "expression": "applications.filter{appClients.filter{identifier == $.identifier && credentials == $.credentials}}",
             "parameters": {"@": "applicationIdentityOrganizationAuthorizationQueryCriteriaParameters"}
         }
     },
