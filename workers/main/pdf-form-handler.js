@@ -60,7 +60,7 @@ function threadAPIAuthorizationHeaderPromise() {
         readOperation.type = DataOperation.Type.ReadOperation;
         readOperation.target = secretObjectDescriptor;
         readOperation.criteria = new Criteria().initWithExpression("name == $.name", {
-            name: "arn:aws:secretsmanager:us-west-2:545740467277:secret:ThreadAPIAuthorizationHeader-qylDUc"
+            name: "ThreadAPIAuthorizationHeader"
         });
 
         secretObjectDescriptor.addEventListener(DataOperation.Type.ReadCompletedOperation, function(readCompletedOperation) {
@@ -310,7 +310,7 @@ function getAppointentPDFDataOnS3(appointmentOriginId) {
         })
         .catch(function (error) {
             console.error("getAppointentPDFDataOnS3 error:", error);
-            return null;
+            return Promise.reject(error);
         });
 
 }
@@ -476,7 +476,24 @@ exports.handleRespondentQuestionnaireReadCompletedOperation = function (readComp
             );
         }
 
-        return Promise.all(getPDFPromises);
+        return Promise.all(getPDFPromises)
+        .catch(function(error) {
+            console.error("handleRespondentQuestionnaireReadCompletedOperation: Error ",error);
+            readCompletedOperation.stopImmediatePropagation();
+
+            var readFailedOperation = new DataOperation();
+            readFailedOperation.referrerId = readCompletedOperation.referrerId;
+            readFailedOperation.type = DataOperation.Type.ReadFailedOperation;
+            readFailedOperation.target = readCompletedOperation.target;
+            readFailedOperation.context = readCompletedOperation.context;
+            readFailedOperation.clientId = readCompletedOperation.clientId;
+            readFailedOperation.data = error;
+
+            // console.log("Unauthorized Read Operation for type: "+createTransactionOperation.target.name, createTransactionOperation);
+
+            readFailedOperation.target.dispatchEvent(readFailedOperation);
+            return readFailedOperation;
+        });
     }
 
 };
