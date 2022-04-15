@@ -28,6 +28,82 @@
             ]
         },
         {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch PhrontDesk on localhost",
+            "runtimeArgs": [
+                "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
+                "--silent",
+                "--gzip",
+                "-p",
+                "9796",
+                "-S",
+                "-C",
+                "${workspaceFolder}/apps/phront-desk/node_modules/phront/dev/local-ssl-certificate-authority/localhost.crt",
+                "-K",
+                "${workspaceFolder}/apps/phront-desk/node_modules/phront/dev/local-ssl-certificate-authority/localhost.key"
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "cwd": "${workspaceFolder}/apps/phront-desk/",
+            "command": "npx serverless deploy --aws-profile cogent-mod --stage mod --region us-east-1",
+            "name": "Deploy PhrontDesk to mod/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/apps/phront-desk/",
+            "command": "npx serverless remove-domain --aws-profile cogent-mod --stage mod --region us-east-1",
+            "name": "Remove PhrontDesk from mod/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/apps/phront-desk/",
+            "command": "npx serverless deploy --aws-profile cogent-test --stage test --region us-west-2",
+            "name": "Deploy PhrontDesk to test/us-west-2",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/apps/phront-desk/",
+            "command": "npx serverless deploy --aws-profile cogent-live --stage live --region us-east-1",
+            "name": "Deploy PhrontDesk to live/us-east-1",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "-------------------------------------"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Cockpit on phront.local",
+            "runtimeArgs": [
+                "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
+                "${workspaceFolder}/apps/cockpit/",
+                "--silent",
+                "--gzip",
+                "-p",
+                "9798",
+                "-S",
+                "-C",
+                "${workspaceFolder}/apps/cockpit/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-K",
+                "${workspaceFolder}/apps/cockpit/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+            ],
+            "trace": false,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
             "name": "-------------------------------------"
         },
 
@@ -54,7 +130,7 @@
                 "-k",
                 "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
                 "--gatewayTimeout",
-                "500"
+                "6000"
             ],
             "trace": true,
             "enableContentValidation": false,
@@ -626,6 +702,32 @@
             "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
         },
         {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-3 on local mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-3/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "ws://phront.local:7373",
+                "--httpURL",
+                "http://phront.local:7374"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
             "cwd": "${workspaceFolder}/workers/intake/",
             "command": "npx serverless package --stage mod --region us-east-1",
             "name": "Package IntakeWorker for mod/us-east-1",
@@ -677,6 +779,32 @@
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "wss://connect.intake.mod.oh.my-plum-appointment.guru/v1",
+                "--httpURL",
+                "https://send.intake.mod.oh.my-plum-appointment.guru/v1"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-3 on mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-3/index.json",
                 "-s",
                 "mod",
                 "--webSocketURL",
