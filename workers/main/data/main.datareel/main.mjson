@@ -82,17 +82,17 @@
                 "live": {
                     "profile": "cogent-live",
                     "region": "us-east-1",
-                    "bucketName": "plumming-production"
+                    "bucketName": "live-plum-540973189736"
                 },
                 "test": {
                     "profile": "cogent-test",
                     "region": "us-west-2",
-                    "bucketName": "plumming-staging"
+                    "bucketName": "test-plum-545740467277"
                 },
                 "mod": {
                     "profile": "cogent-mod",
                     "region": "us-east-1",
-                    "bucketName": "plumming-mod"
+                    "bucketName": "mod-plum-006408448862"
                 }
             }
         }
