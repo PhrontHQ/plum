@@ -36,10 +36,19 @@
         "values": {
             "authorizationPolicy": {"=":"@AuthenticationPolicy.ON_DEMAND"},
             "connectionDescriptor": {
-                "staging": {
-                    "websocketURL": "wss://aibqczt09g.execute-api.us-west-2.amazonaws.com/staging"
+                "live": {
+                    "websocketURL": "wss://connect.oh.my-plum-appointment.guru/v1",
+                    "httpsURL": "https://send.oh.my-plum-appointment.guru/v1"
                 },
-                "dev": {
+                "test": {
+                    "websocketURL": "wss://connect.test.oh.my-plum-appointment.guru/v1",
+                    "httpsURL": "https://send.test.oh.my-plum-appointment.guru/v1"
+                },
+                "mod": {
+                    "websocketURL": "wss://connect.mod.oh.my-plum-appointment.guru/v1",
+                    "httpsURL": "https://send.mod.oh.my-plum-appointment.guru/v1"
+                },
+                "local": {
                     "websocketURL": "wss://phront.local:3001"
                 }
             }
