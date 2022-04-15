@@ -5125,6 +5125,10 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         responsiblePartyRelationshipA,
                         responsiblePartyRelationshipB;
 
+                    if(accountHolderPersonA && accountHolderPersonB && (accountHolderPersonA === accountHolderPersonB)) {
+                        console.warn("accountHolderPersonA and accountHolderPersonB are the same: ",accountHolderPersonA);
+                    }
+
                     if(responsiblePartyRelationships && responsiblePartyRelationships.length > 0) {
                         var responsiblePartyACriteria = new Criteria().initWithExpression("responsibleParty == $responsibleParty && ", {
                             responsibleParty: accountHolderPersonA
@@ -5171,7 +5175,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         financialResponsibilityRoleRankingA.ranking = 1;
                         responsiblePartyRelationshipA.roleRankings = [financialResponsibilityRoleRankingA];
 
-                        responsiblePartyRelationships.push(responsiblePartyRelationshipA);
+                        //responsiblePartyRelationships.push(responsiblePartyRelationshipA);
 
                     }
 
@@ -5182,10 +5186,10 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         
                         var financialResponsibilityRoleRankingB = mainService.createDataObject(RoleRanking);
                         financialResponsibilityRoleRankingB.role = self.financialResponsibilityRole;
-                        financialResponsibilityRoleRankingB.ranking = 1;
+                        financialResponsibilityRoleRankingB.ranking = 2;
                         responsiblePartyRelationshipB.roleRankings = [financialResponsibilityRoleRankingB];
 
-                        responsiblePartyRelationships.push(responsiblePartyRelationshipB);
+                        //responsiblePartyRelationships.push(responsiblePartyRelationshipB);
                     }
 
 
