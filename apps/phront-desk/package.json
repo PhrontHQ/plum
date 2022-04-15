@@ -24,7 +24,7 @@
     },
     "scripts": {
         "lint": "jshint .",
-        "build": "node node_modules/mop/optimize .",
+        "build": "node node_modules/mop/optimize . -target .serverless",
         "serve": "node_modules/http-server/bin/http-server -p 9797 -S -C node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt -K node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
         "start": "minit serve",
         "start:dist": "minit serve -r dist",
