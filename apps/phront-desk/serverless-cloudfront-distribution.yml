@@ -1,0 +1,54 @@
+Type: AWS::CloudFront::Distribution
+Properties:
+  DistributionConfig:
+    Aliases: 
+    # - ${self:custom.domainComponents.domain}
+    - ${self:custom.websiteDomain.domain}
+    CustomErrorResponses:
+      - ErrorCode: 404
+        ResponseCode: 200
+        ResponsePagePath: /index.html
+    DefaultCacheBehavior:
+      AllowedMethods:
+        - GET
+        - HEAD
+      CachedMethods: [GET, HEAD]
+      Compress: True
+
+      # LambdaFunctionAssociations:
+      #   - EventType: viewer-request
+      #     LambdaFunctionARN: ${self:custom.websiteDomain.edgeLambdaArn}
+      TargetOriginId: ${self:custom.cloudfrontOriginId}
+      ForwardedValues:
+        QueryString: true
+        Cookies:
+          Forward: none
+      ViewerProtocolPolicy: redirect-to-https
+    
+    # CacheBehaviors:
+    #   - 
+    #     TargetOriginId: ${self:custom.cloudfrontOriginId}
+    #     ViewerProtocolPolicy: redirect-to-https
+    #     AllowedMethods:
+    #       - GET
+    #       - HEAD
+    #     CachedMethods: [GET, HEAD]
+    #     PathPattern: index.html
+    #     #per https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-cachepolicyid
+    #     CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad
+
+    DefaultRootObject: index.html
+    Enabled: 'true'
+    HttpVersion: 'http2'
+    IPV6Enabled: true
+    Origins:
+      - DomainName: ${self:custom.bucketName}.s3.amazonaws.com
+        CustomOriginConfig:
+          HTTPPort: 80
+          HTTPSPort: 443
+          OriginProtocolPolicy: https-only
+        Id: ${self:custom.cloudfrontOriginId}
+    ViewerCertificate:
+      AcmCertificateArn:  ${certificate(${self:custom.customCertificate.0.certificateName}):CertificateArn}
+      MinimumProtocolVersion: 'TLSv1.2_2021'
+      SslSupportMethod: 'sni-only'

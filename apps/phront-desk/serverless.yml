@@ -4,6 +4,7 @@ frameworkVersion: '3'
 # See https://www.serverless.com/blog/framework-release-v138-websockets
 # org: benoitmarchant
 service: plum-apps-phront-desk
+org: cogent-design
 
 package:
     exclude:
@@ -31,11 +32,24 @@ package:
 # $ serverless deploy --stage live
 # more at https://serverless-stack.com/chapters/configure-multiple-aws-profiles.html
 custom:
+  projectVersion: ${file(../../package.json):version}
+  versionComponents: ${file(../../tools/serverless/package-version-components.js)}
+  majorVersion: ${self:custom.versionComponents.0}
+
+  myLiveAppId: fc3b780d-8a69-4688-8f62-871390be4143
+  myServiceObjectName: ${sls:stage}-${self:service}
+  myServiceObjectVersionedName: ${self:custom.myServiceObjectName}-v${self:custom.majorVersion}
   myStage: ${opt:stage, self:provider.stage}
-  myRegion: 
-    mod: us-east-1
-    test: us-west-2
-    live: us-east-1
+  myRegion: ${opt:region, self:provider.region}
+  myDefaultBaseDomain: ${self:custom.myLiveAppId}.phrontier.live
+  myBaseDomain: oh.my-plum-appointment.guru
+  myStageBaseDomain: 
+    mod: ${self:custom.myStage}.${self:custom.myBaseDomain}
+    test: ${self:custom.myStage}.${self:custom.myBaseDomain}
+    live: ${self:custom.myBaseDomain}.
+  bucketName: ${self:custom.myServiceObjectVersionedName} # required
+  cloudfrontOriginId: ${self:custom.myServiceObjectName}
+
   myProfile:
     mod: cogent-mod
     test: cogent-test
@@ -45,12 +59,42 @@ custom:
     mod: 006408448862
     test: 545740467277
     live: 540973189736
+  myCfnRole:
+    mod: arn:aws:iam::006408448862:role/cloudformation-manager
+    test: arn:aws:iam::545740467277:role/cloudformation-manager
+    live: arn:aws:iam::540973189736:role/cloudformation-manager
+
+  hostedZone:
+    name: ${self:custom.myStageBaseDomain.${self:custom.myStage}}.
+
+  # Amazon Certificate Manager
+  # @dezeroku/serverless-certificate-creator
+  customCertificate:
+    - 
+      # Route 53 Hosted Zone name
+      # don't forget the dot on the end!
+      hostedZoneNames: 
+        # - phrontier.live.
+        - ${self:custom.myStageBaseDomain.${self:custom.myStage}}.
+      #hostedZoneIds: Z0729969302NRWU3T38ZD
+      # Here we get our certificate name inside custom.domain.STAGE.certificateName
+      # STAGE will be automatically filled with the value from "provider > stage"
+      # certificateName: ${self:custom.myStageBaseDomain}
+      # certificateName: "*.phrontier.live"
+      certificateName: "${self:custom.myStageBaseDomain.${self:custom.myStage}}"
+      region: ${self:custom.myRegion}
+
+  # certificateName: ${self:custom.customCertificate.0.certificateName}
+  # AcmCertificate: ${certificate:${self:custom.certificateName}}
+  # AcmCertificateArn:  ${certificate:${self:custom.customCertificate.0.certificateName}}.CertificateArn
+
 
   s3Sync:
     # A simple configuration for copying static assets
-    - bucketName: ${self:service} # required
+    # We embed the stage in the bucket name to enable the possibility of a single account
+    - bucketName: ${self:custom.bucketName} # required
       #bucketPrefix: assets/ # optional
-      localDir: builds/phront-desk # required
+      localDir: .serverless/phront-desk # required
       # localDir: / # required
       deleteRemoved: false # optional, indicates whether sync deletes files no longer present in localDir. Defaults to 'true'
       #acl: public-read # optional
@@ -65,6 +109,20 @@ custom:
       #  tagKey1: tagValue1
       #  tagKey2: tagValue2
 
+  #For serverless-website-domain plugin
+  websiteDomain:
+    cloudfrontOutputKey: 'cloudFrontDomainName'
+    domain: ${self:custom.myStageBaseDomain.${self:custom.myStage}}
+    # edgeLambda:
+    #   basicAuthCredentials: ${env:BASIC_AUTH_CREDENTIALS}
+    #   redirect:
+    #     from: ${self:custom.domainComponents.withoutWWW}
+    #     to: ${self:custom.domainComponents.withWWW}
+
+  scriptable:
+    hooks:
+      before:package:createDeploymentArtifacts: npm run build
+
   prune:
     automatic: true
     includeLayers: true
@@ -72,22 +130,46 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs12.x
-  stage: dev
+  runtime: nodejs14.x
+  stage: mod
+  stackName: ${self:custom.myServiceObjectVersionedName} # Overwrite default CloudFormation stack name. Default is ${self:service}-${sls:stage}
   profile: ${self:custom.myProfile.${self:custom.myStage}}
   role: arn:aws:iam::${self:custom.myAccount.${self:custom.myStage}}:role/lambda-runner 
-  cfnRole: arn:aws:iam::${self:custom.myAccount.${self:custom.myStage}}:role/cloudformation-manager  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
-  region: ${self:custom.myRegion.${self:custom.myStage}} # Overwrite the default region used. Default is us-east-1
+  # cfnRole: arn:aws:iam::${self:custom.myAccount.${self:custom.myStage}}:role/cloudformation-manager  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
+  cfnRole: ${self:custom.myCfnRole.${self:custom.myStage}}  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
+  region: us-east-1 # Overwrite the default region used. Default is us-east-1
+
+  deploymentBucket:
+    name: ${self:custom.bucketName}-serverless-deployment
+
+  # cloudfront:
+  #   cachePolicies:
+  #     - IndexCachePolicy:
+  #         DefaultTTL: 0
+  #         MinTTL: 0
+  #         MaxTTL: 0
+
+
 
 resources:
+  Outputs:
+    cloudFrontDistributionId:
+      Value:
+        Ref: CloudFrontDistribution
+    cloudFrontDomainName:
+      Value:
+        'Fn::GetAtt': [ CloudFrontDistribution, DomainName ]
   Resources:
-    # AssetsBucket:
-    #   Type: AWS::S3::Bucket
-    #   Properties:
-    #     BucketName: plum-appointments-${self:custom.myStage}
+    Bucket: ${file(./serverless-s3-bucket.yml)}
+    BucketPolicy: ${file(./serverless-s3-bucket-policy.yml)}
+    CloudFrontDistribution: ${file(./serverless-cloudfront-distribution.yml)}
 
           
 plugins:
+  - serverless-hosted-zone
+  - "@dezeroku/serverless-certificate-creator"
+  - serverless-website-domain
+  - serverless-deployment-bucket
   - serverless-s3-sync
   - serverless-scriptable-plugin
   #https://www.serverless.com/plugins/serverless-prune-plugin
