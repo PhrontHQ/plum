@@ -24,17 +24,17 @@ exports.ConsentmentForm = DataEditor.specialize({
 
     formConnectionDescriptor: {
         value: {
+            "local": {
+                "url": "http://localhost:3000/staging/multipart"
+            },
             "mod": {
                 "url": "https://kl1yvohwsh.execute-api.us-east-1.amazonaws.com/mod/multipart"
             },
-            "staging": {
+            "test": {
                 "url": "https://5ak3bzyrq7.execute-api.us-west-2.amazonaws.com/staging/multipart"
             },
-            "production": {
+            "live": {
                 "url": "https://cdu8qeqi80.execute-api.us-east-1.amazonaws.com/production/multipart"
-            },
-            "dev": {
-                "url": "http://localhost:3000/staging/multipart"
             }
         }
     },
