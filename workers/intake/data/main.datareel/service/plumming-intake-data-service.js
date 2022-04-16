@@ -276,7 +276,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 }
             }, (error) => {
                 console.log("PlummingIntakeDataService -eventRoleWithNameAndTags ["+name.en["*"]+"] error:",error);
-                if(error.message.indexOf('"phront.Role" does not exist') !== -1) {
+                if(error.message.indexOf('.Role" does not exist') !== -1) {
                         //We need to find a way expose the creation of a object descriptor's storage
                         //to the main data service.
 
@@ -1209,7 +1209,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     this._objectDescriptorStoreExistsCache.set(objectDescriptor,false);
                     return false;
                 },  (error) => {
-                    if((error.message.indexOf('"phront.'+query.type.name+'" does not exist') !== -1)) {
+                    if((error.message.indexOf('.'+query.type.name+'" does not exist') !== -1)) {
                         //We need to find a way expose the creation of a object descriptor's storage
                         //to the main data service.
                         //console.log("PlummingIntakeDataService phrontClientService.createObjectDescriptorStore() for "+objectDescriptor.name);
