@@ -1,0 +1,55 @@
+{
+  "criteria0" : {
+    "values" : {
+      "expression" : "practice_id == $practice_id",
+      "parameters" : {
+        "practice_id" : 1000
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "root" : {
+    "values" : {
+      "id" : "424DC753-FD53-4BC3-8614-6CF1B9083396",
+      "data" : {
+        "notifyRelevantChanges" : false,
+        "operations" : {
+          "data/main.datareel/model/practice" : {
+            "mergeOperations" : [
+              {
+                "@" : "dataOperation0"
+              }
+            ]
+          }
+        }
+      },
+      "type" : "performTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation0" : {
+    "values" : {
+      "id" : "0F9FB1EA-3DFE-4444-952D-FD56A2006362",
+      "data" : {
+        "disable_checkin" : false,
+        "disable_admittance_forms" : false,
+        "invite_inside_immediately" : false,
+        "invite_inside_upon_forms_completed" : true,
+        "timezone" : "America/New_York",
+        "early_arrival_minutes" : 15,
+        "max_minutes_to_wait_after_arrival" : 15,
+        "practice_id" : 1000,
+        "max_minutes_to_allow_admittance_forms" : 120,
+        "practice_name" : "Eugenio Martins, D.D.S., P.C."
+      },
+      "referrerId" : "7D558AD9-72EA-4FA2-A457-EB10B91B0E3B",
+      "type" : "mergeOperation",
+      "target" : "data/main.datareel/model/practice",
+      "criteria" : {
+        "@" : "criteria0"
+      }
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

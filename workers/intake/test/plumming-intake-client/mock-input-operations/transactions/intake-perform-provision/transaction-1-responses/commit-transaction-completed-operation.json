@@ -1,0 +1,39 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-operation",
+        "values": {
+            "id": "88f457b2-1291-4355-801a-ba36fb68be2b",
+            "type": "performTransactionCompletedOperation",
+            "timeStamp": 80284.05584716797,
+            "clientId": "F847E75A-B316-43AE-8297-0FB678DB7B6F",
+            "targetModuleId": null,
+            "referrerId": "A4206266-4257-4D78-AC83-23809A76A72A",
+            "data": {
+                "createdDataObjects": {
+                    "data/main.datareel/model/organization": {
+                        "count": 1
+                    },
+                    "data/main.datareel/model/app/application": {
+                        "count": 3
+                    },
+                    "data/main.datareel/model/app/app-client": {
+                        "count": 3
+                    },
+                    "data/main.datareel/model/customer-engagement-questionnaire": {
+                        "count": 2
+                    },
+                    "data/main.datareel/model/b-2-c-customer-supplier-relationship": {
+                        "count": 1
+                    },
+                    "data/main.datareel/model/calendar": {
+                        "count": 1
+                    },
+                    "data/main.datareel/model/event": {
+                        "count": 1
+                    }
+                },
+                "deletedDataObjects": {}
+            }
+        }
+    }
+}
