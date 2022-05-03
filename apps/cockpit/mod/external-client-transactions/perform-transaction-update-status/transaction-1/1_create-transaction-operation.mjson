@@ -1,0 +1,49 @@
+{
+  "criteria3" : {
+    "values" : {
+      "expression" : "originId == $.originId && parent != null",
+      "parameters" : {
+        "originId" : "aac98df0-52a7-426f-b407-cf7b9cfbe5bc"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "root" : {
+    "values" : {
+      "id" : "5D84CCA1-C559-4C92-ADC8-00970CD6CA8E",
+      "data" : {
+        "notifyRelevantChanges" : false,
+        "operations" : {
+          "data/main.datareel/model/event" : {
+            "updateOperations" : [
+              {
+                "@" : "dataOperation3"
+              }
+            ]
+          }
+        }
+      },
+      "type" : "performTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation3" : {
+    "values" : {
+      "criteria" : {
+        "@" : "criteria3"
+      },
+      "id" : "B7BCC8EA-1271-402D-8ABB-EB594125ED45",
+      "data" : {
+        "participationStatus" : "InvitedIn"
+      },
+      "targetModuleId" : "data/main.datareel/model/event",
+      "snapshot" : {
+        "participationStatus" : "Arrived"
+      },
+      "type" : "updateOperation",
+      "referrerId" : "5D84CCA1-C559-4C92-ADC8-00970CD6CA8E"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}
