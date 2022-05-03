@@ -135,7 +135,13 @@
     min-width: 0;
 }
 
-.Appointment-fillOutFormButton.hasPatientFormToFillBeforeAppointment, .Appointment-fillOutFormButton.hasPatientFormToFillBeforeAppointment:hover {
+.Appointment-fillOutFormButton:focus {
+    box-shadow: none;
+}
+
+.Appointment-fillOutFormButton.hasPatientFormToFillBeforeAppointment
+/*, .Appointment-fillOutFormButton.hasPatientFormToFillBeforeAppointment:hover */
+{
     width: 46px;
     height: 46px;
     background-image: url(./fill-out-form-button.svg);
@@ -144,11 +150,11 @@
     background-position: center;
 }
 
-.Appointment-fillOutFormButton.hasPatientFilledForms {
+.Appointment-fillOutFormButton.PatientFilledForms {
     background-image: url(./checked.svg);
 }   
 
-.Appointment-fillOutFormButton.hasPatientFilledForms[disabled="disabled"] {
+.Appointment-fillOutFormButton.PatientFilledForms[disabled="disabled"] {
     opacity:1;
 }   
 
