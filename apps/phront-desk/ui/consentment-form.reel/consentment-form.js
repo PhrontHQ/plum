@@ -25,7 +25,7 @@ exports.ConsentmentForm = DataEditor.specialize({
     formConnectionDescriptor: {
         value: {
             "local": {
-                "url": "http://localhost:3000/staging/multipart"
+                "url": "http://localhost:3000/mod/multipart"
             },
             "mod": {
                 "url": "https://kl1yvohwsh.execute-api.us-east-1.amazonaws.com/mod/multipart"
