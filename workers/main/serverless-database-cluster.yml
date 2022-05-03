@@ -1,0 +1,49 @@
+# see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engine
+Type: AWS::RDS::DBCluster
+Properties:
+  Engine: aurora-postgresql
+  EngineMode: serverless
+  EngineVersion: '10' # this currently provisions '10.serverless_14'
+  EnableHttpEndpoint: True
+  DBClusterIdentifier: ${sls:stage}
+  DatabaseName: ${sls:stage}-${self:custom.app}-v${self:custom.majorVersion}
+  # MasterUsername: admin
+  # MasterUserPassword: '{{resolve:ssm-secure:MasterPassword:10}}' #See link
+  MasterUsername: !Join ['', ['{{resolve:secretsmanager:', !Ref DatabaseSecret, ':SecretString:username}}' ]]
+  MasterUserPassword: !Join ['', ['{{resolve:secretsmanager:', !Ref DatabaseSecret, ':SecretString:password}}' ]]
+
+
+# Type: AWS::RDS::DBCluster
+# Properties:
+#   MasterUsername: 
+#     Ref: DBUsername
+#   MasterUserPassword: 
+#     Ref: DBPassword
+#   DatabaseName: RANDOMNAME
+#   Engine: aurora
+#   EngineMode: serverless
+#   ScalingConfiguration:
+#     AutoPause: true
+#     MaxCapacity: 16
+#     MinCapacity: 2
+#     SecondsUntilAutoPause: 300
+#   DBSubnetGroupName:
+#     Ref: DBSubnetGroup
+
+#   Type: AWS::RDS::DBCluster
+#   Properties:
+#     DBClusterIdentifier: !Ref DBClusterName
+#     MasterUsername: some-name
+#     MasterUserPassword: some-password
+#     DatabaseName: some-db-name
+#     Engine: aurora-postgresql
+#     EngineMode: serverless
+#     EngineVersion: '10' # this currently provisions '10.serverless_14'
+#     EnableHttpEndpoint: true # for HTTP API endpoint
+#     ScalingConfiguration:
+#       AutoPause: true
+#       MaxCapacity: 2
+#       MinCapacity: 2 # min 2 currently
+#       SecondsUntilAutoPause: 900 # 15 min
+#     DBSubnetGroupName:
+#       Ref: DBSubnetGroup

@@ -1,0 +1,59 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.datareel/model/organization.mjson"
+    },
+    "ApplicationDescriptor": {
+        "object": "phront/data/main.datareel/model/app/application.mjson"
+    },
+    "UserPoolDescriptor": {
+        "object": "phront/data/main.datareel/model/app/user-pool.mjson"
+    },
+    "AppClientDescriptor": {
+        "object": "phront/data/main.datareel/model/app/app-client.mjson"
+    },
+
+    "objectDescriptorWhiteList": {
+        "value": [
+            {"@": "OrganizationDescriptor"}, 
+            {"@": "ApplicationDescriptor"},
+            {"@": "UserPoolDescriptor"},
+            {"@": "AppClientDescriptor"}
+        ]
+    },
+
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "matchObjectDescriptorWhiteListMapEntry"}
+            ]
+        }
+    },
+
+    "matchObjectDescriptorWhiteListMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "value": [
+                {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "clientId.defined() ? true : objectDescriptors.filter{!@objectDescriptorWhiteList.has(this)}.length == 0"
+                }
+            }
+        }
+    }
+}

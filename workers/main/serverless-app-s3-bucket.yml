@@ -1,0 +1,18 @@
+Type: AWS::S3::Bucket
+Properties:
+  BucketName: ${self:custom.bucketName}
+  AccessControl: Private
+  PublicAccessBlockConfiguration:
+    BlockPublicAcls: true
+    BlockPublicPolicy: true
+    IgnorePublicAcls: true
+    RestrictPublicBuckets: true
+
+  BucketEncryption: 
+    ServerSideEncryptionConfiguration: 
+        - ServerSideEncryptionByDefault:
+            SSEAlgorithm: 'AES256'
+            # KMSMasterKeyID: KMS-KEY-ARN
+  # Needs to not specify it to keep it disabled by default apparently
+  # VersioningConfiguration:
+  #   Status: Suspended

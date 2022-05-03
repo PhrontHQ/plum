@@ -27,19 +27,19 @@ exports.PlummingDataWorker = DataWorker.specialize( /** @lends PlummingDataWorke
         value: function(event, context, callback) {
             //console.log("PlummingDataWorker -handleConnect: event:",event, "context:", context);
             //console.log("PlummingDataWorker -handleConnect: event:",JSON.stringify(event), "context:", JSON.stringify(context));
-            this.super(event, context, callback);
+            return this.super(event, context, callback);
         }
     },
     handleMessage: {
         value: async function(event, context, callback) {
             //console.log("PlummingDataWorker -handleMessage: event:",JSON.stringify(event), "context:", JSON.stringify(context));
-            this.super(event, context, callback);
+            return this.super(event, context, callback);
         }
     },
     handleDisconnect: {
         value: function(event, context, callback) {
             //console.log("PlummingDataWorker -handleDisconnect: event:",JSON.stringify(event), "context:", JSON.stringify(context));
-            this.super(event, context, callback);
+            return this.super(event, context, callback);
         }
     }
 

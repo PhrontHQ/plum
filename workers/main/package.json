@@ -22,13 +22,13 @@
     "phront": "github:phrontHQ/phront#master"
   },
   "devDependencies": {
+    "@dezeroku/serverless-certificate-creator": "^1.6.0",
+    "distill": "github:PhrontHQ/distill#main",
     "http-server": "^0.9.0",
     "local-websocket-server": "github:phrontHQ/local-websocket-server#master",
-    "distill": "github:PhrontHQ/distill#main",
     "serverless": "~3.9.0",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-deployment-bucket": "^1.5.2",
-    "@dezeroku/serverless-certificate-creator": "^1.6.0",
     "serverless-domain-manager": "^6.0.2",
     "serverless-dotenv-plugin": "^3.10.0",
     "serverless-hosted-zone": "^0.0.8",

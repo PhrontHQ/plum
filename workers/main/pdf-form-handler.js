@@ -205,7 +205,7 @@ function getAppointentPDFDataOnS3(appointmentOriginId) {
                             if (res.statusCode !== 404) {
                                 resolve(JSON.parse(data));
                             } else {
-                                console.log(`getAppointmentPDF Request statusCode: ${res.statusCode} for appointmentOriginId ${appointmentOriginId}`);
+                                console.error(`getAppointmentPDF Request statusCode: ${res.statusCode} for appointmentOriginId ${appointmentOriginId}`);
                                 resolve(null);
                             }
                         });
@@ -323,6 +323,7 @@ function updateRespondentQuestionnaireWithS3Data(originId, iRecordToUpdateByAppo
         var mainService = DataService.mainService,
             assetObjectDescriptor = mainService.objectDescriptorForType(Asset),
             respondentQuestionnaireObjectDescriptor = readCompletedOperation.target,
+            useDataAPI = mainService.childServiceForType(assetObjectDescriptor).useDataAPI,
             i, countI, dataOperations, iAssetId,
             iCreateDataOperation, iRespondentQuestionnnaires,
             j, countJ, jRespondentQuestionnaire, jUpdateOperation, currentDate = new Date();
@@ -400,7 +401,12 @@ function updateRespondentQuestionnaireWithS3Data(originId, iRecordToUpdateByAppo
                     iOperation = operations[i];
 
                     iRecord.pdfExportId = iAssetId;
-                    iOperation[0].stringValue = JSON.stringify(iRecord);
+                    if(useDataAPI) {
+                        iOperation[0].stringValue = JSON.stringify(iRecord);
+                    } else {
+                        // iOperation.to_jsonb = iRecord;
+                        operations[i] = iRecord;
+                    }
                 }
 
                 resolve(commitTransactionCompletedOperation);
@@ -434,6 +440,8 @@ function updateRespondentQuestionnaireWithS3Data(originId, iRecordToUpdateByAppo
 exports.handleRespondentQuestionnaireReadCompletedOperation = function (readCompletedOperation) {
     
     var readCompletedOperationData = readCompletedOperation.data,
+        mainService = DataService.mainService,
+        useDataAPI = mainService.childServiceForType(readCompletedOperation.target).useDataAPI,
         i, countI, iRecord,
         iRecordToUpdateByAppointmentOriginId = new Map(),
         iOperationToUpdateByAppointmentOriginId = new Map(),
@@ -444,7 +452,9 @@ exports.handleRespondentQuestionnaireReadCompletedOperation = function (readComp
         getPDFPromises;
 
     for (i = 0, countI = readCompletedOperationData.length; (i < countI); i++) {
-        iRecord = JSON.parse(readCompletedOperationData[i][0].stringValue);
+        iRecord = useDataAPI 
+            ? JSON.parse(readCompletedOperationData[i][0].stringValue)
+            : readCompletedOperationData[i].to_jsonb;
         if (iRecord.pdfExportId === null) {
             iRecords = iRecordToUpdateByAppointmentOriginId.get(iRecord.originId);
             if (!iRecords) {
