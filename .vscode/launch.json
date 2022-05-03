@@ -240,6 +240,62 @@
             }
         },      
         {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch UNSECURE mod MainWorker",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--trace-warnings",
+                // "--prof",
+                "--expose-internals",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3005",
+                "-s",
+                "mod",
+                "--gatewayTimeout",
+                "6000"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "env": {
+                "TIME_START": true
+            }
+            // "skipFiles": [
+            //     "<node_internals>/**"
+            // ]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch perform update status transaction on local mod mainWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/apps/cockpit/mod/external-client-transactions/perform-transaction-update-status/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "ws://phront.local:3005",
+                "--httpURL",
+                "http://phront.local:3002"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
             "cwd": "${workspaceFolder}/workers/main/",
             "command": "npx serverless package --stage mod --region us-east-1",
             "name": "Package MainWorker for mod/us-east-1",
@@ -629,6 +685,34 @@
         {
             "type": "pwa-node",
             "request": "launch",
+            "name": "Profile mod IntakeWorker (authorize)",
+            "runtimeVersion": "14.18.1",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                // "--prof",
+                "${workspaceFolder}/workers/intake/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/intake/main.js",
+                "-p",
+                "7373",
+                "-s",
+                "mod",
+                "--gatewayTimeout",
+                "29000"
+
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env":{
+                "PROFILE_AUTHORIZE": true
+            }
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
             "name": "Launch mod IntakeWorker build",
             "runtimeVersion": "14.18.1",
             "runtimeArgs": [
@@ -713,6 +797,59 @@
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-3/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "ws://phront.local:7373",
+                "--httpURL",
+                "http://phront.local:7374"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch perform provision on local mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/provision-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/intake-perform-provision/index.json",
+                "-s",
+                "mod",
+                "--webSocketURL",
+                "ws://phront.local:7373",
+                "--httpURL",
+                "http://phront.local:7374"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch perform export on local mod IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/mod/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/intake-perform-provisioned-export/index.json",
                 "-s",
                 "mod",
                 "--webSocketURL",
@@ -865,6 +1002,124 @@
             "skipFiles": [
                 "<node_internals>/**"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch live-export-2-provision on local test IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/test/provision-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
+                "-s",
+                "test",
+                "--webSocketURL",
+                "ws://phront.local:7373",
+                "--httpURL",
+                "http://phront.local:7374"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-2-provision on test IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/test/provision-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
+                "-s",
+                "test",
+                "--webSocketURL",
+                "wss://connect.intake.test.oh.my-plum-appointment.guru/v1",
+                "--httpURL",
+                "https://send.intake.test.oh.my-plum-appointment.guru/v1"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-2 on test IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/test/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
+                "-s",
+                "test",
+                "--webSocketURL",
+                "wss://connect.intake.test.oh.my-plum-appointment.guru/v1",
+                "--httpURL",
+                "https://send.intake.test.oh.my-plum-appointment.guru/v1"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch live-export-3 on test IntakeWorker",
+            "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
+                "--session",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/session-serialization/test/organization-session.mjson",
+                "--dataOperationIndex",
+                "${workspaceFolder}/workers/intake/test/plumming-intake-client/mock-input-operations/transactions/live-export-3/index.json",
+                "-s",
+                "test",
+                "--webSocketURL",
+                "wss://connect.intake.test.oh.my-plum-appointment.guru/v1",
+                "--httpURL",
+                "https://send.intake.test.oh.my-plum-appointment.guru/v1"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js"
+        },        {
+            "cwd": "${workspaceFolder}/workers/intake/",
+            "command": "npx serverless package --stage test --region us-west-2",
+            "name": "Package IntakeWorker for test/us-west-2",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "cwd": "${workspaceFolder}/workers/intake/",
+            "command": "npx serverless deploy --stage test --region us-west-2",
+            "name": "Deploy IntakeWorker to test/us-west-2",
+            "request": "launch",
+            "type": "node-terminal"
         },
         {
             "name": "-------------------------------------"
