@@ -32,6 +32,8 @@
     },
     "exclude": [
         "run-tests.html",
+        "launcher.html",
+        "launcher.json",
         "mod",
         "dev",
         "test",
