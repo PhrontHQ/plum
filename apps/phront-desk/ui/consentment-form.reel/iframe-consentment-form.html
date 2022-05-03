@@ -499,7 +499,10 @@
                 <input value="Submit" name="Submit" class="tops-button" type="submit">
                 <script>
                     $("#myform").submit((e) => {
-                        $(`input[name="Submit"]`).addClass('disabled')
+                        var submitButtonQuery = $(`input[name="Submit"]`);
+                        submitButtonQuery.addClass('disabled');
+                        submitButtonQuery[0].disabled = true;
+                        submitButtonQuery[0].value = "Submitting...";
                         const date = moment().format('LLLL')
                         $('input[name="submitted_at"]').val(date)
 
