@@ -3,7 +3,7 @@ frameworkVersion: '3'
 # Removes serveless enterprise plugin injection
 # See https://www.serverless.com/blog/framework-release-v138-websockets
 # org: benoitmarchant
-service: plum-apps-phront-desk
+service: ${self:custom.app}-apps-phront-desk
 org: cogent-design
 
 package:
@@ -32,6 +32,8 @@ package:
 # $ serverless deploy --stage live
 # more at https://serverless-stack.com/chapters/configure-multiple-aws-profiles.html
 custom:
+
+  app: ${file(../../package.json):name}
   projectVersion: ${file(../../package.json):version}
   versionComponents: ${file(../../tools/serverless/package-version-components.js)}
   majorVersion: ${self:custom.versionComponents.0}
@@ -47,14 +49,14 @@ custom:
     mod: ${self:custom.myStage}.${self:custom.myBaseDomain}
     test: ${self:custom.myStage}.${self:custom.myBaseDomain}
     live: ${self:custom.myBaseDomain}.
-  bucketName: ${self:custom.myServiceObjectVersionedName} # required
+  bucketName: ${self:custom.myServiceObjectVersionedName}-${aws:accountId} # required
   cloudfrontOriginId: ${self:custom.myServiceObjectName}
 
   myProfile:
     mod: cogent-mod
     test: cogent-test
     live: cogent-live
-    s3Bucket: ${self:service}
+    # s3Bucket: ${self:service}
   myAccount:
     mod: 006408448862
     test: 545740467277
@@ -140,8 +142,7 @@ provider:
   region: us-east-1 # Overwrite the default region used. Default is us-east-1
 
   deploymentBucket:
-    name: ${self:custom.bucketName}-serverless-deployment
-
+    name: ${self:custom.bucketName}-serverless
   # cloudfront:
   #   cachePolicies:
   #     - IndexCachePolicy:
