@@ -10,6 +10,7 @@
                 {"@": "plumming-intake-data-service"},
                 {"@": "phrontDataService"},
                 {"@": "S3DataService"},
+                {"@": "SecretManagerDataService"},
                 {"@": "CognitoDataService"}
             ],
             "authorizationPolicy": {"=":"@AuthorizationPolicy.OnConnect"},
@@ -49,31 +50,57 @@
         "values": {
             "childServices": [
             ],
+            "useDataAPI": false,
             "connectionDescriptor": {
                 "live": {
-                    "database": "plumming",
+                    "database": "plum",
                     "owner": "postgres",
-                    "schema": "phront",
+                    "schema": "live_plum_v1",
                     "profile": "cogent-live",
-                    "resourceArn": "arn:aws:rds:us-east-1:540973189736:cluster:cogent-design-production",
+                    "resourceArn": "arn:aws:rds:us-east-1:540973189736:cluster:live",
                     "secretArn": "arn:aws:secretsmanager:us-east-1:540973189736:secret:cogent-design-production-db-133jR7"
                 },
                 "test": {
-                    "database": "plumming",
+                    "database": "plum",
                     "owner": "postgres",
-                    "schema": "phront",
+                    "schema": "test_plum_v1",
                     "profile": "cogent-test",
-                    "resourceArn": "arn:aws:rds:us-west-2:545740467277:cluster:cogent-design-staging",
-                    "secretArn": "arn:aws:secretsmanager:us-west-2:545740467277:secret:cogent-design-staging-db-ibOFof"
+                    "resourceArn": "arn:aws:rds:us-west-2:545740467277:cluster:test",
+                    "secretArn": "arn:aws:secretsmanager:us-west-2:545740467277:secret:test-plum-database-RDok3T"
                 },
                 "mod": {
                     "database": "plum",
                     "owner": "postgres",
-                    "schema": "phront",
+                    "schema": "mod_plum_v1",
                     "profile": "cogent-mod",
-                    "resourceArn": "arn:aws:rds:us-east-1:006408448862:cluster:mod-plum",
+                    "resourceArn": "arn:aws:rds:us-east-1:006408448862:cluster:mod",
+                    "readWriteEndpoint": {
+                        "endpoint": "mod.cluster-clickt0wttv7.us-east-1.rds.amazonaws.com"
+                    },
+                    "readOnlyEndpoints": [
+                        {
+                            "endpoint": "mod.cluster-ro-clickt0wttv7.us-east-1.rds.amazonaws.com"
+                        }
+                    ],
+                    "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
+                },
+                "local-mod": {
+                    "database": "plum",
+                    "owner": "postgres",
+                    "schema": "mod_plum_v1",
+                    "profile": "cogent-mod",
+                    "resourceArn": "arn:aws:rds:us-east-1:006408448862:cluster:mod",
+                    "readWriteEndpoint": {
+                        "endpoint": "mod.cluster-clickt0wttv7.us-east-1.rds.amazonaws.com"
+                    },
+                    "readOnlyEndpoints": [
+                        {
+                            "endpoint": "mod.cluster-ro-clickt0wttv7.us-east-1.rds.amazonaws.com"
+                        }
+                    ],
                     "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
                 }
+
             }
         }
     },
@@ -85,17 +112,37 @@
                 "live": {
                     "profile": "cogent-live",
                     "region": "us-east-1",
-                    "bucketName": "plumming-production"
+                    "bucketName": "live-plum-540973189736"
                 },
                 "test": {
                     "profile": "cogent-test",
                     "region": "us-west-2",
-                    "bucketName": "plumming-staging"
+                    "bucketName": "test-plum-545740467277"
                 },
                 "mod": {
                     "profile": "cogent-mod",
                     "region": "us-east-1",
-                    "bucketName": "plumming-mod"
+                    "bucketName": "mod-plum-006408448862"
+                }
+            }
+        }
+    },
+
+    "SecretManagerDataService": {
+        "object": "phront/data/main.datareel/secret-manager-data-service.mjson",
+        "values": {
+            "connectionDescriptor": {
+                "live": {
+                    "profile": "cogent-live",
+                    "region": "us-east-1"
+                },
+                "test": {
+                    "profile": "cogent-test",
+                    "region": "us-west-2"
+                },
+                "mod": {
+                    "profile": "cogent-mod",
+                    "region": "us-east-1"
                 }
             }
         }

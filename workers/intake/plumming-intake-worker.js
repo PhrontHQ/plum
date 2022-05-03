@@ -40,72 +40,84 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
         }
     },
 
+    provisionStorageForRootOrganization: {
+        value: function() {
+            var mainService = this.mainService;
+
+            return Promise.all([
+                mainService.createStorageForObjectDescriptor(mainService.objectDescriptorForType(Organization)),
+                mainService.createStorageForObjectDescriptor(mainService.objectDescriptorForType(Application)),
+                mainService.createStorageForObjectDescriptor(mainService.objectDescriptorForType(UserPool)),
+                mainService.createStorageForObjectDescriptor(mainService.objectDescriptorForType(AppClient)),
+                mainService.createStorageForObjectDescriptor(mainService.objectDescriptorForType(WebSocketSession))
+            ]);
+        }
+    },
+
+    
+
     provisionRootOrganizationFromIdentity: {
         value: function(identity, cogentDesignCognitoUserPool, provisionAppClient) {
            var mainService = this.mainService;
 
            console.log("provisionRootOrganizationFromIdentity: create tables");
 
-            return Promise.all([
-                mainService.createStorageForObjectDescriptorIfNeeded(mainService.objectDescriptorForType(Organization)),
-                mainService.createStorageForObjectDescriptorIfNeeded(mainService.objectDescriptorForType(Application)),
-                mainService.createStorageForObjectDescriptorIfNeeded(mainService.objectDescriptorForType(UserPool)),
-                mainService.createStorageForObjectDescriptorIfNeeded(mainService.objectDescriptorForType(AppClient)),
-                mainService.createStorageForObjectDescriptorIfNeeded(mainService.objectDescriptorForType(WebSocketSession))
-            ])
-            .then(() => {
+            console.log("provisionRootOrganizationFromIdentity: create objects");
 
-                console.log("provisionRootOrganizationFromIdentity: create objects");
-
-                //Create the organization:
-                var cogentDesignOrganization = mainService.createDataObject(Organization);
-                cogentDesignOrganization.name = "Cogent Design, Inc.";
+            //Create the organization:
+            var cogentDesignOrganization = mainService.createDataObject(Organization);
+            cogentDesignOrganization.name = "Cogent Design, Inc.";
 
 
 
-                var plummingProvisionApplication = mainService.createDataObject(Application);
-                plummingProvisionApplication.name = 'plumming-provision';
-                plummingProvisionApplication.controllingOrganization = cogentDesignOrganization;
+            var plummingProvisionApplication = mainService.createDataObject(Application);
+            plummingProvisionApplication.name = 'plumming-provision';
+            plummingProvisionApplication.controllingOrganization = cogentDesignOrganization;
 
 
 
-                var cogentDesignUserPool = mainService.createDataObject(UserPool);
-                /*
-                    Should probably be automated by some business logic
-                */
-                cogentDesignUserPool.name = cogentDesignCognitoUserPool.name;
+            var cogentDesignUserPool = mainService.createDataObject(UserPool);
+            /*
+                Should probably be automated by some business logic
+            */
+            cogentDesignUserPool.name = cogentDesignCognitoUserPool.name;
 
-                cogentDesignUserPool.cognitoUserPool = cogentDesignCognitoUserPool;
-                cogentDesignOrganization.userPools = [cogentDesignUserPool];
+            cogentDesignUserPool.cognitoUserPool = cogentDesignCognitoUserPool;
+            cogentDesignOrganization.userPools = [cogentDesignUserPool];
 
 
-                var plummingProvisionAppClient = mainService.createDataObject(AppClient);
-                /*
-                    Should probably be automated by some business logic
-                */
-                plummingProvisionAppClient.name = plummingProvisionApplication.name;
+            var plummingProvisionAppClient = mainService.createDataObject(AppClient);
+            /*
+                Should probably be automated by some business logic
+            */
+            plummingProvisionAppClient.name = plummingProvisionApplication.name;
 
-                plummingProvisionAppClient.identifier = provisionAppClient.clientId;
-                plummingProvisionAppClient.credentials = provisionAppClient.clientSecret;
-                plummingProvisionAppClient.userPool = cogentDesignUserPool;
-                plummingProvisionAppClient.cognitoUserPoolClient = provisionAppClient;
-                plummingProvisionAppClient.application = plummingProvisionApplication;
+            plummingProvisionAppClient.identifier = provisionAppClient.clientId;
+            plummingProvisionAppClient.credentials = provisionAppClient.clientSecret;
+            plummingProvisionAppClient.userPool = cogentDesignUserPool;
+            plummingProvisionAppClient.cognitoUserPoolClient = provisionAppClient;
+            plummingProvisionAppClient.application = plummingProvisionApplication;
 
-                console.log("provisionRootOrganizationFromIdentity: saveChanges()");
+            console.log("provisionRootOrganizationFromIdentity: saveChanges()");
 
-                return mainService.saveChanges()
-                .then(function() {
-                    console.log("provisionRootOrganizationFromIdentity: saveChanges() completed");
+            return mainService.saveChanges()
+            .then(function() {
+                console.log("provisionRootOrganizationFromIdentity: saveChanges() completed");
 
-                    return cogentDesignOrganization;
-                })
-                .catch(function(error) {
-                    console.log("provisionRootOrganizationFromIdentity: saveChanges() failed");
+                return cogentDesignOrganization;
+            })
+            .catch(function(error) {
+                console.log("provisionRootOrganizationFromIdentity: saveChanges() failed");
 
-                    return Promise.reject(error);
-                });
-
+                return Promise.reject(error);
             });
+
+            // })
+            // .catch(function(error) {
+            //     console.log("createStorageForObjectDescriptorIfNeeded failed with error: ",error);
+            //     return Promise.reject(error);
+            // });
+
        }
     },
 
@@ -122,9 +134,11 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
 
             userPoolQuery.fetchLimit = 5;
 
-            return this.mainService.fetchData(userPoolQuery)
-            .then((result) => {
-                var cogentDesignCognitoUserPool;
+            
+            return Promise.all([this.provisionStorageForRootOrganization(), this.mainService.fetchData(userPoolQuery)])
+            .then((results) => {
+                var result = results[1],
+                    cogentDesignCognitoUserPool;
 
                 console.log("Cognito UserPool fetch result:",result);
 
@@ -210,16 +224,24 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             var self = this,
                 superMethod = this.superForValue("handleAuthorize");
 
+            //Try to let the work finish even if the gateway shuts the door on the other side.
+            context.callbackWaitsForEmptyEventLoop = true;
+
             return superMethod.call(this, event, context, callback)
             .then(function(authorizationResponse) {
+                var message = authorizationResponse?.context?.data?.message;
+
                 console.log("authorizationResponse: ",authorizationResponse);
 
                 if(authorizationResponse.policyDocument.Statement[0].Effect === "Deny" 
                     && authorizationResponse.context.type === "authorizeConnectionFailedOperation"
-                    && authorizationResponse.context.data
-                    && authorizationResponse.context.data.message
-                    && authorizationResponse.context.data.message.startsWith("ERROR: relation ")
-                    && authorizationResponse.context.data.message.contains(" does not exist")) {
+                    && message
+                    && (
+                        message.contains("schema")
+                        ||
+                        message.contains("relation")
+                    )
+                    && message.contains(" does not exist")) {
                         self.deserializer.init(authorizationResponse.principalId, self.require, /*objectRequires*/undefined, /*module*/undefined, /*isSync*/false);
 
                         console.log("authorizationResponse FAILED");
@@ -236,6 +258,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
                             return superMethod.call(self, event, context, callback);
                         })
                         .catch(function(error) {
+                            console.error("handleAuthorize ... catch():",error, authorizationResponse);
                             authorizationResponse.context.data = error;
                             return authorizationResponse;
                         });
@@ -249,7 +272,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
     handleConnect: {
         value: function(event, context, cb) {
             //console.log("PlummingIntakeWorker -handleConnect: event:",JSON.stringify(event), "context:", JSON.stringify(context), "cb:", cb);
-            this.super(event, context, cb);
+            return this.super(event, context, cb);
         }
     },
     handleMessage: {
@@ -283,7 +306,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             //--- WORK?
 
 
-            this.super(event, context, callback);
+            return this.super(event, context, callback);
         }
     },
 
@@ -296,7 +319,35 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
         value: function(dataService, dataOperation) {
             return true;
         }
-    }
+    },
+
+
+    /*
+        We have access control for the Phront types, which is what ends up being saved, we're going to be more flexible on what we take in as it's already protected by an identity.
+    */
+        dataServiceAccessControlFailedForOperations: {
+        value: function(dataService, failedOperations) {
+            var isRawIntake = false,
+                mainService = this.mainService;
+
+            for(var i=0, countI = failedOperations.length, iOperation, iChildService; (i < countI); i++) {
+                iOperation = failedOperations[i];
+                iChildService = mainService.childServiceForType(iOperation.target)
+                if( !iChildService || iChildService.name !== "PlummingIntakeDataService") {
+                    isRawIntake = false;
+                    break;
+                } else {
+                    isRawIntake = true;
+                }
+            }
+            if( isRawIntake) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    },
+
 
     /* default implementation starts by forwarding data to our operation coordinator */
     // handleMessage: {

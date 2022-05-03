@@ -156,11 +156,11 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
         value: function PlummingIntakeDataService() {
             this.super();
 
-            this.addEventListener(DataOperation.Type.CreateTransactionOperation,this,false);
-            this.addEventListener(DataOperation.Type.BatchOperation,this,false);
-            this.addEventListener(DataOperation.Type.MergeOperation,this,false);
-            this.addEventListener(DataOperation.Type.DeleteOperation,this,false);
-            this.addEventListener(DataOperation.Type.CommitTransactionOperation,this,false);
+            // this.addEventListener(DataOperation.Type.CreateTransactionOperation,this,false);
+            // this.addEventListener(DataOperation.Type.BatchOperation,this,false);
+            // this.addEventListener(DataOperation.Type.MergeOperation,this,false);
+            // this.addEventListener(DataOperation.Type.DeleteOperation,this,false);
+            // this.addEventListener(DataOperation.Type.CommitTransactionOperation,this,false);
 
             this._deserializer = new Deserializer();
 
@@ -193,6 +193,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
     addMainServiceEventListeners: {
         value: function() {
             this.super();
+            this.mainService.addEventListener(DataOperation.Type.PerformTransactionOperation,this,false);
             this.mainService.addEventListener(DataOperation.Type.AppendTransactionOperation,this,false);
             this.mainService.addEventListener(DataOperation.Type.CommitTransactionOperation,this,false);
             this.mainService.addEventListener(DataOperation.Type.RollbackTransactionOperation,this,false);
@@ -281,7 +282,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         //to the main data service.
 
                         return Promise.all([
-                            this.rootService.createStorageForObjectDescriptor()(this.rootService.objectDescriptorForType(Role))
+                            this.rootService.createStorageForObjectDescriptor(this.rootService.objectDescriptorForType(Role))
                         ]).then(() => {
                             return this.createEventRoleWithNameAndTags(name, tags, locales);
                         });
@@ -623,7 +624,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
     createCustomerEngagementQuestionnaireWithNameForOrganization: {
         value: function(questionnaireName, organization) {
-            return self.questionnaireWithName(questionnaireName)
+            var self = this;
+            return this.questionnaireWithName(questionnaireName)
             .then(function(questionnaire) {
 
                 if(!questionnaire) {
@@ -632,8 +634,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 
                 var mainService = self.rootService,
 
-                    //Create the CustomerEngagementQuestionnaire if it wasn't found:
-                    customerEngagementConsentQuestionnaire = mainService.createDataObject(CustomerEngagementQuestionnaire);
+                //Create the CustomerEngagementQuestionnaire if it wasn't found:
+                customerEngagementConsentQuestionnaire = mainService.createDataObject(CustomerEngagementQuestionnaire);
                 customerEngagementConsentQuestionnaire.organization = organization;
                 customerEngagementConsentQuestionnaire.questionnaire = questionnaire;
                 // return mainService.saveChanges()
@@ -669,6 +671,10 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             return this.questionnaireWithName(consentQuestionnaireName)
             .then(function(questionnaire) {
                 //console.log("PlummingIntakeDataService -checkInQuestionnaire then #1");
+                var  supplementalHealthQuestionnaireName = self.supplementalHealthQuestionnaireName,
+                supplementalHealthQuestionnaireTitle = "AAOIC Supplemental Health Questionnaire",
+                supplementalHealthQuestionnaire;
+
 
                 if(!questionnaire) {
                     // console.log("PlummingIntakeDataService -checkInQuestionnaire then #1.1");
@@ -813,10 +819,6 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         /*
                             Now create the Supplemental Health Questionnaire
                         */
-                       var  supplementalHealthQuestionnaireName = self.supplementalHealthQuestionnaireName,
-                            supplementalHealthQuestionnaireTitle = "AAOIC Supplemental Health Questionnaire",
-                            supplementalHealthQuestionnaire;
-
                        supplementalHealthQuestionnaire = mainService.createDataObject(Questionnaire);
                        supplementalHealthQuestionnaire.locales = [englishLocale];
                        supplementalHealthQuestionnaire.name = supplementalHealthQuestionnaireName;
@@ -951,6 +953,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     .then(() => {
                         //console.log("PlummingIntakeDataService -checkInQuestionnaire then #1.3 saveChanges DONE!");
                         self._questionnaireByName.set(consentQuestionnaireName, questionnaire);
+                        self._questionnaireByName.set(supplementalHealthQuestionnaireName, supplementalHealthQuestionnaire);
+
                         return questionnaire;
                     })
                     .catch((error) => {
@@ -1056,39 +1060,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             operation.type = DataOperation.Type.CreateTransactionCompletedOperation;
             operation.data = data;
 
-            // //Make sure we have check-in questionnaire created:
-            // this.checkInQuestionnaire()
-            // .then(() => {
-            //     if(!this.eventOrganizerRole) {
-            //         return this._createObjectDescriptorStoreForTypeIfNeeded(Role)
-            //         .then(() => {
-            //             //Fetch Shared/reference roles
-            //             return Promise.all([this.eventOrganizerRolePromise, this.eventAttendeeRolePromise, this.patientRolePromise, this.financialResponsibilityRolePromise, this.customerPreferenceRolePromise, this.emergencyContactRolePromise]);
-            //         });
-            //     } else {
-            //         return Promise.resolveTrue;
-            //     }
-            // })
-            // .then((roles) => {
-            //     // if(Array.isArray(roles)) {
-            //     //     //Cache it:
-            //     //     eventOrganizerRoleInstance = roles[0];
-            //     //     eventAttendeeRoleInstance = roles[1];
-            //     //     patientRoleInstance = roles[2];
-            //     //     financialResponsibilityRoleInstance = roles[3];
-            //     //     customerPreferenceRoleInstance = roles[4];
-            //     //     emergencyContactRoleInstance = roles[5];
-            //     // }
-            //     console.log("PlummingIntakeDataService -handleCreateTransactionOperation: ",createTransactionOperation,"dispatchEvent: ",operation);
-
-            //     operation.target.dispatchEvent(operation);
-            // });
-
-            // this._debugServiceProductVariant(createTransactionOperation)
-            // .then(()=> {
-                //Make sure we have check-in questionnaire created:
             operation.target.dispatchEvent(operation);
-            // });
 
         }
     },
@@ -1148,25 +1120,27 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 if(createTransactionOperation) {
                     //Add the operation to the batch:
                     createTransactionOperation.batchOperations.push(mergeOperation);
-
-                    var operation = new DataOperation();
-                    operation.referrerId = mergeOperation.id;
-                    operation.clientId = mergeOperation.clientId;
-
-                    operation.clientId = mergeOperation.clientId;
-                    //We keep the same
-                    operation.target = mergeOperation.target;
-                    operation.type = DataOperation.Type.TransactionUpdatedOperation;
-                    operation.data = {
-                        transactionId: referrerId
-                    };
-
                     this.setOperationForTypeOriginIdInCreateTransactionOperation(mergeOperation,mergeOperation.target, originIdValue, createTransactionOperation);
 
-                    operation.target.dispatchEvent(operation);
+                    if(createTransactionOperation.clientId) {
+                        var operation = new DataOperation();
+                        operation.referrerId = mergeOperation.id;
+                        operation.clientId = mergeOperation.clientId;
+    
+                        operation.clientId = mergeOperation.clientId;
+                        //We keep the same
+                        operation.target = mergeOperation.target;
+                        operation.type = DataOperation.Type.TransactionUpdatedOperation;
+                        operation.data = {
+                            transactionId: referrerId
+                        };    
+
+                        operation.target.dispatchEvent(operation);
+
+                    }
         
                 } else {
-                    this.invokeMethodProcessingOperation(mergeOperation);
+                    return this.invokeMethodProcessingOperation(mergeOperation);
                 }
 
                 // var objectDescriptor = mergeOperation.target,
@@ -1188,12 +1162,12 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
         value: function(type) {
             var mainService = this.rootService,
                 objectDescriptor = mainService.objectDescriptorForType(type),
-                cache = this._objectDescriptorStoreExistsCache.has(objectDescriptor),
+                cachedValue = this._objectDescriptorStoreExistsCache.get(objectDescriptor),
                 self = this;
 
 
-            if(cache) {
-                return Promise.resolve(false);
+            if(cachedValue !== undefined) {
+                return Promise.is(cachedValue) ? cachedValue : Promise.resolve(cachedValue);
             } else {
 
                 var query = DataQuery.withTypeAndCriteria(objectDescriptor),
@@ -1231,6 +1205,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         return Promise.reject(error);
                     }
                 });
+
+                this._objectDescriptorStoreExistsCache.set(objectDescriptor,queryPromise);
 
                 // this._objectDescriptorStoreExistsCache.set(objectDescriptor,queryPromise);
                 return queryPromise;
@@ -1274,34 +1250,65 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
     handleCommitTransactionOperation: {
         value: function (commitTransactionOperation) {
-            var self = this,
-                commitTransactionOperationId = commitTransactionOperation.id,
-                referrerId = commitTransactionOperation.referrerId,
-                clientId = commitTransactionOperation.clientId,
-                commitTransactionOperations = commitTransactionOperation.data.operations,
-                //Find the matching createTransaction operation:
-                createTransactionOperation = this._pendingCreateTransactionOperationById.get(referrerId);
+            return this.handleCommitOrPerformTransactionOperation(commitTransactionOperation);
+        }
+    },
+    handlePerformTransactionOperation: {
+        value: function (performTransactionOperation) {
+            return this.handleCommitOrPerformTransactionOperation(performTransactionOperation);
+        }
+    },
 
-            console.log("PlummingIntakeDataService.handleCommitTransactionOperation()",commitTransactionOperation, "createTransactionOperation: ",createTransactionOperation);
+    handleCommitOrPerformTransactionOperation: {
+        value: function ( transactionOperation/*formerly commitTransactionOperation*/) {
+            var self = this,
+                isCommitTransactionOperation = (transactionOperation.type ===  DataOperation.Type.CommitTransactionOperation),
+                transactionOperationId = transactionOperation.id,
+                referrerId = transactionOperation.referrerId,
+                clientId = transactionOperation.clientId,
+                transactionOperations = transactionOperation.data.operations,
+                //Find the matching createTransaction operation:
+                createTransactionOperation = this._pendingCreateTransactionOperationById.get((referrerId || transactionOperationId)),
+                notifyRelevantChanges,
+                operationPropagationPromises,
+                operationPropagationPromise;
             
-            if(!commitTransactionOperations && !createTransactionOperation) {
+            //console.log("PlummingIntakeDataService.handleCommitOrPerformTransactionOperation()",transactionOperation, "createTransactionOperation: ",createTransactionOperation);
+            
+            if(isCommitTransactionOperation && !transactionOperations && !createTransactionOperation) {
                 /* this is isn't a transaction we're part of */
                 return;
-            } else if(commitTransactionOperations) {
+            } else if(transactionOperations) {
+
+                /*
+                    4/24/2022
+                    We're receiving this for a saveChanges in the mainWorker for the provisionning,
+                    which shouldn't be the case.
+
+                    Maybe we check and punt if there's no clientId?
+                */
 
                 if(!createTransactionOperation) {
+
+                    notifyRelevantChanges = transactionOperation.data.notifyRelevantChanges;
+
                     /*
                         Workaround, we're going to re-create a minimal one for the sake of getting what we have working. We'll need to refactor later:
                     */
                     createTransactionOperation = new DataOperation();
-                    createTransactionOperation.id = referrerId;
+                    /*
+                        If transactionOperation is a commitTransaction, it will have a referrerId, if it's a perform, it won't so we use the transaction's id (stored in transactionOperationId)
+                    */
+                    createTransactionOperation.id = (referrerId || transactionOperationId);
                     createTransactionOperation.type = DataOperation.Type.CreateTransactionOperation;
                     createTransactionOperation.target = DataService.mainService;
     
                     this._setupCreateTransactionOperation(createTransactionOperation);
+                } else {
+                    notifyRelevantChanges = createTransactionOperation.data.notifyRelevantChanges;
                 }
                 /*
-                    If there are operations in the commitTransactionOperation, we add them now:
+                    If there are operations in the transactionOperation, we add them now:
 
                     commitOperation.data.operations is now an object where keys are objectDescriptor moduleIds, and value of keys are an object with the structure:
                     {
@@ -1318,8 +1325,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     }
                 */
 
-                //console.log("commitTransactionOperation.data.operations: ",commitTransactionOperations);
-                var keys = Object.keys(commitTransactionOperations),
+                //console.log("transactionOperation.data.operations: ",transactionOperations);
+                var keys = Object.keys(transactionOperations),
                     i, countI, iType, iOperations,
                     j, countJ, jType, jOperation,
                     total = 0;
@@ -1328,24 +1335,49 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 for(i=0, countI = keys.length; (i<countI); i++) {
                     iType = keys[i];
                     // console.log("iType: ", iType);
-                    iOperations = commitTransactionOperations[iType].mergeOperations;
+                    iOperations = transactionOperations[iType].mergeOperations;
 
                     //console.log("iOperations: ",iOperations);
 
-                    for(j=0, countJ = iOperations.length; (j<countJ); j++) {
+                    for(j=0, countJ = iOperations ? iOperations.length : 0; (j<countJ); j++) {
                         jOperation = iOperations[j];
                         // console.log("jOperation: ", jOperation);
                         // console.log("jOperation.target: ", jOperation.target);
+                        /*
+                            Check the referrerId. If we're in a commitTransacion, the operations have the createTransaction as a referrerId, that might not be ideal, but if we're in a perform, the referer needs to be the performOperation:
+                        */
+                        if(!isCommitTransactionOperation) {
+                            /*
+                                Adding it so we can tell the difference in handleMergeOperation between a multi-step transaction and a one-step performTransaction
+                            */
+                            jOperation.referrer = transactionOperation;
+                            jOperation.referrerId = transactionOperationId;
+                        }
                         jOperation.target.dispatchEvent(jOperation);
                         total++;
                         if(jOperation.propagationPromise) {
-                            console.log("!!!!!! jOperation.propagationPromise:",jOperation.propagationPromise);
+                            (operationPropagationPromises || (operationPropagationPromises = [])).push(jOperation.propagationPromise);
+                            //console.log("!!!!!! jOperation.propagationPromise:",jOperation.propagationPromise);
                         }
                     }
                 }
 
-                //console.log("commitTransactionOperation.data.operations added: ",total);
+                //console.log("transactionOperation.data.operations added: ",total);
             }
+
+
+            /*
+                4/24/2022
+                We're receiving this for a saveChanges in the mainWorker for the provisionning,
+                which shouldn't be the case.
+
+                Maybe we check and punt if there's no clientId?
+            */
+           if(total === 0) {
+               return;
+           }
+
+
 
             var progressListener = function(commitTransactionProgressOperation) {
 
@@ -1355,15 +1387,15 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 */
                 if(!commitTransactionProgressOperation.clientId) {
                     //Recalibrate the data to 20%+ 0.8 here is the arbitary 80% the past 2 phases represent
-                    var lastProgressSent = commitTransactionOperation.lastProgressSent || 0,
+                    var lastProgressSent = transactionOperation.lastProgressSent || 0,
                     percentCompletion = (Math.round((0.8+(commitTransactionProgressOperation.data*0.2))*100) / 100);
 
                     //Throttle, send only if integer level progress.
                     if(percentCompletion > lastProgressSent) {
-                        commitTransactionProgressOperation.referrerId = commitTransactionOperationId;
+                        commitTransactionProgressOperation.referrerId = transactionOperationId;
                         commitTransactionProgressOperation.clientId = clientId;   
                         commitTransactionProgressOperation.data = percentCompletion;
-                        commitTransactionOperation.lastProgressSent = percentCompletion;
+                        transactionOperation.lastProgressSent = percentCompletion;
                     }
 
                     //commitTransactionProgressOperation.target = self;
@@ -1373,18 +1405,20 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
             saveChangesProgressListener = function(saveChangesProgressEvent) {
                 //Recalibrate the data to 40%+ - 0.4 here is the 40% we already accomplished
-                var lastProgressSent = commitTransactionOperation.lastProgressSent || 0,
+                var lastProgressSent = transactionOperation.lastProgressSent || 0,
                 percentCompletion = (Math.round((0.4+(saveChangesProgressEvent.detail*0.4))*100) / 100);
                 //Throttle, send only if integer level progress.
                 if(percentCompletion > lastProgressSent) {
                     //console.log("saveChangesProgressListener: "+percentCompletion);
                     progressOperation = new DataOperation();
-                    progressOperation.referrerId = commitTransactionOperation.id;
-                    progressOperation.clientId = commitTransactionOperation.clientId;
+                    progressOperation.referrerId = transactionOperation.id;
+                    progressOperation.clientId = transactionOperation.clientId;
                     //progressOperation.target = transactionObjectDescriptors;
                     progressOperation.target = this;
-                    progressOperation.type = DataOperation.Type.CommitTransactionProgressOperation;
-                    commitTransactionOperation.lastProgressSent = percentCompletion;
+                    progressOperation.type = isCommitTransactionOperation 
+                        ? DataOperation.Type.CommitTransactionProgressOperation
+                        : DataOperation.Type.PerformTransactionProgressOperation;
+                    transactionOperation.lastProgressSent = percentCompletion;
                     progressOperation.data = percentCompletion;
                     progressOperation.target.dispatchEvent(progressOperation);    
                 }
@@ -1398,19 +1432,35 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             /*
                 This only works if a commitTransaction would end on the same runtime and the cache works
             */
-            if(createTransactionOperation) {
+            if(createTransactionOperation && isCommitTransactionOperation) {
 
-                allOperationsPerformedPromise = Promise.all(this._operationPromisesByCreateTransactionOperationId.get(referrerId));
+                allOperationsPerformedPromise = Promise.all(this._operationPromisesByCreateTransactionOperationId.get((referrerId || transactionOperationId)));
                 /*
                     Now resolve the first promise, now that we know there won't be new operations in that transaction, will unlock the promise of processing of each operation handler  
                 */
                 createTransactionOperation.promiseCallbacks[0]();
             }
 
-            console.log("this._processCreateTransaction(",createTransactionOperation,commitTransactionOperation,")");
+            if(operationPropagationPromises) {
+                operationPropagationPromise = (operationPropagationPromises.length === 1)
+                    ? operationPropagationPromises[0]
+                    : Promise.all(operationPropagationPromises);
+            } else {
+                operationPropagationPromise = Promise.resolve(true);
+            }
 
-            this._processCreateTransaction(createTransactionOperation, commitTransactionOperation)
+            operationPropagationPromise
+            .then(() => {
+                // if(createTransactionOperation && isCommitTransactionOperation) {
+                //     console.log("this._processCreateTransaction(",createTransactionOperation,transactionOperation,")");
+                    return this._processCreateTransaction(createTransactionOperation, transactionOperation);
+                // } else {
+                //     return Promise.resolve(true);
+                // }
+                //allOperationsPerformedPromise    
             //allOperationsPerformedPromise
+                //allOperationsPerformedPromise    
+            })
             .then(function(resolvedPromises) {
                 // console.log("rootService.saveChanges() A");
             /*
@@ -1424,7 +1474,11 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 // console.log("rootService.saveChanges() B");
 
                 //Listener for progress sent by PhrontDataService as it adds to the SQL transaction
-                self.rootService.addEventListener(DataOperation.Type.CommitTransactionProgressOperation,progressListener,true);
+                self.rootService.addEventListener(
+                    isCommitTransactionOperation 
+                        ? DataOperation.Type.CommitTransactionProgressOperation
+                        : DataOperation.Type.PerformTransactionProgressOperation,
+                        progressListener,true);
                 // console.log("rootService.saveChanges() C");
 
                 return self.rootService.saveChanges();
@@ -1432,17 +1486,23 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 console.log("rootService.saveChanges() error:",error);
 
                 self.rootService.removeEventListener(DataEvent.saveChangesProgress,saveChangesProgressListener,true);
-                self.rootService.removeEventListener(DataOperation.Type.CommitTransactionProgressOperation,progressListener,true);
+                self.rootService.removeEventListener(
+                    isCommitTransactionOperation 
+                        ? DataOperation.Type.CommitTransactionProgressOperation
+                        : DataOperation.Type.PerformTransactionProgressOperation,
+                        progressListener,true);
 
                 var operation = new DataOperation();
-                operation.referrerId = commitTransactionOperation.id;
-                operation.clientId = commitTransactionOperation.clientId;
-                operation.type = DataOperation.Type.CommitTransactionFailedOperation;
+                operation.referrerId = transactionOperation.id;
+                operation.clientId = transactionOperation.clientId;
+                operation.type = isCommitTransactionOperation 
+                        ? DataOperation.Type.CommitTransactionFailedOperation
+                        : DataOperation.Type.PerformTransactionFailedOperation
                 operation.target = self;
                 operation.data = error;
 
                 //Wether transaction performed or failed, we cleanup
-                self._pendingCreateTransactionOperationById.delete(referrerId);
+                self._pendingCreateTransactionOperationById.delete((referrerId || transactionOperationId));
 
                 operation.target.dispatchEvent(operation);
             })
@@ -1452,26 +1512,36 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 var hasObjectSaved = (!!transaction.createdDataObjects && transaction.createdDataObjects.size > 0) || (!!transaction.updatedDataObjects && transaction.updatedDataObjects.size > 0) || (!!transaction.deletedDataObjects && transaction.deletedDataObjects.size > 0);
 
                 self.rootService.removeEventListener(DataEvent.saveChangesProgress,saveChangesProgressListener,true);
-                self.rootService.removeEventListener(DataOperation.Type.CommitTransactionProgressOperation,progressListener,true);
+                self.rootService.removeEventListener(
+                    isCommitTransactionOperation 
+                        ? DataOperation.Type.CommitTransactionProgressOperation
+                        : DataOperation.Type.PerformTransactionProgressOperation,
+                    progressListener,true);
 
                 //Check if we need to catchup on progress, if there were no operations to change, we might still be stuck at less than 100%
 
-                if(commitTransactionOperation.lastProgressSent < 1) {
+                if(transactionOperation.lastProgressSent < 1) {
                     var progressOperation = new DataOperation();
-                    progressOperation.referrerId = commitTransactionOperation.id;
-                    progressOperation.clientId = commitTransactionOperation.clientId;
+                    progressOperation.referrerId = transactionOperation.id;
+                    progressOperation.clientId = transactionOperation.clientId;
                     progressOperation.target = self;
-                    progressOperation.type = DataOperation.Type.CommitTransactionProgressOperation;
-                    commitTransactionOperation.lastProgressSent = 1;
+                    progressOperation.type = isCommitTransactionOperation 
+                        ? DataOperation.Type.CommitTransactionProgressOperation
+                        : DataOperation.Type.PerformTransactionProgressOperation;
+                    transactionOperation.lastProgressSent = 1;
                     progressOperation.data = 1;
                     progressOperation.target.dispatchEvent(progressOperation);    
 
                 }
 
                 var operation = new DataOperation(),
-                    operationType = hasObjectSaved ? DataOperation.Type.CommitTransactionCompletedOperation : DataOperation.Type.NoOp;
-                operation.referrerId = commitTransactionOperation.id;
-                operation.clientId = commitTransactionOperation.clientId;
+                    operationType = hasObjectSaved 
+                        ? isCommitTransactionOperation 
+                            ? DataOperation.Type.CommitTransactionCompletedOperation
+                            : DataOperation.Type.PerformTransactionCompletedOperation
+                        : DataOperation.Type.NoOp;
+                operation.referrerId = transactionOperation.id;
+                operation.clientId = transactionOperation.clientId;
                 operation.type = operationType;
                 operation.target = self;
                 operation.data = {};
@@ -1484,7 +1554,6 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     setIteration,
                     setIterationRawData,
                     mapIteration,
-                    notifyRelevantChanges = createTransactionOperation.data.notifyRelevantChanges,
                     summary;
 
                 if(transaction.createdDataObjects) {
@@ -1553,9 +1622,9 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 }
 
                 if(operationType === DataOperation.Type.NoOp) {
-                    console.log("commitTransaction "+ commitTransactionOperation.id+ " completed with no changes needed");
+                    console.log(transactionOperation.type + " "+ transactionOperation.id+ " completed with no changes needed");
                 } else {
-                    console.log("commitTransaction "+ commitTransactionOperation.id+ " completed as " + operationType);
+                    console.log(transactionOperation.type + " "+ transactionOperation.id+ " completed as " + operationType);
                 }
 
 
@@ -1566,16 +1635,18 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
             },function(error) {
                 var operation = new DataOperation();
-                operation.referrerId = commitTransactionOperation.id;
-                operation.clientId = commitTransactionOperation.clientId;
-                operation.type = DataOperation.Type.CommitTransactionFailedOperation;
+                operation.referrerId = transactionOperation.id;
+                operation.clientId = transactionOperation.clientId;
+                operation.type = isCommitTransactionOperation 
+                    ? DataOperation.Type.CommitTransactionFailedOperation
+                    : DataOperation.Type.PerformTransactionFailedOperation;
                 operation.target = self;
                 operation.data = error;
 
                 console.log("rootService.saveChanges() failed with error: ", error);
 
                 //Wether transaction performed or failed, we cleanup
-                self._pendingCreateTransactionOperationById.delete(referrerId);
+                self._pendingCreateTransactionOperationById.delete((referrerId || transactionOperationId));
 
                 operation.target.dispatchEvent(operation);
             });
@@ -1705,7 +1776,9 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                var result = this[iOperationListenerMethodName](operation);
                //console.log("this["+iOperationListenerMethodName+"](operation)",operation," ---> returned ",result);
                return result.then((value) => {
-                    promiseIndexesSet.delete(operation.index);
+                    if(promiseIndexesSet) {
+                        promiseIndexesSet.delete(operation.index);
+                    }
                     // console.log("promiseIndexesSet "+JSON.stringify(Array.from(promiseIndexesSet)));
 
                     if(operationCount) {
@@ -1746,12 +1819,32 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 progressOperation.clientId = commitTransactionOperation.clientId;
                 //progressOperation.target = transactionObjectDescriptors;
                 progressOperation.target = this;
-                progressOperation.type = DataOperation.Type.CommitTransactionProgressOperation;
+                // progressOperation.type = DataOperation.Type.CommitTransactionProgressOperation;
+                progressOperation.type = (commitTransactionOperation.type ===  DataOperation.Type.CommitTransactionOperation) 
+                ? DataOperation.Type.CommitTransactionProgressOperation
+                : DataOperation.Type.PerformTransactionProgressOperation;
+
                 commitTransactionOperation.lastProgressSent = percentCompletion;
                 progressOperation.data = percentCompletion;
                 progressOperation.target.dispatchEvent(progressOperation);    
             }
 
+        }
+    },
+
+    createRolesIfNeeded: {
+        value: function() {
+            if(!this.eventOrganizerRole) {
+                return this._createObjectDescriptorStoreForTypeIfNeeded(Role)
+                .then((wasCreated) => {
+                    console.log("_processCreateTransaction(): get RolePromise (Role wasCreated: ",wasCreated+")");
+                    
+                    //Fetch Shared/reference roles
+                    return Promise.all([this.eventOrganizerRolePromise, this.eventAttendeeRolePromise, this.patientRolePromise, this.financialResponsibilityRolePromise, this.customerPreferenceRolePromise, this.emergencyContactRolePromise]);
+                });
+            } else {
+                return Promise.resolve(true);
+            }
         }
     },
 
@@ -1769,17 +1862,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 return this.checkInQuestionnaire()
             // })
             .then(() => {
-                if(!this.eventOrganizerRole) {
-                    return this._createObjectDescriptorStoreForTypeIfNeeded(Role)
-                    .then((wasCreated) => {
-                        console.log("_processCreateTransaction(): get RolePromise (Role wasCreated: ",wasCreated+")");
-                        
-                        //Fetch Shared/reference roles
-                        return Promise.all([this.eventOrganizerRolePromise, this.eventAttendeeRolePromise, this.patientRolePromise, this.financialResponsibilityRolePromise, this.customerPreferenceRolePromise, this.emergencyContactRolePromise]);
-                    });
-                } else {
-                    return Promise.resolve(true);
-                }
+                return this.createRolesIfNeeded();
             })
             .then((roles) => {
                 //console.log("_processCreateTransaction(): Roles checked: loop on transactions ("+transactionOperations.length+")");
@@ -1998,7 +2081,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                             }
                         })
                         .catch(function(caughtError) {
-                            console.error("Error fetching objectQuery:",objectQuery);
+                            console.error("Error fetching objectQuery:",caughtError);
                             return null;
                         });
                     }
@@ -2473,7 +2556,9 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 this._createObjectDescriptorStoreForTypeIfNeeded(ContactForm),
                 this._createObjectDescriptorStoreForTypeIfNeeded(PartyInstantMessageAddress),
                 this._createObjectDescriptorStoreForTypeIfNeeded(InstantMessageAddress),
-                this._createObjectDescriptorStoreForTypeIfNeeded(RoleRanking)
+                this._createObjectDescriptorStoreForTypeIfNeeded(RoleRanking),
+                this.checkInQuestionnaire(),
+                this.createRolesIfNeeded()
             ])
             .then((wasCreated) => {
                 var mainService = this.rootService,
@@ -2745,7 +2830,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
     createCogentDesignCustomerOrgnizationAppClientNamed: {
         value: function(organization, appClientName) {
-            var mainService = self.rootService;
+            var mainService = this.rootService;
 
             var application = mainService.createDataObject(Application);
             application.name = appClientName;

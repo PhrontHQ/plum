@@ -21,6 +21,7 @@
                 {"@": "authorizeConnectionOperationMapEntry"},
                 {"@": "readOperationMapEntry"},
                 {"@": "createTransactionOperationMapEntry"},
+                {"@": "performTransactionOperationMapEntry"},
                 {"@": "updateOperationMapEntry"},
                 {"@": "createOperationMapEntry"},
                 {"@": "deleteOperationMapEntry"}
@@ -67,6 +68,21 @@
 
     "DataOperationIdentityCreateTransactionAccessPolicy": {
         "object": "data/main.datareel/access-control/create-transaction/identity-criteria-access-policy.mjson"
+    },
+
+
+    "performTransactionOperationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": "performTransactionOperation",
+            "value": [
+                {"@": "DataOperationIdentityPerformTransactionAccessPolicy"}
+            ]
+        }
+    },
+
+    "DataOperationIdentityPerformTransactionAccessPolicy": {
+        "object": "data/main.datareel/access-control/perform-transaction/identity-criteria-access-policy.mjson"
     },
 
 
