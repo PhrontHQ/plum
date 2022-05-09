@@ -123,7 +123,7 @@ custom:
   myStageBaseDomain: 
     mod: ${self:custom.myStage}.${self:custom.myBaseDomain}
     test: ${self:custom.myStage}.${self:custom.myBaseDomain}
-    live: ${self:custom.myBaseDomain}.
+    live: ${self:custom.myBaseDomain}
 
   myMainWorkerWebsocketDomainName: connect.${self:custom.myStageBaseDomain.${self:custom.myStage}}
   myMainWorkerHttpDomainName: send.${self:custom.myStageBaseDomain.${self:custom.myStage}}
