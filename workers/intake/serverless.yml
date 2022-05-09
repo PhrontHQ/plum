@@ -291,7 +291,6 @@ functions:
     handler: main.connect
     events:
       - websocket:
-          async: true
           route: $connect # authorizers are only for connect routes
           authorizer: # references the auth function below
             name: authorize
