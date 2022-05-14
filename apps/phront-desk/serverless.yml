@@ -48,7 +48,7 @@ custom:
   myStageBaseDomain: 
     mod: ${self:custom.myStage}.${self:custom.myBaseDomain}
     test: ${self:custom.myStage}.${self:custom.myBaseDomain}
-    live: ${self:custom.myBaseDomain}.
+    live: ${self:custom.myBaseDomain}
   bucketName: ${self:custom.myServiceObjectVersionedName}-${aws:accountId} # required
   cloudfrontOriginId: ${self:custom.myServiceObjectName}
 
@@ -105,8 +105,18 @@ custom:
       params: # optional
         - index.html:
             CacheControl: 'public, must-revalidate, proxy-revalidate, max-age=0'
-        - "*.js":
-            CacheControl: 'public, max-age=31536000'
+        - '*/**/*.html':
+            CacheControl: 'public, max-age=31536000, immutable'
+        - '**/*.js':
+            CacheControl: 'public, max-age=31536000, immutable'
+        - '**/*.json':
+            CacheControl: 'public, max-age=31536000, immutable'
+        - '**/*.css':
+            CacheControl: 'public, max-age=31536000, immutable'
+        - '**/*.png':
+            CacheControl: 'public, max-age=31536000, immutable'
+        - '**/*.svg':
+            CacheControl: 'public, max-age=31536000, immutable'
       #bucketTags: # optional, these are appended to existing S3 bucket tags (overwriting tags with the same key)
       #  tagKey1: tagValue1
       #  tagKey2: tagValue2
