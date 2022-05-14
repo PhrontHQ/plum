@@ -1,6 +1,6 @@
 {
-    "name": "Plum Appointments",
-    "short_name": "Plum Appointments",
+    "name": "plum Appointments",
+    "short_name": "plum Appointments",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,6 +13,8 @@
             "type": "image/png"
         }
     ],
+    "start_url": "./",
+    "scope": "/",
     "theme_color": "#9a54cc",
     "background_color": "#9a54cc",
     "display": "standalone"
