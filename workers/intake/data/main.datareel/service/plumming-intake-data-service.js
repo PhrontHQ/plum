@@ -1623,9 +1623,10 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
                 if(operationType === DataOperation.Type.NoOp) {
                     console.log(transactionOperation.type + " "+ transactionOperation.id+ " completed with no changes needed");
-                } else {
-                    console.log(transactionOperation.type + " "+ transactionOperation.id+ " completed as " + operationType);
-                }
+                } 
+                // else {
+                //     console.log(transactionOperation.type + " "+ transactionOperation.id+ " completed as " + operationType);
+                // }
 
 
                 //Wether transaction performed or failed, we cleanup
