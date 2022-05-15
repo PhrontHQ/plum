@@ -175,7 +175,7 @@ function receiveOperation(operationJSON) {
         //referrerId = operation.referrerId
         promiseFunctions = pendingOperationPromiseFunctionsById.get(referrerId);
 
-    if(operationJSON.root.values.type !== "commitTransactionProgressOperation") {
+    if(operationJSON.root.values.type !== "commitTransactionProgressOperation" && operationJSON.root.values.type !== "performTransactionProgressOperation") {
         pendingOperationById.delete(referrerId);
 
         // console.log("Clearing promise for referrerId ["+referrerId+"]");
@@ -185,7 +185,7 @@ function receiveOperation(operationJSON) {
           promiseFunctions[0]();
         }, timeoutBetweenOperations);    
     } else {
-        console.log("commitTransactionProgress: ",operationJSON.root.values.data*100+"%");
+        console.log("transactionProgress: ",operationJSON.root.values.data*100+"%");
         //test
         //ws.send(serializedKeepAliveOperationString);
     }
