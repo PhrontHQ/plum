@@ -54,7 +54,31 @@
                     "schema": "live_plum_v1",
                     "profile": "cogent-live",
                     "resourceArn": "arn:aws:rds:us-east-1:540973189736:cluster:live",
-                    "secretArn": "arn:aws:secretsmanager:us-east-1:540973189736:secret:cogent-design-production-db-133jR7"
+                    "readWriteEndpoint": {
+                        "endpoint": "live.cluster-cyb5ajci5gqj.us-east-1.rds.amazonaws.com"
+                    },
+                    "readOnlyEndpoints": [
+                        {
+                            "endpoint": "live.cluster-ro-cyb5ajci5gqj.us-east-1.rds.amazonaws.com"
+                        }
+                    ],
+                    "secretArn": "arn:aws:secretsmanager:us-east-1:540973189736:secret:live-plum-database-lphHF4"
+                },
+                "local-live": {
+                    "database": "plum",
+                    "owner": "postgres",
+                    "schema": "live_plum_v1",
+                    "profile": "cogent-live",
+                    "resourceArn": "arn:aws:rds:us-east-1:540973189736:cluster:live",
+                    "readWriteEndpoint": {
+                        "endpoint": "live.cluster-cyb5ajci5gqj.us-east-1.rds.amazonaws.com"
+                    },
+                    "readOnlyEndpoints": [
+                        {
+                            "endpoint": "live.cluster-ro-cyb5ajci5gqj.us-east-1.rds.amazonaws.com"
+                        }
+                    ],
+                    "secretArn": "arn:aws:secretsmanager:us-west-2:545740467277:secret:live-plum-database-lphHF4"
                 },
                 "test": {
                     "database": "plum",
@@ -62,6 +86,30 @@
                     "schema": "test_plum_v1",
                     "profile": "cogent-test",
                     "resourceArn": "arn:aws:rds:us-west-2:545740467277:cluster:test",
+                    "readWriteEndpoint": {
+                        "endpoint": "test.cluster-cdt1lvbscbuf.us-west-2.rds.amazonaws.com"
+                    },
+                    "readOnlyEndpoints": [
+                        {
+                            "endpoint": "test.cluster-ro-cdt1lvbscbuf.us-west-2.rds.amazonaws.com"
+                        }
+                    ],
+                    "secretArn": "arn:aws:secretsmanager:us-west-2:545740467277:secret:test-plum-database-RDok3T"
+                },
+                "local-test": {
+                    "database": "plum",
+                    "owner": "postgres",
+                    "schema": "test_plum_v1",
+                    "profile": "cogent-test",
+                    "resourceArn": "arn:aws:rds:us-west-2:545740467277:cluster:test",
+                    "readWriteEndpoint": {
+                        "endpoint": "test.cluster-cdt1lvbscbuf.us-west-2.rds.amazonaws.com"
+                    },
+                    "readOnlyEndpoints": [
+                        {
+                            "endpoint": "test.cluster-ro-cdt1lvbscbuf.us-west-2.rds.amazonaws.com"
+                        }
+                    ],
                     "secretArn": "arn:aws:secretsmanager:us-west-2:545740467277:secret:test-plum-database-RDok3T"
                 },
                 "mod": {
