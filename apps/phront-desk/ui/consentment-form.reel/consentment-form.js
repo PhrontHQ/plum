@@ -34,7 +34,7 @@ exports.ConsentmentForm = DataEditor.specialize({
                 "url": "https://y52bemv26a.execute-api.us-west-2.amazonaws.com/test/multipart"
             },
             "live": {
-                "url": "https://cdu8qeqi80.execute-api.us-east-1.amazonaws.com/production/multipart"
+                "url": "https://ifepvnvs2i.execute-api.us-east-1.amazonaws.com/live//multipart"
             }
         }
     },
