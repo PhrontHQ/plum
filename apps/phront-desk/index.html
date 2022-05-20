@@ -43,6 +43,8 @@
         }
     }
     </script>
+</head>
+<body class="Plum">
     <script>  
         /*
             In iOS 12 and above, Safari's navigation bar can expand and contract depending
@@ -56,23 +58,14 @@
             Note that the behaviour described is considered a feature by Apple so it might not
             be fixed any time soon.
         */
-        setTimeout(function iOsHeightWorkaround() {
-            var resize = function () {
-                    var height
-
-                    document.body.style.height = "9999px";
-                    setTimeout(function () {
-                        height = window.innerHeight;
-                        document.body.style.height = height + "px";
-                        document.documentElement.scrollTop = 0;
-                    }, 200)
-                };
-
-            resize();
-            window.addEventListener("resize", resize);
-        }, 0);
+        var resize = function () {
+                setTimeout(function () {
+                    document.body.style.height = window.innerHeight + "px";
+                    document.documentElement.scrollTop = 0;
+                }, 200)
+            };
+        resize();
+        window.addEventListener("resize", resize);
     </script>
-</head>
-<body class="Plum">
 </body>
 </html>
