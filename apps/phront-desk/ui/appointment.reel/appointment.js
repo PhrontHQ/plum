@@ -352,10 +352,10 @@ exports.Appointment = DataEditor.specialize({
             );
 
 
-
-            if(currentEnvironment.stage && currentEnvironment.stage.indexOf("prod") === -1) {
-                this._minuteOffset = Number(this.application.url.searchParams.get("minuteOffset"));    
-            }
+            /*
+                minuteOffset can be useful live, or with test data.
+            */
+            this._minuteOffset = Number(this.application.url.searchParams.get("minuteOffset"));    
 
             this.defineBinding("isServiceEngagementCanceled", {
                 source: this,
