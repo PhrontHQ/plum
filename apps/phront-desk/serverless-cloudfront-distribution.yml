@@ -7,7 +7,10 @@ Properties:
     CustomErrorResponses:
       - ErrorCode: 404
         ResponseCode: 200
-        ResponsePagePath: /index.html
+        ResponsePagePath: /error.html
+      - ErrorCode: 403
+        ResponseCode: 200
+        ResponsePagePath: /error.html
     DefaultCacheBehavior:
       AllowedMethods:
         - GET

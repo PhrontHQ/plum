@@ -1,3 +1,19 @@
 Type: AWS::S3::Bucket
 Properties:
   BucketName: ${self:custom.bucketName}
+  WebsiteConfiguration:
+    IndexDocument: index.html
+    ErrorDocument: error.html
+    RoutingRules:
+      - RoutingRuleCondition:
+          HttpErrorCodeReturnedEquals: '404'
+        RedirectRule:
+          Protocol: https
+          HostName: ${self:custom.myStageBaseDomain.${self:custom.myStage}}
+          ReplaceKeyWith: 404.html
+      - RoutingRuleCondition:
+          HttpErrorCodeReturnedEquals: '403'
+        RedirectRule:
+          Protocol: https
+          HostName: ${self:custom.myStageBaseDomain.${self:custom.myStage}}
+          ReplaceKeyWith: 404.html

@@ -107,6 +107,8 @@ custom:
             CacheControl: 'public, must-revalidate, proxy-revalidate, max-age=0'
         - '*/**/*.html':
             CacheControl: 'public, max-age=31536000, immutable'
+        - '**/*.webmanifest':
+            CacheControl: 'public, max-age=31536000, immutable'
         - '**/*.js':
             CacheControl: 'public, max-age=31536000, immutable'
         - '**/*.json':
@@ -117,6 +119,7 @@ custom:
             CacheControl: 'public, max-age=31536000, immutable'
         - '**/*.svg':
             CacheControl: 'public, max-age=31536000, immutable'
+            
       #bucketTags: # optional, these are appended to existing S3 bucket tags (overwriting tags with the same key)
       #  tagKey1: tagValue1
       #  tagKey2: tagValue2
