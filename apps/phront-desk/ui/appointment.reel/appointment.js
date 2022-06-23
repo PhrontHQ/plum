@@ -776,6 +776,11 @@ exports.Appointment = DataEditor.specialize({
     /*
         The delay we use in setInterval should be taking into account in which phase we are and what could make it change.
         - For filling the form, it's known and set. If now is before this.patientMandatoryFormFillingTimeRange, then the next time we need to make an upate is on this.patientMandatoryFormFillingTimeRange.begin. So we should start then.
+
+        Ideas to improve as we refactor it in montage:
+        - better handle precision. If only minute is needed, set a timeout to the reminder of the next minute to come, then re-evalute and re-do a nother timeout, not an intervak
+
+        - pause the watchTimeIfNeeded() when the page is not visible and start it again when it becomes visible again.
     */
     watchTimeIfNeeded: {
         value: function() {
