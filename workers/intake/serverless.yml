@@ -231,7 +231,10 @@ provider:
   cfnRole: ${self:custom.myCfnRole.${self:custom.myStage}}  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
   region: us-west-2 # Overwrite the default region used. Default is us-east-1
 
-  runtime: nodejs14.x
+  runtime: nodejs16.x
+  architecture: arm64 #x86_64
+  # Default memory size for functions (default: 1024MB)
+  memorySize: 512
   logRetentionInDays: 3
   apiGateway:
     # Attach to an externally created REST API via its ID:
@@ -289,6 +292,7 @@ functions:
   connect:
     name: ${self:custom.myServiceObjectVersionedName}-connect
     handler: main.connect
+    memorySize: 256
     events:
       - websocket:
           route: $connect # authorizers are only for connect routes
@@ -331,6 +335,7 @@ functions:
   disconnect:
     name: ${self:custom.myServiceObjectVersionedName}-disconnect
     handler: main.disconnect
+    memorySize: 256
     events:
       - websocket:
           route: $disconnect
