@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="liveapp.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#9a54cc">
+    <meta name="msapplication-TileColor" content="#9a54cc">
+    <meta name="theme-color" content="#9a54cc">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Error</title>
+    <style>
+        html {
+            touch-action: none;
+        }
+        body {    
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+            background: linear-gradient(117deg, hsl(275, 54%, 56%) 0%, hsl(275, 42%, 36%) 38%, hsl(247, 46%, 12%) 100%) fixed;
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="node_modules/montage/montage.js" async></script>
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/plum-loader.reel",
+            "values": {
+                "minimumLoadingDuration": 1000
+            }
+        }
+    }
+    </script>
+</head>
+<body class="Plum">
+    <script>  
+        /*
+            In iOS 12 and above, Safari's navigation bar can expand and contract depending
+            on the current page's scroll. When the navigation bar is expanded, part of the
+            100vh will be covered by it. From CSS we have access to 2 vertical measures:
+            100vh, that is the viewport height with the navigation bar contracted, and
+            100%, that is the viewport height with the navigation bar expanded. We don't have
+            any simple CSS way to know in what of the two cases we are, and this ends creating
+            a series of issues for web applications and games that want to use the full 
+            viewport and not use the standard website scrolling as is the case with plum.
+            Note that the behaviour described is considered a feature by Apple so it might not
+            be fixed any time soon.
+        */
+        var resize = function () {
+                setTimeout(function () {
+                    document.body.style.height = window.innerHeight + "px";
+                    document.documentElement.scrollTop = 0;
+                }, 200)
+            };
+        resize();
+        window.addEventListener("resize", resize);
+    </script>
+</body>
+</html>
