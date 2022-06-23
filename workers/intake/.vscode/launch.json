@@ -64,7 +64,7 @@
                 "-p",
                 "7373",
                 "-s",
-                "staging"
+                "test"
             ],
             "trace": true,
             "enableContentValidation": false,
@@ -86,7 +86,7 @@
                 "-p",
                 "7373",
                 "-s",
-                "staging"
+                "test"
             ],
             "trace": true,
             "enableContentValidation": false,
@@ -179,7 +179,7 @@
                 "--inspect",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/provision-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/provision-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
                 "-s",
@@ -205,7 +205,7 @@
                 "--preserve-symlinks",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/organization-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/organization-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
                 "-s",
@@ -231,7 +231,7 @@
                 "--preserve-symlinks",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/organization-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/organization-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/change_invite_inside_immediately_to_false/index.json",
                 "-s",
@@ -309,7 +309,7 @@
                 "--preserve-symlinks",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/provision-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/provision-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
                 "-s",
@@ -335,7 +335,7 @@
                 "--preserve-symlinks",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/organization-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/organization-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
                 "-s",
@@ -355,17 +355,17 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch live-export-2-provisionStaging IntakeWorker",
+            "name": "Launch live-export-2-provisionTest IntakeWorker",
             "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/provision-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/provision-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/live-export-2-provision/index.json",
                 "-s",
-                "staging",
+                "test",
                 "--webSocketURL",
                 "wss://4evki41bi7.execute-api.us-east-1.amazonaws.com/mod",
                 "--httpURL",
@@ -381,21 +381,21 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch live-export-2Staging IntakeWorker",
+            "name": "Launch live-export-2Test IntakeWorker",
             "runtimeVersion": "14.18.1", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/test/plumming-intake-client/index.js",
                 "--session",
-                "${workspaceFolder}/test/plumming-intake-client/session-serialization/staging/organization-session.mjson",
+                "${workspaceFolder}/test/plumming-intake-client/session-serialization/test/organization-session.mjson",
                 "--dataOperationIndex",
                 "${workspaceFolder}/test/plumming-intake-client/mock-input-operations/transactions/live-export-2/index.json",
                 "-s",
-                "staging",
+                "test",
                 "--webSocketURL",
-                "wss://5fvrn782kl.execute-api.us-west-2.amazonaws.com/staging",
+                "wss://5fvrn782kl.execute-api.us-west-2.amazonaws.com/test",
                 "--httpURL",
-                "https://r8grcs3pr1.execute-api.us-west-2.amazonaws.com/staging"
+                "https://r8grcs3pr1.execute-api.us-west-2.amazonaws.com/test"
             ],
             "trace": true,
             "enableContentValidation": false,
@@ -417,14 +417,14 @@
             "type": "node-terminal"
         },
         {
-            "command": "npx serverless package --stage staging --region us-west-2",
-            "name": "Package Staging us-west-2",
+            "command": "npx serverless package --stage test --region us-west-2",
+            "name": "Package test us-west-2",
             "request": "launch",
             "type": "node-terminal"
         },
         {
-            "command": "npx serverless deploy --stage staging --region us-west-2",
-            "name": "Deploy Staging us-west-2",
+            "command": "npx serverless deploy --stage test --region us-west-2",
+            "name": "Deploy test us-west-2",
             "request": "launch",
             "type": "node-terminal"
         },
