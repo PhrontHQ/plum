@@ -9,7 +9,7 @@
         "phront": "github:PhrontHQ/phront#master"
     },
     "devDependencies": {
-        "http-server": "^14.0.0",
+        "http-server": "^14.1.0",
         "jshint": "^2.9.5",
         "minit": "^0.5.7",
         "mop": "github:marchant/mop.git#montage-19",
@@ -24,7 +24,7 @@
     },
     "scripts": {
         "lint": "jshint .",
-        "build": "node node_modules/mop/optimize . -target .serverless",
+        "build": "node node_modules/mop/optimize . --optimize 1 -target .serverless",
         "serve": "node_modules/http-server/bin/http-server -p 9797 -S -C node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt -K node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
         "start": "minit serve",
         "start:dist": "minit serve -r dist",
