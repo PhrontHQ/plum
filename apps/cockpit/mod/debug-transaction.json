@@ -1,0 +1,49 @@
+{
+    "criteria0": {
+        "values": {
+            "expression": "originId == $.originId && parent != null",
+            "parameters": {
+                "originId": "c21df01f-a87d-4cf7-b280-568bf9f87687"
+            }
+        },
+        "prototype": "montage/core/criteria"
+    },
+    "root": {
+        "values": {
+            "id": "EF0ED7CB-2C6C-44E5-A062-2B17CD059A6A",
+            "data": {
+                "notifyRelevantChanges": false,
+                "operations": {
+                    "data/main.datareel/model/event": {
+                        "updateOperations": [
+                            {
+                                "@": "33163C0D-0A01-4550-AC08-94CB855CF174"
+                            }
+                        ]
+                    }
+                }
+            },
+            "type": "performTransactionOperation",
+            "targetModuleId": null
+        },
+        "prototype": "montage/data/service/data-operation"
+    },
+    "dataOperation0": {
+        "values": {
+            "criteria": {
+                "@": "criteria0"
+            },
+            "id": "33163C0D-0A01-4550-AC08-94CB855CF174",
+            "data": {
+                "participationStatus": "InvitedIn"
+            },
+            "targetModuleId": "data/main.datareel/model/event",
+            "snapshot": {
+                "participationStatus": "Arrived"
+            },
+            "type": "updateOperation",
+            "referrerId": "EF0ED7CB-2C6C-44E5-A062-2B17CD059A6A"
+        },
+        "prototype": "montage/data/service/data-operation"
+    }
+}

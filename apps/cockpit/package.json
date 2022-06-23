@@ -8,7 +8,7 @@
         "phront": "github:PhrontHQ/phront#master"
     },
     "devDependencies": {
-        "http-server": "^0.12.3",
+        "http-server": "^14.1.0",
         "jshint": "^2.9.5",
         "minit": "^0.5.7",
         "mop": "github:marchant/mop.git#montage-19",
