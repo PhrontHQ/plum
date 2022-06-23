@@ -18,7 +18,10 @@ exports.ConsentmentForm = DataEditor.specialize({
             this.super();
 
             this.application.addEventListener("openConsentmentForm", this, false);
-            this.fetchCheckInQuestionnaire();
+
+
+            this.application.addEventListener("firstDraw", this, false);
+            
         }
     },
 
@@ -71,13 +74,90 @@ exports.ConsentmentForm = DataEditor.specialize({
         }
     },
 
+    handleAppointmentFirstDraw: {
+        value: function(event) {
+            console.debug(event.target.identifier +" firstDraw for instance number "+event.target.instanceNumber);
+            this.loadIFrameIfNeededForAppointmentComponent(event.target);
+
+        }
+    },
+
+
     handleOpenConsentmentForm: {
         value: function (event) {
             var serviceEngagement = event.detail.serviceEngagement;
             //todo: filter video list with youtube trailer available.?
 
             if (serviceEngagement) {
-                this.open();
+                var self = this;
+                Promise.all([this.fetchCheckInQuestionnaire(), this.loadIFrame()])
+                //this.fetchCheckInQuestionnaire()
+                .then(function() {
+                    self.open();
+                })
+            }
+        }
+    },
+
+    _loadIFramePromise: {
+        value: undefined
+    },
+    loadIFrame: {
+        value: function() {
+            var self = this;
+            return this._loadIFramePromise || (this._loadIFramePromise = new Promise(function(resolve, reject) {
+                if(!self.iFrameElement.src) {
+                    return self.loadTemplatePromise
+                    .then(function(template) {
+                        self.iFrameElement.addEventListener("load", function(event) {
+                            resolve(self.iFrameElement);
+                        }, false);
+                        self.iFrameElement.addEventListener("error", function(event) {
+                            reject(self.iFrameElement);
+                        }, false);
+                        self.iFrameElement.src = template.getBaseUrl()+"iframe-consentment-form.html";    
+                    })
+
+                } else {
+                    resolve(self.iFrameElement);
+                }
+
+            }));
+        }
+    },
+
+    _canPatientFillForm: {
+        value: false
+    },
+
+    canPatientFillForm: {
+        get: function() {
+            return this._canPatientFillForm;
+        },
+        set: function(value) {
+            if(value !== this._canPatientFillForm) {
+                this._canPatientFillForm = value;
+                if(value) {
+                    this.loadIFrame();
+                }
+            }
+        }
+    },
+
+    loadIFrameIfNeededForAppointmentComponent: {
+        value: function (appointmentComponent) {
+
+            /*  
+                We'll need to move the canPatientFillForm logic (implemented with bindings/expressions) to the DOs, but until we do, we use it from the component itself.
+            */
+            if(!this._loadIFramePromise) {
+                if(this.getBinding("canPatientFillForm")) {
+                    this.cancelBinding("canPatientFillForm");
+                }
+                this.defineBinding("canPatientFillForm", {
+                    source: appointmentComponent,
+                    "<-": "canPatientFillForm"
+                });
             }
         }
     },
