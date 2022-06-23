@@ -8,14 +8,14 @@
         "owner": {
             "values": {
                 "element": {"#": "owner"},
-                "_scrollingElement": {"#": "repetition"},
-                "_repetition": {"@": "repetition"}
+                "_scrollingElement": {"#": "chat-repetition"},
+                "_repetition": {"@": "chatRepetition"}
             }
         },
-        "repetition": {
+        "chatRepetition": {
             "prototype": "montage/ui/repetition.reel",
             "values": {
-                "element": {"#": "repetition"},
+                "element": {"#": "chat-repetition"},
                 "content": {"<-": "@owner.conversation"}
             }
         },
@@ -23,7 +23,7 @@
             "prototype": "../chat-message.reel",
             "values": {
                 "element": {"#": "message"},
-                "iteration": {"<-": "@repetition:iteration"},
+                "iteration": {"<-": "@chatRepetition:iteration"},
                 "data": {"<-": "iteration.object"},
                 "isMainSender": {"<-": "iteration.object.sender == @owner.mainSender"},
                 "isFirstInGroup": {"<-": "@owner.conversation[iteration.index - 1].sender != iteration.object.sender"},
@@ -35,7 +35,7 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Chat">
-        <div data-montage-id="repetition" class="Chat-repetition">
+        <div data-montage-id="chat-repetition" class="Chat-repetition">
             <div>
                 <div data-montage-id="message"></div>
             </div>
