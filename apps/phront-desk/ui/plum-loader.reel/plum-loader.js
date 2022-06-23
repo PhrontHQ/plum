@@ -15,7 +15,7 @@ var PlumLoader = exports.PlumLoader = Loader.specialize(/** @lends PlumLoader# *
     },
 
     minimumFirstLoadingDuration: {
-        value: 800
+        value: 0
     }
 
 });
