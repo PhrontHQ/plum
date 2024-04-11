@@ -18,8 +18,8 @@
   "dependencies": {
     "commander": "^6.1.0",
     "isomorphic-ws": "^4.0.1",
-    "montage": "github:marchant/montage#montage-19",
-    "montage-geo": "github:marchant/montage-geo.git#montage-19",
+    "montage": "github:PhrontHQ/montage#montage-19",
+    "montage-geo": "github:PhrontHQ/montage-geo.git#montage-19",
     "phront": "github:phrontHQ/phront#master",
     "ws": "^8.4.2"
   },
