@@ -228,7 +228,10 @@ provider:
   cfnRole: ${self:custom.myCfnRole.${self:custom.myStage}}  # ARN of an IAM role for CloudFormation service. If specified, CloudFormation uses the role's credentials
   region: us-west-2 # Overwrite the default region used. Default is us-east-1
 
-  runtime: nodejs14.x
+  runtime: nodejs16.x
+  architecture: arm64 #x86_64
+  # Default memory size for functions (default: 1024MB)
+  memorySize: 512
   logRetentionInDays: 3
   apiGateway:
     # Attach to an externally created REST API via its ID:
@@ -252,7 +255,7 @@ provider:
   websocketsDescription: connect main worker
   websocketsApiRouteSelectionExpression: $request.body.action # custom routes are selected by the value of the action property in the body
   
-  # used in phront/data/main.datareel/serverles/a-w-s-a-p-i-gateway.js
+  # used in phront/data/main.datareel/worker/a-w-s-a-p-i-gateway.js
   # This allows our AWSAPIGateway to know to which endpoint it should post data
   environment:
     APIG_ENDPOINT:
@@ -286,6 +289,7 @@ functions:
   connect:
     name: ${self:custom.myServiceObjectVersionedName}-connect
     handler: main.connect
+    memorySize: 256
     events:
       - websocket:
           route: $connect # authorizers are only for connect routes
@@ -298,6 +302,7 @@ functions:
   authorize:
     name: ${self:custom.myServiceObjectVersionedName}-authorize
     handler: main.authorize
+    memorySize: 256
     timeout: 60 # optional, in seconds, default is 6
 
 
@@ -329,6 +334,7 @@ functions:
   disconnect:
     name: ${self:custom.myServiceObjectVersionedName}-disconnect
     handler: main.disconnect
+    memorySize: 256
     events:
       - websocket:
           route: $disconnect
