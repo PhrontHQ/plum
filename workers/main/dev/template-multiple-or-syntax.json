@@ -1,0 +1,165 @@
+{
+    "type": "or",
+    "args": [
+        {
+            "type": "or",
+            "args": [
+                {
+                    "type": "or",
+                    "args": [
+                        {
+                            "type": "or",
+                            "args": [
+                                {
+                                    "type": "equals",
+                                    "args": [
+                                        {
+                                            "type": "property",
+                                            "args": [
+                                                {
+                                                    "type": "value"
+                                                }, 
+                                                {
+                                                    "type": "literal",
+                                                    "value": "a"
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "type": "property",
+                                            "args": [
+                                                {
+                                                    "type": "parameters"
+                                                }, 
+                                                {
+                                                    "type": "literal",
+                                                    "value": "a"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "type": "equals",
+                                    "args": [
+                                        {
+                                            "type": "property",
+                                            "args": [
+                                                {
+                                                    "type": "value"
+                                                }, 
+                                                {
+                                                    "type": "literal",
+                                                    "value": "b"
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "type": "property",
+                                            "args": [
+                                                {
+                                                    "type": "parameters"
+                                                }, 
+                                                {
+                                                    "type": "literal",
+                                                    "value": "b"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "type": "equals",
+                            "args": [
+                                {
+                                    "type": "property",
+                                    "args": [
+                                        {
+                                            "type": "value"
+                                        }, 
+                                        {
+                                            "type": "literal",
+                                            "value": "c"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "type": "property",
+                                    "args": [
+                                        {
+                                            "type": "parameters"
+                                        }, 
+                                        {
+                                            "type": "literal",
+                                            "value": "c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type": "equals",
+                    "args": [
+                        {
+                            "type": "property",
+                            "args": [
+                                {
+                                    "type": "value"
+                                }, 
+                                {
+                                    "type": "literal",
+                                    "value": "d"
+                                }
+                            ]
+                        }, 
+                        {
+                            "type": "property",
+                            "args": [
+                                {
+                                    "type": "parameters"
+                                }, 
+                                {
+                                    "type": "literal",
+                                    "value": "d"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "type": "equals",
+            "args": [
+                {
+                    "type": "property",
+                    "args": [
+                        {
+                            "type": "value"
+                        }, 
+                        {
+                            "type": "literal",
+                            "value": "e"
+                        }
+                    ]
+                }, 
+                {
+                    "type": "property",
+                    "args": [
+                        {
+                            "type": "parameters"
+                        }, 
+                        {
+                            "type": "literal",
+                            "value": "e"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

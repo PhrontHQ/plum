@@ -1,0 +1,86 @@
+{
+    "type": "or",
+    "args": [{
+        "type": "or",
+        "args": [{
+            "type": "or",
+            "args": [{
+                "type": "has",
+                "args": [{
+                    "type": "property",
+                    "args": [{
+                        "type": "parameters"
+                    }, {
+                        "type": "literal",
+                        "value": "parameter1"
+                    }]
+                }, {
+                    "type": "property",
+                    "args": [{
+                        "type": "value"
+                    }, {
+                        "type": "literal",
+                        "value": "id"
+                    }]
+                }]
+            }, {
+                "type": "has",
+                "args": [{
+                    "type": "property",
+                    "args": [{
+                        "type": "parameters"
+                    }, {
+                        "type": "literal",
+                        "value": "parameter1"
+                    }]
+                }, {
+                    "type": "property",
+                    "args": [{
+                        "type": "value"
+                    }, {
+                        "type": "literal",
+                        "value": "id"
+                    }]
+                }]
+            }]
+        }, {
+            "type": "has",
+            "args": [{
+                "type": "property",
+                "args": [{
+                    "type": "parameters"
+                }, {
+                    "type": "literal",
+                    "value": "parameter1"
+                }]
+            }, {
+                "type": "property",
+                "args": [{
+                    "type": "value"
+                }, {
+                    "type": "literal",
+                    "value": "id"
+                }]
+            }]
+        }]
+    }, {
+        "type": "has",
+        "args": [{
+            "type": "property",
+            "args": [{
+                "type": "parameters"
+            }, {
+                "type": "literal",
+                "value": "parameter1"
+            }]
+        }, {
+            "type": "property",
+            "args": [{
+                "type": "value"
+            }, {
+                "type": "literal",
+                "value": "id"
+            }]
+        }]
+    }]
+}

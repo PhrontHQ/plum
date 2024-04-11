@@ -1,0 +1,16 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "7EFB8F1D-C0AB-40CB-BDC5-1040235FADDE",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/appointments"
+        ],
+        "notifyRelevantChanges" : false
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

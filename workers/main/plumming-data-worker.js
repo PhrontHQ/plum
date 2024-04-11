@@ -1,4 +1,4 @@
-var DataWorker = require("phront/serverles/data-worker").DataWorker;
+var DataWorker = require("phront/worker/data-worker").DataWorker;
 
 
 /**

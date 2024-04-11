@@ -2292,7 +2292,7 @@ table.breakpoint > tbody > tr > td.expand {
   background: -webkit-linear-gradient(315deg, #a7e732 0%, #1fb50e 35%);
   background: -o-linear-gradient(315deg, #a7e732 0%, #1fb50e 35%);
   background: linear-gradient(135deg, #a7e732 0%, #1fb50e 35%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7e732', endColorstr='#1fb50e', GradientType=1);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7e732', endColorstr='#1fb50e', GradientType=1); */
 }
 
 .side_share .fb {

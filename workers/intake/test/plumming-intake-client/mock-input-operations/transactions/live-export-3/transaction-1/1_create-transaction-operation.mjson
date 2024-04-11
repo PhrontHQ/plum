@@ -1,0 +1,16 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "7D558AD9-72EA-4FA2-A457-EB10B91B0E3B",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/practice"
+        ],
+        "notifyRelevantChanges" : false
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

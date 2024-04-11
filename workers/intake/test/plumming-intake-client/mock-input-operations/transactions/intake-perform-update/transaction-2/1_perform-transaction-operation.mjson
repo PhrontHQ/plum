@@ -1,0 +1,965 @@
+{
+  "criteria22" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "4e20d237-8f37-4471-bfac-01bf2667b383"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation17" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria17"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "73118A22-A8DD-4F22-B07E-E754F8A03E5E",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 3600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Deband 3",
+        "is_consult_visit_flag" : false,
+        "type_id" : "8c81ddd6-43e4-47b3-9fde-2a97e694e555",
+        "type_label" : "Deband 3",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation4" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria4"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "1C35A26E-01FB-4C3E-A4F2-FC76CEF7388F",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 2400,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Band 7s",
+        "is_consult_visit_flag" : false,
+        "type_id" : "ef6167c4-fc0d-4a66-9cfe-9e67b5fff6a2",
+        "type_label" : "Band 7s",
+        "last_modified_date" : 1390225721.93697
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria15" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "40446497-911b-46d3-8dde-58861744811c"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria4" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "ef6167c4-fc0d-4a66-9cfe-9e67b5fff6a2"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation19" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria19"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "9EDB89E2-6E10-42DB-820A-119544FA1968",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 5400,
+        "is_new_patient_exam_flag" : false,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1392758252.30936,
+        "permanent_label" : "",
+        "is_consult_visit_flag" : false,
+        "type_id" : "2a76c4d7-4118-4fff-9dfa-a9e53d5913e0",
+        "type_label" : "Invisalign Delivery",
+        "last_modified_date" : 1392758548.83167
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria20" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "6347b026-0177-4dc1-9fd7-eb0307f8ed56"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation8" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria8"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "61904AAE-8363-4C14-8456-A51A0FC297B6",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : true,
+        "created_date" : 1108270800,
+        "permanent_label" : "Development Ck",
+        "is_consult_visit_flag" : false,
+        "type_id" : "b0ea4333-9139-4595-8fd7-ac6f43384ab1",
+        "type_label" : "Development Ck",
+        "last_modified_date" : 1390225749.82741
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria13" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "a49721b4-a1c4-443d-9d75-8312df9fc339"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria9" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "fb544226-417f-4c33-afcc-d63fe6509999"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation3" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria3"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "0E2BA61C-CDC9-4B6A-A965-8F3C4AB98C93",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Adjustment",
+        "is_consult_visit_flag" : false,
+        "type_id" : "bb7e0b98-6fa3-42bb-86b8-8341696693ef",
+        "type_label" : "Adjustment",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation10" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria10"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "00D0931C-3A00-4BC8-8FB8-906A465ACA0F",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : true,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Retainer Check",
+        "is_consult_visit_flag" : false,
+        "type_id" : "90493828-b4cf-4107-8f26-5752813c847f",
+        "type_label" : "Retainer Check",
+        "last_modified_date" : 1390225779.99686
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria5" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "2f8eb479-b321-4f6e-bb1d-41e70f785a0e"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria11" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "0e5d0eb9-ab46-47eb-bb81-9b6dc0dc42c5"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation12" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria12"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "E5ECFE16-8F0D-4885-A5F6-76ED279132FC",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 2700,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Transfer Adjustment",
+        "is_consult_visit_flag" : false,
+        "type_id" : "45da3c1b-14a7-4969-ad5f-30d31dcaffb2",
+        "type_label" : "Transfer Adjustment",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation7" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria7"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "C3F36A06-1F8E-4A95-AFEB-819006451FC7",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Deband 2",
+        "is_consult_visit_flag" : false,
+        "type_id" : "cf13ecb7-9b57-4902-bf49-39ee83498af0",
+        "type_label" : "Deband Phase I",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation21" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria21"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "B234D6B7-9C80-4E9D-B020-6A0D3CF84037",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Deband 1",
+        "is_consult_visit_flag" : false,
+        "type_id" : "aa5a968d-a09c-4681-8406-e14d911f6c2a",
+        "type_label" : "Deband 1",
+        "last_modified_date" : 1453216667.72813
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria18" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "26fe1ac0-1e0d-4763-8e70-63a9a27cf3ad"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria1" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "491873d9-0fad-4306-b938-01fad5ef227c"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation14" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria14"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "E5162EBD-7EA5-4C71-9FDB-839CC3B72ABE",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Splint",
+        "is_consult_visit_flag" : false,
+        "type_id" : "64de93d7-5400-42ac-aa96-65a848ae34c6",
+        "type_label" : "Splint",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation16" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria16"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "BD883A28-62E5-4253-B0B8-000C383F7E3B",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Appliance Delivery",
+        "is_consult_visit_flag" : false,
+        "type_id" : "7f60ef91-05b0-423c-9426-d08578ea318b",
+        "type_label" : "Appliance Delivery",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria16" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "7f60ef91-05b0-423c-9426-d08578ea318b"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria6" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "37b2810c-158d-492c-a0ea-645f925fe7c1"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria21" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "aa5a968d-a09c-4681-8406-e14d911f6c2a"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation2" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria2"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "A85FA8B1-249C-409B-B500-4EE6C321B6F2",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Consultation",
+        "is_consult_visit_flag" : true,
+        "type_id" : "863d0cd3-e990-44a0-989c-f44b5e13441c",
+        "type_label" : "Consultation",
+        "last_modified_date" : 1390225729.82526
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation18" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria18"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "AADA93D4-6B50-4951-9298-B4BF1A26312D",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Appliance Impression",
+        "is_consult_visit_flag" : false,
+        "type_id" : "26fe1ac0-1e0d-4763-8e70-63a9a27cf3ad",
+        "type_label" : "Appliance Impression",
+        "last_modified_date" : 1390154805.80208
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "root" : {
+    "values" : {
+      "id" : "3439A536-0779-4059-92F9-63F438511DD1",
+      "data" : {
+        "notifyRelevantChanges" : false,
+        "operations" : {
+          "data/main.datareel/model/procedure_types" : {
+            "mergeOperations" : [
+              {
+                "@" : "dataOperation1"
+              },
+              {
+                "@" : "dataOperation2"
+              },
+              {
+                "@" : "dataOperation3"
+              },
+              {
+                "@" : "dataOperation4"
+              },
+              {
+                "@" : "dataOperation5"
+              },
+              {
+                "@" : "dataOperation6"
+              },
+              {
+                "@" : "dataOperation7"
+              },
+              {
+                "@" : "dataOperation8"
+              },
+              {
+                "@" : "dataOperation9"
+              },
+              {
+                "@" : "dataOperation10"
+              },
+              {
+                "@" : "dataOperation11"
+              },
+              {
+                "@" : "dataOperation12"
+              },
+              {
+                "@" : "dataOperation13"
+              },
+              {
+                "@" : "dataOperation14"
+              },
+              {
+                "@" : "dataOperation15"
+              },
+              {
+                "@" : "dataOperation16"
+              },
+              {
+                "@" : "dataOperation17"
+              },
+              {
+                "@" : "dataOperation18"
+              },
+              {
+                "@" : "dataOperation19"
+              },
+              {
+                "@" : "dataOperation20"
+              },
+              {
+                "@" : "dataOperation21"
+              },
+              {
+                "@" : "dataOperation22"
+              }
+            ]
+          }
+        }
+      },
+      "type" : "performTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation6" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria6"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "95A31DF0-3AC5-40EA-AB2E-6E58D88745C3",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 3600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Band Uppers",
+        "is_consult_visit_flag" : false,
+        "type_id" : "37b2810c-158d-492c-a0ea-645f925fe7c1",
+        "type_label" : "Band Uppers",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria2" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "863d0cd3-e990-44a0-989c-f44b5e13441c"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria14" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "64de93d7-5400-42ac-aa96-65a848ae34c6"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation1" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria1"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "D3E6F9CE-7E83-416E-9F5F-F39ABC907725",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : true,
+        "total_time" : 600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Emergency",
+        "is_consult_visit_flag" : false,
+        "type_id" : "491873d9-0fad-4306-b938-01fad5ef227c",
+        "type_label" : "Emergency",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria7" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "cf13ecb7-9b57-4902-bf49-39ee83498af0"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria12" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "45da3c1b-14a7-4969-ad5f-30d31dcaffb2"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation11" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria11"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "D0E80E83-7BA9-40DD-9094-24B0238085D0",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Separators",
+        "is_consult_visit_flag" : false,
+        "type_id" : "0e5d0eb9-ab46-47eb-bb81-9b6dc0dc42c5",
+        "type_label" : "Separators",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation20" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria20"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "73D31CBF-0C8D-42A4-AD4F-DAFAD64EB539",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 3600,
+        "is_new_patient_exam_flag" : true,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "New Patient Exam",
+        "is_consult_visit_flag" : false,
+        "type_id" : "6347b026-0177-4dc1-9fd7-eb0307f8ed56",
+        "type_label" : "New Patient Exam",
+        "last_modified_date" : 1407436434.67418
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria19" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "2a76c4d7-4118-4fff-9dfa-a9e53d5913e0"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation5" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria5"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "419D9521-219B-4B15-8D1B-81153D934443",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 3600,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Band Lowers",
+        "is_consult_visit_flag" : false,
+        "type_id" : "2f8eb479-b321-4f6e-bb1d-41e70f785a0e",
+        "type_label" : "Band Lowers",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria3" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "bb7e0b98-6fa3-42bb-86b8-8341696693ef"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria10" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "90493828-b4cf-4107-8f26-5752813c847f"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation13" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria13"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "A757FE8A-2C40-48C0-9350-4BA57876F40C",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 2700,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Open",
+        "is_consult_visit_flag" : false,
+        "type_id" : "a49721b4-a1c4-443d-9d75-8312df9fc339",
+        "type_label" : "Open",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation9" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria9"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "7044A20E-FDDF-44C5-B15F-A74AFD1AF9FB",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 2400,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Repo Brackets",
+        "is_consult_visit_flag" : false,
+        "type_id" : "fb544226-417f-4c33-afcc-d63fe6509999",
+        "type_label" : "Repo Brackets",
+        "last_modified_date" : 1390089505.45141
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation22" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria22"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "CE28866F-5E64-4BE0-A32C-A9106EDE3FD7",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : false,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 5400,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Full Banding",
+        "is_consult_visit_flag" : false,
+        "type_id" : "4e20d237-8f37-4471-bfac-01bf2667b383",
+        "type_label" : "Full Banding",
+        "last_modified_date" : 1515163617.27384
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria17" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "8c81ddd6-43e4-47b3-9fde-2a97e694e555"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation15" : {
+    "values" : {
+      "target" : "data/main.datareel/model/procedure_types",
+      "criteria" : {
+        "@" : "criteria15"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "2D9A82E0-7B18-4828-BD18-37BF85748137",
+      "data" : {
+        "is_visible" : true,
+        "is_records_visit_flag" : true,
+        "is_retention_visit_flag" : false,
+        "practice_id" : 1000,
+        "emergency_flag" : false,
+        "total_time" : 1800,
+        "is_new_patient_exam_flag" : null,
+        "is_recall_exam_flag" : false,
+        "created_date" : 1108270800,
+        "permanent_label" : "Records",
+        "is_consult_visit_flag" : false,
+        "type_id" : "40446497-911b-46d3-8dde-58861744811c",
+        "type_label" : "Records",
+        "last_modified_date" : 1395065741.74077
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "3439A536-0779-4059-92F9-63F438511DD1"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria8" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "b0ea4333-9139-4595-8fd7-ac6f43384ab1"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  }
+}

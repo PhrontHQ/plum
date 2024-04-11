@@ -1,0 +1,16 @@
+{
+  "root" : {
+    "values" : {
+      "id" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
+      "data" : {
+        "objectDescriptors" : [
+          "data/main.datareel/model/staff_members"
+        ],
+        "notifyRelevantChanges" : false
+      },
+      "type" : "createTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

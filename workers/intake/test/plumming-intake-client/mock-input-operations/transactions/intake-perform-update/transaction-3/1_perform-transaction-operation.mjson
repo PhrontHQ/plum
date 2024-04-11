@@ -1,0 +1,119 @@
+{
+  "criteria24" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "b1341447-b19e-4278-8bba-21e5bbbaea94"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation23" : {
+    "values" : {
+      "target" : "data/main.datareel/model/location_types",
+      "criteria" : {
+        "@" : "criteria23"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "E63999AF-F2D1-4A6C-B3B4-C87DD8838D98",
+      "data" : {
+        "short_label" : "MON",
+        "phone_country_code" : "1",
+        "created_date" : null,
+        "type_id" : "dfb8990b-c408-4323-a3b5-b39a7ae925b6",
+        "street_address" : "5555 Peachtree Dunwoody Rd NE",
+        "latitude" : 33.90576,
+        "city" : "Atlanta",
+        "type_label" : "Main",
+        "state_province" : "GA",
+        "last_modified_date" : 1607300882.36521,
+        "timezone_name" : "America/New_York",
+        "practice_id" : 1000,
+        "country_id" : 26,
+        "use_own_mailing_address" : true,
+        "permanent_label" : "Main Office Location Name",
+        "phone" : "7706452488",
+        "website" : "",
+        "email" : "",
+        "longitude" : -84.35207,
+        "post_code" : "30342",
+        "is_visible" : true
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "DEE58048-935C-43A2-B5F3-F7654999703C"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation24" : {
+    "values" : {
+      "target" : "data/main.datareel/model/location_types",
+      "criteria" : {
+        "@" : "criteria24"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "3D3528AF-F48D-4A92-AE2C-ED74F56AFEC1",
+      "data" : {
+        "short_label" : "SAT",
+        "phone_country_code" : "",
+        "created_date" : null,
+        "type_id" : "b1341447-b19e-4278-8bba-21e5bbbaea94",
+        "street_address" : "2621 Sandy Plains Road",
+        "latitude" : 34.01488,
+        "city" : "Marietta",
+        "type_label" : "Satellite",
+        "state_province" : "GA",
+        "last_modified_date" : 1607301006.7236,
+        "timezone_name" : "America/New_York",
+        "practice_id" : 1000,
+        "country_id" : 26,
+        "use_own_mailing_address" : true,
+        "permanent_label" : "Second Office Location Name",
+        "phone" : "7706452488",
+        "website" : "",
+        "email" : "",
+        "longitude" : -84.49611,
+        "post_code" : "30066",
+        "is_visible" : true
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "DEE58048-935C-43A2-B5F3-F7654999703C"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria23" : {
+    "values" : {
+      "expression" : "type_id == $type_id",
+      "parameters" : {
+        "type_id" : "dfb8990b-c408-4323-a3b5-b39a7ae925b6"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "root" : {
+    "values" : {
+      "id" : "DEE58048-935C-43A2-B5F3-F7654999703C",
+      "data" : {
+        "notifyRelevantChanges" : false,
+        "operations" : {
+          "data/main.datareel/model/location_types" : {
+            "mergeOperations" : [
+              {
+                "@" : "dataOperation23"
+              },
+              {
+                "@" : "dataOperation24"
+              }
+            ]
+          }
+        }
+      },
+      "type" : "performTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

@@ -43,6 +43,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -95,6 +96,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -138,6 +140,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -190,6 +193,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -242,6 +246,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -294,6 +299,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -337,6 +343,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -398,6 +405,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -450,6 +458,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -511,6 +520,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -622,6 +632,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -674,6 +685,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -717,6 +729,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -778,6 +791,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -821,6 +835,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -873,6 +888,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {
@@ -925,6 +941,7 @@
         "phone_label_d_id" : 0
       },
       "referrerId" : "E3D8F6C5-7689-4D1C-AEB5-CB9D4E005CFA",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/account_holders",
       "criteria" : {

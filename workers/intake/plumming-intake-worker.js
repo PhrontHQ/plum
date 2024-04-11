@@ -1,4 +1,4 @@
-var DataWorker = require("phront/serverles/data-worker").DataWorker,
+var DataWorker = require("phront/worker/data-worker").DataWorker,
     Organization = require("phront/data/main.datareel/model/organization").Organization,
     Application = require("phront/data/main.datareel/model/app/application").Application,
     CognitoUserPool = require("phront/data/main.datareel/model/aws/cognito/user-pool").UserPool,
@@ -7,6 +7,7 @@ var DataWorker = require("phront/serverles/data-worker").DataWorker,
     DataQuery = require("montage/data/model/data-query").DataQuery,
     UserPool = require("phront/data/main.datareel/model/app/user-pool").UserPool,
     AppClient = require("phront/data/main.datareel/model/app/app-client").AppClient,
+    PracticeObjectDescriptor = require("./data/main.datareel/model/practice.mjson").montageObject,
     WebSocketSession = require("phront/data/main.datareel/model/app/web-socket-session").WebSocketSession;
 
 const WebSocket = require('isomorphic-ws'),
@@ -40,7 +41,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
         }
     },
 
-    provisionStorageForRootOrganization: {
+    _provisionStorageForRootOrganization: {
         value: function() {
             var mainService = this.mainService;
 
@@ -54,7 +55,26 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
         }
     },
 
-    
+    provisionStorageForRootOrganization: {
+        value: function() {
+
+            return this._provisionStorageForRootOrganization()
+            .catch(function(error) {
+                var message = error.message;
+                if(
+                    message
+                    && message.contains("schema")
+                    && message.contains(" does not exist")) {
+                        //Retry once
+                        return this._provisionStorageForRootOrganization();
+                    } else {
+                        return Promise.reject(error);
+                    }
+
+            });
+        }
+    },
+
 
     provisionRootOrganizationFromIdentity: {
         value: function(identity, cogentDesignCognitoUserPool, provisionAppClient) {
@@ -130,12 +150,17 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             //     controllingOrganization: organization
             // }),
             var self = this,
-                userPoolQuery = DataQuery.withTypeAndCriteria(CognitoUserPool);
+                userPoolQuery = DataQuery.withTypeAndCriteria(CognitoUserPool),
+                intakeDataService =  this.mainService.childServiceForType(PracticeObjectDescriptor);
 
             userPoolQuery.fetchLimit = 5;
-
             
-            return Promise.all([this.provisionStorageForRootOrganization(), this.mainService.fetchData(userPoolQuery)])
+            return Promise.all([
+                this.provisionStorageForRootOrganization(), 
+                this.mainService.fetchData(userPoolQuery), 
+                intakeDataService.checkInQuestionnaire(), 
+                intakeDataService.createRolesIfNeeded()
+            ])
             .then((results) => {
                 var result = results[1],
                     cogentDesignCognitoUserPool;

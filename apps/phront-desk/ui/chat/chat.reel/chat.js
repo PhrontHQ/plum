@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 var Component = require("montage/ui/component").Component;
 
 function lerp(v0, v1, t) {

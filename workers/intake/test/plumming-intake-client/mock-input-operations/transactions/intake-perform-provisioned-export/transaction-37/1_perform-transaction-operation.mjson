@@ -27,6 +27,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -81,6 +82,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -126,6 +128,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -180,6 +183,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -216,6 +220,7 @@
         "entry_date" : 1462442400
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -270,6 +275,7 @@
         "entry_date" : 1432288800
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -315,6 +321,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -351,6 +358,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -396,6 +404,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -432,6 +441,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -468,6 +478,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -504,6 +515,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -540,6 +552,7 @@
         "entry_date" : 1434794400
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -653,6 +666,7 @@
         "entry_date" : 1434708000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -689,6 +703,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -761,6 +776,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {
@@ -806,6 +822,7 @@
         "entry_date" : 1462356000
       },
       "referrerId" : "EC2F9C99-C5D3-4748-A671-E79B3B3B7CE6",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/appointments",
       "criteria" : {

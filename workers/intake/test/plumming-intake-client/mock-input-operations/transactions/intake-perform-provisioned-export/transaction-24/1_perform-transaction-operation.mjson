@@ -42,6 +42,7 @@
         "post_code" : "30308"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -93,6 +94,7 @@
         "post_code" : "30334"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -144,6 +146,7 @@
         "post_code" : "23452"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -195,6 +198,7 @@
         "post_code" : "30310"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -246,6 +250,7 @@
         "post_code" : "30313"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -297,6 +302,7 @@
         "post_code" : "30328"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -411,6 +417,7 @@
         "post_code" : "30312"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -480,6 +487,7 @@
         "post_code" : "30313"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -549,6 +557,7 @@
         "post_code" : "30314"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -609,6 +618,7 @@
         "post_code" : "30309"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -660,6 +670,7 @@
         "post_code" : "30313"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -776,6 +787,7 @@
         "post_code" : "30309"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {
@@ -827,6 +839,7 @@
         "post_code" : "30310"
       },
       "referrerId" : "92D4CA94-E8D7-4B65-94C0-DD4D68F24F1D",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/patients",
       "criteria" : {

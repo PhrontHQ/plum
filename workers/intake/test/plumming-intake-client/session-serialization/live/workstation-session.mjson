@@ -1,0 +1,1 @@
+{"identity":{"prototype":"montage/data/model/identity","values":{"applicationIdentifier":"c4aeb291-769c-4532-b02a-18a5c54053af","applicationCredentials":"9e2e8e8d9e8f8d4a9f12ae1377f3f29724331e00056e833f0663597efa9d2059"}},"root":{"prototype":"phront/data/main.datareel/model/app/web-socket-session","values":{"identity":{"@":"identity"}}}}

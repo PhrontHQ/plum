@@ -3,24 +3,28 @@
     "version": "0.1.0",
     "description": "application",
     "dependencies": {
+        "@capacitor/android": "^4.2.0",
+        "@capacitor/cli": "^4.2.0",
+        "@capacitor/core": "^4.2.0",
+        "@capacitor/ios": "^4.2.0",
         "launcher": "github:PhrontHQ/launcher#main",
-        "montage": "github:marchant/montage#montage-19",
-        "montage-geo": "github:marchant/montage-geo.git#montage-19",
+        "montage": "github:PhrontHQ/montage#montage-19",
+        "montage-geo": "github:PhrontHQ/montage-geo.git#montage-19",
         "phront": "github:PhrontHQ/phront#master"
     },
     "devDependencies": {
+        "@dezeroku/serverless-certificate-creator": "^1.6.0",
         "http-server": "^14.1.0",
         "jshint": "^2.9.5",
         "minit": "^0.5.7",
-        "mop": "github:marchant/mop.git#montage-19",
+        "mop": "github:PhrontHQ/mop.git#montage-19",
         "serverless": "~3.16.0",
-        "serverless-hosted-zone": "^0.0.8",
-        "@dezeroku/serverless-certificate-creator": "^1.6.0",
         "serverless-deployment-bucket": "^1.5.2",
+        "serverless-hosted-zone": "^0.0.8",
         "serverless-prune-plugin": "^2.0.1",
-        "serverless-website-domain": "github:PhrontHQ/serverless-website-domain#master",
         "serverless-s3-sync": "github:PhrontHQ/serverless-s3-sync#master",
-        "serverless-scriptable-plugin": "^1.2.2"
+        "serverless-scriptable-plugin": "^1.2.2",
+        "serverless-website-domain": "github:PhrontHQ/serverless-website-domain#master"
     },
     "scripts": {
         "lint": "jshint .",
@@ -43,5 +47,5 @@
         "ui/main.reel",
         "data/main.datareel/main.mjson"
     ],
-    "shard": 2
+    "shard": 1
 }

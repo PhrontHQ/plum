@@ -20,10 +20,10 @@
                 "data": {"<-": "@owner.data"}
             }
         },
-        "consentmentForm": {
-            "prototype": "ui/consentment-form.reel",
+        "formOverlay": {
+            "prototype": "ui/form-overlay.mod",
             "values": {
-                "element": {"#": "consentmentForm"},
+                "element": {"#": "formOverlay"},
                 "data": {"<-": "@appointments.dataController.selection.one()"}
             }
         }
@@ -35,7 +35,7 @@
         <div data-montage-id="mainContent">
             <div data-montage-id="appointments"></div>
         </div>
-        <div data-montage-id="consentmentForm" class="popup"></div>
+        <div data-montage-id="formOverlay" class="popup"></div>
     </div>
 </body>
 </html>

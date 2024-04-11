@@ -3,11 +3,11 @@ Note: Using the "preview" debug extension
 'properties' block is deprecated, use 'values' instead 
  node_modules/montage/core/deprecate.js
 Phront Worker reporting for duty!
- node_modules/phront/serverles/main.js
+ node_modules/phront/worker/main.js
 PlummingDataWorker -handleConnect: event: {"requestContext":{"connectionId":"013AA208-0448-457E-9DA8-6E60E5765F74","stage":"staging","identity":{"sourceIp":"::1","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"}},"headers":{"host":"phront.local:7474","connection":"Upgrade","pragma":"no-cache","cache-control":"no-cache","user-agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1","upgrade":"websocket","origin":"http://phront.local:9797","sec-websocket-version":"13","accept-encoding":"gzip, deflate","accept-language":"en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7","sec-websocket-key":"ug9tNR6Afy13fCBkOR4bmA==","sec-websocket-extensions":"permessage-deflate; client_max_window_bits"},"body":""} context: undefined
  plumming-data-worker.js
 DataWorker -handleConnect: operationCoordinator.handleOperation() done
- node_modules/phront/serverles/data-worker.js
+ node_modules/phront/worker/data-worker.js
 {
   "criteria": {
     "prototype": "montage/core/criteria",

@@ -8,11 +8,14 @@
             "type": "node",
             "request": "launch",
             "name": "Launch PhrontDesk on phront.local",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
                 "${workspaceFolder}/apps/phront-desk/",
                 "--silent",
                 "--gzip",
+                "-c", /* disable caching with -1 value */
+                "-1",
                 "-p",
                 "9797",
                 "-S",
@@ -31,6 +34,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch PhrontDesk on localhost",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
                 "--silent",
@@ -91,6 +95,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Cockpit on phront.local",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
                 "${workspaceFolder}/apps/cockpit/",
@@ -118,7 +123,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch mod MainWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -149,11 +154,48 @@
             //     "<node_internals>/**"
             // ]
         },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch mod MainWorker on Neon mod DB",
+            "runtimeVersion": "18",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--inspect",
+                "--trace-warnings",
+                // "--prof",
+                "--expose-internals",
+                "${workspaceFolder}/workers/main/node_modules/local-websocket-server/index.js",
+                "--function",
+                "${workspaceFolder}/workers/main/main.js",
+                "-p",
+                "3001",
+                "-s",
+                "mod",
+                "-c",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt",
+                "-k",
+                "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+                "--gatewayTimeout",
+                "6000"
+            ],
+            "trace": true,
+            "enableContentValidation": false,
+            "env": {
+                "TIME_START": true,
+                "TIME_PG": true
+            }
+            // "skipFiles": [
+            //     "<node_internals>/**"
+            // ]
+        },
+
         {
             "type": "node",
             "request": "launch",
             "name": "Profile mod MainWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -172,7 +214,7 @@
                 "-k",
                 "${workspaceFolder}/workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
                 "--gatewayTimeout",
-                "2000"
+                "6000"
             ],
             "trace": true,
             "enableContentValidation": false,
@@ -187,7 +229,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch mod MainWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -219,7 +261,7 @@
             "type": "node",
             "request": "launch",
             "name": "Profile mod MainWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -251,7 +293,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch UNSECURE mod MainWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -281,7 +323,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform update status transaction on local mod mainWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -324,7 +366,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch test MainWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -358,7 +400,7 @@
             "type": "node",
             "request": "launch",
             "name": "Profile test MainWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -392,7 +434,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch test MainWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -424,7 +466,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch test MainWorker build with source-maps",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -467,7 +509,7 @@
             "type": "node",
             "request": "launch",
             "name": "Profile test MainWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -499,7 +541,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch test MainWorker (live setting)",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--prof",
@@ -531,7 +573,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch MainWorker on test (localhost)",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -557,7 +599,7 @@
             "type": "node",
             "request": "launch",
             "name": "Profile MainWorker on test (localhost)",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -603,7 +645,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch MainWorker on live (phront.local)",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -629,7 +671,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch MainWorker on live (localhost)",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -672,7 +714,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch mod IntakeWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -698,7 +740,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Profile mod IntakeWorker (authorize)",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -726,7 +768,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch mod IntakeWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -748,7 +790,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch live-export-2-provision on local mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -775,7 +817,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-2 on local mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -801,7 +843,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-3 on local mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -827,7 +869,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch perform provision on local mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -854,7 +896,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform export on local mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -880,7 +922,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform update on local mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -920,7 +962,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-2-provision on mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -946,7 +988,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-2 on mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -972,7 +1014,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-3 on mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -998,7 +1040,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch perform provision on mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -1025,7 +1067,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform export on mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1051,7 +1093,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform update on mod IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1080,7 +1122,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch test IntakeWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -1102,7 +1144,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch test IntakeWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -1124,7 +1166,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch live-export-2-provision on local test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -1151,7 +1193,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-2-provision on test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1177,7 +1219,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-2 on test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1203,7 +1245,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live-export-3 on test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1229,7 +1271,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch perform provision on local test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -1256,7 +1298,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform export on local test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1282,7 +1324,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform Mark export on local test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1322,7 +1364,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch perform provision on test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -1349,7 +1391,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform export on test IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1378,7 +1420,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live IntakeWorker",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -1400,7 +1442,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch live IntakeWorker build",
-            "runtimeVersion": "16",
+            "runtimeVersion": "18",
             "runtimeArgs": [
                 "--preserve-symlinks",
                 // "--prof",
@@ -1422,7 +1464,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch perform provision on local live IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -1449,7 +1491,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform export on local live IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1489,7 +1531,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch perform provision on live IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "--inspect",
@@ -1516,7 +1558,7 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch perform export on live IntakeWorker",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeArgs": [
                 "--preserve-symlinks",
                 "${workspaceFolder}/workers/intake/test/plumming-intake-client/index.js",
@@ -1554,7 +1596,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Serverless Offline via NPM",
-            "runtimeVersion": "16", // If i need to run node 4.8.7
+            "runtimeVersion": "18", // If i need to run node 4.8.7
             "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run-script",

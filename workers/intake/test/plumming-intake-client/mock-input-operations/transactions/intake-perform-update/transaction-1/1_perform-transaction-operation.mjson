@@ -1,0 +1,58 @@
+{
+  "criteria0" : {
+    "values" : {
+      "expression" : "practice_id == $practice_id",
+      "parameters" : {
+        "practice_id" : 1000
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "root" : {
+    "values" : {
+      "id" : "1672E96C-4367-48AE-AE8C-61F5AA4DF4CE",
+      "data" : {
+        "notifyRelevantChanges" : false,
+        "operations" : {
+          "data/main.datareel/model/practice" : {
+            "mergeOperations" : [
+              {
+                "@" : "dataOperation0"
+              }
+            ]
+          }
+        }
+      },
+      "type" : "performTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation0" : {
+    "values" : {
+      "target" : "data/main.datareel/model/practice",
+      "criteria" : {
+        "@" : "criteria0"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "152DEC97-39CA-427F-BCD1-3EBE7241903A",
+      "data" : {
+        "disable_checkin" : false,
+        "disable_admittance_forms" : false,
+        "invite_inside_immediately" : false,
+        "invite_inside_upon_forms_completed" : true,
+        "timezone" : "America/New_York",
+        "early_arrival_minutes" : 15,
+        "max_minutes_to_wait_after_arrival" : 15,
+        "practice_id" : 1000,
+        "max_minutes_to_allow_admittance_forms" : 120,
+        "practice_name" : "Eugenio Martins, D.D.S., P.C."
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "1672E96C-4367-48AE-AE8C-61F5AA4DF4CE"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

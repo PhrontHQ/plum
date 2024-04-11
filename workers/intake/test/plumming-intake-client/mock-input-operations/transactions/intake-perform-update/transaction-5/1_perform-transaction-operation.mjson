@@ -1,0 +1,347 @@
+{
+  "dataOperation51" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria51"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "096E2778-023C-4098-974A-DDBCE3ABFE12",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "",
+        "created_date" : 1485306588.15,
+        "title" : "",
+        "person_id" : "a437fcb6-df17-48e5-b48b-0a0ee4bcb57e",
+        "active_flag" : true,
+        "staff_type_id" : 300,
+        "first_name" : "US",
+        "last_name" : "•North Central 2",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1453603016.98715
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria52" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "711ccc07-a1e3-4425-a6ba-8df5b0d1a166"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria54" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "526cce10-f446-4574-b8b8-2ee511bd1446"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation54" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria54"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "4EBC1C60-65D7-474C-8E79-EAF16D2E4BAA",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "DF",
+        "created_date" : 1469384177.04049,
+        "title" : "Dr.",
+        "person_id" : "526cce10-f446-4574-b8b8-2ee511bd1446",
+        "active_flag" : true,
+        "staff_type_id" : 100,
+        "first_name" : "David",
+        "last_name" : "Foster",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1453603016.98715
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation50" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria50"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "82D3F4F4-7544-468C-8E2E-6BC712B52041",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "NC1",
+        "created_date" : 1485306457.40772,
+        "title" : "",
+        "person_id" : "f16b8446-ac87-4eaf-94c1-237cb228e072",
+        "active_flag" : true,
+        "staff_type_id" : 300,
+        "first_name" : "US",
+        "last_name" : "•North Central 1",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1453603016.98715
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria56" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "8f55916d-0cbf-4d9a-83b3-bf07c2fdd810"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation57" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria57"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "601CC561-9145-4903-9D76-FB56C48D9A40",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "",
+        "created_date" : 1469384177.04049,
+        "title" : "",
+        "person_id" : "b1613e7b-6737-4f4e-b662-e4ced78a0379",
+        "active_flag" : false,
+        "staff_type_id" : 400,
+        "first_name" : "tops",
+        "last_name" : "Support",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1632256179.30352
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "dataOperation53" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria53"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "E81BAAFC-4FEF-4E49-AD67-2BEC3B747010",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "MB",
+        "created_date" : 1469384177.04049,
+        "title" : "Dr.",
+        "person_id" : "e877bed6-7947-4dd3-947e-e5b7cc1c68d9",
+        "active_flag" : true,
+        "staff_type_id" : 100,
+        "first_name" : "Mary",
+        "last_name" : "Bradly",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1453603016.98715
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria51" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "a437fcb6-df17-48e5-b48b-0a0ee4bcb57e"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria53" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "e877bed6-7947-4dd3-947e-e5b7cc1c68d9"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation56" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria56"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "663E3ACF-12A7-43A4-AD5B-EEFA28D1F031",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "EM",
+        "created_date" : 1469384177.04049,
+        "title" : "Dr.",
+        "person_id" : "8f55916d-0cbf-4d9a-83b3-bf07c2fdd810",
+        "active_flag" : true,
+        "staff_type_id" : 100,
+        "first_name" : "Eugenio",
+        "last_name" : "Martins",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1585396626.73866
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria55" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "1c8920fb-f6d6-4e44-8685-c4a1d69d163d"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation52" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria52"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "FCF16C3C-EA90-4112-BA0A-112CAEA9996A",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "",
+        "created_date" : 1485306613.9566,
+        "title" : "",
+        "person_id" : "711ccc07-a1e3-4425-a6ba-8df5b0d1a166",
+        "active_flag" : true,
+        "staff_type_id" : 300,
+        "first_name" : "US",
+        "last_name" : "•North Central 3",
+        "treatment_coordinator_flag" : false,
+        "last_modified_date" : 1453603016.98715
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "root" : {
+    "values" : {
+      "id" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082",
+      "data" : {
+        "notifyRelevantChanges" : false,
+        "operations" : {
+          "data/main.datareel/model/staff_members" : {
+            "mergeOperations" : [
+              {
+                "@" : "dataOperation50"
+              },
+              {
+                "@" : "dataOperation51"
+              },
+              {
+                "@" : "dataOperation52"
+              },
+              {
+                "@" : "dataOperation53"
+              },
+              {
+                "@" : "dataOperation54"
+              },
+              {
+                "@" : "dataOperation55"
+              },
+              {
+                "@" : "dataOperation56"
+              },
+              {
+                "@" : "dataOperation57"
+              }
+            ]
+          }
+        }
+      },
+      "type" : "performTransactionOperation",
+      "targetModuleId" : null
+    },
+    "prototype" : "montage/data/service/data-operation"
+  },
+  "criteria57" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "b1613e7b-6737-4f4e-b662-e4ced78a0379"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "criteria50" : {
+    "values" : {
+      "expression" : "person_id == $person_id",
+      "parameters" : {
+        "person_id" : "f16b8446-ac87-4eaf-94c1-237cb228e072"
+      }
+    },
+    "prototype" : "montage/core/criteria"
+  },
+  "dataOperation55" : {
+    "values" : {
+      "target" : "data/main.datareel/model/staff_members",
+      "criteria" : {
+        "@" : "criteria55"
+      },
+      "referrer" : {
+        "@" : "root"
+      },
+      "id" : "989520E9-CBC1-4A1F-8EE9-65967A69F21E",
+      "data" : {
+        "middle_initial" : "",
+        "practice_id" : 1000,
+        "short_name" : "EJ",
+        "created_date" : 1469384177.04049,
+        "title" : "",
+        "person_id" : "1c8920fb-f6d6-4e44-8685-c4a1d69d163d",
+        "active_flag" : true,
+        "staff_type_id" : 300,
+        "first_name" : "Elizabeth",
+        "last_name" : "Jones",
+        "treatment_coordinator_flag" : true,
+        "last_modified_date" : 1453603016.98715
+      },
+      "type" : "mergeOperation",
+      "referrerId" : "03D61397-4CA4-4D7E-99A8-BEE95CBF3082"
+    },
+    "prototype" : "montage/data/service/data-operation"
+  }
+}

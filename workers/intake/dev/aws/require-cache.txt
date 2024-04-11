@@ -292,9 +292,9 @@
     children: [ [Module] ],
     paths: [ '/var/task/node_modules', '/var/node_modules', '/node_modules' ]
   },
-  '/var/task/node_modules/phront/serverles/main.js': Module {
-    id: '/var/task/node_modules/phront/serverles/main.js',
-    path: '/var/task/node_modules/phront/serverles',
+  '/var/task/node_modules/phront/worker/main.js': Module {
+    id: '/var/task/node_modules/phront/worker/main.js',
+    path: '/var/task/node_modules/phront/worker',
     exports: {
       worker: [Promise [Object]],
       connect: [Function (anonymous)],
@@ -315,11 +315,11 @@
       children: [Array],
       paths: [Array]
     },
-    filename: '/var/task/node_modules/phront/serverles/main.js',
+    filename: '/var/task/node_modules/phront/worker/main.js',
     loaded: true,
     children: [ [Module] ],
     paths: [
-      '/var/task/node_modules/phront/serverles/node_modules',
+      '/var/task/node_modules/phront/worker/node_modules',
       '/var/task/node_modules/phront/node_modules',
       '/var/task/node_modules',
       '/var/node_modules',
@@ -340,11 +340,11 @@
       TemplateLoader: [Function (anonymous)]
     },
     parent: Module {
-      id: '/var/task/node_modules/phront/serverles/main.js',
-      path: '/var/task/node_modules/phront/serverles',
+      id: '/var/task/node_modules/phront/worker/main.js',
+      path: '/var/task/node_modules/phront/worker',
       exports: [Object],
       parent: [Module],
-      filename: '/var/task/node_modules/phront/serverles/main.js',
+      filename: '/var/task/node_modules/phront/worker/main.js',
       loaded: true,
       children: [Array],
       paths: [Array]

@@ -664,7 +664,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             var self = this,
                 mainService = this.rootService,
                 consentQuestionnaireName = this.consentQuestionnaireName,
-                questionnaireTitle = "AAOIC SUPPLEMENTAL INFORMED CONSENT Orthodontic Treatment in the Era of COVID-19";
+                questionnaireTitle = "AAOIC SUPPLEMENTAL INFORMED CONSENT";
+                questionnaireSubtitle = "Orthodontic Treatment in the Era of COVID-19";
 
             //console.log("PlummingIntakeDataService -checkInQuestionnaire");
 
@@ -755,6 +756,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                         questionnaire.locales = [englishLocale];
                         questionnaire.name = consentQuestionnaireName;
                         questionnaire.title = questionnaireTitle;
+                        questionnaire.subtitle = questionnaireSubtitle;
+                        
                         questionnaire.description = `Thank you for your continued trust in our practice. As with the transmission of any communicable disease like a cold or the flu, you may be exposed to COVID-19, also known as “Coronavirus,” at any time or in any place. Be assured that we have always followed state and federal regulations and recommended universal personal protection and disinfection protocols to limit transmission of all diseases in our office and continue to do so.
                         Despite our careful attention to sterilization, disinfection, and use of personal barriers, there is still a chance that you could be exposed to an illness in our office, just as you might be at your gym, grocery store, or favorite restaurant. “Social Distancing” nationwide has reduced the transmission of the Coronavirus. Although we have taken measures to provide social distancing in our practice, due to the nature of the procedures we provide, it is not possible to maintain social distancing between the patient, orthodontist, orthodontic staff and sometimes other patients at all times.`;
                         questionnaire.userContextVariables = [ipv4Variable, ipv6Variable, userAgentVariable, submissionDateVariable, signatureFileVariable, signatureCaptionVariable];
@@ -1001,18 +1004,45 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             }
 
             typeMap.set(dataObject.originId.toString(), dataObject);
+
+            /*
+                Hard coding logic for now about the type we're keeping around because they get reused a lot:
+            */
+            // if(dataObjectDescriptor.name === "Organization" ||
+            // dataObjectDescriptor.name === "Person" ) {
+            //     typeMap = this._dataObjectsByOriginId.get(dataObjectDescriptor);
+
+            //     if(!typeMap) {
+            //         this._dataObjectsByOriginId.set(dataObjectDescriptor,(typeMap = new Map()));
+            //     }
+    
+            //     typeMap.set(dataObject.originId.toString(), dataObject);
+            // }
         }
+    },
+
+    _dataObjectsByOriginId: {
+        value: new Map()
     },
 
     registeredDataObjectForTypeOriginIdInCreateTransaction: {
         value: function(type, originId, createTransactionOperation) {
             var dataObjectDescriptor = this.rootService.objectDescriptorForType(type),
                 transactionDataObjectsByOriginId = createTransactionOperation.dataObjectsByOriginId,
-                typeMap = transactionDataObjectsByOriginId.get(dataObjectDescriptor);
+                typeMap = transactionDataObjectsByOriginId.get(dataObjectDescriptor),
+                registeredDataObject;
             
             if(typeMap) {
-                return typeMap.get(originId.toString());
+                registeredDataObject = typeMap.get(originId.toString());
             }
+
+            if(!registeredDataObject) {
+                if(typeMap = this._dataObjectsByOriginId.get(dataObjectDescriptor)) {
+                    registeredDataObject = typeMap.get(originId.toString());
+                }
+            }
+
+            return registeredDataObject;
         }
     },
 
@@ -1857,16 +1887,18 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 promiseIndexesSet = new Set();
                 self = this;
 
-            // return this._debugServiceProductVariant(createTransactionOperation)
-            // .then(()=> {
-                //Make sure we have check-in questionnaire created:
-                return this.checkInQuestionnaire()
-            // })
-            .then(() => {
-                return this.createRolesIfNeeded();
-            })
-            .then((roles) => {
+            //Make sure we have check-in questionnaire created:
+            //return this.checkInQuestionnaire()
+            //.then(() => {
+                // return this.createRolesIfNeeded()
+            //})
+            // .then((roles) => {
                 //console.log("_processCreateTransaction(): Roles checked: loop on transactions ("+transactionOperations.length+")");
+                // var _resolve;
+
+                // this.performQueuedPendingFetchDataPromise = new Promise(function(resolve, reject) {
+                //     _resolve = resolve;
+                // });
 
                 for(i=0, countI = transactionOperations.length;(i<countI); i++) {
 
@@ -1915,6 +1947,21 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     
                     iPreviousPromise = iPromise;
                 }
+
+
+                /*
+                    We should have collected all phront objects to get, so trigger the fetches now, which will resolve promises holding things down.
+
+                    resolve here will trigger the work in this.performQueuedPendingFetchData;
+
+                */
+
+                // // if(countI === 1)
+                //     _resolve(true);
+                // this.performQueuedPendingFetchDataPromise.then(() => {
+                //     this.performQueuedPendingFetchDataPromise = Promise.resolve();
+                // })
+
     
                 //console.log("_processCreateTransaction(): loop on transactions done.");
 
@@ -1928,8 +1975,11 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
     
                 if(PromiseForAll) {
                     //console.log("_processCreateTransaction(): return PromiseForAll");
-
                     return PromiseForAll;
+                    // return PromiseForAll.then(function(resolvedPromises) {
+                    //     console.log("here");
+                    // });
+
                     // return PromiseForAll.then(function(resolvedPromises) {
                     //     return self.rootService.saveChanges();
                     // });
@@ -1937,10 +1987,10 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     return Promise.resolve(true);
                 }
             
-            })
-            .catch((error) => {
-                return error;
-            });
+            // })
+            // .catch((error) => {
+            //     return error;
+            // });
 
 
         }
@@ -1950,9 +2000,119 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
         value: new WeakMap()
     },
 
+    _phrontDataObjectWithDescriptorPendingFetchInfo: {
+        value: new Map()
+    },
+
+    performQueuedPendingFetchDataForObjectDescriptorWithFetchInfo: {
+        value: function(iObjectDescriptor, iPendingFetchInfo) {
+            var iCriteria = iPendingFetchInfo.criteria,
+                iCriteriaArray = Array.from(iCriteria),
+                iCombinedCriteria,
+                iQuery;
+
+                iCombinedCriteria = iCriteria.size > 1 ? Criteria.or(iCriteriaArray) : iCriteriaArray[0];
+
+            iQuery = DataQuery.withTypeAndCriteria(iObjectDescriptor, iCombinedCriteria);
+            if(iPendingFetchInfo.readExpressions) {
+                iQuery.readExpressions = Array.from(iPendingFetchInfo.readExpressions);
+            }
+
+            this.rootService.fetchData(iQuery)
+            .then(function(combinedFetchedValues) {
+                /*
+                    value contains all the instances matching any of the combined criteria. Each criteria is expressed in term of raw data, so we need to evaluate it on the snapshots of these objects.
+
+                    So we're going to loop on the objects, and for each object's snapshot, we're going to evaluate it on each criteria.
+                */
+
+                //console.log("_combineFetchDataMicrotaskFunctionForTypeQueryParts results:",combinedFetchedValues, " query:",query);
+
+                var i, countI, iCriteria, criteria = iCriteriaArray, combinedFetchedValuesSnapshots, 
+                    iFetchPromiseResolvers,
+                    j, countJ = combinedFetchedValues.length, jValue, jSnapshot;
+
+                for(i=0, countI = criteria.length; (i<countI); i++) {
+                    iCriteria = criteria[i];
+
+                    /*
+                        We lazily get the iFetchPromise if a criteria finds a match
+                    */
+                        iFetchPromiseResolvers = null;
+
+                    for(j=0; (j < countJ); j++) {
+                        jSnapshot = combinedFetchedValuesSnapshots && combinedFetchedValuesSnapshots[j];
+                        if(!jSnapshot) {
+                            jValue = combinedFetchedValues[j];
+                            jSnapshot = jValue.snapshot;
+                            (combinedFetchedValuesSnapshots || (combinedFetchedValuesSnapshots = []))[j] = jSnapshot;
+                        }
+
+                        iFetchPromiseResolvers = (iFetchPromiseResolvers || (iFetchPromiseResolvers = iPendingFetchInfo.promisesByCriteria.get(iCriteria)));
+
+                        if(iCriteria.evaluate(jSnapshot)) {
+                            (iFetchPromiseResolvers.result || (iFetchPromiseResolvers.result = [])).push(jValue);
+
+                        }
+                    }
+
+                    if(countJ == 0) {
+                        iFetchPromiseResolvers = iPendingFetchInfo.promisesByCriteria.get(iCriteria);
+                        iFetchPromiseResolvers.resolve(combinedFetchedValues);
+
+                    } else if(iFetchPromiseResolvers) {
+                        if(iFetchPromiseResolvers.result) {
+                            iFetchPromiseResolvers.result.objectDescriptor = combinedFetchedValues.objectDescriptor;
+                            iFetchPromiseResolvers.resolve(iFetchPromiseResolvers.result);
+                        } else {
+                            iFetchPromiseResolvers.resolve(null);
+                        }
+                    }
+                }
+            });
+        }
+    },
+
+    _performQueuedPendingFetchDataPromise: {
+        value: Promise.resolve()
+    },
+    performQueuedPendingFetchDataPromise: {
+        get:  function() {
+            return this._performQueuedPendingFetchDataPromise;
+        },
+        set: function(value) {
+            if(value !== this._performQueuedPendingFetchDataPromise) {
+                // this._performQueuedPendingFetchDataPromise = this._performQueuedPendingFetchDataPromise.then(() => {
+                //     return value;
+                // });
+                this._performQueuedPendingFetchDataPromise = value;
+            }
+        }
+    },
+
+    performQueuedPendingFetchData: {
+        value: function() {
+            //console.debug(this._phrontDataObjectWithDescriptorPendingFetchInfo);
+
+            // this.performQueuedPendingFetchDataPromise.then(() => {
+                var pendingFetchInfoByObjectDescriptor =  this._phrontDataObjectWithDescriptorPendingFetchInfo,
+                    keysIterator = pendingFetchInfoByObjectDescriptor.keys(),
+                    iteration,
+                    pendingFetchInfoByObjectDescriptor;
+
+                while(!(iteration = keysIterator.next()).done) {
+                    this.performQueuedPendingFetchDataForObjectDescriptorWithFetchInfo(iteration.value, pendingFetchInfoByObjectDescriptor.get(iteration.value));
+                }
+                this._phrontDataObjectWithDescriptorPendingFetchInfo.clear();
+                //this.performQueuedPendingFetchDataPromise = Promise.resolve();
+            // });
+
+        }
+    },
+
     phrontDataObjectWithDescriptorAndOriginIdInTransaction: {
         value: function(objectDescriptor, originId, createTransactionOperation, rawDataObjectDescriptor, readExpressions, criteria) {
-
+// console.warn("phrontDataObjectWithDescriptorAndOriginIdInTransaction("+objectDescriptor.name+","+originId);
             /*
                 If we don't catch it up here, and in a previous transactions roles for staff_type or account_relationship_type were created, we'll fetch, find nothing, and then end-up re-creating all types.
 
@@ -2053,6 +2213,42 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                             objectQuery.readExpressions = readExpressions;
                             //objectQuery.readExpressions = ["originId"];
 
+                            /*
+                            var pendingFetchInfo = self._phrontDataObjectWithDescriptorPendingFetchInfo.get(objectDescriptor);
+                            if(!pendingFetchInfo) {
+                                self._phrontDataObjectWithDescriptorPendingFetchInfo.set(objectDescriptor, (pendingFetchInfo = {
+                                    readExpressions: Set.from(readExpressions),
+                                    criteria: Set.from([criteria]),
+                                    promisesByCriteria: new Map()
+                                }));
+
+                                //Too much async cascading for that to work here.
+                                //queueMicrotask(function() {
+                                //    self.performQueuedPendingFetchData();
+                                //});
+                                self.performQueuedPendingFetchDataPromise.then(() => {
+                                    self.performQueuedPendingFetchData();
+                                });
+    
+
+                            } else {
+                                pendingFetchInfo.readExpressions.addEach(readExpressions);
+                                if(!pendingFetchInfo.criteria.hasEqual(criteria)) {
+                                    pendingFetchInfo.criteria.add(criteria);
+                                }
+                            }
+
+                            //This promise will be resolved when we eveluate individual criteria on the combined results
+                            var resultPromise = new Promise(function(resolve, reject) {
+                                pendingFetchInfo.promisesByCriteria.set(criteria, {
+                                    resolve: resolve,
+                                    reject: reject
+                                });
+
+                            });
+
+                            return resultPromise;
+                            */
                             return self.rootService.fetchData(objectQuery);
                         })
                         .then(function(result) {
@@ -2558,7 +2754,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                 this._createObjectDescriptorStoreForTypeIfNeeded(PartyInstantMessageAddress),
                 this._createObjectDescriptorStoreForTypeIfNeeded(InstantMessageAddress),
                 this._createObjectDescriptorStoreForTypeIfNeeded(RoleRanking),
-                this.checkInQuestionnaire(),
+                //this.checkInQuestionnaire(),
                 this.createRolesIfNeeded()
             ])
             .then((wasCreated) => {

@@ -35,6 +35,7 @@
         "is_visible" : true
       },
       "referrerId" : "922870CD-E00D-4F1C-B7F7-E36287E6B1B1",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/location_types",
       "criteria" : {
@@ -70,6 +71,7 @@
         "is_visible" : true
       },
       "referrerId" : "922870CD-E00D-4F1C-B7F7-E36287E6B1B1",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/location_types",
       "criteria" : {

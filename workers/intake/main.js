@@ -1,2 +1,2 @@
 'use strict';
-require('phront/serverles/main').initMainModuleWithRequire(module, require);
+require('phront/worker/main').initMainModuleWithRequire(module, require);

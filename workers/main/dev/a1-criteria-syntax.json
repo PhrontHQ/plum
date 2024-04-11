@@ -1,0 +1,20 @@
+{
+    "type": "equals",
+    "args": [{
+        "type": "property",
+        "args": [{
+            "type": "value"
+        }, {
+            "type": "literal",
+            "value": "a"
+        }]
+    }, {
+        "type": "property",
+        "args": [{
+            "type": "parameters"
+        }, {
+            "type": "literal",
+            "value": "a"
+        }]
+    }]
+}

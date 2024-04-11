@@ -44,6 +44,7 @@
         "practice_name" : "Eugenio Martins, D.D.S., P.C."
       },
       "referrerId" : "7D558AD9-72EA-4FA2-A457-EB10B91B0E3B",
+      "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
       "target" : "data/main.datareel/model/practice",
       "criteria" : {

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="supplemental-informed-consent-respondent-questionnaire-editor.css">
+    <script type="text/montage-serialization">
+    {
+  
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}   
+            }
+        },
+
+        "testDate": {
+            "value": {"#": "test-date"},
+            "listeners": [
+                {
+                    "type": "input",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+
+        "questionnaireTitle": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "questionnaireTitle"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.title"
+                }
+            }
+        },
+        "questionnaireSubtitle": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "questionnaireSubtitle"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.subtitle"
+                }
+            }
+        },
+        "questionnaireDescription": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "questionnaireDescription"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.description",
+                    "converter": {"@":"newLineToParagraphConverter"}
+                },
+                "parseValueAsHTML": true
+            }
+        },
+
+        "newLineToParagraphConverter": {
+            "prototype": "montage/core/converter/new-line-to-paragraph-converter"
+        },
+
+        "consentQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "consentQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[0].question.text",
+                    "converter": {"@":"newLineToParagraphConverter"}
+                },
+                "parseValueAsHTML": true
+            }
+        },
+
+        "consentPatientFirstNameLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "consentPatientFirstNameLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[1].question.text"
+                }
+            }
+        },
+
+        "consentPatientFirstName": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "consentPatientFirstName"},
+                "value": {"<-": "@owner.data.respondent.name.givenName"}
+            }
+        },
+
+        "consentPatientLastNameLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "consentPatientLastNameLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[2].question.text"
+                }
+                }
+            },
+        "consentPatientLastName": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "consentPatientLastName"},
+                "value": {"<-": "@owner.data.respondent.name.familyName"}
+            }
+        },
+
+        "consentPatientDateLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "consentPatientDateLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[3].question.text"
+                }
+            }
+        },
+
+        "consentDateField": {
+            "prototype": "montage/ui/date-field.reel",
+            "values": {
+                "element": {"#": "consentDateField"},
+                "value": {"<-": "Date.presentDate"}
+            }
+        },
+
+
+        "consentPatientSignatureLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "consentPatientSignatureLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[4].question.text"
+                }
+            }
+        },
+
+        "consentSignaturePad": {
+            "prototype": "phront/ui/controls/signature-pad.reel",
+            "values": {
+                "element": {"#": "consentSignaturePad"}
+            }
+        }
+
+
+    }
+    </script>
+
+    <!-- <script type="text/javascript" src="https://tops-forms.com/covid-consent-form/js/check_checkboxes.js"></script> -->
+    <!--
+        $('input[data-checked]').each(function () {
+            $('#' + $(this).data('checked')).prop('checked', true)
+        });
+    -->
+    <!-- <script type="text/javascript" src="https://tops-forms.com/covid-consent-form/js/submit_form.js"></script> -->
+    <!--
+        jQuery(document).on('click', '[id^="Signature"]', function () {
+    $(this).removeClass('errBorder')
+    })
+    -->
+</head>
+<body>
+    <div data-montage-id="owner" class="SupplementalInformedConsentQuestionnaireEditor container paper" id="page1">
+        <form method="post" enctype="multipart/form-data">
+            <div class="header">
+            </div>
+            <div>
+                <input type="date"  data-montage-id="test-date" value=""/>
+
+                <h3 data-montage-id="questionnaireTitle">AAOIC SUPPLEMENTAL INFORMED CONSENT</h3>
+                <h4 data-montage-id="questionnaireSubtitle">Orthodontic Treatment in the Era of COVID-19</h4>
+                <hr>
+                <p data-montage-id="questionnaireDescription" class="questionnaireDescription" style="font-size:16px">Thank you for your continued trust in our practice. As with the transmission
+                    of any communicable disease like a cold or the flu, you may be exposed to COVID-19, also known as
+                    “Coronavirus,” at any time or in any place. Be assured that we have always followed state and
+                    federal regulations and recommended universal personal protection and disinfection protocols to
+                    limit transmission of all diseases in our office and continue to do so.</p>
+                <!-- <p style="font-size:16px">Despite our careful attention to sterilization, disinfection, and use of
+                    personal barriers, there is still a chance that you could be exposed to an illness in our office,
+                    just as you might be at your gym, grocery store, or favorite restaurant. “Social Distancing”
+                    nationwide has reduced the transmission of the Coronavirus. Although we have taken measures to
+                    provide social distancing in our practice, due to the nature of the procedures we provide, it is not
+                    possible to maintain social distancing between the patient, orthodontist, orthodontic staff and
+                    sometimes other patients at all times.</p> -->
+                <hr>
+                <p data-montage-id="consentQuestionLabel" style="font-size:16px">Although exposure is unlikely, do you accept the risk and consent to
+                    treatment?</p>
+                <hr class="spacer">
+                <label for="accept_consent">Yes</label>
+                <input name="accept_consent" value="yes" type="radio" required>    
+                <br>
+                <label for="accept_consent">No</label>
+                <input name="accept_consent" value="no" type="radio">
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label data-montage-id="consentPatientFirstNameLabel">Patient First Name!</label>
+                        <input data-montage-id="consentPatientFirstName" name="first_name" value="" type="text" required class="disabled"/>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label data-montage-id="consentPatientLastNameLabel">Patient Last Name!</label>
+                        <input data-montage-id="consentPatientLastName" name="last_name" value="" type="text" required class="disabled"/>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <label data-montage-id="consentPatientSignatureLabel">Patient/Parent’s Signature!</label>
+                        <div data-montage-id="consentSignaturePad" class="signature" style="margin-top: 10px;">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <label data-montage-id="consentPatientDateLabel">Date!</label>
+                        <input type="date" data-montage-id="consentDateField" name="accept_date" value="" required class="disabled"/>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+</html>

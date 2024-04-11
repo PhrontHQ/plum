@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="supplemental-health-respondent-questionnaire-editor.css">
+    <script type="text/montage-serialization">
+    {
+  
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "questionnaireTitle": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "questionnaireTitle"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.title"
+                }
+            }
+        },
+        "questionnaireDescription": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "questionnaireDescription"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.description",
+                    "converter": {"@":"newLineToParagraphConverter"}
+                },
+                "parseValueAsHTML": true
+            }
+        },
+        "newLineToParagraphConverter": {
+            "prototype": "montage/core/converter/new-line-to-paragraph-converter"
+        },
+
+        "responsiblePartyQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "responsiblePartyQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[0].question.text"
+                }
+            }
+        },
+
+        "covidQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "covidQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[1].question.text"
+                }
+            }
+        },
+
+        "lastPositiveCovidDateQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "lastPositiveCovidDateQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[2].question.text"
+                }
+            }
+        },
+
+
+        "lastCovidDate": {
+            "prototype": "montage/ui/date-field.reel",
+            "values": {
+                "element": {"#": "lastCovidDate"},
+                "value": {"<->": "@owner.lastCovidDate"}
+            }
+        },
+
+        "symptomGroupQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "symptomGroupQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[3].question.text"
+                }
+            }
+        },
+        "feverQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "feverQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[4].question.text"
+                }
+            }
+        },
+        "coughQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "coughQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[5].question.text"
+                }
+            }
+        },
+        "breathingIssuesQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "breathingIssuesQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[6].question.text"
+                }
+            }
+        },
+        "chestPainQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "chestPainQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[7].question.text"
+                }
+            }
+        },
+        "acceptsRescheduleIfSickQuestionLabel": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "acceptsRescheduleIfSickQuestionLabel"},
+                "value": {
+                    "<-": "@owner.data.questionnaire.questions[8].question.text",
+                    "converter": {"@":"newLineToParagraphConverter"}
+                },
+                "parseValueAsHTML": true
+            }
+        },
+
+        "healthSignaturePad": {
+            "prototype": "phront/ui/controls/signature-pad.reel",
+            "values": {
+                "element": {"#": "healthSignaturePad"}
+            }
+        }
+
+
+    }
+    </script>
+
+    <!-- <script type="text/javascript" src="https://tops-forms.com/covid-consent-form/js/check_checkboxes.js"></script> -->
+    <!--
+        $('input[data-checked]').each(function () {
+            $('#' + $(this).data('checked')).prop('checked', true)
+        });
+    -->
+    <!-- <script type="text/javascript" src="https://tops-forms.com/covid-consent-form/js/submit_form.js"></script> -->
+    <!--
+        jQuery(document).on('click', '[id^="Signature"]', function () {
+    $(this).removeClass('errBorder')
+    })
+    -->
+</head>
+<body>
+    <div data-montage-id="owner" class="SupplementalHealthQuestionnaireEditor container paper" id="page2">
+        <form method="post" enctype="multipart/form-data" name="myform">
+            <div style="opacity: 0; visibility: hidden; height: 0;">
+                <input name="appointment_guid" value="" type="text">
+                <input name="ipv4" value="" type="text">
+                <input name="ipv6" value="" type="text">ion
+                <input name="user_agent" value="" type="text">
+                <input name="submitted_at" value="" type="text">
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>
+                        <h3 data-montage-id="questionnaireTitle">AAOIC SUPPLEMENTAL HEALTH QUESTIONNAIRE!</h3>
+                    </p>
+                    <p data-montage-id="questionnaireDescription"> If you have been exposed to a communicable disease, you may spread the disease to the
+                        orthodontist, orthodontic staff, or other patients/parents in the practice. Therefore, prior to
+                        each appointment, we will be asking the following questions to reduce the chances of
+                        transmission:!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label data-montage-id="responsiblePartyQuestionLabel">Responsible Party!</label>
+                    <input type="text" id="responsible_party" name="responsible_party" value="" required />
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p data-montage-id="covidQuestionLabel">Have you, your child, or others accompanying you to today’s appointment or other recent
+                        acquaintances tested positive for or been diagnosed as having COVID-19 or any other communicable
+                        disease? !</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="positive_covid">Yes</label>
+                    <input type="radio" name="positive_covid" value="yes" required>
+                    <br>
+                    <label for="positive_covid">No</label>
+                    <input type="radio" name="positive_covid" value="no">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label data-montage-id="lastPositiveCovidDateQuestionLabel">If yes, when? Date!</label>
+                    <input type="date" data-montage-id="lastCovidDate" name="last_covid_date" class="datepicker" value="" />
+                </div>
+
+            </div>
+            <hr>
+            <div class="row">   
+                <div class="col-xs-12">
+
+                    <p data-montage-id="symptomGroupQuestionLabel">Do you, your child, or others accompanying you to today’s appointment or other recent
+                        acquaintances have: !</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p data-montage-id="feverQuestionLabel">• A Fever (defined as above 99.6 degrees) !</p>
+                    <label for="fever">Yes</label>
+                    <input type="radio" name="fever" value="yes" required>
+                    <br>
+                    <label for="fever">No</label>
+                    <input type="radio" name="fever" value="no">
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <p data-montage-id="coughQuestionLabel">• A Cough?! </p>
+                    <label for="cough">Yes</label>
+                    <input type="radio" name="cough" value="yes" required>
+                    <br>
+                    <label for="cough">No</label>
+                    <input type="radio" name="cough" value="no">
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p data-montage-id="breathingIssuesQuestionLabel">• Shortness of Breath and/or Trouble Breathing?!</p>
+                    <label for="breath_issues">Yes</label>
+                    <input type="radio" name="breath_issues" value="yes" required>
+                    <br>
+                    <label for="breath_issues">No</label>
+                    <input type="radio" name="breath_issues" value="no">
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <p data-montage-id="chestPainQuestionLabel">• Persistent Pain, Pressure, or Tightness in the Chest?!</p>
+                    <label for="chest_pain">Yes</label>
+                    <input type="radio" name="chest_pain" value="yes" required>
+                    <br>
+                    <label for="chest_pain">No</label>
+                    <input type="radio" name="chest_pain" value="no">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p data-montage-id="acceptsRescheduleIfSickQuestionLabel">I understand that if the answer to any of these questions is yes, I will be asked to reschedule
+                        today’s orthodontic appointment.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <!-- <label>Patient/Parent’s Signature</label> -->
+                    <div data-montage-id="healthSignaturePad" class="signature" style="margin-top: 10px;">
+                        <!-- <script type="text/javascript">
+                            new sform.Signature({
+                                id: "Signature50",
+                                form_name: "myform",
+                                field_name: "resched_signature",
+                                caption: "Signature",
+                                w: 280,
+                                h: 90
+                            });
+                        </script> -->
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <label>Date </label>
+                    <input type="text" name="resched_date" value="" class="disabled"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

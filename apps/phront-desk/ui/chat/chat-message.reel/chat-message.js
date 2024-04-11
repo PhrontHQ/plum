@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 var Component = require("montage/ui/component").Component,
     DataEditor = require("montage/ui/data-editor").DataEditor,
     Promise = require("montage/core/promise").Promise,
@@ -8,9 +8,13 @@ var Component = require("montage/ui/component").Component,
 //Expose moduleid so it's picked up by mop:
 require("ui/chat/chat-text-message.reel");
 
+var instanceCount = 0;
+
 exports.ChatMessage = DataEditor.specialize({
     constructor: {
         value: function ChatMessage () {
+            this.instanceNumber = ++instanceCount;
+
             this.super();
             return this;
         }

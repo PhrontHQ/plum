@@ -8,7 +8,7 @@
             "childServices": [
                 {"@": "IdentityAuthorizationService"},
                 {"@": "plumming-intake-data-service"},
-                {"@": "phrontDataService"},
+                {"@": "postgreSQLService"},
                 {"@": "S3DataService"},
                 {"@": "SecretManagerDataService"},
                 {"@": "CognitoDataService"}
@@ -45,8 +45,8 @@
         }
     },
 
-    "phrontDataService": {
-        "object": "phront/data/main.datareel/phront-service.mjson",
+    "postgreSQLService": {
+        "object": "phront/data/main.datareel/postgre-s-q-l-service.mjson",
         "values": {
             "childServices": [
             ],
@@ -133,23 +133,25 @@
                     "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
                 },
                 "local-mod": {
+                    "clientPool": {"@":"neonPostgreSQLClientPool"},
+                    "environment": "neon",
                     "database": "plum",
                     "owner": "postgres",
                     "schema": "mod_plum_v1",
                     "profile": "cogent-mod",
                     "resourceArn": "arn:aws:rds:us-east-1:006408448862:cluster:mod",
-                    "readWriteEndpoint": {
-                        "endpoint": "mod.cluster-clickt0wttv7.us-east-1.rds.amazonaws.com"
-                    },
-                    "readOnlyEndpoints": [
-                        {
-                            "endpoint": "mod.cluster-ro-clickt0wttv7.us-east-1.rds.amazonaws.com"
-                        }
-                    ],
+                    "endpoint": "ep-floral-base-444193-pooler.us-west-2.aws.neon.tech",
                     "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
                 }
 
             }
+        }
+    },
+
+    "neonPostgreSQLClientPool": {
+        "prototype": "phront/data/main.datareel/service/neon/neon-postgre-s-q-l-client-pool",
+        "values": {
+            "delegate": {"@":"postgreSQLService"}
         }
     },
 

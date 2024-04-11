@@ -837,7 +837,7 @@ exports.Appointment = DataEditor.specialize({
         ]
     },
 
-    consentmentForm: {
+    formOverlay: {
         value: undefined
     },
 
@@ -865,7 +865,7 @@ exports.Appointment = DataEditor.specialize({
     },
     handleFillOutFormButtonPress: {
         value: function(event) {
-            this.dispatchEventNamed("openConsentmentForm", true, true, {serviceEngagement: this.data});
+            this.dispatchEventNamed("openFormOverlay", true, true, {serviceEngagement: this.data});
         }
     },
     _isChatButtonFirstPress: {
