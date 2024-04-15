@@ -1,7 +1,7 @@
 {
   "dataOperation264" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria264"
       },
@@ -56,7 +56,7 @@
   },
   "dataOperation270" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria270"
       },
@@ -102,7 +102,7 @@
   },
   "dataOperation269" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria269"
       },
@@ -148,7 +148,7 @@
   },
   "dataOperation267" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria267"
       },
@@ -194,7 +194,7 @@
   },
   "dataOperation265" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria265"
       },
@@ -240,7 +240,7 @@
   },
   "dataOperation263" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria263"
       },
@@ -286,7 +286,7 @@
   },
   "dataOperation271" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria271"
       },
@@ -332,7 +332,7 @@
   },
   "dataOperation268" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria268"
       },
@@ -382,7 +382,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/account_holders" : {
+          "data/main.mod/model/account_holders" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation262"
@@ -443,7 +443,7 @@
   },
   "dataOperation266" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria266"
       },
@@ -543,7 +543,7 @@
   },
   "dataOperation262" : {
     "values" : {
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria262"
       },

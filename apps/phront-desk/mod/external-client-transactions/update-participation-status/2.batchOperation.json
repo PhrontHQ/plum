@@ -14,7 +14,7 @@
       "id": "5301364F-2607-44E1-83EB-AFDD32D7BFD7",
       "type": "updateOperation",
       "timeStamp": 24498.80000000121,
-      "targetModuleId": "data/main.datareel/model/event",
+      "targetModuleId": "data/main.mod/model/event",
       "criteria": {"@": "criteria95"},
       "data": {
         "participationStatus": "Arrived",

@@ -5,7 +5,7 @@
       "id": "0985CFDA-03ED-42FA-837C-42BBCDC44EF5",
       "type": "readCompleted",
       "timeStamp": 11833.039947986603,
-      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "targetModuleId": "data/main.mod/model/questionnaire/respondent-questionnaire",
       "referrerId": "C5183414-0711-45F5-906C-70451C57331A",
       "data": [
         [

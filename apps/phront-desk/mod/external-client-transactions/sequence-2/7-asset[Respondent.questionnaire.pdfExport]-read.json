@@ -23,7 +23,7 @@
       "id": "0A56FBC8-6BD7-40F0-B754-6D18A237874A",
       "type": "read",
       "timeStamp": 7855.035000000498,
-      "targetModuleId": "data/main.datareel/model/asset",
+      "targetModuleId": "data/main.mod/model/asset",
       "criteria": {"@": "criteria7"},
       "data": {}
     }

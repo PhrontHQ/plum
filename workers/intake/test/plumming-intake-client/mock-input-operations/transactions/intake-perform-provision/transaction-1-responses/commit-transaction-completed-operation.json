@@ -10,25 +10,25 @@
             "referrerId": "A4206266-4257-4D78-AC83-23809A76A72A",
             "data": {
                 "createdDataObjects": {
-                    "data/main.datareel/model/organization": {
+                    "data/main.mod/model/organization": {
                         "count": 1
                     },
-                    "data/main.datareel/model/app/application": {
+                    "data/main.mod/model/app/application": {
                         "count": 3
                     },
-                    "data/main.datareel/model/app/app-client": {
+                    "data/main.mod/model/app/app-client": {
                         "count": 3
                     },
-                    "data/main.datareel/model/customer-engagement-questionnaire": {
+                    "data/main.mod/model/customer-engagement-questionnaire": {
                         "count": 2
                     },
-                    "data/main.datareel/model/b-2-c-customer-supplier-relationship": {
+                    "data/main.mod/model/b-2-c-customer-supplier-relationship": {
                         "count": 1
                     },
-                    "data/main.datareel/model/calendar": {
+                    "data/main.mod/model/calendar": {
                         "count": 1
                     },
-                    "data/main.datareel/model/event": {
+                    "data/main.mod/model/event": {
                         "count": 1
                     }
                 },

@@ -23,7 +23,7 @@
       "id": "28FDACE6-397F-46EA-8B0D-40C190063523",
       "type": "read",
       "timeStamp": 7854.795000006561,
-      "targetModuleId": "data/main.datareel/model/questionnaire/questionnaire",
+      "targetModuleId": "data/main.mod/model/questionnaire/questionnaire",
       "criteria": {"@": "criteria5"},
       "data": {}
     }

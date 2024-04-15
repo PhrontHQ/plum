@@ -5,7 +5,7 @@
       "id": "99A5C1E7-0BBF-40FB-B02E-2243D4206295",
       "type": 1,
       "timeStamp": 71133.54517200589,
-      "target": "data/main.datareel/model/appointment_status_types",
+      "target": "data/main.mod/model/appointment_status_types",
       "data": {
         "type_id": "020490D5-26B9-40BF-85D8-DCC77D329981",
         "type_label": "Mother",

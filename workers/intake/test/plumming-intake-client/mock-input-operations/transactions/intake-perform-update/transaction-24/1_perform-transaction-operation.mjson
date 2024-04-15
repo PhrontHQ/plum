@@ -1,7 +1,7 @@
 {
   "dataOperation337" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria337"
       },
@@ -55,7 +55,7 @@
   },
   "dataOperation349" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria349"
       },
@@ -109,7 +109,7 @@
   },
   "dataOperation347" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria347"
       },
@@ -163,7 +163,7 @@
   },
   "dataOperation345" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria345"
       },
@@ -217,7 +217,7 @@
   },
   "dataOperation343" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria343"
       },
@@ -271,7 +271,7 @@
   },
   "dataOperation341" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria341"
       },
@@ -388,7 +388,7 @@
   },
   "dataOperation348" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria348"
       },
@@ -460,7 +460,7 @@
   },
   "dataOperation346" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria346"
       },
@@ -532,7 +532,7 @@
   },
   "dataOperation344" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria344"
       },
@@ -595,7 +595,7 @@
   },
   "dataOperation338" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria338"
       },
@@ -649,7 +649,7 @@
   },
   "dataOperation342" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria342"
       },
@@ -716,7 +716,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/patients" : {
+          "data/main.mod/model/patients" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation337"
@@ -768,7 +768,7 @@
   },
   "dataOperation340" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria340"
       },
@@ -822,7 +822,7 @@
   },
   "dataOperation339" : {
     "values" : {
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria339"
       },

@@ -4,7 +4,7 @@
         "id" : "F3EE589E-4BAA-4486-8659-BE832BA7E7FA",
         "type" : "createTransactionOperation",
         "data" : [
-          "data/main.datareel/model/procedure_types"
+          "data/main.mod/model/procedure_types"
         ]
       },
       "prototype" : "montage/data/service/data-operation"

@@ -14,7 +14,7 @@
       "id": "B5820FBF-A7A6-4CAD-857A-E5A0A8B0AC29",
       "type": "updateOperation",
       "timeStamp": 37211.23000001535,
-      "targetModuleId": "data/main.datareel/model/event",
+      "targetModuleId": "data/main.mod/model/event",
       "criteria": {"@": "criteria218"},
       "data": {
         "participationStatus": "InvitedIn"
@@ -37,7 +37,7 @@
           "PhrontService": "AUsMMTVFzjPOHB1A+/dwPvykVHzMG/1WHtNnDt69Trnmjr1cFZGvjaDMbs4NCmpwni9ciiLGmRcqpv8BbGgfU1SHdKItoh75s92uXS3qBQXhSgdEG/DhcN4LrkY3jHeP2cBSu48Q53sZqHXay5KGrWbIEwU23H9+eJrCZFJ2ezDsujAWRfpHdLfKruNZpXdWz+es1KDRUE1n"
         },
         "operations": {
-          "data/main.datareel/model/event": {
+          "data/main.mod/model/event": {
             "updateOperations": [
               {"@": "dataoperation"}
             ]

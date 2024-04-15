@@ -5,7 +5,7 @@
       "id": "FF350713-6E3B-43BD-9A4F-37C972492427",
       "type": "readCompleted",
       "timeStamp": 15756421.52232027,
-      "targetModuleId": "data/main.datareel/model/asset",
+      "targetModuleId": "data/main.mod/model/asset",
       "referrerId": "F4EDA64A-5981-4E7F-81BE-A1171CC9DEE4",
       "data": [
         [

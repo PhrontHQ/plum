@@ -23,7 +23,7 @@
       "id": "DEB7B185-2EDA-47C4-AAA0-3A94A3413101",
       "type": 8,
       "timeStamp": 2766.8750000884756,
-      "target": "data/main.datareel/model/service",
+      "target": "data/main.mod/model/service",
       "criteria": {"@": "criteria"},
       "data": {}
     }

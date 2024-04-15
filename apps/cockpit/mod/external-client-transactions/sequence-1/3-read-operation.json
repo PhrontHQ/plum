@@ -26,7 +26,7 @@
       "id": "C5183414-0711-45F5-906C-70451C57331A",
       "type": "read",
       "timeStamp": 3838.3449999964796,
-      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "targetModuleId": "data/main.mod/model/questionnaire/respondent-questionnaire",
       "criteria": {"@": "criteria3"},
       "data": {}
     }

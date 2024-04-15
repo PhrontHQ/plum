@@ -13,7 +13,7 @@
       "id" : "A4206266-4257-4D78-AC83-23809A76A72A",
       "data" : {
         "operations" : {
-          "data/main.datareel/model/practice" : {
+          "data/main.mod/model/practice" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation0"
@@ -45,7 +45,7 @@
       },
       "referrerId" : "A0233AF4-1904-4579-A9D9-5F395B56623A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/practice",
+      "target" : "data/main.mod/model/practice",
       "criteria" : {
         "@" : "criteria0"
       }

@@ -14,7 +14,7 @@
       "id": "B3340B26-3E35-4365-B5F7-F4A9037DE075",
       "type": "read",
       "timeStamp": 6766.615000000456,
-      "targetModuleId": "data/main.datareel/model/event",
+      "targetModuleId": "data/main.mod/model/event",
       "criteria": {"@": "criteria"},
       "data": {
         "readExpressions": [

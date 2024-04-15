@@ -12,7 +12,7 @@
       "id": "C3C68FDE-5E05-4D11-9D61-5622D10989D8",
       "type": "read",
       "timeStamp": 7854.525000002468,
-      "targetModuleId": "data/main.datareel/model/person",
+      "targetModuleId": "data/main.mod/model/person",
       "criteria": {"@": "criteria4"},
       "data": {}
     }

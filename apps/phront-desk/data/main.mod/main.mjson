@@ -1,0 +1,69 @@
+{
+    "AuthenticationPolicy": {
+        "object": "montage/data/service/user-authentication-policy"
+    },
+
+    "phrontClientIdentityService": {
+        "object": "montage/data/service/u-r-l-search-param-identity-service.mjson",
+        "values": {
+            "searchParamName": "appointment_guid",
+            "identityQuery": {"=":"@identityQuery"},
+            "authorizationPolicy": {"=":"@AuthenticationPolicy.ON_DEMAND"}
+        }        
+    },
+    "identityQuery": {
+        "prototype": "montage/data/model/data-query",
+        "values": {
+            "type": {"@": "ServiceEngagementDescriptor"},
+            "criteria": {"@": "dataIdentityQueryCriteria"}
+        }
+    },
+
+    "ServiceEngagementDescriptor": {
+        "object": "phront/data/main.mod/model/service-engagement.mjson"
+    },
+
+    "dataIdentityQueryCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "originId == $.originId",
+            "parameters": {"<-":"{originId: @phrontClientIdentityService.searchParamValue}"}
+        }
+    },
+
+    "AWSAPIGatewayWebSocketDataOperationService": {
+        "object": "phront/data/main.mod/a-w-s-a-p-i-gateway-web-socket-data-operation-service.mjson",
+        "values": {
+            "authorizationPolicy": {"=":"@AuthenticationPolicy.ON_DEMAND"},
+            "connectionDescriptor": {
+                "live": {
+                    "websocketURL": "wss://connect.oh.my-plum-appointment.guru/v1",
+                    "httpsURL": "https://send.oh.my-plum-appointment.guru/v1"
+                },
+                "test": {
+                    "websocketURL": "wss://connect.test.oh.my-plum-appointment.guru/v1",
+                    "httpsURL": "https://send.test.oh.my-plum-appointment.guru/v1"
+                },
+                "mod": {
+                    "websocketURL": "wss://connect.mod.oh.my-plum-appointment.guru/v1",
+                    "httpsURL": "https://send.mod.oh.my-plum-appointment.guru/v1"
+                },
+                "local": {
+                    "websocketURL": "wss://phront.local:3001"
+                }
+            }
+        }        
+    },
+
+    "root": {
+        "prototype": "montage/data/service/data-service",
+        "values": {
+            "name": "PlumDataService",
+            "isUniquing": true,
+            "childServices": [
+                {"@": "phrontClientIdentityService"},
+                {"@": "AWSAPIGatewayWebSocketDataOperationService"}
+            ]
+        }
+    }
+}

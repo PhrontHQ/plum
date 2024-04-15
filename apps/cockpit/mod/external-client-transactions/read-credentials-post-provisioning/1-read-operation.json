@@ -23,7 +23,7 @@
       "id": "9980D7CF-F1C8-43E6-B393-B55AA0CA0966",
       "type": "readOperation",
       "timeStamp": 10164.245000109076,
-      "targetModuleId": "data/main.datareel/model/app/user-pool-client",
+      "targetModuleId": "data/main.mod/model/app/user-pool-client",
       "criteria": {"@": "criteria"},
       "data": {
         "readExpressions": [

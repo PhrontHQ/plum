@@ -3,7 +3,7 @@ var DataEditor = require("montage/ui/data-editor").DataEditor,
     DataQuery = require("montage/data/model/data-query").DataQuery,
     DataStream = require("montage/data/service/data-stream").DataStream,
     RangeController = require("montage/core/range-controller").RangeController,
-    ServiceEngagement = require("phront/data/main.datareel/model/service-engagement").ServiceEngagement,
+    ServiceEngagement = require("phront/data/main.mod/model/service-engagement").ServiceEngagement,
     KeyComposer = require("montage/composer/key-composer").KeyComposer;
 
 exports.Appointments = DataEditor.specialize({

@@ -249,7 +249,7 @@ function _registerMergeOperationFromData(operationData, operations) {
         /*
           mergeOperation.target isn't deserialized from for example
 
-                "target" : "data/main.datareel/model/procedure_types",
+                "target" : "data/main.mod/model/procedure_types",
 
           because we don't have the ObjectDescriptors loaded here. 
 
@@ -318,12 +318,12 @@ function oneShotCommitTransactionOperationData() {
                     /*
                             commitOperation.data.operations is now an object where keys are objectDescriptor moduleIds, and value of keys are an object with the structure:
                     {
-                      "data/main.datareel/model/practice": {
+                      "data/main.mod/model/practice": {
                           mergeOperations: [op1,op2,op3,...],
                           deleteOperations: [op1,op2,op3,...]
                         }
                       },
-                      "data/main.datareel/model/patients": {
+                      "data/main.mod/model/patients": {
                           mergeOperations: [op1,op2,op3,...],
                           deleteOperations: [op1,op2,op3,...]
                         }
@@ -520,7 +520,7 @@ function receiveOperation(operationJSON) {
             //console.log("receiveOperation " + operationJSON.root.values.type, operationJSON);
             console.log("receiveOperation " + operationJSON.root.values.type, JSON.stringify(operationJSON));
 
-            if ((operationJSON.root.values.type === "commitTransactionCompletedOperation" || operationJSON.root.values.type === "performTransactionCompletedOperation") && (createdAppClients = (operationJSON.root.values.data?.createdDataObjects && operationJSON.root.values.data?.createdDataObjects["data/main.datareel/model/app/app-client"]?.rawData))) {
+            if ((operationJSON.root.values.type === "commitTransactionCompletedOperation" || operationJSON.root.values.type === "performTransactionCompletedOperation") && (createdAppClients = (operationJSON.root.values.data?.createdDataObjects && operationJSON.root.values.data?.createdDataObjects["data/main.mod/model/app/app-client"]?.rawData))) {
                 if (sessionPath.endsWith("/provision-session.mjson")) {
                     var serializedOrganizationsessionPath = `${PATH.dirname(sessionPath)}/organization-session.mjson`,
                         serializedOrganizationIdentity = fs.readFileSync(serializedOrganizationsessionPath, 'utf8'),

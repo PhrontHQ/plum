@@ -35,7 +35,7 @@
       },
       "referrerId" : "41FC3E3C-344F-4CA1-866D-9FBA74873820",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria281"
       }
@@ -56,7 +56,7 @@
       "id" : "B1669303-3A28-4C51-9F93-0F0863FDB185",
       "data" : {
         "operations" : {
-          "data/main.datareel/model/account_holders" : {
+          "data/main.mod/model/account_holders" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation280"
@@ -125,7 +125,7 @@
       },
       "referrerId" : "41FC3E3C-344F-4CA1-866D-9FBA74873820",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria282"
       }
@@ -177,7 +177,7 @@
       },
       "referrerId" : "41FC3E3C-344F-4CA1-866D-9FBA74873820",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria283"
       }
@@ -220,7 +220,7 @@
       },
       "referrerId" : "41FC3E3C-344F-4CA1-866D-9FBA74873820",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/account_holders",
+      "target" : "data/main.mod/model/account_holders",
       "criteria" : {
         "@" : "criteria280"
       }

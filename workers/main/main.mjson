@@ -13,7 +13,7 @@
     },
 
     "mainDataService": {
-        "object": "./data/main.datareel/main.mjson",
+        "object": "./data/main.mod/main.mjson",
         "listeners": [
             {
                 "type": "batchOperation",
@@ -26,7 +26,7 @@
     },
 
     "RespondentQuestionnaire": {
-        "object": "phront/data/main.datareel/model/questionnaire/respondent-questionnaire.mjson",
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire.mjson",
         "listeners": [
             {
                 "type": "readCompletedOperation",

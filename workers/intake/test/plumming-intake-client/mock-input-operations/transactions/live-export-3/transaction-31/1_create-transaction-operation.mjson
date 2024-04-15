@@ -4,7 +4,7 @@
       "id" : "7C7C0035-7FDA-4870-9907-C7D3E42C31F4",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/patients"
+          "data/main.mod/model/patients"
         ],
         "notifyRelevantChanges" : false
       },

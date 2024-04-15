@@ -4,7 +4,7 @@
       "id" : "41FC3E3C-344F-4CA1-866D-9FBA74873820",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/account_holders"
+          "data/main.mod/model/account_holders"
         ]
       },
       "type" : "createTransactionOperation",

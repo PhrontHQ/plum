@@ -1,0 +1,63 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+
+    "RespondentQuestionnaireDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire.mjson"
+    },
+    "AnswerDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/answer.mjson"
+    },
+    "RespondentQuestionnaireVariableValueDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire-variable-value.mjson"
+    },
+    "RespondentQuestionnaireAnswerDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire-answer.mjson"
+    },
+    "EventDescriptor": {
+        "object": "phront/data/main.mod/model/event.mjson"
+    },
+
+    "objectDescriptorWhiteList": {
+        "value": [
+            {"@": "RespondentQuestionnaireDescriptor"}, 
+            {"@": "AnswerDescriptor"},
+            {"@": "RespondentQuestionnaireVariableValueDescriptor"},
+            {"@": "RespondentQuestionnaireAnswerDescriptor"},
+            {"@": "EventDescriptor"}
+        ]
+    },
+
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "matchObjectDescriptorWhiteListMapEntry"}
+            ]
+        }
+    },
+
+    "matchObjectDescriptorWhiteListMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "value": [
+                {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "objectDescriptors.filter{!@objectDescriptorWhiteList.has(this)}.length == 0"
+                }
+            }
+        }
+    }
+}

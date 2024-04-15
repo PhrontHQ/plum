@@ -10,7 +10,7 @@
             "referrerId": "A4206266-4257-4D78-AC83-23809A76A72A",
             "data": {
                 "createdDataObjects": {
-                    "data/main.datareel/model/organization": {
+                    "data/main.mod/model/organization": {
                         "count": 1,
                         "rawData": [{
                             "id": "9a5d6df4-55aa-402a-921e-816b76a027f3",
@@ -22,7 +22,7 @@
                             "customerEngagementQuestionnaireIds": ["ded675b2-2146-4ccf-b78f-8057397eece4", "3ca1087a-e15a-463e-baa7-a289399075d8"]
                         }]
                     },
-                    "data/main.datareel/model/app/application": {
+                    "data/main.mod/model/app/application": {
                         "count": 3,
                         "rawData": [{
                             "id": "ba93e4ee-11de-4754-976f-89b2dbf63bda",
@@ -44,7 +44,7 @@
                             "controllingOrganizationId": "9a5d6df4-55aa-402a-921e-816b76a027f3"
                         }]
                     },
-                    "data/main.datareel/model/app/app-client": {
+                    "data/main.mod/model/app/app-client": {
                         "count": 3,
                         "rawData": [{
                             "id": "80247880-6354-40ab-ade6-f01d1881a12b",
@@ -72,7 +72,7 @@
                             "applicationId": "30e7f852-e6e4-4e1c-baa1-54c3c1ed0bb0"
                         }]
                     },
-                    "data/main.datareel/model/customer-engagement-questionnaire": {
+                    "data/main.mod/model/customer-engagement-questionnaire": {
                         "count": 2,
                         "rawData": [{
                             "id": "ded675b2-2146-4ccf-b78f-8057397eece4",
@@ -94,7 +94,7 @@
                             "roleIdsRequiredToComplete": ["48b59784-0cf2-4f84-a7d5-348efd46c282"]
                         }]
                     },
-                    "data/main.datareel/model/b-2-c-customer-supplier-relationship": {
+                    "data/main.mod/model/b-2-c-customer-supplier-relationship": {
                         "count": 1,
                         "rawData": [{
                             "id": "e418c852-d8d0-4f23-9fa6-0d2d40279eb1",
@@ -106,7 +106,7 @@
                             "supplierId": "9a5d6df4-55aa-402a-921e-816b76a027f3"
                         }]
                     },
-                    "data/main.datareel/model/calendar": {
+                    "data/main.mod/model/calendar": {
                         "count": 1,
                         "rawData": [{
                             "id": "705f0392-387c-4c15-bea0-bc45c6829473",
@@ -120,7 +120,7 @@
                             "ownerB2cCustomerSupplierRelationshipId": "e418c852-d8d0-4f23-9fa6-0d2d40279eb1"
                         }]
                     },
-                    "data/main.datareel/model/event": {
+                    "data/main.mod/model/event": {
                         "count": 1,
                         "rawData": [{
                             "id": "ffdaf305-1976-40a2-a0c0-4eec41b94d6c",

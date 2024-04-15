@@ -255,7 +255,7 @@ provider:
   websocketsDescription: connect main worker
   websocketsApiRouteSelectionExpression: $request.body.action # custom routes are selected by the value of the action property in the body
   
-  # used in phront/data/main.datareel/worker/a-w-s-a-p-i-gateway.js
+  # used in phront/data/main.mod/worker/a-w-s-a-p-i-gateway.js
   # This allows our AWSAPIGateway to know to which endpoint it should post data
   environment:
     APIG_ENDPOINT:

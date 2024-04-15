@@ -18,7 +18,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria51"
       }
@@ -62,7 +62,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria54"
       }
@@ -97,7 +97,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria57"
       }
@@ -123,7 +123,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria53"
       }
@@ -167,7 +167,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria56"
       }
@@ -202,7 +202,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria52"
       }
@@ -214,7 +214,7 @@
       "id" : "400FCCA3-1F7F-499A-9814-4C5A085F8C75",
       "data" : {
         "operations" : {
-          "data/main.datareel/model/staff_members" : {
+          "data/main.mod/model/staff_members" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation51"
@@ -275,7 +275,7 @@
       },
       "referrerId" : "FBBDA016-B9B2-45A8-91B9-3FD314CB931A",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria55"
       }

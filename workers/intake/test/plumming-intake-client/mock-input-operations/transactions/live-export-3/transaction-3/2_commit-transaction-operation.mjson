@@ -36,7 +36,7 @@
       },
       "referrerId" : "922870CD-E00D-4F1C-B7F7-E36287E6B1B1",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/location_types",
+      "target" : "data/main.mod/model/location_types",
       "criteria" : {
         "@" : "criteria23"
       }
@@ -71,7 +71,7 @@
       },
       "referrerId" : "922870CD-E00D-4F1C-B7F7-E36287E6B1B1",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/location_types",
+      "target" : "data/main.mod/model/location_types",
       "criteria" : {
         "@" : "criteria24"
       }
@@ -92,7 +92,7 @@
       "id" : "9E738249-472F-42B8-8FBD-422DAACCB114",
       "data" : {
         "operations" : {
-          "data/main.datareel/model/location_types" : {
+          "data/main.mod/model/location_types" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation23"

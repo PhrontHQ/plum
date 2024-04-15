@@ -12,7 +12,7 @@
       "id": "02D69CDD-4409-49E2-8BC4-F03B90377550",
       "type": "read",
       "timeStamp": 7535.564999998314,
-      "targetModuleId": "data/main.datareel/model/event",
+      "targetModuleId": "data/main.mod/model/event",
       "criteria": {"@": "criteria2"},
       "data": {}
     }

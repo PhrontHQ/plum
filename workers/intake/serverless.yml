@@ -159,9 +159,9 @@ custom:
     include:
       - 'node_modules/montage/core/date/time-zone-data'
       - 'node_modules/uuid'
-      # data/main.datareel/raw-data is missed by default, so making sure it's taken care off before we figure out why it's not picked up in the first place
-      - 'data/main.datareel/raw-data'
-      # - node_modules/phront/data/main.datareel/raw-model/install-postGIS.sql
+      # data/main.mod/raw-data is missed by default, so making sure it's taken care off before we figure out why it's not picked up in the first place
+      - 'data/main.mod/raw-data'
+      # - node_modules/phront/data/main.mod/raw-model/install-postGIS.sql
 
     minifyPatterns:
       - 'node_modules/**'
@@ -258,7 +258,7 @@ provider:
   websocketsDescription: connect main worker
   websocketsApiRouteSelectionExpression: $request.body.action # custom routes are selected by the value of the action property in the body
   
-  # used in phront/data/main.datareel/worker/a-w-s-a-p-i-gateway.js
+  # used in phront/data/main.mod/worker/a-w-s-a-p-i-gateway.js
   # This allows our AWSAPIGateway to know to which endpoint it should post data
   environment:
     APIG_ENDPOINT:

@@ -5,7 +5,7 @@
       "id": "99A5C1E7-0BBF-40FB-B02E-2243D4206295",
       "type": 21,
       "timeStamp": 71133.54517200589,
-      "target": "data/main.datareel/model/account_relationship_types",
+      "target": "data/main.mod/model/account_relationship_types",
       "criteria": {"@": "criteria8869"},
       "data": {},
       "snapshot": {

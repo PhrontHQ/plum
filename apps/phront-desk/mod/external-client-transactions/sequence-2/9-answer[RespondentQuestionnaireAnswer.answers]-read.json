@@ -27,7 +27,7 @@
       "id": "C3F7029A-4381-41E0-8E2F-DF9BDD767D73",
       "type": "read",
       "timeStamp": 8270.239999998012,
-      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "targetModuleId": "data/main.mod/model/questionnaire/answer",
       "criteria": {"@": "criteria12"},
       "data": {}
     }

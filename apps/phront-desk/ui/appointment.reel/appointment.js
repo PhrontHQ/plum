@@ -1,7 +1,7 @@
 var DataEditor = require("montage/ui/data-editor").DataEditor,
     Criteria = require("montage/core/criteria").Criteria,
     DataQuery = require("montage/data/model/data-query").DataQuery,
-    PhrontEvent = require("phront/data/main.datareel/model/event").Event,
+    PhrontEvent = require("phront/data/main.mod/model/event").Event,
     currentEnvironment = require("montage/core/environment").currentEnvironment,
     Sender = require("ui/chat/sender").Sender,
     Range = require("montage/core/range").Range,

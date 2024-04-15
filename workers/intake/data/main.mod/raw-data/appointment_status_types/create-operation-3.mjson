@@ -1,0 +1,17 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "f3818f07-2c9f-47fb-89a0-e8c9f73fdfee",
+      "type": "createOperation",
+      "timeStamp": 71143.94226998091,
+      "targetModuleId": "data/main.mod/model/appointment_status_types",
+      "data": {
+        "type_id": "300",
+        "type_label": "Missed",
+        "permanent_label": "Missed",
+        "is_visible": true
+      }
+    }
+  }
+}

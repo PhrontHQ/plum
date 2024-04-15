@@ -1,0 +1,433 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "nextPoliciesKeyCriteria": {"@": "dataOperationTargetCriteria"},
+            "nextPoliciesMap": {"@": "targetNextPoliciesMap"}
+        }
+    },
+
+    "dataOperationTargetCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "target"
+        }
+    },
+
+    "targetNextPoliciesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "AnswerMapEntry"},
+                {"@": "AssetMapEntry"},
+                {"@": "B2CCustomerSupplierRelationshipEntry"},
+                {"@": "CalendarMapEntry"},
+                {"@": "CountryMapEntry"},
+                {"@": "CustomerEngagementQuestionnaireMapEntry"},
+                {"@": "EventMapEntry"},
+                {"@": "OrganizationMapEntry"},
+                {"@": "PartyPostalAddressMapEntry"},
+                {"@": "PartyPhoneNumberMapEntry"},
+                {"@": "PersonMapEntry"},
+                {"@": "PhoneNumberMapEntry"},
+                {"@": "PostalAddressMapEntry"},
+                {"@": "QuestionMapEntry"},
+                {"@": "QuestionnaireMapEntry"},
+                {"@": "QuestionnaireQuestionMapEntry"},
+                {"@": "RespondentQuestionnaireMapEntry"},
+                {"@": "RespondentQuestionnaireAnswerMapEntry"},
+                {"@": "RespondentQuestionnaireVariableValueMapEntry"},
+                {"@": "RoleMapEntry"},
+                {"@": "ServiceEngagementMapEntry"},
+                {"@": "ServiceProductVariantMapEntry"},
+                {"@": "VariableMapEntry"}
+           ]
+        }
+    },
+
+
+    "AnswerDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/answer.mjson"
+    },
+    "AnswerAccessPolicy": {
+        "object": "./answer-access-policy.mjson"
+    },
+    "AnswerMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "AnswerDescriptor"},
+            "value": [
+                {"@": "AnswerAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "AssetDescriptor": {
+        "object": "phront/data/main.mod/model/asset.mjson"
+    },
+    "AssetAccessPolicy": {
+        "object": "./asset-access-policy.mjson"
+    },
+    "AssetMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "AssetDescriptor"},
+            "value": [
+                {"@": "AssetAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "EventDescriptor": {
+        "object": "phront/data/main.mod/model/event.mjson"
+    },
+    "EventAccessPolicy": {
+        "object": "./event-access-policy.mjson"
+    },
+    "EventMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "EventDescriptor"},
+            "value": [
+                {"@": "EventAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.mod/model/organization.mjson"
+    },
+    "OrganizationAccessPolicy": {
+        "object": "./organization-access-policy.mjson"
+    },
+    "OrganizationMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "OrganizationDescriptor"},
+            "value": [
+                {"@": "OrganizationAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PartyPostalAddressDescriptor": {
+        "object": "phront/data/main.mod/model/messaging-channel/party-postal-address.mjson"
+    },
+    "PartyPostalAddressAccessPolicy": {
+        "object": "./party-postal-address-access-policy.mjson"
+    },
+    "PartyPostalAddressMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PartyPostalAddressDescriptor"},
+            "value": [
+                {"@": "PartyPostalAddressAccessPolicy"}
+            ]
+        }
+    },
+
+    "PartyPhoneNumberDescriptor": {
+        "object": "phront/data/main.mod/model/messaging-channel/party-phone-number.mjson"
+    },
+    "PartyPhoneNumberAccessPolicy": {
+        "object": "./party-phone-number-access-policy.mjson"
+    },
+    "PartyPhoneNumberMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PartyPhoneNumberDescriptor"},
+            "value": [
+                {"@": "PartyPhoneNumberAccessPolicy"}
+            ]
+        }
+    },
+
+    "PersonDescriptor": {
+        "object": "phront/data/main.mod/model/person.mjson"
+    },
+    "PersonAccessPolicy": {
+        "object": "./person-access-policy.mjson"
+    },
+    "PersonMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PersonDescriptor"},
+            "value": [
+                {"@": "PersonAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "PostalAddressDescriptor": {
+        "object": "phront/data/main.mod/model/messaging-channel/postal-address.mjson"
+    },
+    "PostalAddressAccessPolicy": {
+        "object": "./postal-address-access-policy.mjson"
+    },
+    "PostalAddressMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PostalAddressDescriptor"},
+            "value": [
+                {"@": "PostalAddressAccessPolicy"}
+            ]
+        }
+    },
+
+    "PhoneNumberDescriptor": {
+        "object": "phront/data/main.mod/model/messaging-channel/phone-number.mjson"
+    },
+    "PhoneNumberAccessPolicy": {
+        "object": "./phone-number-access-policy.mjson"
+    },
+    "PhoneNumberMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "PhoneNumberDescriptor"},
+            "value": [
+                {"@": "PhoneNumberAccessPolicy"}
+            ]
+        }
+    },
+
+    "QuestionDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/question.mjson"
+    },
+    "QuestionAccessPolicy": {
+        "object": "./question-access-policy.mjson"
+    },
+    "QuestionMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "QuestionDescriptor"},
+            "value": [
+                {"@": "QuestionAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "QuestionnaireDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/questionnaire.mjson"
+    },
+    "QuestionnaireAccessPolicy": {
+        "object": "./questionnaire-access-policy.mjson"
+    },
+    "QuestionnaireMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "QuestionnaireDescriptor"},
+            "value": [
+                {"@": "QuestionnaireAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "QuestionnaireQuestionDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/questionnaire-question.mjson"
+    },
+    "QuestionnaireQuestionAccessPolicy": {
+        "object": "./questionnaire-question-access-policy.mjson"
+    },
+    "QuestionnaireQuestionMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "QuestionnaireQuestionDescriptor"},
+            "value": [
+                {"@": "QuestionnaireQuestionAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "RespondentQuestionnaireDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire.mjson"
+    },
+    "RespondentQuestionnaireAccessPolicy": {
+        "object": "./respondent-questionnaire-access-policy.mjson"
+    },
+    "RespondentQuestionnaireMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RespondentQuestionnaireDescriptor"},
+            "value": [
+                {"@": "RespondentQuestionnaireAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "RespondentQuestionnaireAnswerDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire-answer.mjson"
+    },
+    "RespondentQuestionnaireAnswerAccessPolicy": {
+        "object": "./respondent-questionnaire-answer-access-policy.mjson"
+    },
+    "RespondentQuestionnaireAnswerMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RespondentQuestionnaireAnswerDescriptor"},
+            "value": [
+                {"@": "RespondentQuestionnaireAnswerAccessPolicy"}
+            ]
+        }
+    },
+
+    "RespondentQuestionnaireVarialeValueDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire-variable-value.mjson"
+    },
+    "RespondentQuestionnaireVarialeValueAccessPolicy": {
+        "object": "./respondent-questionnaire-variable-value-access-policy.mjson"
+    },
+    "RespondentQuestionnaireVariableValueMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RespondentQuestionnaireVarialeValueDescriptor"},
+            "value": [
+                {"@": "RespondentQuestionnaireVarialeValueAccessPolicy"}
+            ]
+        }
+    },
+    
+
+    "RoleDescriptor": {
+        "object": "phront/data/main.mod/model/role.mjson"
+    },
+    "RoleAccessPolicy": {
+        "object": "./role-access-policy.mjson"
+    },
+    "RoleMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "RoleDescriptor"},
+            "value": [
+                {"@": "RoleAccessPolicy"}
+            ]
+        }
+    },
+
+    
+    "B2CCustomerSupplierRelationshipDescriptor": {
+        "object": "phront/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
+    },
+    "B2CCustomerSupplierRelationshipAccessPolicy": {
+        "object": "./b-2-c-customer-supplier-relationship-access-policy.mjson"
+    },
+    "B2CCustomerSupplierRelationshipEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "B2CCustomerSupplierRelationshipDescriptor"},
+            "value": [
+                {"@": "B2CCustomerSupplierRelationshipAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "CalendarDescriptor": {
+        "object": "phront/data/main.mod/model/calendar.mjson"
+    },
+    "CalendarAccessPolicy": {
+        "object": "./calendar-access-policy.mjson"
+    },
+    "CalendarMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "CalendarDescriptor"},
+            "value": [
+                {"@": "CalendarAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "CountryDescriptor": {
+        "object": "phront/data/main.mod/model/country.mjson"
+    },
+    "CountryAccessPolicy": {
+        "object": "./country-access-policy.mjson"
+    },
+    "CountryMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "CountryDescriptor"},
+            "value": [
+                {"@": "CountryAccessPolicy"}
+            ]
+        }
+    },
+
+
+    "CustomerEngagementQuestionnaireDescriptor": {
+        "object": "phront/data/main.mod/model/customer-engagement-questionnaire.mjson"
+    },
+    "CustomerEngagementQuestionnaireAccessPolicy": {
+        "object": "./customer-engagement-questionnaire-access-policy.mjson"
+    },
+    "CustomerEngagementQuestionnaireMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "CustomerEngagementQuestionnaireDescriptor"},
+            "value": [
+                {"@": "CustomerEngagementQuestionnaireAccessPolicy"}
+            ]
+        }
+    },
+
+
+
+    "ServiceEngagementDescriptor": {
+        "object": "phront/data/main.mod/model/service-engagement.mjson"
+    },
+    "ServiceEngagementAccessPolicy": {
+        "object": "./service-engagement-access-policy.mjson"
+    },
+    "ServiceEngagementMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ServiceEngagementDescriptor"},
+            "value": [
+                {"@": "ServiceEngagementAccessPolicy"}
+            ]
+        }
+    },
+
+    "ServiceProductVariantDescriptor": {
+        "object": "phront/data/main.mod/model/service-product-variant.mjson"
+    },
+    "ServiceProductVariantAccessPolicy": {
+        "object": "./service-product-variant-access-policy.mjson"
+    },
+    "ServiceProductVariantMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "ServiceProductVariantDescriptor"},
+            "value": [
+                {"@": "ServiceProductVariantAccessPolicy"}
+            ]
+        }
+    },
+
+    "VariableDescriptor": {
+        "object": "phront/data/main.mod/model/questionnaire/variable.mjson"
+    },
+    "VariableAccessPolicy": {
+        "object": "./variable-access-policy.mjson"
+    },
+    "VariableMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {"@": "VariableDescriptor"},
+            "value": [
+                {"@": "VariableAccessPolicy"}
+            ]
+        }
+    }
+
+}

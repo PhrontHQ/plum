@@ -4,7 +4,7 @@
       "id" : "541BE8E9-62A7-4931-A8AC-700F91654CA0",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/account_holders"
+          "data/main.mod/model/account_holders"
         ],
         "notifyRelevantChanges" : false
       },

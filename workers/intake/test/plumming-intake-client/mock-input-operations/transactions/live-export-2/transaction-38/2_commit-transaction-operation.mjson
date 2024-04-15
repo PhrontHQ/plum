@@ -13,7 +13,7 @@
       "id" : "0120A9EA-0C44-497A-A7AB-D24EF9BA21A0",
       "data" : {
         "operations" : {
-          "data/main.datareel/model/patients" : {
+          "data/main.mod/model/patients" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation518"
@@ -78,7 +78,7 @@
       },
       "referrerId" : "3FFF8629-A923-4992-8EC9-B0631E34EC00",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria519"
       }
@@ -138,7 +138,7 @@
       },
       "referrerId" : "3FFF8629-A923-4992-8EC9-B0631E34EC00",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria520"
       }
@@ -198,7 +198,7 @@
       },
       "referrerId" : "3FFF8629-A923-4992-8EC9-B0631E34EC00",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/patients",
+      "target" : "data/main.mod/model/patients",
       "criteria" : {
         "@" : "criteria518"
       }

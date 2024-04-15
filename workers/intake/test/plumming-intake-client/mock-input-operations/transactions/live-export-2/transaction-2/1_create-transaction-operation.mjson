@@ -4,7 +4,7 @@
       "id" : "2BBD23B7-4E93-4F55-8870-089C54D3D715",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/procedure_types"
+          "data/main.mod/model/procedure_types"
         ]
       },
       "type" : "createTransactionOperation",

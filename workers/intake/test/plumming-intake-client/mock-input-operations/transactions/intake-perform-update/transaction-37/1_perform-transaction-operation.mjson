@@ -1,7 +1,7 @@
 {
   "dataOperation502" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria502"
       },
@@ -58,7 +58,7 @@
   },
   "dataOperation503" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria503"
       },
@@ -106,7 +106,7 @@
   },
   "dataOperation504" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria504"
       },
@@ -163,7 +163,7 @@
   },
   "dataOperation505" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria505"
       },
@@ -202,7 +202,7 @@
   },
   "dataOperation506" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria506"
       },
@@ -259,7 +259,7 @@
   },
   "dataOperation507" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria507"
       },
@@ -307,7 +307,7 @@
   },
   "dataOperation508" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria508"
       },
@@ -346,7 +346,7 @@
   },
   "dataOperation510" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria510"
       },
@@ -394,7 +394,7 @@
   },
   "dataOperation509" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria509"
       },
@@ -433,7 +433,7 @@
   },
   "dataOperation511" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria511"
       },
@@ -472,7 +472,7 @@
   },
   "dataOperation496" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria496"
       },
@@ -511,7 +511,7 @@
   },
   "dataOperation512" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria512"
       },
@@ -550,7 +550,7 @@
   },
   "dataOperation497" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria497"
       },
@@ -602,7 +602,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/appointments" : {
+          "data/main.mod/model/appointments" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation496"
@@ -666,7 +666,7 @@
   },
   "dataOperation498" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria498"
       },
@@ -705,7 +705,7 @@
   },
   "dataOperation499" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria499"
       },
@@ -780,7 +780,7 @@
   },
   "dataOperation500" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria500"
       },
@@ -828,7 +828,7 @@
   },
   "dataOperation501" : {
     "values" : {
-      "target" : "data/main.datareel/model/appointments",
+      "target" : "data/main.mod/model/appointments",
       "criteria" : {
         "@" : "criteria501"
       },

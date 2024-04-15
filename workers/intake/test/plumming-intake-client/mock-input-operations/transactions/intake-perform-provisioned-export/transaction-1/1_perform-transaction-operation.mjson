@@ -14,7 +14,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/practice" : {
+          "data/main.mod/model/practice" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation0"
@@ -46,7 +46,7 @@
       "referrerId" : "7D558AD9-72EA-4FA2-A457-EB10B91B0E3B",
       "referrer" : {"@" : "root"},
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/practice",
+      "target" : "data/main.mod/model/practice",
       "criteria" : {
         "@" : "criteria0"
       }

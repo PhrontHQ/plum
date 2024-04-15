@@ -4,7 +4,7 @@
       "id" : "A0233AF4-1904-4579-A9D9-5F395B56623A",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/practice"
+          "data/main.mod/model/practice"
         ]
       },
       "type" : "createTransactionOperation",

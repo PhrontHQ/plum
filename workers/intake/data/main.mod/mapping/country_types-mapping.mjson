@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "country_typesDescriptor"},
+            "rawDataPrimaryKeys":["type_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "country_typesDescriptor": {
+        "object": "data/main.mod/model/country_types.mjson"
+    }
+
+}

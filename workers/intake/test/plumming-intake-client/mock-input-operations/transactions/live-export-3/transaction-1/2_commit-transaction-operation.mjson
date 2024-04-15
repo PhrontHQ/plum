@@ -13,7 +13,7 @@
       "id" : "424DC753-FD53-4BC3-8614-6CF1B9083396",
       "data" : {
         "operations" : {
-          "data/main.datareel/model/practice" : {
+          "data/main.mod/model/practice" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation0"
@@ -45,7 +45,7 @@
       },
       "referrerId" : "7D558AD9-72EA-4FA2-A457-EB10B91B0E3B",
       "type" : "mergeOperation",
-      "target" : "data/main.datareel/model/practice",
+      "target" : "data/main.mod/model/practice",
       "criteria" : {
         "@" : "criteria0"
       }

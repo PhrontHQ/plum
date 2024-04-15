@@ -6,7 +6,7 @@
       "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
       "type": "mergeOperation",
       "timeStamp": 71143.94226998091,
-      "targetModuleId": "data/main.datareel/model/country_types",
+      "targetModuleId": "data/main.mod/model/country_types",
       "data": {
         "type_id": "4",
         "permanent_label": "Belgium",

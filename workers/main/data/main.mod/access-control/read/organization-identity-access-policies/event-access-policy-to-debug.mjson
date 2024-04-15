@@ -1,0 +1,202 @@
+{
+    "root": {
+        "prototype": "montage/data/service/data-access-policy",
+        "values": {
+            "objectDescriptor": {"@": "EventDescriptor"},
+            "dataOperationTypePolicyRules": {
+                "readOperation": [
+                    {"@": "matchDataIdentityAppointmentRule"},
+                    {"@": "isAuthorizedRule"}
+                ],
+                "updateOperation": [
+                    {"@": "updateOperationMatchDataIdentityAppointmentRule"},
+                    {"@": "isUpdateOperationAuthorizedRule"}
+                ]
+            },
+            "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
+        }
+    },
+
+    "EventDescriptor": {
+        "object": "phront/data/main.mod/model/event.mjson"
+    },
+
+    "matchDataIdentityAppointmentRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(identity.query.criteria)"
+                }
+            }
+        }
+    },
+    
+    "matchDataIdentityAppointmentParametersRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria.parameters.serviceEngagementOriginId": {
+                    "=": "identity.query.criteria.parameters.originId"
+                }
+            }
+        }
+    },
+
+    "isAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "true"
+                }
+            }
+        }
+    },
+
+    "updateOperationMatchDataIdentityAppointmentRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(identity.query.criteria)"
+                }
+            }
+        }
+    },
+
+    "isUpdateOperationAuthorizedRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "isAuthorized": {
+                    "=": "true"
+                }
+            }
+        }
+    },
+
+
+
+
+
+
+    "RulesMap": {
+        "prototype": "global[Map]",
+        "values": {
+            "entries": [
+                {"@": "readOperationRulesForAppointmentIdentityMapEntry"},
+                {"@": "readOperationRulesForApplicationIdentityMapEntry"}
+            ]
+        }
+    },
+
+    "ServiceEngagementDescriptor": {
+        "object": "phront/data/main.mod/model/service-engagement.mjson"
+    },
+    "appointmentIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "scope.filter{type == @ServiceEngagementDescriptor && criteria.parameters.originId.defined()}"
+        }
+    },
+
+    "readOperationRulesForAppointmentIdentityMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {
+                "=": "@root.readOperationTypeCriteria.and(@appointmentIdentityCriteria)"
+            },
+            "value": [
+                    {"@": "matchDataIdentityAppointmentParametersRule"},
+                    {"@": "matchDataIdentityAppointmentCriteriaRule"},
+                    {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+    "matchServiceEngagementIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "serviceEngagement.originId == $.serviceEngagementOriginId}",
+            "parameters": {
+                "serviceEngagementOriginId": ""
+            }
+        }
+    },
+    "matchDataIdentityAppointmentCriteriaRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(@matchServiceEngagementIdentityCriteria)"
+                }
+            }
+        }
+    },
+    "matchDataIdentityAppointmentParametersRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "@matchServiceEngagementIdentityCriteria.parameters.serviceEngagementOriginId": {
+                    "=": "identity.scope.0.criteria.parameters.originId"
+                }
+            }
+        }
+    },
+
+
+
+    "OrganizationDescriptor": {
+        "object": "phront/data/main.mod/model/organization.mjson"
+    },
+    "applicationIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "identity.scope.filter{type == @OrganizationDescriptor && criteria.parameters.id.defined()}"
+        }
+    },
+
+    "readOperationRulesForApplicationIdentityMapEntry": {
+        "prototype": "global[Object]",
+        "values": {
+            "key": {
+                "=": "@root.readOperationTypeCriteria.and(@applicationIdentityCriteria)"
+            },
+            "value": [
+                    {"@": "matchOrganizationIdentityParametersRule"},
+                    {"@": "matchOrganizationIdentityCriteriaRule"},
+                    {"@": "isAuthorizedRule"}
+            ]
+        }
+    },
+    "matchOrganizationIdentityCriteria": {
+        "prototype": "montage/core/criteria",
+        "values": {
+            "expression": "calendar.owner.employmentPosition.employer.id == $organizationId || parent.calendar.owner.employmentPosition.employer.id == $organizationId",
+            "parameters": {
+                "organizationId": ""
+            }
+        }
+    },
+    "matchOrganizationIdentityCriteriaRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "criteria": {
+                    "=": "criteria.and(@matchOrganizationIdentityCriteria)"
+                }
+            }
+        }
+    },
+    "matchOrganizationIdentityParametersRule": {
+        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "values": {
+            "descriptor": {
+                "@matchOrganizationIdentityCriteria.parameters.organizationId": {
+                    "=": "identity.scope.0.criteria.parameters.id"
+                }
+            }
+        }
+    }
+
+}

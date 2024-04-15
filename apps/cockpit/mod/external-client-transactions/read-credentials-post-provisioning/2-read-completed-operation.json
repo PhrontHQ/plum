@@ -5,7 +5,7 @@
             "id": "92824BFF-C68E-41FD-A468-161602FD4AC4",
             "type": "readCompletedOperation",
             "timeStamp": 54154.260784983635,
-            "targetModuleId": "data/main.datareel/model/app/user-pool-client",
+            "targetModuleId": "data/main.mod/model/app/user-pool-client",
             "referrerId": "9980D7CF-F1C8-43E6-B393-B55AA0CA0966",
             "data": [
                 [{

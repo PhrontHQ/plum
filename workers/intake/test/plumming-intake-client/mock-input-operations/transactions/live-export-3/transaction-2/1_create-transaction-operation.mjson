@@ -4,7 +4,7 @@
       "id" : "6C4B176A-EA97-4DF7-8648-0DA6898526C2",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/procedure_types"
+          "data/main.mod/model/procedure_types"
         ],
         "notifyRelevantChanges" : false
       },

@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "account_relationship_typesDescriptor"},
+            "rawDataPrimaryKeys":["type_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "account_relationship_typesDescriptor": {
+        "object": "data/main.mod/model/account_relationship_types.mjson"
+    }
+
+}

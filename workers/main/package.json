@@ -54,7 +54,7 @@
   },
   "bundle": [
     "main",
-    "data/main.datareel/main.mjson",
+    "data/main.mod/main.mjson",
     "montage/data/model/identity"
   ]
 }

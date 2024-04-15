@@ -26,7 +26,7 @@
       "id": "18441D6F-9647-4127-AC45-9D65087D2B15",
       "type": "read",
       "timeStamp": 7535.600000002887,
-      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire",
+      "targetModuleId": "data/main.mod/model/questionnaire/respondent-questionnaire",
       "criteria": {"@": "criteria3"},
       "data": {}
     }

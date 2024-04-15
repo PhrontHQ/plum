@@ -4,7 +4,7 @@
       "id" : "206319CB-D585-4FC5-840D-1B4499CA040E",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/patients"
+          "data/main.mod/model/patients"
         ],
         "notifyRelevantChanges" : false
       },

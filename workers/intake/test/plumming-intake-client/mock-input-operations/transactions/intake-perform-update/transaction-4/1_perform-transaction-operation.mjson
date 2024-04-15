@@ -1,7 +1,7 @@
 {
   "dataOperation33" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria33"
       },
@@ -30,7 +30,7 @@
   },
   "dataOperation42" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria42"
       },
@@ -77,7 +77,7 @@
   },
   "dataOperation26" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria26"
       },
@@ -106,7 +106,7 @@
   },
   "dataOperation35" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria35"
       },
@@ -144,7 +144,7 @@
   },
   "dataOperation44" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria44"
       },
@@ -173,7 +173,7 @@
   },
   "dataOperation28" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria28"
       },
@@ -202,7 +202,7 @@
   },
   "dataOperation37" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria37"
       },
@@ -231,7 +231,7 @@
   },
   "dataOperation46" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria46"
       },
@@ -287,7 +287,7 @@
   },
   "dataOperation39" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria39"
       },
@@ -316,7 +316,7 @@
   },
   "dataOperation48" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria48"
       },
@@ -390,7 +390,7 @@
   },
   "dataOperation30" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria30"
       },
@@ -437,7 +437,7 @@
   },
   "dataOperation41" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria41"
       },
@@ -466,7 +466,7 @@
   },
   "dataOperation32" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria32"
       },
@@ -504,7 +504,7 @@
   },
   "dataOperation25" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria25"
       },
@@ -542,7 +542,7 @@
   },
   "dataOperation34" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria34"
       },
@@ -571,7 +571,7 @@
   },
   "dataOperation43" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria43"
       },
@@ -604,7 +604,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/staff_members" : {
+          "data/main.mod/model/staff_members" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation25"
@@ -701,7 +701,7 @@
   },
   "dataOperation36" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria36"
       },
@@ -730,7 +730,7 @@
   },
   "dataOperation45" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria45"
       },
@@ -777,7 +777,7 @@
   },
   "dataOperation29" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria29"
       },
@@ -806,7 +806,7 @@
   },
   "dataOperation38" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria38"
       },
@@ -835,7 +835,7 @@
   },
   "dataOperation47" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria47"
       },
@@ -864,7 +864,7 @@
   },
   "dataOperation27" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria27"
       },
@@ -911,7 +911,7 @@
   },
   "dataOperation49" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria49"
       },
@@ -967,7 +967,7 @@
   },
   "dataOperation31" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria31"
       },
@@ -996,7 +996,7 @@
   },
   "dataOperation40" : {
     "values" : {
-      "target" : "data/main.datareel/model/staff_members",
+      "target" : "data/main.mod/model/staff_members",
       "criteria" : {
         "@" : "criteria40"
       },

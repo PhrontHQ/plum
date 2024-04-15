@@ -1,0 +1,20 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "6C38B538-2E5D-4D9A-9BA2-D27ECD1FD833",
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "type": "createOperation",
+      "timeStamp": 71143.94226998091,
+      "targetModuleId": "data/main.mod/model/language_types",
+      "data": {
+        "type_id": "4",
+        "type_label": "French",
+        "permanent_label": "French",
+        "is_visible": true,
+        "iso_language_code": "fr",
+        "iso_language_code_3": "fre"
+      }
+    }
+  }
+}

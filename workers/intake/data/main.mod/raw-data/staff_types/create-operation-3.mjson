@@ -1,0 +1,17 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "2e7cc63d-9775-40f0-8854-8e55fb0d1f54",
+      "type": "createOperation",
+      "timeStamp": 71143.94226998091,
+      "targetModuleId": "data/main.mod/model/staff_types",
+      "data": {
+        "type_id": 300,
+        "type_label": "Admin Staff",
+        "permanent_label": "Admin Staff",
+        "is_visible": true
+      }
+    }
+  }
+}

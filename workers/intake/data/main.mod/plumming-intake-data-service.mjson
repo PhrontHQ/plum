@@ -1,0 +1,147 @@
+{
+    "root": {
+        "prototype": "data/main.mod/service/plumming-intake-data-service",
+        "values": {
+            "name": "PlummingIntakeDataService",
+            "userPoolId": "us-west-2_jBAg8wI35",
+            "mappings": [
+                {"@": "account_holders-mapping"},
+                {"@": "account_relationship_types-mapping"},
+                {"@": "procedure_types-mapping"},
+                {"@": "country_types-mapping"},
+                {"@": "location_types-mapping"},
+                {"@": "gender_types-mapping"},
+                {"@": "practice-mapping"},
+                {"@": "staff_members-mapping"},
+                {"@": "staff_types-mapping"},
+                {"@": "language_types-mapping"},
+                {"@": "patients-mapping"},
+                {"@": "phone_label_types-mapping"},
+                {"@": "appointments-mapping"},
+                {"@": "appointment_status_types-mapping"}
+            ],
+            "types": [
+                {"@": "practice"},
+                {"@": "account_holders"},
+                {"@": "account_relationship_types"},
+                {"@": "appointment_status_types"},
+                {"@": "appointments"},
+                {"@": "country_types"},
+                {"@": "gender_types"},
+                {"@": "language_types"},
+                {"@": "location_types"},
+                {"@": "marital_status_types"},
+                {"@": "patients"},
+                {"@": "phone_label_types"},
+                {"@": "procedure_types"},
+                {"@": "country_types"},
+                {"@": "practice"},
+                {"@": "staff_members"},
+                {"@": "staff_types"},
+                {"@": "time_period_types"}
+            ],
+            "rawDataTypeMappings": [
+            ]
+
+        }
+    },
+    "account_holders": {
+        "object": "data/main.mod/model/account_holders.mjson"
+    },
+    "account_holders-mapping": {
+        "object": "data/main.mod/mapping/account_holders-mapping.mjson"
+    },
+
+    "account_relationship_types": {
+        "object": "data/main.mod/model/account_relationship_types.mjson"
+    },
+    "account_relationship_types-mapping": {
+        "object": "data/main.mod/mapping/account_relationship_types-mapping.mjson"
+    },
+
+    "appointment_status_types": {
+        "object": "data/main.mod/model/appointment_status_types.mjson"
+    },
+    
+    "appointment_status_types-mapping": {
+        "object": "data/main.mod/mapping/appointment_status_types-mapping.mjson"
+    },
+
+    "appointments": {
+        "object": "data/main.mod/model/appointments.mjson"
+    },
+    "appointments-mapping": {
+        "object": "data/main.mod/mapping/appointments-mapping.mjson"
+    },
+
+    "gender_types": {
+        "object": "data/main.mod/model/gender_types.mjson"
+    },
+    "gender_types-mapping": {
+        "object": "data/main.mod/mapping/gender_types-mapping.mjson"
+    },
+
+    "language_types": {
+        "object": "data/main.mod/model/language_types.mjson"
+    },
+    
+    "location_types": {
+        "object": "data/main.mod/model/location_types.mjson"
+    },
+    "location_types-mapping": {
+        "object": "data/main.mod/mapping/location_types-mapping.mjson"
+    },
+
+    "marital_status_types": {
+        "object": "data/main.mod/model/marital_status_types.mjson"
+    },
+    "patients": {
+        "object": "data/main.mod/model/patients.mjson"
+    },
+    "patients-mapping": {
+        "object": "data/main.mod/mapping/patients-mapping.mjson"
+    },
+    "phone_label_types-mapping": {
+        "object": "data/main.mod/mapping/phone_label_types-mapping.mjson"
+    },
+    "phone_label_types": {
+        "object": "data/main.mod/model/phone_label_types.mjson"
+    },
+    "procedure_types": {
+        "object": "data/main.mod/model/procedure_types.mjson"
+    },
+    "procedure_types-mapping": {
+        "object": "data/main.mod/mapping/procedure_types-mapping.mjson"
+    },
+    "country_types": {
+        "object": "data/main.mod/model/country_types.mjson"
+    },
+    "country_types-mapping": {
+        "object": "data/main.mod/mapping/country_types-mapping.mjson"
+    },
+    "practice": {
+        "object": "data/main.mod/model/practice.mjson"
+    },
+    "practice-mapping": {
+        "object": "data/main.mod/mapping/practice-mapping.mjson"
+    },
+
+    "staff_members": {
+        "object": "data/main.mod/model/staff_members.mjson"
+    },
+    "staff_members-mapping": {
+        "object": "data/main.mod/mapping/staff_members-mapping.mjson"
+    },
+    "staff_types": {
+        "object": "data/main.mod/model/staff_types.mjson"
+    },
+    "staff_types-mapping": {
+        "object": "data/main.mod/mapping/staff_types-mapping.mjson"
+    },
+    "language_types-mapping": {
+        "object": "data/main.mod/mapping/language_types-mapping.mjson"
+    },
+    "time_period_types": {
+        "object": "data/main.mod/model/staff_types.mjson"
+    }
+}

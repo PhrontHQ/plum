@@ -5,7 +5,7 @@
       "id": "3C6696A2-3D73-466E-A97A-36DEBB95DEE3",
       "type": "readCompleted",
       "timeStamp": 24093.862397000194,
-      "targetModuleId": "data/main.datareel/model/questionnaire/answer",
+      "targetModuleId": "data/main.mod/model/questionnaire/answer",
       "referrerId": "C3F7029A-4381-41E0-8E2F-DF9BDD767D73",
       "data": [
         [

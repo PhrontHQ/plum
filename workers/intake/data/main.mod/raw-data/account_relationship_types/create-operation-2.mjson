@@ -1,0 +1,17 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E1243CB9-E932-492B-A4A8-0B7004FF1FC1",
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "type": "createOperation",
+      "timeStamp": 71143.48667398095,
+      "targetModuleId": "data/main.mod/model/account_relationship_types",
+      "data": {
+        "type_id": 200,
+        "type_label": "Father",
+        "permanent_label": "Father"
+      }
+    }
+  }
+}

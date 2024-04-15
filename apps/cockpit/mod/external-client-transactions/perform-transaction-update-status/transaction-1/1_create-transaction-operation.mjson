@@ -14,7 +14,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/event" : {
+          "data/main.mod/model/event" : {
             "updateOperations" : [
               {
                 "@" : "dataOperation3"
@@ -37,7 +37,7 @@
       "data" : {
         "participationStatus" : "InvitedIn"
       },
-      "targetModuleId" : "data/main.datareel/model/event",
+      "targetModuleId" : "data/main.mod/model/event",
       "snapshot" : {
         "participationStatus" : "Arrived"
       },

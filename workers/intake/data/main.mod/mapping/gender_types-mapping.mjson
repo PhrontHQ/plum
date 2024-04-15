@@ -1,0 +1,20 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "gender_typesDescriptor"},
+            "rawDataPrimaryKeys":["type_id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "gender_typesDescriptor": {
+        "object": "data/main.mod/model/gender_types.mjson"
+    }
+
+}

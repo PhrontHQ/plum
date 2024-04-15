@@ -4,7 +4,7 @@
       "id" : "27B07086-AD01-4585-BEAA-9AEDDD7AA329",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/appointments"
+          "data/main.mod/model/appointments"
         ]
       },
       "type" : "createTransactionOperation",

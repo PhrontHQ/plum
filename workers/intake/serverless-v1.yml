@@ -86,14 +86,14 @@ custom:
   distill:
     include:
       - 'node_modules/montage/core/date/time-zone-data'
-      - 'data/main.datareel/raw-data'
+      - 'data/main.mod/raw-data'
 
     minifyPatterns:
       - 'node_modules/**'
       - '!node_modules/montage/**'
       - '!node_modules/montage-geo/**'
       - '!node_modules/phront/**'
-      - 'data/main.datareel/raw-data/**'
+      - 'data/main.mod/raw-data/**'
       # - '!*/**'
   
 provider:

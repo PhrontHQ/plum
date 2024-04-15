@@ -15,7 +15,7 @@
       "id": "09B2C062-62E1-4379-8C9B-B7F0EEA7021B",
       "type": "read",
       "timeStamp": 2219.36000000278,
-      "targetModuleId": "data/main.datareel/model/event",
+      "targetModuleId": "data/main.mod/model/event",
       "criteria": {"@": "criteria2"},
       "locales": [
         "en-US"

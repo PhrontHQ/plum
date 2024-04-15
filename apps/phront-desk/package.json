@@ -45,7 +45,7 @@
     ],
     "bundle": [
         "ui/main.reel",
-        "data/main.datareel/main.mjson"
+        "data/main.mod/main.mjson"
     ],
     "shard": 1
 }

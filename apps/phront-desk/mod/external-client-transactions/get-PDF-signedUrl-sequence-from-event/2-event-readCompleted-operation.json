@@ -5,7 +5,7 @@
       "id": "6AF519D9-0F72-497C-A964-1CA0909CA125",
       "type": "readCompleted",
       "timeStamp": 32647.703177928925,
-      "targetModuleId": "data/main.datareel/model/event",
+      "targetModuleId": "data/main.mod/model/event",
       "referrerId": "9980D7CF-F1C8-43E6-B393-B55AA0CA0966",
       "data": [
         [

@@ -7,7 +7,7 @@
     }
   },
   "root": {
-    "prototype": "phront/data/main.datareel/model/app/web-socket-session",
+    "prototype": "phront/data/main.mod/model/app/web-socket-session",
     "values": {
       "identity": {"@": "identity"}
     }

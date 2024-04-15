@@ -23,7 +23,7 @@
       "id": "F1EC98BF-96E5-464C-B027-D661A2B0B1F6",
       "type": "read",
       "timeStamp": 8486.304999998538,
-      "targetModuleId": "data/main.datareel/model/questionnaire/question",
+      "targetModuleId": "data/main.mod/model/questionnaire/question",
       "criteria": {"@": "criteria34"},
       "data": {}
     }

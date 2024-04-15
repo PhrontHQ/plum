@@ -14,7 +14,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/practice" : {
+          "data/main.mod/model/practice" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation0"
@@ -30,7 +30,7 @@
   },
   "dataOperation0" : {
     "values" : {
-      "target" : "data/main.datareel/model/practice",
+      "target" : "data/main.mod/model/practice",
       "criteria" : {
         "@" : "criteria0"
       },

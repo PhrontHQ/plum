@@ -39,7 +39,7 @@
       "id": "3EA6FAF5-7A04-4F4E-8BDA-DEBB5CAA327E",
       "type": "read",
       "timeStamp": 7854.944999999134,
-      "targetModuleId": "data/main.datareel/model/questionnaire/respondent-questionnaire-answer",
+      "targetModuleId": "data/main.mod/model/questionnaire/respondent-questionnaire-answer",
       "criteria": {"@": "criteria6"},
       "data": {}
     }

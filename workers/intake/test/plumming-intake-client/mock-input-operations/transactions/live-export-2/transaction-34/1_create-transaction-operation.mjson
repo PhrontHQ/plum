@@ -4,7 +4,7 @@
       "id" : "95A93108-9815-4890-82FC-9F9CB00FFE27",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/patients"
+          "data/main.mod/model/patients"
         ]
       },
       "type" : "createTransactionOperation",

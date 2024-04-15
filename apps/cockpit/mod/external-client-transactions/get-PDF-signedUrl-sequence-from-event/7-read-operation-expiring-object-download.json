@@ -25,7 +25,7 @@
       "id": "175961A6-2C7A-4991-8EC2-1F9093211F40",
       "type": "read",
       "timeStamp": 32351.230000145733,
-      "targetModuleId": "data/main.datareel/model/aws/s3/expiring-object-download",
+      "targetModuleId": "data/main.mod/model/aws/s3/expiring-object-download",
       "criteria": {"@": "criteria80"},
       "data": {
         "readExpressions": [

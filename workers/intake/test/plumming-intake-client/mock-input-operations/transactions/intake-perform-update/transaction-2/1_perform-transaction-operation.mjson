@@ -10,7 +10,7 @@
   },
   "dataOperation17" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria17"
       },
@@ -41,7 +41,7 @@
   },
   "dataOperation4" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria4"
       },
@@ -90,7 +90,7 @@
   },
   "dataOperation19" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria19"
       },
@@ -130,7 +130,7 @@
   },
   "dataOperation8" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria8"
       },
@@ -179,7 +179,7 @@
   },
   "dataOperation3" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria3"
       },
@@ -210,7 +210,7 @@
   },
   "dataOperation10" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria10"
       },
@@ -259,7 +259,7 @@
   },
   "dataOperation12" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria12"
       },
@@ -290,7 +290,7 @@
   },
   "dataOperation7" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria7"
       },
@@ -321,7 +321,7 @@
   },
   "dataOperation21" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria21"
       },
@@ -370,7 +370,7 @@
   },
   "dataOperation14" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria14"
       },
@@ -401,7 +401,7 @@
   },
   "dataOperation16" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria16"
       },
@@ -459,7 +459,7 @@
   },
   "dataOperation2" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria2"
       },
@@ -490,7 +490,7 @@
   },
   "dataOperation18" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria18"
       },
@@ -525,7 +525,7 @@
       "data" : {
         "notifyRelevantChanges" : false,
         "operations" : {
-          "data/main.datareel/model/procedure_types" : {
+          "data/main.mod/model/procedure_types" : {
             "mergeOperations" : [
               {
                 "@" : "dataOperation1"
@@ -604,7 +604,7 @@
   },
   "dataOperation6" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria6"
       },
@@ -653,7 +653,7 @@
   },
   "dataOperation1" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria1"
       },
@@ -702,7 +702,7 @@
   },
   "dataOperation11" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria11"
       },
@@ -733,7 +733,7 @@
   },
   "dataOperation20" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria20"
       },
@@ -773,7 +773,7 @@
   },
   "dataOperation5" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria5"
       },
@@ -822,7 +822,7 @@
   },
   "dataOperation13" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria13"
       },
@@ -853,7 +853,7 @@
   },
   "dataOperation9" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria9"
       },
@@ -884,7 +884,7 @@
   },
   "dataOperation22" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria22"
       },
@@ -924,7 +924,7 @@
   },
   "dataOperation15" : {
     "values" : {
-      "target" : "data/main.datareel/model/procedure_types",
+      "target" : "data/main.mod/model/procedure_types",
       "criteria" : {
         "@" : "criteria15"
       },

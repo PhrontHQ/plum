@@ -1,0 +1,20 @@
+{
+  "root": {
+    "prototype": "montage/data/service/data-operation",
+    "values": {
+      "id": "E1243CB9-E932-492B-A4A8-0B7004FF1FC1",
+      "referrerId": "51431732-895B-459D-B7FB-F6592A580994",
+      "type": "createOperation",
+      "timeStamp": 71143.94226998091,
+      "targetModuleId": "data/main.mod/model/country_types",
+      "data": {
+        "type_id": "2",
+        "permanent_label": "Australia",
+        "phone_format": null,
+        "phone_country_code": "61",
+        "iso_country_code": "au",
+        "address_format": "ADDRESS/CITY STATE  POSTCODE/COUNTRY"
+      }
+    }
+  }
+}

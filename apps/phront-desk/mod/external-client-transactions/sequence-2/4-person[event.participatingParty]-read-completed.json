@@ -5,7 +5,7 @@
       "id": "0FB71667-193D-44CC-A263-C89E1A15DB5B",
       "type": "readCompleted",
       "timeStamp": 23661.706396996975,
-      "targetModuleId": "data/main.datareel/model/person",
+      "targetModuleId": "data/main.mod/model/person",
       "referrerId": "C3C68FDE-5E05-4D11-9D61-5622D10989D8",
       "data": [
         [

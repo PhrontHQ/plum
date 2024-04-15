@@ -4,7 +4,7 @@
       "id" : "C55F4056-65B0-447F-A309-A98F0DF3E963",
       "data" : {
         "objectDescriptors" : [
-          "data/main.datareel/model/appointments"
+          "data/main.mod/model/appointments"
         ],
         "notifyRelevantChanges" : false
       },
