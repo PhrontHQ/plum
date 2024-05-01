@@ -20,7 +20,7 @@
     },
 
     "ServiceEngagementDescriptor": {
-        "object": "phront/data/main.mod/model/service-engagement.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
 
     "dataIdentityQueryCriteria": {
@@ -32,7 +32,7 @@
     },
 
     "AWSAPIGatewayWebSocketDataOperationService": {
-        "object": "phront/data/main.mod/a-w-s-a-p-i-gateway-web-socket-data-operation-service.mjson",
+        "object": "business-data.mod/data/main.mod/a-w-s-a-p-i-gateway-web-socket-data-operation-service.mjson",
         "values": {
             "authorizationPolicy": {"=":"@AuthenticationPolicy.ON_DEMAND"},
             "connectionDescriptor": {

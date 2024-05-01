@@ -9,7 +9,7 @@
     },
 
     "aws-api-gateway": {
-        "object": "phront/worker/a-w-s-a-p-i-gateway"
+        "object": "aws.mod/worker/a-w-s-a-p-i-gateway"
     },
 
     "mainDataService": {
@@ -26,7 +26,7 @@
     },
 
     "RespondentQuestionnaire": {
-        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire.mjson",
+        "object": "business-data.mod/data/main.mod/model/questionnaire/respondent-questionnaire.mjson",
         "listeners": [
             {
                 "type": "readCompletedOperation",

@@ -43,7 +43,7 @@
     },    
 
     "postgreSQLService": {
-        "object": "phront/data/main.mod/postgre-s-q-l-service.mjson",
+        "object": "business-data-postgre-s-q-l.mod/data/main.mod/postgre-s-q-l-service.mjson",
         "values": {
             "childServices": [
             ],
@@ -161,21 +161,21 @@
     },
 
     "auroraV2PostgreSQLClientPool": {
-        "prototype": "phront/data/main.mod/service/aws/aurora-v-2-postgre-s-q-l-client-pool",
+        "prototype": "aws.mod/data/main.mod/service/aurora-v-2-postgre-s-q-l-client-pool",
         "values": {
             "delegate": {"@":"postgreSQLService"}
         }
     },
 
     "neonPostgreSQLClientPool": {
-        "prototype": "phront/data/main.mod/service/neon/neon-postgre-s-q-l-client-pool",
+        "prototype": "business-data.mod/data/main.mod/service/neon/neon-postgre-s-q-l-client-pool",
         "values": {
             "delegate": {"@":"postgreSQLService"}
         }
     },
 
     "S3DataService": {
-        "object": "phront/data/main.mod/s3-data-service.mjson",
+        "object": "aws.mod/data/main.mod/s3-data-service.mjson",
         "values": {
             "connectionDescriptor": {
                 "live": {
@@ -197,7 +197,7 @@
         }
     },
     "SecretManagerDataService": {
-        "object": "phront/data/main.mod/secret-manager-data-service.mjson",
+        "object": "aws.mod/data/main.mod/secret-manager-data-service.mjson",
         "values": {
             "connectionDescriptor": {
                 "live": {
@@ -216,7 +216,7 @@
         }
     },
     "CognitoDataService": {
-        "object": "phront/data/main.mod/cognito-data-service.mjson",
+        "object": "aws.mod/data/main.mod/cognito-data-service.mjson",
         "values": {
             "connectionDescriptor": {
                 "live": {

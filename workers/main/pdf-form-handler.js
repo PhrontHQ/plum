@@ -5,12 +5,12 @@ var DataOperation = require("montage/data/service/data-operation").DataOperation
     // mainService = DataService.mainService,
     Criteria = require("montage/core/criteria").Criteria,
     //currentEnvironment = (require) ("montage/core/environment").currentEnvironment,
-    // Object = (require) ("phront/data/main.mod/model/aws/s3/object").Object,
-    ObjectDescriptor =  require("phront/data/main.mod/model/aws/s3/object.mjson").montageObject,
-    Asset = require("phront/data/main.mod/model/asset").Asset,
-    //Secret = (require) ("phront/data/main.mod/model/aws/secret").Secret,
+    // Object = (require) ("aws.mod/data/main.mod/model/s3/object").Object,
+    ObjectDescriptor =  require("aws.mod/data/main.mod/model/s3/object.mjson").montageObject,
+    Asset = require("business-data.mod/data/main.mod/model/asset").Asset,
+    //Secret = (require) ("app-infrastructure-data.mod/data/main.mod/model/secret").Secret,
     uuid = require("montage/core/uuid"),
-    secretObjectDescriptor = require("phront/data/main.mod/model/aws/secret.mjson").montageObject;
+    secretObjectDescriptor = require("app-infrastructure-data.mod/data/main.mod/model/secret.mjson").montageObject;
 
 const hostname = "roostergrinforms.com",
     path = "/perl/post/11397-16996-IOov",

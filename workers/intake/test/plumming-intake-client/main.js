@@ -192,9 +192,9 @@ var startMilliseconds = Date.now();
 ws = new WebSocket(socketUrl
     /*
     ,{
-    cert: fs.readFileSync("./workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt"),
+    cert: fs.readFileSync("./workers/main/node_modules/business-data.mod/dev/local-ssl-certificate-authority/phront.local.crt"),
     key:
-    fs.readFileSync("./workers/main/node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key")
+    fs.readFileSync("./workers/main/node_modules/business-data.mod/dev/local-ssl-certificate-authority/phront.local.key")
 
     }*/);
 setupWebSocket(ws);

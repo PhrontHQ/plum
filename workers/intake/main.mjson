@@ -9,7 +9,7 @@
     },
 
     "aws-api-gateway": {
-        "object": "phront/worker/a-w-s-a-p-i-gateway"
+        "object": "business-data.mod/worker/a-w-s-a-p-i-gateway"
     },
 
     "mainDataService": {

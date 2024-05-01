@@ -57,6 +57,6 @@
     },
 
     "QuestionnaireDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/questionnaire.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/questionnaire.mjson"
     }
 }

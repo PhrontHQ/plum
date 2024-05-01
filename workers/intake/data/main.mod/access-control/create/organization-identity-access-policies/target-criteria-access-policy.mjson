@@ -47,7 +47,7 @@
 
 
     "EventDescriptor": {
-        "object": "phront/data/main.mod/model/event.mjson"
+        "object": "business-data.mod/data/main.mod/model/event.mjson"
     },
     "EventAccessPolicy": {
         "object": "./event-access-policy.mjson"
@@ -64,7 +64,7 @@
 
 
     "OrganizationDescriptor": {
-        "object": "phront/data/main.mod/model/organization.mjson"
+        "object": "business-data.mod/data/main.mod/model/organization.mjson"
     },
     "OrganizationAccessPolicy": {
         "object": "./organization-access-policy.mjson"
@@ -81,7 +81,7 @@
 
 
     "PartyPostalAddressDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/party-postal-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-postal-address.mjson"
     },
     "PartyPostalAddressAccessPolicy": {
         "object": "./party-postal-address-access-policy.mjson"
@@ -98,7 +98,7 @@
 
 
     "PersonDescriptor": {
-        "object": "phront/data/main.mod/model/person.mjson"
+        "object": "business-data.mod/data/main.mod/model/person.mjson"
     },
     "PersonAccessPolicy": {
         "object": "./person-access-policy.mjson"
@@ -115,7 +115,7 @@
 
 
     "PostalAddressDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/postal-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/postal-address.mjson"
     },
     "PostalAddressAccessPolicy": {
         "object": "./postal-address-access-policy.mjson"
@@ -133,7 +133,7 @@
 
 
     "RoleDescriptor": {
-        "object": "phront/data/main.mod/model/role.mjson"
+        "object": "business-data.mod/data/main.mod/model/role.mjson"
     },
     "RoleAccessPolicy": {
         "object": "./role-access-policy.mjson"
@@ -150,7 +150,7 @@
 
 
     "RoleRankingDescriptor": {
-        "object": "phront/data/main.mod/model/role-ranking.mjson"
+        "object": "business-data.mod/data/main.mod/model/role-ranking.mjson"
     },
     "RoleRankingAccessPolicy": {
         "object": "./role-ranking-access-policy.mjson"
@@ -167,7 +167,7 @@
 
 
     "ServiceEngagementDescriptor": {
-        "object": "phront/data/main.mod/model/service-engagement.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
     "ServiceEngagementAccessPolicy": {
         "object": "./service-engagement-access-policy.mjson"
@@ -184,7 +184,7 @@
 
 
     "ServiceDescriptor": {
-        "object": "phront/data/main.mod/model/service.mjson"
+        "object": "business-data.mod/data/main.mod/model/service.mjson"
     },
     "ServiceAccessPolicy": {
         "object": "./service-access-policy.mjson"
@@ -201,7 +201,7 @@
 
 
     "ServiceProductVariantDescriptor": {
-        "object": "phront/data/main.mod/model/service-product-variant.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-product-variant.mjson"
     },
     "ServiceProductVariantAccessPolicy": {
         "object": "./service-product-variant-access-policy.mjson"
@@ -218,7 +218,7 @@
 
 
     "PartyEmailAddressDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/party-email-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-email-address.mjson"
     },
     "PartyEmailAddressAccessPolicy": {
         "object": "./party-email-address-access-policy.mjson"
@@ -235,7 +235,7 @@
 
 
     "PartyPhoneNumberDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/party-phone-number.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-phone-number.mjson"
     },
     "PartyPhoneNumberAccessPolicy": {
         "object": "./party-phone-number-access-policy.mjson"
@@ -253,7 +253,7 @@
 
 
     "PartySMSNumberDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/party-s-m-s-number.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-s-m-s-number.mjson"
     },
     "PartySMSNumberAccessPolicy": {
         "object": "./party-s-m-s-number-access-policy.mjson"
@@ -271,7 +271,7 @@
 
 
     "EmailAddressDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/email-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/email-address.mjson"
     },
     "EmailAddressAccessPolicy": {
         "object": "./email-address-access-policy.mjson"
@@ -288,7 +288,7 @@
 
 
     "PhoneNumberDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/phone-number.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/phone-number.mjson"
     },
     "PhoneNumberAccessPolicy": {
         "object": "./phone-number-access-policy.mjson"
@@ -305,7 +305,7 @@
 
 
     "PositionDescriptor": {
-        "object": "phront/data/main.mod/model/position.mjson"
+        "object": "business-data.mod/data/main.mod/model/position.mjson"
     },
     "PositionAccessPolicy": {
         "object": "./position-access-policy.mjson"
@@ -322,7 +322,7 @@
 
 
     "EmploymentPositionDescriptor": {
-        "object": "phront/data/main.mod/model/employment-position.mjson"
+        "object": "business-data.mod/data/main.mod/model/employment-position.mjson"
     },
     "EmploymentPositionAccessPolicy": {
         "object": "./employment-position-access-policy.mjson"
@@ -339,7 +339,7 @@
 
 
     "EmploymentPositionStaffingDescriptor": {
-        "object": "phront/data/main.mod/model/employment-position-staffing.mjson"
+        "object": "business-data.mod/data/main.mod/model/employment-position-staffing.mjson"
     },
     "EmploymentPositionStaffingAccessPolicy": {
         "object": "./employment-position-staffing-access-policy.mjson"
@@ -355,7 +355,7 @@
     },
 
     "CalendarDescriptor": {
-        "object": "phront/data/main.mod/model/calendar.mjson"
+        "object": "business-data.mod/data/main.mod/model/calendar.mjson"
     },
     "CalendarAccessPolicy": {
         "object": "./calendar-access-policy.mjson"
@@ -371,7 +371,7 @@
     },
 
     "PersonalRelationshipDescriptor": {
-        "object": "phront/data/main.mod/model/personal-relationship.mjson"
+        "object": "business-data.mod/data/main.mod/model/personal-relationship.mjson"
     },
     "PersonalRelationshipAccessPolicy": {
         "object": "./personal-relationship-access-policy.mjson"
@@ -388,7 +388,7 @@
 
 
     "B2CCustomerSupplierRelationshipDescriptor": {
-        "object": "phront/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
+        "object": "business-data.mod/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
     },
     "B2CCustomerSupplierRelationshipAccessPolicy": {
         "object": "./b-2-c-customer-supplier-relationship-access-policy.mjson"
@@ -404,7 +404,7 @@
     },
 
     "B2CCustomerSupplierResponsiblePartyDescriptor": {
-        "object": "phront/data/main.mod/model/b-2-c-customer-supplier-responsible-party.mjson"
+        "object": "business-data.mod/data/main.mod/model/b-2-c-customer-supplier-responsible-party.mjson"
     },
     "B2CCustomerSupplierResponsiblePartyAccessPolicy": {
         "object": "./b-2-c-customer-supplier-responsible-party-access-policy.mjson"

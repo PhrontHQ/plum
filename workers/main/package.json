@@ -19,13 +19,17 @@
   },
   "dependencies": {
     "montage": "github:PhrontHQ/montage#montage-19",
-    "phront": "github:PhrontHQ/phront#master"
+    "business-data.mod": "github:PhrontHQ/business-data.mod#main",
+    "app-infrastructure-data.mod": "github:PhrontHQ/app-infrastructure-data.mod#main",
+    "aws.mod": "github:PhrontHQ/aws.mod#main",
+    "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod#main",
+    "business-data-postgre-s-q-l.mod": "github:PhrontHQ/business-data-postgre-s-q-l.mod#main"
   },
   "devDependencies": {
     "@dezeroku/serverless-certificate-creator": "^1.6.0",
     "distill": "github:PhrontHQ/distill#main",
     "http-server": "^14.1.0",
-    "local-websocket-server": "github:PhrontHQ/local-websocket-server#master",
+    "local-websocket-server": "github:PhrontHQ/local-websocket-server#master",  
     "serverless": "~3.9.0",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-deployment-bucket": "^1.5.2",

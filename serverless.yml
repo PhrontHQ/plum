@@ -28,12 +28,12 @@ package:
       - '!node_modules/montage/tools/**'
       - '!node_modules/montage/node_modules/**'
       - '!node_modules/montage/.vscode/**'
-      - '!node_modules/phront/dev/**'
-      - '!node_modules/phront/test/**'
-      - '!node_modules/phront/sandbox/**'
-      - '!node_modules/phront/node_modules/**'
-      - '!node_modules/phront/.git/**'
-      - '!node_modules/phront/.vscode/**'
+      - '!node_modules/business-data.mod/dev/**'
+      - '!node_modules/business-data.mod/test/**'
+      - '!node_modules/business-data.mod/sandbox/**'
+      - '!node_modules/business-data.mod/node_modules/**'
+      - '!node_modules/business-data.mod/.git/**'
+      - '!node_modules/business-data.mod/.vscode/**'
       - '!node_modules/montage-geo/ui/**'
       - '!node_modules/montage-geo/test/**'
       - '!node_modules/montage-geo/.git/**'
@@ -88,12 +88,12 @@ package:
       - node_modules/montage-geo/.git/**
       - node_modules/montage-geo/test/**
       - node_modules/montage-geo/ui/**
-      - node_modules/phront/.git/**
-      - node_modules/phront/.vscode/**
-      - node_modules/phront/dev/**
-      - node_modules/phront/sandbox/**
-      - node_modules/phront/test/**
-      - node_modules/phront/ui/**
+      - node_modules/business-data.mod/.git/**
+      - node_modules/business-data.mod/.vscode/**
+      - node_modules/business-data.mod/dev/**
+      - node_modules/business-data.mod/sandbox/**
+      - node_modules/business-data.mod/test/**
+      - node_modules/business-data.mod/ui/**
       - node_modules/local-websocket-server/**
       - node_modules/serverless/**
       - node_modules/serverless-offline/**
@@ -160,7 +160,7 @@ custom:
       - 'node_modules/**'
       - '!node_modules/montage/**'
       - '!node_modules/montage-geo/**'
-      - '!node_modules/phront/**'
+      - '!node_modules/business-data.mod/**'
       # - '!*/**'
 
   s3Sync:

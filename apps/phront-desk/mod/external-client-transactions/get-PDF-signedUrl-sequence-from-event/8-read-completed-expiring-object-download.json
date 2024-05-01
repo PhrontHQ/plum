@@ -5,7 +5,7 @@
       "id": "74120460-ECB7-4CBC-B8A8-0393E1171EAC",
       "type": "readCompleted",
       "timeStamp": 15813026.55089426,
-      "targetModuleId": "data/main.mod/model/aws/s3/expiring-object-download",
+      "targetModuleId": "aws.mod/data/main.mod/model/s3/expiring-object-download",
       "referrerId": "175961A6-2C7A-4991-8EC2-1F9093211F40",
       "data": [
         {

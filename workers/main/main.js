@@ -1,2 +1,2 @@
 'use strict';
-require('phront/worker/main').initMainModuleWithRequire(module, require);
+require('montage/worker/main').initMainModuleWithRequire(module, require);

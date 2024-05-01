@@ -20,7 +20,7 @@
     "isomorphic-ws": "^4.0.1",
     "montage": "github:PhrontHQ/montage#montage-19",
     "montage-geo": "github:PhrontHQ/montage-geo.git#montage-19",
-    "phront": "github:phrontHQ/phront#master",
+    "business-data.mod": "github:phrontHQ/business-data.mod#main",
     "ws": "^8.4.2"
   },
   "devDependencies": {

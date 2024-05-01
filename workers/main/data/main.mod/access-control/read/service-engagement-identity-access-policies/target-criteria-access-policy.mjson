@@ -47,7 +47,7 @@
 
 
     "AnswerDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/answer.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/answer.mjson"
     },
     "AnswerAccessPolicy": {
         "object": "./answer-access-policy.mjson"
@@ -64,7 +64,7 @@
 
 
     "AssetDescriptor": {
-        "object": "phront/data/main.mod/model/asset.mjson"
+        "object": "business-data.mod/data/main.mod/model/asset.mjson"
     },
     "AssetAccessPolicy": {
         "object": "./asset-access-policy.mjson"
@@ -81,7 +81,7 @@
 
 
     "EventDescriptor": {
-        "object": "phront/data/main.mod/model/event.mjson"
+        "object": "business-data.mod/data/main.mod/model/event.mjson"
     },
     "EventAccessPolicy": {
         "object": "./event-access-policy.mjson"
@@ -98,7 +98,7 @@
 
 
     "OrganizationDescriptor": {
-        "object": "phront/data/main.mod/model/organization.mjson"
+        "object": "business-data.mod/data/main.mod/model/organization.mjson"
     },
     "OrganizationAccessPolicy": {
         "object": "./organization-access-policy.mjson"
@@ -115,7 +115,7 @@
 
 
     "PartyPostalAddressDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/party-postal-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-postal-address.mjson"
     },
     "PartyPostalAddressAccessPolicy": {
         "object": "./party-postal-address-access-policy.mjson"
@@ -131,7 +131,7 @@
     },
 
     "PartyPhoneNumberDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/party-phone-number.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-phone-number.mjson"
     },
     "PartyPhoneNumberAccessPolicy": {
         "object": "./party-phone-number-access-policy.mjson"
@@ -147,7 +147,7 @@
     },
 
     "PersonDescriptor": {
-        "object": "phront/data/main.mod/model/person.mjson"
+        "object": "business-data.mod/data/main.mod/model/person.mjson"
     },
     "PersonAccessPolicy": {
         "object": "./person-access-policy.mjson"
@@ -164,7 +164,7 @@
 
 
     "PostalAddressDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/postal-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/postal-address.mjson"
     },
     "PostalAddressAccessPolicy": {
         "object": "./postal-address-access-policy.mjson"
@@ -180,7 +180,7 @@
     },
 
     "PhoneNumberDescriptor": {
-        "object": "phront/data/main.mod/model/messaging-channel/phone-number.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/phone-number.mjson"
     },
     "PhoneNumberAccessPolicy": {
         "object": "./phone-number-access-policy.mjson"
@@ -196,7 +196,7 @@
     },
 
     "QuestionDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/question.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/question.mjson"
     },
     "QuestionAccessPolicy": {
         "object": "./question-access-policy.mjson"
@@ -213,7 +213,7 @@
 
 
     "QuestionnaireDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/questionnaire.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/questionnaire.mjson"
     },
     "QuestionnaireAccessPolicy": {
         "object": "./questionnaire-access-policy.mjson"
@@ -230,7 +230,7 @@
 
 
     "QuestionnaireQuestionDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/questionnaire-question.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/questionnaire-question.mjson"
     },
     "QuestionnaireQuestionAccessPolicy": {
         "object": "./questionnaire-question-access-policy.mjson"
@@ -247,7 +247,7 @@
 
 
     "RespondentQuestionnaireDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/respondent-questionnaire.mjson"
     },
     "RespondentQuestionnaireAccessPolicy": {
         "object": "./respondent-questionnaire-access-policy.mjson"
@@ -264,7 +264,7 @@
 
 
     "RespondentQuestionnaireAnswerDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire-answer.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/respondent-questionnaire-answer.mjson"
     },
     "RespondentQuestionnaireAnswerAccessPolicy": {
         "object": "./respondent-questionnaire-answer-access-policy.mjson"
@@ -280,7 +280,7 @@
     },
 
     "RespondentQuestionnaireVarialeValueDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/respondent-questionnaire-variable-value.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/respondent-questionnaire-variable-value.mjson"
     },
     "RespondentQuestionnaireVarialeValueAccessPolicy": {
         "object": "./respondent-questionnaire-variable-value-access-policy.mjson"
@@ -297,7 +297,7 @@
     
 
     "RoleDescriptor": {
-        "object": "phront/data/main.mod/model/role.mjson"
+        "object": "business-data.mod/data/main.mod/model/role.mjson"
     },
     "RoleAccessPolicy": {
         "object": "./role-access-policy.mjson"
@@ -314,7 +314,7 @@
 
     
     "B2CCustomerSupplierRelationshipDescriptor": {
-        "object": "phront/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
+        "object": "business-data.mod/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
     },
     "B2CCustomerSupplierRelationshipAccessPolicy": {
         "object": "./b-2-c-customer-supplier-relationship-access-policy.mjson"
@@ -331,7 +331,7 @@
 
 
     "CalendarDescriptor": {
-        "object": "phront/data/main.mod/model/calendar.mjson"
+        "object": "business-data.mod/data/main.mod/model/calendar.mjson"
     },
     "CalendarAccessPolicy": {
         "object": "./calendar-access-policy.mjson"
@@ -348,7 +348,7 @@
 
 
     "CountryDescriptor": {
-        "object": "phront/data/main.mod/model/country.mjson"
+        "object": "business-data.mod/data/main.mod/model/country.mjson"
     },
     "CountryAccessPolicy": {
         "object": "./country-access-policy.mjson"
@@ -365,7 +365,7 @@
 
 
     "CustomerEngagementQuestionnaireDescriptor": {
-        "object": "phront/data/main.mod/model/customer-engagement-questionnaire.mjson"
+        "object": "business-data.mod/data/main.mod/model/customer-engagement-questionnaire.mjson"
     },
     "CustomerEngagementQuestionnaireAccessPolicy": {
         "object": "./customer-engagement-questionnaire-access-policy.mjson"
@@ -383,7 +383,7 @@
 
 
     "ServiceEngagementDescriptor": {
-        "object": "phront/data/main.mod/model/service-engagement.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
     "ServiceEngagementAccessPolicy": {
         "object": "./service-engagement-access-policy.mjson"
@@ -399,7 +399,7 @@
     },
 
     "ServiceProductVariantDescriptor": {
-        "object": "phront/data/main.mod/model/service-product-variant.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-product-variant.mjson"
     },
     "ServiceProductVariantAccessPolicy": {
         "object": "./service-product-variant-access-policy.mjson"
@@ -415,7 +415,7 @@
     },
 
     "VariableDescriptor": {
-        "object": "phront/data/main.mod/model/questionnaire/variable.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/variable.mjson"
     },
     "VariableAccessPolicy": {
         "object": "./variable-access-policy.mjson"

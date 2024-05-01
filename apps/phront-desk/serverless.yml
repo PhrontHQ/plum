@@ -18,9 +18,9 @@ package:
       - node_modules/montage/testing/**
       - node_modules/montage/tools/**
       - node_modules/montage-geo/.git/**
-      - node_modules/phront/.git/**
-      - node_modules/phront/test/**
-      - node_modules/phront/sandbox/**
+      - node_modules/business-data.mod/.git/**
+      - node_modules/business-data.mod/test/**
+      - node_modules/business-data.mod/sandbox/**
       - node_modules/local-websocket-server/**
       - node_modules/serverless/**
       - node_modules/serverless-offline/**

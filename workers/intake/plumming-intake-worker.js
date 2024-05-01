@@ -1,14 +1,14 @@
-var DataWorker = require("phront/worker/data-worker").DataWorker,
-    Organization = require("phront/data/main.mod/model/organization").Organization,
-    Application = require("phront/data/main.mod/model/app/application").Application,
-    CognitoUserPool = require("phront/data/main.mod/model/aws/cognito/user-pool").UserPool,
-    CognitoUserPoolClient = require("phront/data/main.mod/model/aws/cognito/user-pool").UserPoolClient,
+var DataWorker = require("business-data.mod/worker/data-worker").DataWorker,
+    Organization = require("business-data.mod/data/main.mod/model/organization").Organization,
+    Application = require("business-data.mod/data/main.mod/model/app/application").Application,
+    CognitoUserPool = require("aws.mod/data/main.mod/model/cognito/user-pool").UserPool,
+    CognitoUserPoolClient = require("aws.mod/data/main.mod/model/cognito/user-pool").UserPoolClient,
     Criteria = require("montage/core/criteria").Criteria,
     DataQuery = require("montage/data/model/data-query").DataQuery,
-    UserPool = require("phront/data/main.mod/model/app/user-pool").UserPool,
-    AppClient = require("phront/data/main.mod/model/app/app-client").AppClient,
+    UserPool = require("business-data.mod/data/main.mod/model/app/user-pool").UserPool,
+    AppClient = require("business-data.mod/data/main.mod/model/app/app-client").AppClient,
     PracticeObjectDescriptor = require("./data/main.mod/model/practice.mjson").montageObject,
-    WebSocketSession = require("phront/data/main.mod/model/app/web-socket-session").WebSocketSession;
+    WebSocketSession = require("business-data.mod/data/main.mod/model/app/web-socket-session").WebSocketSession;
 
 const WebSocket = require('isomorphic-ws'),
     crypto = require('crypto');

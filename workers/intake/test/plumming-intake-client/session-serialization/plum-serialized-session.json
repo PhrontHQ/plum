@@ -9,7 +9,7 @@
       }
     },
     "ServiceEngagement": {
-      "object": "phront/data/main.mod/model/service-engagement.mjson"
+      "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
     "dataquery": {
       "prototype": "montage/data/model/data-query",
@@ -27,7 +27,7 @@
       }
     },
     "root": {
-      "prototype": "phront/data/main.mod/model/app/web-socket-session",
+      "prototype": "business-data.mod/data/main.mod/model/app/web-socket-session",
       "values": {
         "identity": {"@": "identity"}
       }

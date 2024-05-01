@@ -46,7 +46,7 @@
     },
 
     "phrontDataService": {
-        "object": "phront/data/main.mod/phront-service.mjson",
+        "object": "business-data.mod/data/main.mod/business-data.mod-service.mjson",
         "values": {
             "childServices": [
             ],
@@ -154,7 +154,7 @@
     },
 
     "S3DataService": {
-        "object": "phront/data/main.mod/s3-data-service.mjson",
+        "object": "business-data.mod/data/main.mod/s3-data-service.mjson",
         "values": {
             "connectionDescriptor": {
                 "live": {
@@ -177,7 +177,7 @@
     },
 
     "SecretManagerDataService": {
-        "object": "phront/data/main.mod/secret-manager-data-service.mjson",
+        "object": "business-data.mod/data/main.mod/secret-manager-data-service.mjson",
         "values": {
             "connectionDescriptor": {
                 "live": {
@@ -197,7 +197,7 @@
     },
 
     "CognitoDataService": {
-        "object": "phront/data/main.mod/cognito-data-service.mjson",
+        "object": "business-data.mod/data/main.mod/cognito-data-service.mjson",
         "values": {
             "connectionDescriptor": {
                 "live": {

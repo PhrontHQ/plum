@@ -73,4 +73,6 @@ env.js
 
 node-build*
 
+#Profiling Results
 vscode-profile*
+*.cpuprofile

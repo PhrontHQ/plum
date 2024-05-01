@@ -5,7 +5,7 @@
     "dependencies": {
         "montage": "github:PhrontHQ/montage#montage-19",
         "montage-geo": "github:PhrontHQ/montage-geo.git#montage-19",
-        "phront": "github:PhrontHQ/phront#master"
+        "business-data.mod": "github:PhrontHQ/business-data.mod#main"
     },
     "devDependencies": {
         "http-server": "^14.1.0",

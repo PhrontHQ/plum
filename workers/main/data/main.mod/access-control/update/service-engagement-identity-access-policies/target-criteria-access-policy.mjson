@@ -25,7 +25,7 @@
 
 
     "EventDescriptor": {
-        "object": "phront/data/main.mod/model/event.mjson"
+        "object": "business-data.mod/data/main.mod/model/event.mjson"
     },
     "EventAccessPolicy": {
         "object": "./event-access-policy.mjson"

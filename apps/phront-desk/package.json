@@ -9,8 +9,9 @@
         "@capacitor/ios": "^4.2.0",
         "launcher": "github:PhrontHQ/launcher#main",
         "montage": "github:PhrontHQ/montage#montage-19",
-        "montage-geo": "github:PhrontHQ/montage-geo.git#montage-19",
-        "phront": "github:PhrontHQ/phront#master"
+        "geo.mod": "github:PhrontHQ/geo.mod#montage-19",
+        "business-data.mod": "github:PhrontHQ/business-data.mod#main",
+        "business-data-postgre-s-q-l.mod": "github:PhrontHQ/business-data-postgre-s-q-l.mod#main"
     },
     "devDependencies": {
         "@dezeroku/serverless-certificate-creator": "^1.6.0",
@@ -29,7 +30,7 @@
     "scripts": {
         "lint": "jshint .",
         "build": "node node_modules/mop/optimize . --optimize 1 -target .serverless",
-        "serve": "node_modules/http-server/bin/http-server -p 9797 -S -C node_modules/phront/dev/local-ssl-certificate-authority/phront.local.crt -K node_modules/phront/dev/local-ssl-certificate-authority/phront.local.key",
+        "serve": "node_modules/http-server/bin/http-server -p 9797 -S -C node_modules/business-data.mod/dev/local-ssl-certificate-authority/phront.local.crt -K node_modules/business-data.mod/dev/local-ssl-certificate-authority/phront.local.key",
         "start": "minit serve",
         "start:dist": "minit serve -r dist",
         "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages"

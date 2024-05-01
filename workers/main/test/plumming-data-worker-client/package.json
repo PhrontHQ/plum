@@ -13,7 +13,7 @@
   "author": "Phront. (https://phront.com/)",
   "repository": {
     "type": "git",
-    "url": "PhrontHQ/phront/tree/master/test"
+    "url": "PhrontHQ/business-data.mod/tree/master/test"
   },
  "scripts": {},
 "mappings": {
@@ -22,7 +22,7 @@
   "montage-geo": "../../../node_modules/montage-geo",
   "montage-testing": "../../../node_modules/montage-testing",
   "object-sizeof": "../../../node_modules/object-sizeof",
-  "phront": "./../node_modules/phront",
+  "business-data.mod": "./../node_modules/business-data.mod",
   "tiny-worker": "../../../node_modules/tiny-worker",
   "esm": "../../../node_modules/esm"
 },

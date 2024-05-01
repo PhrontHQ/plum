@@ -292,9 +292,9 @@
     children: [ [Module] ],
     paths: [ '/var/task/node_modules', '/var/node_modules', '/node_modules' ]
   },
-  '/var/task/node_modules/phront/worker/main.js': Module {
-    id: '/var/task/node_modules/phront/worker/main.js',
-    path: '/var/task/node_modules/phront/worker',
+  '/var/task/node_modules/business-data.mod/worker/main.js': Module {
+    id: '/var/task/node_modules/business-data.mod/worker/main.js',
+    path: '/var/task/node_modules/business-data.mod/worker',
     exports: {
       worker: [Promise [Object]],
       connect: [Function (anonymous)],
@@ -315,12 +315,12 @@
       children: [Array],
       paths: [Array]
     },
-    filename: '/var/task/node_modules/phront/worker/main.js',
+    filename: '/var/task/node_modules/business-data.mod/worker/main.js',
     loaded: true,
     children: [ [Module] ],
     paths: [
-      '/var/task/node_modules/phront/worker/node_modules',
-      '/var/task/node_modules/phront/node_modules',
+      '/var/task/node_modules/business-data.mod/worker/node_modules',
+      '/var/task/node_modules/business-data.mod/node_modules',
       '/var/task/node_modules',
       '/var/node_modules',
       '/node_modules'
@@ -340,11 +340,11 @@
       TemplateLoader: [Function (anonymous)]
     },
     parent: Module {
-      id: '/var/task/node_modules/phront/worker/main.js',
-      path: '/var/task/node_modules/phront/worker',
+      id: '/var/task/node_modules/business-data.mod/worker/main.js',
+      path: '/var/task/node_modules/business-data.mod/worker',
       exports: [Object],
       parent: [Module],
-      filename: '/var/task/node_modules/phront/worker/main.js',
+      filename: '/var/task/node_modules/business-data.mod/worker/main.js',
       loaded: true,
       children: [Array],
       paths: [Array]

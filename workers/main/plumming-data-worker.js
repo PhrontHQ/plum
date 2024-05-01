@@ -1,4 +1,4 @@
-var DataWorker = require("phront/worker/data-worker").DataWorker;
+var DataWorker = require("montage/worker/data-worker").DataWorker;
 
 
 /**

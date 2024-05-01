@@ -25,7 +25,7 @@
     },
 
     "ServiceEngagementDescriptor": {
-        "object": "phront/data/main.mod/model/service-engagement.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
     "ProvisionIdentityMapEntry": {
         "prototype": "global[Object]",
@@ -44,7 +44,7 @@
 
 
     "OrganizationDescriptor": {
-        "object": "phront/data/main.mod/model/organization.mjson"
+        "object": "business-data.mod/data/main.mod/model/organization.mjson"
     },
     "OrganizationDescriptorMapEntry": {
         "prototype": "global[Object]",

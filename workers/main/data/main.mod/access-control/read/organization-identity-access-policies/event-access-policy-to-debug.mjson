@@ -18,7 +18,7 @@
     },
 
     "EventDescriptor": {
-        "object": "phront/data/main.mod/model/event.mjson"
+        "object": "business-data.mod/data/main.mod/model/event.mjson"
     },
 
     "matchDataIdentityAppointmentRule": {
@@ -92,7 +92,7 @@
     },
 
     "ServiceEngagementDescriptor": {
-        "object": "phront/data/main.mod/model/service-engagement.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
     "appointmentIdentityCriteria": {
         "prototype": "montage/core/criteria",
@@ -147,7 +147,7 @@
 
 
     "OrganizationDescriptor": {
-        "object": "phront/data/main.mod/model/organization.mjson"
+        "object": "business-data.mod/data/main.mod/model/organization.mjson"
     },
     "applicationIdentityCriteria": {
         "prototype": "montage/core/criteria",
