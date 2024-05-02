@@ -13,14 +13,14 @@
             }
         },
         "chatRepetition": {
-            "prototype": "montage/ui/repetition.reel",
+            "prototype": "montage/ui/repetition.mod",
             "values": {
                 "element": {"#": "chat-repetition"},
                 "content": {"<-": "@owner.conversation"}
             }
         },
         "message": {
-            "prototype": "../chat-message.reel",
+            "prototype": "../chat-message.mod",
             "values": {
                 "element": {"#": "message"},
                 "iteration": {"<-": "@chatRepetition:iteration"},

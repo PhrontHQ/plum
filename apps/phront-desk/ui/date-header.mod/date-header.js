@@ -1,5 +1,5 @@
 /**
- * @module ui/categories.reel
+ * @module ui/categories.mod
  * @requires montage/ui/component
  */
 var DataEditor = require("montage/ui/data-editor").DataEditor;

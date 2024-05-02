@@ -6,7 +6,7 @@ var Component = require("montage/ui/component").Component,
     Template = require("montage/core/template").Template;
 
 //Expose moduleid so it's picked up by mop:
-require("ui/chat/chat-text-message.reel");
+require("ui/chat/chat-text-message.mod");
 
 var instanceCount = 0;
 
@@ -126,7 +126,7 @@ exports.ChatMessage = DataEditor.specialize({
                 if(!isMessageComponentComponent && !isMessageComponentPromise) {
 
                     if(!outputComponentModuledId) {
-                        outputComponentModuledId = "ui/chat/chat-text-message.reel";
+                        outputComponentModuledId = "ui/chat/chat-text-message.mod";
                     }
 
                     return require.async(outputComponentModuledId)

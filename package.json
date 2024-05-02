@@ -17,9 +17,5 @@
         "serverless-s3-sync": "^3.0.0"
     },
     "dependencies": {
-        "@capacitor/android": "^4.2.0",
-        "@capacitor/cli": "^4.2.0",
-        "@capacitor/core": "^4.2.0",
-        "@capacitor/ios": "^4.2.0"
     }
 }

@@ -60,7 +60,7 @@
             }
         },
         "rescheduledEventDate": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "rescheduledEventDate"},
                 "value": {
@@ -88,7 +88,7 @@
             }
         },
         "rescheduledEventReferrerDate": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "rescheduledEventReferrerDate"},
                 "value": {
@@ -108,7 +108,7 @@
         },
 
         "patientName": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "patientName"},
                 "value": {
@@ -117,7 +117,7 @@
             }
         },
         "appointmentTimeHeader": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "appointmentTimeHeader"},
                 "value": {
@@ -137,7 +137,7 @@
         },
 
         "appointmentArrivalTitle": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "appointmentArrivalTitle"},
                 "value": {
@@ -147,7 +147,7 @@
         },
 
         "appointmentArrivalTimeDisplay": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "appointmentArrivalTimeDisplay"},
                 "value": {
@@ -159,7 +159,7 @@
             }
         },
         "durationToFillFormsBeforeAppointment": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "durationToFillFormsBeforeAppointmentDisplay"},
                 "value": {
@@ -179,7 +179,7 @@
             }
         },
         "practiceName": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "practiceName"},
                 "value": {
@@ -188,7 +188,7 @@
             }
         },
         "practiceLocation": {
-            "prototype": "ui/address.reel",
+            "prototype": "ui/address.mod",
             "values": {
                 "element": {"#": "practiceLocation"},
                 "data": {
@@ -197,7 +197,7 @@
             }
         },
         "directionsButton": {
-            "prototype": "montage/ui/button.reel",
+            "prototype": "montage/ui/button.mod",
             "values": {
                 "element": {"#": "directionsButton"},
                 "value": "Button with icon",
@@ -211,7 +211,7 @@
             ]
         },
         "fillOutFormButton": {
-            "prototype": "business-data.mod/ui/controls/button.reel",
+            "prototype": "business-data.mod/ui/controls/button.mod",
             "values": {
                 "element": {"#": "fillOutFormButton"},
                 "title": "Fill-Out Consent Form",
@@ -233,7 +233,7 @@
             ]
         },
         "chatButton": {
-            "prototype": "montage/ui/button.reel",
+            "prototype": "montage/ui/button.mod",
             "values": {
                 "element": {"#": "chatButton"},
                 "value": "Set Arrived",
@@ -257,7 +257,7 @@
             ]
         },
         "chat" : {
-            "prototype": "ui/chat/chat.reel",
+            "prototype": "ui/chat/chat.mod",
             "values": {
                 "element": {"#": "chat"},
                 "mainSender": {"=": "@owner.patientSender"},
@@ -290,43 +290,43 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="Appointment">
-        <div class="Appointment-rescheduled On" data-montage-id="AppointmentRescheduled">
-            ⚠️ Rescheduled to <span data-montage-id="rescheduledEventDate"></span>
+    <div data-mod-id="owner" class="Appointment">
+        <div class="Appointment-rescheduled On" data-mod-id="AppointmentRescheduled">
+            ⚠️ Rescheduled to <span data-mod-id="rescheduledEventDate"></span>
         </div>
-        <div class="Appointment-rescheduled OriginallyOn" data-montage-id="rescheduledEventReferrer">
-            Originally scheduled on <span data-montage-id="rescheduledEventReferrerDate"></span>
+        <div class="Appointment-rescheduled OriginallyOn" data-mod-id="rescheduledEventReferrer">
+            Originally scheduled on <span data-mod-id="rescheduledEventReferrerDate"></span>
         </div>
         <h2 class="Appointment-header">
-            <span data-montage-id="patientName" class="Appointment-patientName"></span>
-            <span data-montage-id="appointmentTimeHeader" class="Appointment-timeHeader"></span>
+            <span data-mod-id="patientName" class="Appointment-patientName"></span>
+            <span data-mod-id="appointmentTimeHeader" class="Appointment-timeHeader"></span>
         </h2>
         <ol class="Appointment-steps">
-            <li class="Appointment-step" data-montage-id="FirstAppointmentStep">
+            <li class="Appointment-step" data-mod-id="FirstAppointmentStep">
                 <h3 class="Appointment-stepTitle">
-                    <span data-montage-id="appointmentArrivalTitle">Get There </span>
-                    <span data-montage-id="appointmentArrivalTimeDisplay" class="Appointment-arrivalTime"></span>
-                    <img src="./directions-icon.svg" data-montage-id="directionsButton" height="46" width="46" class="Appointment-Button Directions-Button"/>
+                    <span data-mod-id="appointmentArrivalTitle">Get There </span>
+                    <span data-mod-id="appointmentArrivalTimeDisplay" class="Appointment-arrivalTime"></span>
+                    <img src="./directions-icon.svg" data-mod-id="directionsButton" height="46" width="46" class="Appointment-Button Directions-Button"/>
                 </h3>
-                <div data-montage-id="practiceName" class="Appointment-stepDetails"></div>
-                <div data-montage-id="practiceLocation" class="Appointment-stepDetails"></div>
-                <div data-montage-id="LocationChangedMessage" class="Appointment-rescheduledLocationChanged">⚠️ Note location change</div>
+                <div data-mod-id="practiceName" class="Appointment-stepDetails"></div>
+                <div data-mod-id="practiceLocation" class="Appointment-stepDetails"></div>
+                <div data-mod-id="LocationChangedMessage" class="Appointment-rescheduledLocationChanged">⚠️ Note location change</div>
             </li>
-            <li class="Appointment-step" data-montage-id="SecondAppointmentStep">
+            <li class="Appointment-step" data-mod-id="SecondAppointmentStep">
                 <h3 class="Appointment-stepTitle">
                     Fill Required Form(s)
-                    <div data-montage-id="fillOutFormButton" class="Appointment-Button Appointment-fillOutFormButton Button--naked"></div>
+                    <div data-mod-id="fillOutFormButton" class="Appointment-Button Appointment-fillOutFormButton Button--naked"></div>
                 </h3>
                 <div class="Appointment-stepDetails">
-                    Please fill out this form within <span data-montage-id="durationToFillFormsBeforeAppointmentDisplay"></span> of your appointment.
+                    Please fill out this form within <span data-mod-id="durationToFillFormsBeforeAppointmentDisplay"></span> of your appointment.
                 </div>
             </li>
             <li class="Appointment-step">
-                <h3 class="Appointment-stepTitle" data-montage-id="ThirdAppointmentStepHeader">
+                <h3 class="Appointment-stepTitle" data-mod-id="ThirdAppointmentStepHeader">
                     Check-in to Get In
-                    <div data-montage-id="chatButton" class="Appointment-Button Chat-Button"></div>
+                    <div data-mod-id="chatButton" class="Appointment-Button Chat-Button"></div>
                 </h3>
-                <div data-montage-id="chat" class="Appointment-chat"></div>
+                <div data-mod-id="chat" class="Appointment-chat"></div>
             </li>
         </ol>
     </div>

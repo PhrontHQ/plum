@@ -12,7 +12,7 @@
             }
         },
         "dateHeader": {
-            "prototype": "ui/date-header.reel",
+            "prototype": "ui/date-header.mod",
             "values": {
                 "element": {"#": "dateHeader"},
                 "data": {"<-": "@owner.dataController.selection.one()"}
@@ -20,7 +20,7 @@
             }
         },
         "appointmentFlow": {
-            "prototype": "montage/ui/flow.reel",
+            "prototype": "montage/ui/flow.mod",
             "values": {
                 "element": {"#": "appointmentFlow"},
                 "delegate": {"@": "owner"},
@@ -111,7 +111,7 @@
             }
         },
         "appointment": {
-            "prototype": "../appointment.reel",
+            "prototype": "../appointment.mod",
             "values": {
                 "element": {"#": "appointment"},
                 "data": {"<-": "@appointmentFlow:iteration.object"}
@@ -154,10 +154,10 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="Appointments">
-        <div data-montage-id="dateHeader" class="Appointments-dateHeader"></div>
-        <div data-montage-id="appointmentFlow" class="Appointments-flow">
-            <div data-montage-id="appointment" class="Appointments-image"></div>
+    <div data-mod-id="owner" class="Appointments">
+        <div data-mod-id="dateHeader" class="Appointments-dateHeader"></div>
+        <div data-mod-id="appointmentFlow" class="Appointments-flow">
+            <div data-mod-id="appointment" class="Appointments-image"></div>
         </div>
     </div>
 </body>

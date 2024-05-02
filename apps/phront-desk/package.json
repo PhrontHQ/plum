@@ -3,12 +3,8 @@
     "version": "0.1.0",
     "description": "application",
     "dependencies": {
-        "@capacitor/android": "^4.2.0",
-        "@capacitor/cli": "^4.2.0",
-        "@capacitor/core": "^4.2.0",
-        "@capacitor/ios": "^4.2.0",
         "launcher": "github:PhrontHQ/launcher#main",
-        "montage": "github:PhrontHQ/montage#montage-19",
+        "mod": "github:PhrontHQ/mod#mod",
         "geo.mod": "github:PhrontHQ/geo.mod#montage-19",
         "business-data.mod": "github:PhrontHQ/business-data.mod#main",
         "business-data-postgre-s-q-l.mod": "github:PhrontHQ/business-data-postgre-s-q-l.mod#main"
@@ -45,7 +41,7 @@
         "server"
     ],
     "bundle": [
-        "ui/main.reel",
+        "ui/main.mod",
         "data/main.mod/main.mjson"
     ],
     "shard": 1

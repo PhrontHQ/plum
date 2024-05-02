@@ -11,9 +11,9 @@ var Bindings = require("montage/core/frb/bindings");
 
 
 // Preload CallButton to be ready to be displayed on the chat when needed
-require("../call-button.reel");
-require("ui/chat/unattended-appointment-message.reel");
-require("ui/chat/call-practice-message.reel");
+require("../call-button.mod");
+require("ui/chat/unattended-appointment-message.mod");
+require("ui/chat/call-practice-message.mod");
 
 /*
     To get "Appointment time passed"
@@ -472,7 +472,7 @@ exports.Appointment = DataEditor.specialize({
                     context: {
                         organization: this.data.event.location.party
                     },
-                    outputComponentModuleId: "ui/chat/call-practice-message.reel"
+                    outputComponentModuleId: "ui/chat/call-practice-message.mod"
                 };
             } else {
                 return null;
@@ -503,7 +503,7 @@ exports.Appointment = DataEditor.specialize({
                         title: "Appointment Canceled",
                         organization: this.data.event.location.party
                     },
-                    outputComponentModuleId: "ui/chat/unattended-appointment-message.reel"
+                    outputComponentModuleId: "ui/chat/unattended-appointment-message.mod"
                 };
             } else {
                 return null;
@@ -522,7 +522,7 @@ exports.Appointment = DataEditor.specialize({
                         title: "Appointment has Expired",
                         organization: this.data.event.location.party
                     },
-                    outputComponentModuleId: "ui/chat/unattended-appointment-message.reel"
+                    outputComponentModuleId: "ui/chat/unattended-appointment-message.mod"
                 };
             } else {
                 return null;
@@ -546,7 +546,7 @@ exports.Appointment = DataEditor.specialize({
 
                     self.chatConversation.push(self.defaultCallPracticeMessage);
 
-                    // require.async("../chat/call-practice-message.reel").then(function (exports) {
+                    // require.async("../chat/call-practice-message.mod").then(function (exports) {
                     //     var callPracticeMessage = exports.montageObject ? montageObject : new exports.CallPracticeMessage();
                         
                     //     callPracticeMessage.data = self.data.event.location.party;
@@ -565,7 +565,7 @@ exports.Appointment = DataEditor.specialize({
                     //     text: "Ok, give us a call",
                     //     component: {
                     //         style: "display: inline-block; margin-right: -12px; vertical-align: middle; width: 46px; height: 46px;",
-                    //         prototype: "../../call-button.reel",
+                    //         prototype: "../../call-button.mod",
                     //         values: {
                     //             "phoneNumber": {"<-": "@owner.ownerComponent.ownerComponent.data.event.location.party.phoneNumbers.0.messagingChannel"} //data.event.location.party.phoneNumbers.messagingChannel.nationalNumber
                     //         }
@@ -950,7 +950,7 @@ exports.Appointment = DataEditor.specialize({
                     //             text: "Ok, give us a call",
                     //             component: {
                     //                 style: "display: inline-block; margin-right: -12px; vertical-align: middle; width: 46px; height: 46px;",
-                    //                 prototype: "../../call-button.reel",
+                    //                 prototype: "../../call-button.mod",
                     //                 values: {
                     //                     "phoneNumber": {"<-": "@owner.ownerComponent.ownerComponent.data.event.location.party.phoneNumbers.0.messagingChannel"} //data.event.location.party.phoneNumbers.messagingChannel.nationalNumber
                     //                 }

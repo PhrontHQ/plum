@@ -12,7 +12,7 @@
             }
         },
         "dateHeader": {
-            "prototype": "ui/date-header.reel",
+            "prototype": "ui/date-header.mod",
             "values": {
                 "element": {"#": "dateHeader"},
                 "data": {"<-": "@owner.dataController.selection.one()"}
@@ -20,14 +20,14 @@
             }
         },
         "lenghty": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "values": {
                 "element": {"#": "lengthy"},
                 "value": {"<-": "@owner.data.length"}
             }
         },
         "appointmentFlow": {
-            "prototype": "montage/ui/repetition.reel",
+            "prototype": "montage/ui/repetition.mod",
             "values": {
                 "element": {"#": "appointmentFlow"},
                 "delegate": {"@": "owner"},
@@ -136,7 +136,7 @@
             }
         },
         "appointment": {
-            "prototype": "../appointment.reel",
+            "prototype": "../appointment.mod",
             "values": {
                 "element": {"#": "appointment"},
                 "data": {"<-": "@appointmentFlow:iteration.object"}
