@@ -1,17 +1,17 @@
 {
   "blueprint_abstractimage_reference": {
-    "prototype": "montage/core/meta/blueprint-reference",
+    "prototype": "mod/core/meta/blueprint-reference",
     "values": {
       "valueReference": {
         "blueprintName": "AbstractImage",
         "blueprintModule": {
-          "%": "montage/ui/base/abstract-image.meta"
+          "%": "mod/ui/base/abstract-image.meta"
         }
       }
     }
   },
   "blueprint_unnamed_src": {
-    "prototype": "montage/core/meta/property-blueprint",
+    "prototype": "mod/core/meta/property-blueprint",
     "values": {
       "name": "src",
       "blueprint": {"@": "root"},
@@ -19,7 +19,7 @@
     }
   },
   "root": {
-    "prototype": "montage/core/meta/module-blueprint",
+    "prototype": "mod/core/meta/module-blueprint",
     "values": {
       "name": null,
       "parent": {"@": "blueprint_abstractimage_reference"},

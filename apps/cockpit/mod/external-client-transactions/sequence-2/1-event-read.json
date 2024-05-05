@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "originId == $.originId && parent != null",
       "parameters": {
@@ -9,7 +9,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "B3340B26-3E35-4365-B5F7-F4A9037DE075",
       "type": "read",

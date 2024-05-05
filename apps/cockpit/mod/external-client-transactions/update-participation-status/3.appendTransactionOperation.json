@@ -1,6 +1,6 @@
 {
   "criteria218": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "originId == $.originId && parent != null",
       "parameters": {
@@ -9,7 +9,7 @@
     }
   },
   "dataoperation": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "B5820FBF-A7A6-4CAD-857A-E5A0A8B0AC29",
       "type": "updateOperation",
@@ -25,7 +25,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "BA3A6F59-ADC6-44E6-8600-675645B8DC90",
       "type": "appendTransactionOperation",

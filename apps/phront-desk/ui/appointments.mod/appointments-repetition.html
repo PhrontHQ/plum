@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="appointments.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
             "values": {
@@ -20,14 +20,14 @@
             }
         },
         "lenghty": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "lengthy"},
                 "value": {"<-": "@owner.data.length"}
             }
         },
         "appointmentFlow": {
-            "prototype": "montage/ui/repetition.mod",
+            "prototype": "mod/ui/repetition.mod",
             "values": {
                 "element": {"#": "appointmentFlow"},
                 "delegate": {"@": "owner"},
@@ -144,7 +144,7 @@
         },
 
         "keyUp": {
-            "prototype": "montage/composer/key-composer",
+            "prototype": "mod/composer/key-composer",
             "values": {
                 "keys": "up",
                 "identifier": "previous",
@@ -152,7 +152,7 @@
             }
         },
         "keyDown": {
-            "prototype": "montage/composer/key-composer",
+            "prototype": "mod/composer/key-composer",
             "values": {
                 "keys": "down",
                 "identifier": "next",
@@ -160,7 +160,7 @@
             }
         },
         "keyLeft": {
-            "prototype": "montage/composer/key-composer",
+            "prototype": "mod/composer/key-composer",
             "values": {
                 "keys": "left",
                 "identifier": "previous",
@@ -168,7 +168,7 @@
             }
         },
         "keyRight": {
-            "prototype": "montage/composer/key-composer",
+            "prototype": "mod/composer/key-composer",
             "values": {
                 "keys": "right",
                 "identifier": "next",
@@ -179,11 +179,11 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="Appointments">
-        <div data-montage-id="dateHeader" class="Appointments-dateHeader"></div>
-        <div data-montage-id="lengthy"></div>
-        <div data-montage-id="appointmentFlow" class="Appointments-flow">
-            <div data-montage-id="appointment" class="Appointments-image"></div>
+    <div data-mod-id="owner" class="Appointments">
+        <div data-mod-id="dateHeader" class="Appointments-dateHeader"></div>
+        <div data-mod-id="lengthy"></div>
+        <div data-mod-id="appointmentFlow" class="Appointments-flow">
+            <div data-mod-id="appointment" class="Appointments-image"></div>
         </div>
     </div>
 </body>

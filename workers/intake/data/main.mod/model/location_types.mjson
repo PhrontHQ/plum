@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/core/meta/object-descriptor",
+        "prototype": "mod/core/meta/object-descriptor",
         "values": {
             "name": "location_types",
             "propertyDescriptors": [
@@ -27,28 +27,28 @@
         }
     },
     "type_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_id",
             "valueType": "string"
         }
     },
     "practice_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "practice_id",
             "valueType": "string"
         }
     },
     "type_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_label",
             "valueType": "string"
         }
     },
     "permanent_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "permanent_label",
             "valueType": "string",
@@ -56,7 +56,7 @@
         }
     },
     "short_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "short_label",
             "valueType": "string",
@@ -64,7 +64,7 @@
         }
     },
     "is_visible": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_visible",
             "valueType": "boolean",
@@ -72,7 +72,7 @@
         }
     },
     "street_address": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "street_address",
             "valueType": "string",
@@ -80,7 +80,7 @@
         }
     },
     "city": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "city",
             "valueType": "string",
@@ -88,7 +88,7 @@
         }
     },
     "state_province": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "state_province",
             "valueType": "string",
@@ -96,7 +96,7 @@
         }
     },
     "post_code": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "post_code",
             "valueType": "string",
@@ -104,7 +104,7 @@
         }
     },
     "country_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "country_object_id",
             "valueType": "string",
@@ -112,7 +112,7 @@
         }
     },
     "phone_country_code": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_country_code",
             "valueType": "string",
@@ -120,7 +120,7 @@
         }
     },
     "phone": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone",
             "valueType": "string",
@@ -128,7 +128,7 @@
         }
     },
     "email": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "email",
             "valueType": "string",
@@ -136,7 +136,7 @@
         }
     },
     "website": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "website",
             "valueType": "string",
@@ -144,7 +144,7 @@
         }
     },
     "use_own_mailing_address": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "use_own_mailing_address",
             "valueType": "boolean",
@@ -152,7 +152,7 @@
         }
     },
     "timezone_name": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "timezone_name",
             "valueType": "string",
@@ -160,7 +160,7 @@
         }
     },
     "created_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "created_date",
             "valueType": "date",
@@ -168,7 +168,7 @@
         }
     },
     "last_modified_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "last_modified_date",
             "valueType": "date",

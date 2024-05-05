@@ -1,12 +1,12 @@
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "application.controllingOrganization.originId == $originId",
       "parameters": {
@@ -18,7 +18,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "9980D7CF-F1C8-43E6-B393-B55AA0CA0966",
       "type": "readOperation",

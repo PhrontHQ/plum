@@ -9,6 +9,6 @@
                 ]
             }
         },
-        "prototype": "montage/data/service/data-operation"
+        "prototype": "mod/data/service/data-operation"
     }
 }

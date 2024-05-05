@@ -18,8 +18,8 @@
   "dependencies": {
     "commander": "^6.1.0",
     "isomorphic-ws": "^4.0.1",
-    "montage": "github:PhrontHQ/montage#montage-19",
-    "montage-geo": "github:PhrontHQ/montage-geo.git#montage-19",
+    "mod": "github:PhrontHQ/mod#montage-19",
+    "mod-geo": "github:PhrontHQ/mod-geo.git#montage-19",
     "business-data.mod": "github:phrontHQ/business-data.mod#main",
     "ws": "^8.4.2"
   },

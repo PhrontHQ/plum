@@ -20,23 +20,23 @@ package:
       - '!builds/**'
       - '!dev/**'
       - '!.vscode/**'
-      - '!node_modules/montage/demo/**'
-      - '!node_modules/montage/.git/**'
-      - '!node_modules/montage/ui/**'
-      - '!node_modules/montage/test/**'
-      - '!node_modules/montage/testing/**'
-      - '!node_modules/montage/tools/**'
-      - '!node_modules/montage/node_modules/**'
-      - '!node_modules/montage/.vscode/**'
+      - '!node_modules/mod/demo/**'
+      - '!node_modules/mod/.git/**'
+      - '!node_modules/mod/ui/**'
+      - '!node_modules/mod/test/**'
+      - '!node_modules/mod/testing/**'
+      - '!node_modules/mod/tools/**'
+      - '!node_modules/mod/node_modules/**'
+      - '!node_modules/mod/.vscode/**'
       - '!node_modules/phront/dev/**'
       - '!node_modules/phront/test/**'
       - '!node_modules/phront/sandbox/**'
       - '!node_modules/phront/node_modules/**'
       - '!node_modules/phront/.git/**'
       - '!node_modules/phront/.vscode/**'
-      - '!node_modules/montage-geo/ui/**'
-      - '!node_modules/montage-geo/test/**'
-      - '!node_modules/montage-geo/.git/**'
+      - '!node_modules/mod-geo/ui/**'
+      - '!node_modules/mod-geo/test/**'
+      - '!node_modules/mod-geo/.git/**'
       - '!node_modules/local-websocket-server/**'
       - '!node_modules/serverless/**'
       - '!node_modules/serverless-offline/**'
@@ -76,17 +76,17 @@ package:
 
       # - node_modules/@aws-sdk/**/dist-es/**
       # - node_modules/@aws-sdk/**/dist-types/**
-      - node_modules/montage/.git/**
-      - node_modules/montage/.vscode/**
-      - node_modules/montage/demo/**
-      - node_modules/montage/ui/**
-      - node_modules/montage/test/**
-      - node_modules/montage/testing/**
-      - node_modules/montage/tools/**
-      # - node_modules/montage/window-loader/**
-      - node_modules/montage-geo/.git/**
-      - node_modules/montage-geo/test/**
-      - node_modules/montage-geo/ui/**
+      - node_modules/mod/.git/**
+      - node_modules/mod/.vscode/**
+      - node_modules/mod/demo/**
+      - node_modules/mod/ui/**
+      - node_modules/mod/test/**
+      - node_modules/mod/testing/**
+      - node_modules/mod/tools/**
+      # - node_modules/mod/window-loader/**
+      - node_modules/mod-geo/.git/**
+      - node_modules/mod-geo/test/**
+      - node_modules/mod-geo/ui/**
       - node_modules/phront/.git/**
       - node_modules/phront/.vscode/**
       - node_modules/phront/dev/**
@@ -157,7 +157,7 @@ custom:
 
   distill:
     include:
-      - 'node_modules/montage/core/date/time-zone-data'
+      - 'node_modules/mod/core/date/time-zone-data'
       - 'node_modules/uuid'
       # data/main.mod/raw-data is missed by default, so making sure it's taken care off before we figure out why it's not picked up in the first place
       - 'data/main.mod/raw-data'
@@ -165,8 +165,8 @@ custom:
 
     minifyPatterns:
       - 'node_modules/**'
-      - '!node_modules/montage/**'
-      - '!node_modules/montage-geo/**'
+      - '!node_modules/mod/**'
+      - '!node_modules/mod-geo/**'
       - '!node_modules/phront/**'
       # - '!*/**'
 

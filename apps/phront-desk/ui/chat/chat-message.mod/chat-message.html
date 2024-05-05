@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="chat-message.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
             "values": {
@@ -15,7 +15,7 @@
             }
         },
         "messageComponentSlot": {
-            "prototype": "montage/ui/slot.mod",
+            "prototype": "mod/ui/slot.mod",
             "values": {
                 "element": {"#": "messageComponentSlot"},
                 "content": {"<-": "@owner.data.outputComponent"}
@@ -25,8 +25,8 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="ChatMessage">
-        <div data-montage-id="messageComponentSlot" class="ChatMessage-componentSlot">
+    <div data-mod-id="owner" class="ChatMessage">
+        <div data-mod-id="messageComponentSlot" class="ChatMessage-componentSlot">
         </div>
     </div>
 </body>

@@ -1,12 +1,12 @@
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria7": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -18,7 +18,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "F4EDA64A-5981-4E7F-81BE-A1171CC9DEE4",
       "type": "read",

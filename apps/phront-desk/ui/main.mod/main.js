@@ -1,7 +1,7 @@
-var Component = require("montage/ui/component").Component,
-//var DataEditor = require("montage/ui/data-editor").DataEditor,
-    Promise = require('montage/core/promise').Promise,
-    defaultLocalizer = require("montage/core/localizer").defaultLocalizer,
+var Component = require("mod/ui/component").Component,
+//var DataEditor = require("mod/ui/data-editor").DataEditor,
+    Promise = require('mod/core/promise').Promise,
+    defaultLocalizer = require("mod/core/localizer").defaultLocalizer,
     CacheManager = require('core/cache-manager.js').CacheManager,
     Date = require("global").Date;
 

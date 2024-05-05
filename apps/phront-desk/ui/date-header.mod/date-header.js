@@ -1,8 +1,8 @@
 /**
  * @module ui/categories.mod
- * @requires montage/ui/component
+ * @requires mod/ui/component
  */
-var DataEditor = require("montage/ui/data-editor").DataEditor;
+var DataEditor = require("mod/ui/data-editor").DataEditor;
 
 /**
  * @class Categories

@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/core/meta/object-descriptor",
+        "prototype": "mod/core/meta/object-descriptor",
         "values": {
             "name": "appointment_status_types",
             "propertyDescriptors": [
@@ -12,21 +12,21 @@
         }
     },
     "type_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_id",
             "valueType": "string"
         }
     },
     "type_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_label",
             "valueType": "string"
         }
     },
     "permanent_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "permanent_label",
             "valueType": "string",
@@ -34,7 +34,7 @@
         }
     },
     "is_visible": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_visible",
             "valueType": "boolean",

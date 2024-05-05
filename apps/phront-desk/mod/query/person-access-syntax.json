@@ -2,7 +2,7 @@
 /*
 
     "matchServiceEngagementIdentityCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "events.filter{originId == $.serviceEngagementOriginId}",
             "parameters": {
@@ -12,7 +12,7 @@
     },
 
     "matchServiceEngagementIdentityCriteriaRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "criteria": {

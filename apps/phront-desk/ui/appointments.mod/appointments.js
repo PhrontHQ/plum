@@ -1,11 +1,11 @@
-var DataEditor = require("montage/ui/data-editor").DataEditor,
-    Criteria = require("montage/core/criteria").Criteria,
-    DataQuery = require("montage/data/model/data-query").DataQuery,
-    DataStream = require("montage/data/service/data-stream").DataStream,
-    RangeController = require("montage/core/range-controller").RangeController,
+var DataEditor = require("mod/ui/data-editor").DataEditor,
+    Criteria = require("mod/core/criteria").Criteria,
+    DataQuery = require("mod/data/model/data-query").DataQuery,
+    DataStream = require("mod/data/service/data-stream").DataStream,
+    RangeController = require("mod/core/range-controller").RangeController,
     //ServiceEngagement = require("business-data.mod/data/main.mod/model/service-engagement").ServiceEngagement,
     ServiceEngagement = require("business-data.mod/data/main.mod/model/service-engagement.mjson").montageObject,
-    KeyComposer = require("montage/composer/key-composer").KeyComposer;
+    KeyComposer = require("mod/composer/key-composer").KeyComposer;
 
 exports.Appointments = DataEditor.specialize({
 

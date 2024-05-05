@@ -1,6 +1,6 @@
 {
   "criteria2": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "originId == $.originId && parent != null && respondentQuestionnaires.filter{questionnaire.name == $.questionnaireName && respondentAnswers.filter{questionnaireQuestion.question.isOpenEnded == false && answers.filter{booleanValue == true}}}",
       "parameters": {
@@ -10,7 +10,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "09B2C062-62E1-4379-8C9B-B7F0EEA7021B",
       "type": "read",

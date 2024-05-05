@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/data-access-policy",
+        "prototype": "mod/data/service/data-access-policy",
         "values": {
             "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
         }
@@ -25,7 +25,7 @@
     },
 
     "matchOrganizationIdentityCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "secondPerson.supplierRelationships.filter{supplier.id == $.organizationId} || firstPerson.supplierRelationships.filter{supplier.id == $.organizationId}",
             "parameters": {
@@ -35,7 +35,7 @@
     },
 
     "matchOrganizationIdentityCriteriaRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "criteria": {
@@ -46,7 +46,7 @@
     },
 
     "matchOrganizationIdentityParametersRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "@matchOrganizationIdentityCriteria.parameters.organizationId": {
@@ -57,7 +57,7 @@
     },
 
     "isAuthorizedRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "isAuthorized": {

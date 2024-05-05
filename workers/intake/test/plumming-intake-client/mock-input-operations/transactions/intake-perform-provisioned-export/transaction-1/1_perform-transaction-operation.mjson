@@ -6,7 +6,7 @@
         "practice_id" : 1000
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "root" : {
     "values" : {
@@ -26,7 +26,7 @@
       "type" : "performTransactionOperation",
       "targetModuleId" : null
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "dataOperation0" : {
     "values" : {
@@ -51,6 +51,6 @@
         "@" : "criteria0"
       }
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   }
 }

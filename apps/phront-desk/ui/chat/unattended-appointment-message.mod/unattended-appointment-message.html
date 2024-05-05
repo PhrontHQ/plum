@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="unattended-appointment-message.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
             "values": {
@@ -11,14 +11,14 @@
             }
         },
         "title": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "title"},
                 "value": {"<-": "@owner.data.context.title"}
             }
         },
         "text": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "text"},
                 "value": {"<-": "@owner.data.text"}
@@ -42,13 +42,13 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="UnattendedAppointmentMessage">
+    <div data-mod-id="owner" class="UnattendedAppointmentMessage">
         <div class="UnattendedAppointmentMessage-header">
-            <img src="./unattended-appointment-message-icon.svg" data-montage-id="directionsButton" height="32" width="32"/>
-            <span data-montage-id="title">Message Title</span>
+            <img src="./unattended-appointment-message-icon.svg" data-mod-id="directionsButton" height="32" width="32"/>
+            <span data-mod-id="title">Message Title</span>
         </div>
-        <span data-montage-id="text" class="ChatMessage-text montage-Text">Ok, give us a call</span>
-        <div data-montage-id="CallButton" class="ChatMessage-component"></div>
+        <span data-mod-id="text" class="ChatMessage-text mod-Text">Ok, give us a call</span>
+        <div data-mod-id="CallButton" class="ChatMessage-component"></div>
     </div>
 </body>
 </html>

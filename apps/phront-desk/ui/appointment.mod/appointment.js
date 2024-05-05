@@ -1,13 +1,13 @@
-var DataEditor = require("montage/ui/data-editor").DataEditor,
-    Criteria = require("montage/core/criteria").Criteria,
-    DataQuery = require("montage/data/model/data-query").DataQuery,
+var DataEditor = require("mod/ui/data-editor").DataEditor,
+    Criteria = require("mod/core/criteria").Criteria,
+    DataQuery = require("mod/data/model/data-query").DataQuery,
     PhrontEvent = require("business-data.mod/data/main.mod/model/event").Event,
-    currentEnvironment = require("montage/core/environment").currentEnvironment,
+    currentEnvironment = require("mod/core/environment").currentEnvironment,
     Sender = require("ui/chat/sender").Sender,
-    Range = require("montage/core/range").Range,
-    Promise = require("montage/core/promise").Promise;
+    Range = require("mod/core/range").Range,
+    Promise = require("mod/core/promise").Promise;
 
-var Bindings = require("montage/core/frb/bindings");
+var Bindings = require("mod/core/frb/bindings");
 
 
 // Preload CallButton to be ready to be displayed on the chat when needed
@@ -777,7 +777,7 @@ exports.Appointment = DataEditor.specialize({
         The delay we use in setInterval should be taking into account in which phase we are and what could make it change.
         - For filling the form, it's known and set. If now is before this.patientMandatoryFormFillingTimeRange, then the next time we need to make an upate is on this.patientMandatoryFormFillingTimeRange.begin. So we should start then.
 
-        Ideas to improve as we refactor it in montage:
+        Ideas to improve as we refactor it in mod:
         - better handle precision. If only minute is needed, set a timeout to the reminder of the next minute to come, then re-evalute and re-do a nother timeout, not an intervak
 
         - pause the watchTimeIfNeeded() when the page is not visible and start it again when it becomes visible again.

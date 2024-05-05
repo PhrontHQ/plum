@@ -1,4 +1,4 @@
-var Promise = require("montage/core/promise").Promise;
+var Promise = require("mod/core/promise").Promise;
 
 function parseURI(url) {
 

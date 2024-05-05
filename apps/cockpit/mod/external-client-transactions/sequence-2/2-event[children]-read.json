@@ -1,13 +1,13 @@
 {
   "criteria2": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "parentId == $",
       "parameters": "45e1ac2c-54e9-4736-ab27-0df75b6b323c"
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "02D69CDD-4409-49E2-8BC4-F03B90377550",
       "type": "read",

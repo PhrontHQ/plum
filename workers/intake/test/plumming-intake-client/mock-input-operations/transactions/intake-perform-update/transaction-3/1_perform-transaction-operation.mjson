@@ -6,7 +6,7 @@
         "type_id" : "b1341447-b19e-4278-8bba-21e5bbbaea94"
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "dataOperation23" : {
     "values" : {
@@ -44,7 +44,7 @@
       "type" : "mergeOperation",
       "referrerId" : "DEE58048-935C-43A2-B5F3-F7654999703C"
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "dataOperation24" : {
     "values" : {
@@ -82,7 +82,7 @@
       "type" : "mergeOperation",
       "referrerId" : "DEE58048-935C-43A2-B5F3-F7654999703C"
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "criteria23" : {
     "values" : {
@@ -91,7 +91,7 @@
         "type_id" : "dfb8990b-c408-4323-a3b5-b39a7ae925b6"
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "root" : {
     "values" : {
@@ -114,6 +114,6 @@
       "type" : "performTransactionOperation",
       "targetModuleId" : null
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   }
 }

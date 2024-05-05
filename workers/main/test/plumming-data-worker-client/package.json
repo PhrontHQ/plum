@@ -18,9 +18,9 @@
  "scripts": {},
 "mappings": {
   "plumming-intake": "../..",
-  "montage": "../../node_modules/montage",
-  "montage-geo": "../../../node_modules/montage-geo",
-  "montage-testing": "../../../node_modules/montage-testing",
+  "mod": "../../node_modules/mod",
+  "mod-geo": "../../../node_modules/mod-geo",
+  "mod-testing": "../../../node_modules/mod-testing",
   "object-sizeof": "../../../node_modules/object-sizeof",
   "business-data.mod": "./../node_modules/business-data.mod",
   "tiny-worker": "../../../node_modules/tiny-worker",

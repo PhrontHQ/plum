@@ -1,7 +1,7 @@
 
 // "use strict";
-var Component = require("montage/ui/component").Component,
-    DataEditor = require("montage/ui/data-editor").DataEditor;
+var Component = require("mod/ui/component").Component,
+    DataEditor = require("mod/ui/data-editor").DataEditor;
 
 
 

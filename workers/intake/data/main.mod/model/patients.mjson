@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/core/meta/object-descriptor",
+        "prototype": "mod/core/meta/object-descriptor",
         "values": {
             "name": "patients",
             "propertyDescriptors": [
@@ -44,21 +44,21 @@
         }
     },
     "person_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "person_id",
             "valueType": "string"
         }
     },
     "practice_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "practice_id",
             "valueType": "string"
         }
     },
     "created_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "created_date",
             "valueType": "date",
@@ -66,7 +66,7 @@
         }
     },
     "last_modified_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "last_modified_date",
             "valueType": "date",
@@ -74,7 +74,7 @@
         }
     },
     "archived_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "archived_flag",
             "valueType": "boolean",
@@ -82,7 +82,7 @@
         }
     },
     "title": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "title",
             "valueType": "string",
@@ -90,7 +90,7 @@
         }
     },
     "first_name": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "first_name",
             "valueType": "string",
@@ -98,7 +98,7 @@
         }
     },
     "middle_initial": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "middle_initial",
             "valueType": "string",
@@ -106,7 +106,7 @@
         }
     },
     "last_name": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "last_name",
             "valueType": "string",
@@ -114,7 +114,7 @@
         }
     },
     "street_address": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "street_address",
             "valueType": "string",
@@ -122,7 +122,7 @@
         }
     },
     "city": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "city",
             "valueType": "string",
@@ -130,7 +130,7 @@
         }
     },
     "state_province": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "state_province",
             "valueType": "string",
@@ -138,7 +138,7 @@
         }
     },
     "post_code": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "post_code",
             "valueType": "string",
@@ -146,7 +146,7 @@
         }
     },
     "country_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "country_object_id",
             "valueType": "string",
@@ -154,7 +154,7 @@
         }
     },
     "phone_label_a_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_label_a_object_id",
             "valueType": "string",
@@ -162,7 +162,7 @@
         }
     },
     "phone_country_code_a": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_country_code_a",
             "valueType": "string",
@@ -170,7 +170,7 @@
         }
     },
     "phone_a": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_a",
             "valueType": "string",
@@ -178,7 +178,7 @@
         }
     },
     "phone_label_b_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_label_b_object_id",
             "valueType": "string",
@@ -186,7 +186,7 @@
         }
     },
     "phone_country_code_b": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_country_code_b",
             "valueType": "string",
@@ -194,7 +194,7 @@
         }
     },
     "phone_b": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_b",
             "valueType": "string",
@@ -202,7 +202,7 @@
         }
     },    
     "email": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "email",
             "valueType": "string",
@@ -210,7 +210,7 @@
         }
     },
     "gender_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "gender_object_id",
             "valueType": "string",
@@ -218,7 +218,7 @@
         }
     },
     "entry_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "entry_date",
             "valueType": "date",
@@ -226,7 +226,7 @@
         }
     },
     "account_holder_a_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "account_holder_a_object_id",
             "valueType": "string",
@@ -234,7 +234,7 @@
         }
     },
     "account_relationship_a_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "account_relationship_a_object_id",
             "valueType": "string",
@@ -242,7 +242,7 @@
         }
     },
     "account_holder_b_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "account_holder_b_object_id",
             "valueType": "string",
@@ -250,7 +250,7 @@
         }
     },
     "account_relationship_b_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "account_relationship_b_object_id",
             "valueType": "string",
@@ -258,7 +258,7 @@
         }
     },
     "orthodontist_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "orthodontist_object_id",
             "valueType": "string",
@@ -266,7 +266,7 @@
         }
     },
     "treatment_coordinator_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "treatment_coordinator_object_id",
             "valueType": "string",
@@ -274,7 +274,7 @@
         }
     },
     "clinical_assistant_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "clinical_assistant_object_id",
             "valueType": "string",
@@ -282,7 +282,7 @@
         }
     },
     "location_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "location_object_id",
             "valueType": "string",
@@ -290,7 +290,7 @@
         }
     },
     "language_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "language_object_id",
             "valueType": "string",
@@ -298,7 +298,7 @@
         }
     },
     "hidden_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "hidden_flag",
             "valueType": "boolean",
@@ -306,7 +306,7 @@
         }
     },
     "wants_phone_reminders_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "wants_phone_reminders_flag",
             "valueType": "boolean",
@@ -314,7 +314,7 @@
         }
     },
     "wants_email_reminders_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "wants_email_reminders_flag",
             "valueType": "boolean",
@@ -322,7 +322,7 @@
         }
     },
     "wants_sms_reminders_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "wants_sms_reminders_flag",
             "valueType": "boolean",

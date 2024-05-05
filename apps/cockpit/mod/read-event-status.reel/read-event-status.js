@@ -1,8 +1,8 @@
-var DataEditor = require("montage/ui/data-editor").DataEditor,
-    Criteria = require("montage/core/criteria").Criteria,
-    DataQuery = require("montage/data/model/data-query").DataQuery,
-    DataStream = require("montage/data/service/data-stream").DataStream,
-    RangeController = require("montage/core/range-controller").RangeController,
+var DataEditor = require("mod/ui/data-editor").DataEditor,
+    Criteria = require("mod/core/criteria").Criteria,
+    DataQuery = require("mod/data/model/data-query").DataQuery,
+    DataStream = require("mod/data/service/data-stream").DataStream,
+    RangeController = require("mod/core/range-controller").RangeController,
     ServiceEngagement = require("business-data.mod/data/main.mod/model/service-engagement").ServiceEngagement,
     PhrontEvent = require("business-data.mod/data/main.mod/model/event").Event,
     PostalAddress = require("business-data.mod/data/main.mod/model/messaging-channel/postal-address").PostalAddress,
@@ -14,7 +14,7 @@ var DataEditor = require("montage/ui/data-editor").DataEditor,
     ExpiringAssetDownload = require("aws.mod/data/main.mod/model/s3/expiring-asset-download").ExpiringAssetDownload,
     ExpiringObjectDownload = require("aws.mod/data/main.mod/model/s3/expiring-object-download").ExpiringObjectDownload,
 
-    KeyComposer = require("montage/composer/key-composer").KeyComposer;
+    KeyComposer = require("mod/composer/key-composer").KeyComposer;
 
 exports.ReadEventStatus = DataEditor.specialize({
 

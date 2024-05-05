@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/core/meta/object-descriptor",
+        "prototype": "mod/core/meta/object-descriptor",
         "values": {
             "name": "country_types",
             "propertyDescriptors": [
@@ -18,28 +18,28 @@
         }
     },
     "type_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_id",
             "valueType": "string"
         }
     },
     "practice_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "practice_id",
             "valueType": "string"
         }
     },
     "type_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_label",
             "valueType": "string"
         }
     },
     "permanent_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "permanent_label",
             "valueType": "string",
@@ -47,7 +47,7 @@
         }
     },
     "is_visible": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_visible",
             "valueType": "boolean",
@@ -55,7 +55,7 @@
         }
     },
     "phone_format": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_format",
             "valueType": "string",
@@ -63,7 +63,7 @@
         }
     },
     "phone_country_code": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "phone_country_code",
             "valueType": "string",
@@ -71,7 +71,7 @@
         }
     },
     "iso_country_code": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "iso_country_code",
             "valueType": "string",
@@ -79,7 +79,7 @@
         }
     },
     "address_format": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "address_format",
             "valueType": "string",
@@ -87,7 +87,7 @@
         }
     },
     "ssn_name": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "ssn_name",
             "valueType": "string",

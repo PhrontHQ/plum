@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="supplemental-health-respondent-questionnaire-editor.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
   
         "owner": {
@@ -13,7 +13,7 @@
         },
 
         "questionnaireTitle": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "questionnaireTitle"},
                 "value": {
@@ -22,7 +22,7 @@
             }
         },
         "questionnaireDescription": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "questionnaireDescription"},
                 "value": {
@@ -33,11 +33,11 @@
             }
         },
         "newLineToParagraphConverter": {
-            "prototype": "montage/core/converter/new-line-to-paragraph-converter"
+            "prototype": "mod/core/converter/new-line-to-paragraph-converter"
         },
 
         "responsiblePartyQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "responsiblePartyQuestionLabel"},
                 "value": {
@@ -47,7 +47,7 @@
         },
 
         "covidQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "covidQuestionLabel"},
                 "value": {
@@ -57,7 +57,7 @@
         },
 
         "lastPositiveCovidDateQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "lastPositiveCovidDateQuestionLabel"},
                 "value": {
@@ -68,7 +68,7 @@
 
 
         "lastCovidDate": {
-            "prototype": "montage/ui/date-field.mod",
+            "prototype": "mod/ui/date-field.mod",
             "values": {
                 "element": {"#": "lastCovidDate"},
                 "value": {"<->": "@owner.lastCovidDate"}
@@ -76,7 +76,7 @@
         },
 
         "symptomGroupQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "symptomGroupQuestionLabel"},
                 "value": {
@@ -85,7 +85,7 @@
             }
         },
         "feverQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "feverQuestionLabel"},
                 "value": {
@@ -94,7 +94,7 @@
             }
         },
         "coughQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "coughQuestionLabel"},
                 "value": {
@@ -103,7 +103,7 @@
             }
         },
         "breathingIssuesQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "breathingIssuesQuestionLabel"},
                 "value": {
@@ -112,7 +112,7 @@
             }
         },
         "chestPainQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "chestPainQuestionLabel"},
                 "value": {
@@ -121,7 +121,7 @@
             }
         },
         "acceptsRescheduleIfSickQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "acceptsRescheduleIfSickQuestionLabel"},
                 "value": {
@@ -157,7 +157,7 @@
     -->
 </head>
 <body>
-    <div data-montage-id="owner" class="SupplementalHealthQuestionnaireEditor container paper" id="page2">
+    <div data-mod-id="owner" class="SupplementalHealthQuestionnaireEditor container paper" id="page2">
         <form method="post" enctype="multipart/form-data" name="myform">
             <div style="opacity: 0; visibility: hidden; height: 0;">
                 <input name="appointment_guid" value="" type="text">
@@ -170,9 +170,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <p>
-                        <h3 data-montage-id="questionnaireTitle">AAOIC SUPPLEMENTAL HEALTH QUESTIONNAIRE!</h3>
+                        <h3 data-mod-id="questionnaireTitle">AAOIC SUPPLEMENTAL HEALTH QUESTIONNAIRE!</h3>
                     </p>
-                    <p data-montage-id="questionnaireDescription"> If you have been exposed to a communicable disease, you may spread the disease to the
+                    <p data-mod-id="questionnaireDescription"> If you have been exposed to a communicable disease, you may spread the disease to the
                         orthodontist, orthodontic staff, or other patients/parents in the practice. Therefore, prior to
                         each appointment, we will be asking the following questions to reduce the chances of
                         transmission:!</p>
@@ -180,14 +180,14 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label data-montage-id="responsiblePartyQuestionLabel">Responsible Party!</label>
+                    <label data-mod-id="responsiblePartyQuestionLabel">Responsible Party!</label>
                     <input type="text" id="responsible_party" name="responsible_party" value="" required />
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-xs-12">
-                    <p data-montage-id="covidQuestionLabel">Have you, your child, or others accompanying you to today’s appointment or other recent
+                    <p data-mod-id="covidQuestionLabel">Have you, your child, or others accompanying you to today’s appointment or other recent
                         acquaintances tested positive for or been diagnosed as having COVID-19 or any other communicable
                         disease? !</p>
                 </div>
@@ -203,8 +203,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label data-montage-id="lastPositiveCovidDateQuestionLabel">If yes, when? Date!</label>
-                    <input type="date" data-montage-id="lastCovidDate" name="last_covid_date" class="datepicker" value="" />
+                    <label data-mod-id="lastPositiveCovidDateQuestionLabel">If yes, when? Date!</label>
+                    <input type="date" data-mod-id="lastCovidDate" name="last_covid_date" class="datepicker" value="" />
                 </div>
 
             </div>
@@ -212,14 +212,14 @@
             <div class="row">   
                 <div class="col-xs-12">
 
-                    <p data-montage-id="symptomGroupQuestionLabel">Do you, your child, or others accompanying you to today’s appointment or other recent
+                    <p data-mod-id="symptomGroupQuestionLabel">Do you, your child, or others accompanying you to today’s appointment or other recent
                         acquaintances have: !</p>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
-                    <p data-montage-id="feverQuestionLabel">• A Fever (defined as above 99.6 degrees) !</p>
+                    <p data-mod-id="feverQuestionLabel">• A Fever (defined as above 99.6 degrees) !</p>
                     <label for="fever">Yes</label>
                     <input type="radio" name="fever" value="yes" required>
                     <br>
@@ -227,7 +227,7 @@
                     <input type="radio" name="fever" value="no">
                 </div>
                 <div class="col-sm-6 col-xs-12">
-                    <p data-montage-id="coughQuestionLabel">• A Cough?! </p>
+                    <p data-mod-id="coughQuestionLabel">• A Cough?! </p>
                     <label for="cough">Yes</label>
                     <input type="radio" name="cough" value="yes" required>
                     <br>
@@ -239,7 +239,7 @@
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
-                    <p data-montage-id="breathingIssuesQuestionLabel">• Shortness of Breath and/or Trouble Breathing?!</p>
+                    <p data-mod-id="breathingIssuesQuestionLabel">• Shortness of Breath and/or Trouble Breathing?!</p>
                     <label for="breath_issues">Yes</label>
                     <input type="radio" name="breath_issues" value="yes" required>
                     <br>
@@ -247,7 +247,7 @@
                     <input type="radio" name="breath_issues" value="no">
                 </div>
                 <div class="col-sm-6 col-xs-12">
-                    <p data-montage-id="chestPainQuestionLabel">• Persistent Pain, Pressure, or Tightness in the Chest?!</p>
+                    <p data-mod-id="chestPainQuestionLabel">• Persistent Pain, Pressure, or Tightness in the Chest?!</p>
                     <label for="chest_pain">Yes</label>
                     <input type="radio" name="chest_pain" value="yes" required>
                     <br>
@@ -258,7 +258,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <p data-montage-id="acceptsRescheduleIfSickQuestionLabel">I understand that if the answer to any of these questions is yes, I will be asked to reschedule
+                    <p data-mod-id="acceptsRescheduleIfSickQuestionLabel">I understand that if the answer to any of these questions is yes, I will be asked to reschedule
                         today’s orthodontic appointment.
                     </p>
                 </div>
@@ -267,7 +267,7 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <!-- <label>Patient/Parent’s Signature</label> -->
-                    <div data-montage-id="healthSignaturePad" class="signature" style="margin-top: 10px;">
+                    <div data-mod-id="healthSignaturePad" class="signature" style="margin-top: 10px;">
                         <!-- <script type="text/javascript">
                             new sform.Signature({
                                 id: "Signature50",

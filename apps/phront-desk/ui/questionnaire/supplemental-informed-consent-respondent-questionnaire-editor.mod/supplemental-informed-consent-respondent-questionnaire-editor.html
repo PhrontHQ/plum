@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="supplemental-informed-consent-respondent-questionnaire-editor.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
   
         "owner": {
@@ -23,7 +23,7 @@
         },
 
         "questionnaireTitle": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "questionnaireTitle"},
                 "value": {
@@ -32,7 +32,7 @@
             }
         },
         "questionnaireSubtitle": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "questionnaireSubtitle"},
                 "value": {
@@ -41,7 +41,7 @@
             }
         },
         "questionnaireDescription": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "questionnaireDescription"},
                 "value": {
@@ -53,11 +53,11 @@
         },
 
         "newLineToParagraphConverter": {
-            "prototype": "montage/core/converter/new-line-to-paragraph-converter"
+            "prototype": "mod/core/converter/new-line-to-paragraph-converter"
         },
 
         "consentQuestionLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "consentQuestionLabel"},
                 "value": {
@@ -69,7 +69,7 @@
         },
 
         "consentPatientFirstNameLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "consentPatientFirstNameLabel"},
                 "value": {
@@ -79,7 +79,7 @@
         },
 
         "consentPatientFirstName": {
-            "prototype": "montage/ui/text-field.mod",
+            "prototype": "mod/ui/text-field.mod",
             "values": {
                 "element": {"#": "consentPatientFirstName"},
                 "value": {"<-": "@owner.data.respondent.name.givenName"}
@@ -87,7 +87,7 @@
         },
 
         "consentPatientLastNameLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "consentPatientLastNameLabel"},
                 "value": {
@@ -96,7 +96,7 @@
                 }
             },
         "consentPatientLastName": {
-            "prototype": "montage/ui/text-field.mod",
+            "prototype": "mod/ui/text-field.mod",
             "values": {
                 "element": {"#": "consentPatientLastName"},
                 "value": {"<-": "@owner.data.respondent.name.familyName"}
@@ -104,7 +104,7 @@
         },
 
         "consentPatientDateLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "consentPatientDateLabel"},
                 "value": {
@@ -114,7 +114,7 @@
         },
 
         "consentDateField": {
-            "prototype": "montage/ui/date-field.mod",
+            "prototype": "mod/ui/date-field.mod",
             "values": {
                 "element": {"#": "consentDateField"},
                 "value": {"<-": "Date.presentDate"}
@@ -123,7 +123,7 @@
 
 
         "consentPatientSignatureLabel": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "consentPatientSignatureLabel"},
                 "value": {
@@ -157,17 +157,17 @@
     -->
 </head>
 <body>
-    <div data-montage-id="owner" class="SupplementalInformedConsentQuestionnaireEditor container paper" id="page1">
+    <div data-mod-id="owner" class="SupplementalInformedConsentQuestionnaireEditor container paper" id="page1">
         <form method="post" enctype="multipart/form-data">
             <div class="header">
             </div>
             <div>
-                <input type="date"  data-montage-id="test-date" value=""/>
+                <input type="date"  data-mod-id="test-date" value=""/>
 
-                <h3 data-montage-id="questionnaireTitle">AAOIC SUPPLEMENTAL INFORMED CONSENT</h3>
-                <h4 data-montage-id="questionnaireSubtitle">Orthodontic Treatment in the Era of COVID-19</h4>
+                <h3 data-mod-id="questionnaireTitle">AAOIC SUPPLEMENTAL INFORMED CONSENT</h3>
+                <h4 data-mod-id="questionnaireSubtitle">Orthodontic Treatment in the Era of COVID-19</h4>
                 <hr>
-                <p data-montage-id="questionnaireDescription" class="questionnaireDescription" style="font-size:16px">Thank you for your continued trust in our practice. As with the transmission
+                <p data-mod-id="questionnaireDescription" class="questionnaireDescription" style="font-size:16px">Thank you for your continued trust in our practice. As with the transmission
                     of any communicable disease like a cold or the flu, you may be exposed to COVID-19, also known as
                     “Coronavirus,” at any time or in any place. Be assured that we have always followed state and
                     federal regulations and recommended universal personal protection and disinfection protocols to
@@ -180,7 +180,7 @@
                     possible to maintain social distancing between the patient, orthodontist, orthodontic staff and
                     sometimes other patients at all times.</p> -->
                 <hr>
-                <p data-montage-id="consentQuestionLabel" style="font-size:16px">Although exposure is unlikely, do you accept the risk and consent to
+                <p data-mod-id="consentQuestionLabel" style="font-size:16px">Although exposure is unlikely, do you accept the risk and consent to
                     treatment?</p>
                 <hr class="spacer">
                 <label for="accept_consent">Yes</label>
@@ -191,25 +191,25 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <label data-montage-id="consentPatientFirstNameLabel">Patient First Name!</label>
-                        <input data-montage-id="consentPatientFirstName" name="first_name" value="" type="text" required class="disabled"/>
+                        <label data-mod-id="consentPatientFirstNameLabel">Patient First Name!</label>
+                        <input data-mod-id="consentPatientFirstName" name="first_name" value="" type="text" required class="disabled"/>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <label data-montage-id="consentPatientLastNameLabel">Patient Last Name!</label>
-                        <input data-montage-id="consentPatientLastName" name="last_name" value="" type="text" required class="disabled"/>
+                        <label data-mod-id="consentPatientLastNameLabel">Patient Last Name!</label>
+                        <input data-mod-id="consentPatientLastName" name="last_name" value="" type="text" required class="disabled"/>
                     </div>
                 </div>
 
                 <hr>
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
-                        <label data-montage-id="consentPatientSignatureLabel">Patient/Parent’s Signature!</label>
-                        <div data-montage-id="consentSignaturePad" class="signature" style="margin-top: 10px;">
+                        <label data-mod-id="consentPatientSignatureLabel">Patient/Parent’s Signature!</label>
+                        <div data-mod-id="consentSignaturePad" class="signature" style="margin-top: 10px;">
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12">
-                        <label data-montage-id="consentPatientDateLabel">Date!</label>
-                        <input type="date" data-montage-id="consentDateField" name="accept_date" value="" required class="disabled"/>
+                        <label data-mod-id="consentPatientDateLabel">Date!</label>
+                        <input type="date" data-mod-id="consentDateField" name="accept_date" value="" required class="disabled"/>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "73007D0C-37F1-4B18-8EDC-39EF22E9EC72",
       "type": "commitTransactionCompletedOperation",

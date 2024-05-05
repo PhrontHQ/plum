@@ -1,6 +1,6 @@
 'use strict';
 
-var Montage = require('montage/montage');
+var Montage = require('mod/mod');
 var PATH = require("path");
 
 // //From Montage

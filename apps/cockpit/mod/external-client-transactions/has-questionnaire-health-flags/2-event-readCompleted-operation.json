@@ -1,6 +1,6 @@
 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "35B19F19-7D61-49B1-B5C6-78FCCCD27285",
       "type": "readCompleted",

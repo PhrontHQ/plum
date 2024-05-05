@@ -3,7 +3,7 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="date-header.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
             "values": {
@@ -12,7 +12,7 @@
         },
 
         "month": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "month"},
                 "value": {
@@ -23,7 +23,7 @@
         },
 
         "monthConverter": {
-            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "prototype": "mod/core/converter/international-date-to-string-formatter",
             "values": {
                 "options": {
                     "month": "long"
@@ -32,7 +32,7 @@
         },
 
         "day": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "day"},
                 "value": {
@@ -43,7 +43,7 @@
         },
 
         "dayConverter": {
-            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "prototype": "mod/core/converter/international-date-to-string-formatter",
             "values": {
                 "options": {
                     "day": "numeric"
@@ -52,7 +52,7 @@
         },
 
         "weekDay": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "weekDay"},
                 "value": {
@@ -63,7 +63,7 @@
         },
 
         "weekDayConverter": {
-            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "prototype": "mod/core/converter/international-date-to-string-formatter",
             "values": {
                 "options": {
                     "weekday": "long"
@@ -75,10 +75,10 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="DateHeader">
-        <div data-montage-id="day" class="DateHeader-day"></div>
-        <div data-montage-id="month" class="DateHeader-month"></div>
-        <div data-montage-id="weekDay" class="DateHeader-weekDay"></div>
+    <div data-mod-id="owner" class="DateHeader">
+        <div data-mod-id="day" class="DateHeader-day"></div>
+        <div data-mod-id="month" class="DateHeader-month"></div>
+        <div data-mod-id="weekDay" class="DateHeader-weekDay"></div>
     </div>
 </body>
 </html>

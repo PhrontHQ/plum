@@ -1,10 +1,10 @@
 {
     "AuthenticationPolicy": {
-        "object": "montage/data/service/user-authentication-policy"
+        "object": "mod/data/service/user-authentication-policy"
     },
 
     "phrontClientIdentityService": {
-        "object": "montage/data/service/u-r-l-search-param-identity-service.mjson",
+        "object": "mod/data/service/u-r-l-search-param-identity-service.mjson",
         "values": {
             "searchParamName": "appointment_guid",
             "identityQuery": {"=":"@identityQuery"},
@@ -12,7 +12,7 @@
         }        
     },
     "identityQuery": {
-        "prototype": "montage/data/model/data-query",
+        "prototype": "mod/data/model/data-query",
         "values": {
             "type": {"@": "ServiceEngagementDescriptor"},
             "criteria": {"@": "dataIdentityQueryCriteria"}
@@ -24,7 +24,7 @@
     },
 
     "dataIdentityQueryCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "originId == $.originId",
             "parameters": {"<-":"{originId: @phrontClientIdentityService.searchParamValue}"}
@@ -56,7 +56,7 @@
     },
 
     "root": {
-        "prototype": "montage/data/service/data-service",
+        "prototype": "mod/data/service/data-service",
         "values": {
             "name": "PlumDataService",
             "isUniquing": true,

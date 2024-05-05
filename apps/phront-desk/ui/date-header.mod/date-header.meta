@@ -1,17 +1,17 @@
 {
   "blueprint_component_reference": {
-    "prototype": "montage/core/meta/blueprint-reference",
+    "prototype": "mod/core/meta/blueprint-reference",
     "values": {
       "valueReference": {
         "blueprintName": "Component",
         "blueprintModule": {
-          "%": "montage/ui/component.meta"
+          "%": "mod/ui/component.meta"
         }
       }
     }
   },
   "root": {
-    "prototype": "montage/core/meta/module-blueprint",
+    "prototype": "mod/core/meta/module-blueprint",
     "values": {
       "name": null,
       "parent": {"@": "blueprint_component_reference"},

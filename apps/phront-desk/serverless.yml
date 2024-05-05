@@ -11,13 +11,13 @@ package:
       - ~/**
       - tools/**
       - .vscode/**
-      - node_modules/montage/.git/**
-      - node_modules/montage/demo/**
-      - node_modules/montage/ui/**
-      - node_modules/montage/test/**
-      - node_modules/montage/testing/**
-      - node_modules/montage/tools/**
-      - node_modules/montage-geo/.git/**
+      - node_modules/mod/.git/**
+      - node_modules/mod/demo/**
+      - node_modules/mod/ui/**
+      - node_modules/mod/test/**
+      - node_modules/mod/testing/**
+      - node_modules/mod/tools/**
+      - node_modules/mod-geo/.git/**
       - node_modules/business-data.mod/.git/**
       - node_modules/business-data.mod/test/**
       - node_modules/business-data.mod/sandbox/**

@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <!-- <link rel="stylesheet" type="text/css" href="chat-message.css"> -->
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "owner"}
             }
         },
         "text": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "text"},
                 "value": {"<-": "@owner.data.text"}
@@ -22,8 +22,8 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="ChatTextMessage">
-        <span data-montage-id="text"></span>
+    <div data-mod-id="owner" class="ChatTextMessage">
+        <span data-mod-id="text"></span>
     </div>
 </body>
 </html>

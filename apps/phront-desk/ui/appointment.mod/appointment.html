@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="appointment.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
             "values": {
@@ -60,7 +60,7 @@
             }
         },
         "rescheduledEventDate": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "rescheduledEventDate"},
                 "value": {
@@ -71,7 +71,7 @@
         },
 
         "rescheduledEventDateConverter": {
-            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "prototype": "mod/core/converter/international-date-to-string-formatter",
             "values": {
                 "options": {
                     "<-": "((@owner.data.event.rescheduledEvent.defined() || @owner.data.event.rescheduledEventReferrer.defined()) && ((@owner.data.event.rescheduledEvent.defined() && @owner.data.event.rescheduledEvent.begin.toDateString() == @owner.data.event.scheduledTimeRange.begin.toDateString()) || (@owner.data.event.rescheduledEventReferrer.defined() && @owner.data.event.rescheduledEventReferrer.begin.toDateString() == @owner.data.event.scheduledTimeRange.begin.toDateString()))) ? {hour: 'numeric', minute: 'numeric'} : {month: 'numeric', day: 'numeric', year: 'numeric'}"
@@ -88,7 +88,7 @@
             }
         },
         "rescheduledEventReferrerDate": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "rescheduledEventReferrerDate"},
                 "value": {
@@ -108,7 +108,7 @@
         },
 
         "patientName": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "patientName"},
                 "value": {
@@ -117,7 +117,7 @@
             }
         },
         "appointmentTimeHeader": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "appointmentTimeHeader"},
                 "value": {
@@ -127,7 +127,7 @@
             }
         },
         "timeConverter": {
-            "prototype": "montage/core/converter/international-date-to-string-formatter",
+            "prototype": "mod/core/converter/international-date-to-string-formatter",
             "values": {
                 "options": {
                     "hour": "numeric",
@@ -137,7 +137,7 @@
         },
 
         "appointmentArrivalTitle": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "appointmentArrivalTitle"},
                 "value": {
@@ -147,7 +147,7 @@
         },
 
         "appointmentArrivalTimeDisplay": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "appointmentArrivalTimeDisplay"},
                 "value": {
@@ -159,7 +159,7 @@
             }
         },
         "durationToFillFormsBeforeAppointment": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "durationToFillFormsBeforeAppointmentDisplay"},
                 "value": {
@@ -169,7 +169,7 @@
             }
         },
         "durationToFillFormsBeforeAppointmentConverter": {
-            "prototype": "montage/core/converter/international-duration-to-string-formatter",
+            "prototype": "mod/core/converter/international-duration-to-string-formatter",
             "values": {
                 "options": {
                     "hours": "long",
@@ -179,7 +179,7 @@
             }
         },
         "practiceName": {
-            "prototype": "montage/ui/text.mod",
+            "prototype": "mod/ui/text.mod",
             "values": {
                 "element": {"#": "practiceName"},
                 "value": {
@@ -197,7 +197,7 @@
             }
         },
         "directionsButton": {
-            "prototype": "montage/ui/button.mod",
+            "prototype": "mod/ui/button.mod",
             "values": {
                 "element": {"#": "directionsButton"},
                 "value": "Button with icon",
@@ -233,7 +233,7 @@
             ]
         },
         "chatButton": {
-            "prototype": "montage/ui/button.mod",
+            "prototype": "mod/ui/button.mod",
             "values": {
                 "element": {"#": "chatButton"},
                 "value": "Set Arrived",

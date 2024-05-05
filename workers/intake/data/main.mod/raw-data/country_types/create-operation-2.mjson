@@ -1,6 +1,6 @@
 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E1243CB9-E932-492B-A4A8-0B7004FF1FC1",
       "referrerId": "51431732-895B-459D-B7FB-F6592A580994",

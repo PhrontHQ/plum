@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "originId == $.originId && parent != null",
       "parameters": {
@@ -9,7 +9,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "1223FB10-1C10-4974-B8E7-E10750EC2F64",
       "type": "read",
@@ -28,7 +28,7 @@
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ} 248753FC-A012-4108-8AF5-471C94EB39D3 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0E56ADE3-96D6-42A2-A2F8-43FD9E9BB295",
       "type": "readCompleted",
@@ -47,14 +47,14 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "criteria2": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "parentId == $",
       "parameters": "1f9bc877-0df2-4f45-8fa3-dbe4ef615e47"
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "CC41095F-FB0E-4CF1-AFBB-A0998C985CCE",
       "type": "read",
@@ -68,7 +68,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 69F04B97-8C8F-4BAD-93F0-28AEE887600A {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "5C6E33D9-8FF2-4EC9-B762-04F3518A77CA",
       "type": "readCompleted",
@@ -81,13 +81,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria3": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -102,7 +102,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C5183414-0711-45F5-906C-70451C57331A",
       "type": "read",
@@ -116,7 +116,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 7528FB30-76C6-45AD-9D17-582AA4B591A4 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0985CFDA-03ED-42FA-837C-42BBCDC44EF5",
       "type": "readCompleted",
@@ -140,14 +140,14 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "criteria4": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "id == $",
       "parameters": "905bcca6-347f-445f-b0ad-e742ad0b6360"
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "A3210B62-B9C6-4788-8192-B6678187082A",
       "type": "read",
@@ -161,13 +161,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria5": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -195,7 +195,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "563A2366-7F01-492F-8F0C-E37A768B7DB2",
       "type": "read",
@@ -209,7 +209,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 9B299E58-2EF4-4952-8F74-88F89AFE749A {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E9C29EFF-C310-4217-BD60-5139C1AB45A9",
       "type": "readCompleted",
@@ -298,13 +298,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria6": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -316,7 +316,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "17863437-BBE3-4E2C-886C-A7B0F4FE0909",
       "type": "read",
@@ -330,13 +330,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria7": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -350,7 +350,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C77C3D52-7030-4086-9A86-2A148118A3BF",
       "type": "read",
@@ -364,13 +364,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria8": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -382,7 +382,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C732FD40-9AAD-410B-8F18-2915CCC148C9",
       "type": "read",
@@ -396,13 +396,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria9": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -416,7 +416,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "71ACD96C-370B-41B3-95E9-CFF8B2E7989F",
       "type": "read",
@@ -430,13 +430,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria10": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -448,7 +448,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "1AAFCD62-8C93-477B-A353-3B082E15FBA4",
       "type": "read",
@@ -462,13 +462,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria11": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -482,7 +482,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0B0E2429-5B2A-4872-8AEC-80246B0A31B9",
       "type": "read",
@@ -496,13 +496,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria12": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -514,7 +514,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "5C0FACBB-79C0-4F6B-9ED0-56223CE61A82",
       "type": "read",
@@ -528,13 +528,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria13": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -548,7 +548,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "6EACBB97-EDFB-481E-84F6-DA7601C49A1D",
       "type": "read",
@@ -562,13 +562,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria14": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -580,7 +580,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "3B14FAF6-EFDD-4E51-B5FA-5158D1560BA4",
       "type": "read",
@@ -594,13 +594,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria15": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -614,7 +614,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "A72D8A2F-49EE-4F52-B219-B27927E5A4C5",
       "type": "read",
@@ -628,13 +628,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria16": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -646,7 +646,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "46164597-6B8D-481E-9354-5C9956CD735D",
       "type": "read",
@@ -660,13 +660,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria17": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -680,7 +680,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "DDC88022-690B-4B3C-9423-9B8B8615EA0B",
       "type": "read",
@@ -694,13 +694,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria18": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -712,7 +712,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "67DB463B-5144-4A19-AF88-705C89B69600",
       "type": "read",
@@ -726,13 +726,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria19": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -744,7 +744,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E15BA2A4-0D53-4002-A147-447E0363D6D5",
       "type": "read",
@@ -758,13 +758,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria20": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -776,7 +776,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "537AF802-D794-4503-8474-F874CB248EAD",
       "type": "read",
@@ -790,13 +790,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria21": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -808,7 +808,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "A7982202-7542-4F5F-B2B7-628CDC446A1F",
       "type": "read",
@@ -822,13 +822,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria22": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -842,7 +842,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "1835239F-BC73-476D-91A0-BEE1022E7A3E",
       "type": "read",
@@ -856,13 +856,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria23": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -874,7 +874,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C728A03C-53C5-462A-BD52-4D615B52F06F",
       "type": "read",
@@ -888,13 +888,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria24": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -906,7 +906,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "D2753067-6A5D-4853-9360-ABF347F28C6D",
       "type": "read",
@@ -920,13 +920,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria25": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -938,7 +938,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "FF77BC61-9155-46BC-820F-06A4F1A7A290",
       "type": "read",
@@ -952,13 +952,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria26": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -970,7 +970,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "8516C0FE-B39E-469B-9981-748D49786B96",
       "type": "read",
@@ -984,13 +984,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria27": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1002,7 +1002,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "2A116B06-6BA4-4C42-B1A9-3293C00140D6",
       "type": "read",
@@ -1016,13 +1016,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria28": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -1036,7 +1036,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "19B829C9-FE0B-4C06-82C1-5FA01FC1A14F",
       "type": "read",
@@ -1050,7 +1050,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} F4956E78-4FD8-4D9D-AE32-B2D8ED0DFBF1 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "37BDE7C6-7973-4B64-A8A6-03F987480771",
       "type": "readCompleted",
@@ -1069,7 +1069,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} F452C4AA-E14C-4DE7-B67C-D3C114E311B3 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E43F4D1A-5242-4386-84C3-7137A8314804",
       "type": "readCompleted",
@@ -1088,7 +1088,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} C7DDE3B5-3A30-492D-9689-BC29B5B4622C {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4460BCE4-CBB2-49FB-A9E8-D0CC5B85D3D5",
       "type": "readCompleted",
@@ -1107,7 +1107,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 24DCB5FB-DE9A-4B0C-B415-0B688BC02C64 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "3B41DC89-E02C-48F1-9B15-8A7EE16FF494",
       "type": "readCompleted",
@@ -1126,7 +1126,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 0AC3E05C-C250-4A9D-AB53-2F7D7A6A0994 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0BDA7AF1-55C3-4BF8-BF7A-BDA5B11318F6",
       "type": "readCompleted",
@@ -1145,7 +1145,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 0C32F27C-1A51-46BC-8C75-19B03756FFE9 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E55DB54E-7E0C-405B-A080-74C822983767",
       "type": "readCompleted",
@@ -1164,13 +1164,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria29": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1182,7 +1182,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "35B3578D-9216-49B2-BC5D-57BD94DE81D9",
       "type": "read",
@@ -1196,13 +1196,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria30": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1214,7 +1214,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "2673457F-84C8-452E-BF93-2B64C90B4A64",
       "type": "read",
@@ -1228,13 +1228,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria31": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -1248,7 +1248,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "62E5E531-979C-4C19-918B-490F3E0D2286",
       "type": "read",
@@ -1262,13 +1262,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria32": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1280,7 +1280,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "F8F7E59B-C2F0-41AA-B9B7-91EA8FCC1E80",
       "type": "read",
@@ -1294,7 +1294,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 220224E7-C7C6-4523-8EEE-14FAD59F4B2A {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "9B92B715-16E8-4A83-9EFA-912094D75350",
       "type": "readCompleted",
@@ -1313,7 +1313,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 612CB8C8-2874-4A09-86F1-285146999AE8 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "EB25709B-D966-4A12-84ED-0391AD8C146F",
       "type": "readCompleted",
@@ -1332,7 +1332,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 5E384E96-591E-4ADD-8950-B2C858E2643E {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "801FE6F0-C153-4112-8C3D-31FA486594FA",
       "type": "readCompleted",
@@ -1351,7 +1351,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 4221EE35-A7A3-4897-B022-9A78325FDB1C {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "45B57964-F8D2-41FD-9EDF-7E9D318D9BDB",
       "type": "readCompleted",
@@ -1370,7 +1370,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 7C2D9407-9F24-4277-8B8D-F4F9304B9992 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "DC40CE83-04C7-444F-8DC4-ACD157E54486",
       "type": "readCompleted",
@@ -1389,7 +1389,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 62086155-F6F8-4A03-B527-FDD596B882AC {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4B5B6835-CDF3-45D8-8EA0-D6F3336432E3",
       "type": "readCompleted",
@@ -1408,7 +1408,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 2A7DD211-973E-485B-9BA5-F80AA743AA67 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "D38F4C69-917C-4DD9-8B85-005B97BBF707",
       "type": "readCompleted",
@@ -1427,13 +1427,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria33": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1445,7 +1445,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "B5EB810A-C519-4002-8A3A-270CC011464F",
       "type": "read",
@@ -1459,13 +1459,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria34": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1477,7 +1477,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4ADCB57B-8C45-4DEA-8102-DF130A9C24B6",
       "type": "read",
@@ -1491,7 +1491,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} C15D1301-32CE-4148-8A71-01A86DA8979A {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "B30BB9F7-7FDD-4E5C-A9BD-CECED1BB74E3",
       "type": "readCompleted",
@@ -1510,7 +1510,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 28C3F854-DA51-42A6-B3DA-6882F4D32997 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "FC6602FD-8C22-42A4-9EFD-C2D645DE5F38",
       "type": "readCompleted",
@@ -1529,7 +1529,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} EB685C15-B983-42EC-8172-F33E67D8C946 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "8773001C-C4E8-4F74-B2AA-EE09E2C8E83C",
       "type": "readCompleted",
@@ -1548,7 +1548,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} E545C5C0-1088-4AD5-A786-992918E46E77 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "CF7B2327-D09E-4183-8340-6FFE7B770A7B",
       "type": "readCompleted",
@@ -1567,7 +1567,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 5615F452-7A04-478C-9F97-A41607B32E56 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "5B5E3D26-4AF9-40BB-AB06-604981E83E33",
       "type": "readCompleted",
@@ -1586,7 +1586,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 8CD5FF4B-2137-45CF-853C-165E8CA13AE7 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0F8B305D-408C-481C-905C-CEF59AA3C670",
       "type": "readCompleted",
@@ -1605,7 +1605,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} FD28056B-4D08-4696-9910-71E20B4AC802 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "FE41DFB6-2F45-4C2C-8B66-7AD736C1E600",
       "type": "readCompleted",
@@ -1624,7 +1624,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 2EDCF31A-A6A5-48D0-9EE0-47352B6D9EA8 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0A0FA315-30D5-4F67-80F8-4445BBE76DE8",
       "type": "readCompleted",
@@ -1643,7 +1643,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} B333D8CC-0812-4555-8568-0B19EA999D33 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "528260DF-BBBE-4774-8038-0799B76D7804",
       "type": "readCompleted",
@@ -1662,7 +1662,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} F78CCAD9-4566-4C14-ABCF-0D448ADBFA41 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "46191D26-D8A4-4F0D-B986-36242B18876F",
       "type": "readCompleted",
@@ -1681,7 +1681,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 67127D78-1DAF-4D34-A465-FE467F0A45BD {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "9DFF4458-64C0-410C-B2BA-5DE6B4A6C473",
       "type": "readCompleted",
@@ -1700,13 +1700,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria35": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1718,7 +1718,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "66AF29E5-D5D1-421A-B2F5-133DD5044E7E",
       "type": "read",
@@ -1732,13 +1732,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria36": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1750,7 +1750,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4ACD4473-8F68-4F73-869C-C7050AC6333D",
       "type": "read",
@@ -1764,13 +1764,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria37": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1782,7 +1782,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C2986E09-0848-4C97-9E96-EA33E49BB43C",
       "type": "read",
@@ -1796,13 +1796,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria38": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1814,7 +1814,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C4AF4881-D40A-4BB1-A066-C7A9961831FA",
       "type": "read",
@@ -1828,13 +1828,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria39": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1846,7 +1846,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "012AD34C-08FA-46E9-B25A-81A915D220BF",
       "type": "read",
@@ -1860,13 +1860,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria40": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1878,7 +1878,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "84F435E9-02D9-492C-A393-52D6779D0BAB",
       "type": "read",
@@ -1892,13 +1892,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria41": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1910,7 +1910,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "BF3DF112-30C5-4FBF-ADF3-4D74F2D4FAF5",
       "type": "read",
@@ -1924,13 +1924,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria42": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1942,7 +1942,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "65C3AB1C-3102-471C-A493-89C327859A95",
       "type": "read",
@@ -1956,13 +1956,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria43": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -1974,7 +1974,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "A043F212-AEC4-45A6-8F22-8F92575BDC5E",
       "type": "read",
@@ -1988,13 +1988,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria44": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -2006,7 +2006,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "CFCCBDE4-A1ED-4E5A-8EDD-AC64B8F7F097",
       "type": "read",
@@ -2020,13 +2020,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria45": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && id == $parameter1",
       "parameters": {
@@ -2038,7 +2038,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "16B372C6-5EC3-4792-A35D-E8742AC0404A",
       "type": "read",
@@ -2052,7 +2052,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} D62B4538-B38A-4800-A727-76C9C3920022 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "465928AA-58FB-44ED-8E52-F73E183AB6E9",
       "type": "readCompleted",
@@ -2071,7 +2071,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 6E14B5B5-230B-4829-821B-1507996C8E58 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "EC5112FD-E70E-47D6-B578-6767751581BD",
       "type": "readCompleted",
@@ -2090,7 +2090,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} D77522B4-781E-421D-A9C3-84B017B61BEB {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "CBEBA49F-E776-4EFB-8751-AB82F7681EC7",
       "type": "readCompleted",
@@ -2109,7 +2109,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 3DB80A75-E212-4AA2-9D2D-5B9D43CD7312 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "773EFB71-5F1B-4268-A55F-AF2672DB6392",
       "type": "readCompleted",
@@ -2128,13 +2128,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria46": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
       "parameters": {
@@ -2146,7 +2146,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "04A9D148-0F77-4B46-826E-254E5636BD02",
       "type": "read",
@@ -2160,13 +2160,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria47": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
       "parameters": {
@@ -2178,7 +2178,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "D13887A4-8041-4DDE-8E55-9E2D046D92C9",
       "type": "read",
@@ -2192,7 +2192,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 6F7FBA25-B692-4034-8DA2-B9A861ECEC53 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E685ECAD-D530-4427-8452-CBDD090DCF23",
       "type": "readCompleted",
@@ -2211,7 +2211,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 50DEBBD3-2875-4F59-81D7-2EC7476A2FF8 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "97EF10EC-426A-4242-AD87-001C0F31C6B5",
       "type": "readCompleted",
@@ -2230,7 +2230,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} E3EEF5CE-C57B-41AD-9F6D-42F5FBE9D7DC {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4E1451ED-560D-4159-820B-C3728991D320",
       "type": "readCompleted",
@@ -2249,7 +2249,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} CF4D7887-F9AD-4CAE-9090-FE67596A3D2B {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "6E40C6E6-4C4C-4E72-BBA4-FA17A04B7D63",
       "type": "readCompleted",
@@ -2268,7 +2268,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 4FC8728E-1AD7-4B95-B4DC-B3ABF25EF38D {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "515D6A2A-837C-41F7-8323-D1D5D2EA05CA",
       "type": "readCompleted",
@@ -2287,7 +2287,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} D0B6EAD2-96DC-43B2-AE4D-57E09A835680 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "5E3525EE-ADAD-4E59-AD61-52A86DBFA586",
       "type": "readCompleted",
@@ -2306,7 +2306,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 85BC794A-307B-4602-8100-AEAF7FF58735 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "5F07BDEE-A3E8-4096-AC58-4498F61CA68B",
       "type": "readCompleted",
@@ -2325,7 +2325,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 6AF75CD2-A855-4C2E-93B0-A0FB112D789B {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "13EE7EA4-F9B8-45AD-BE11-DC6C501D2893",
       "type": "readCompleted",
@@ -2344,7 +2344,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 102CF7C5-36EF-401E-B938-A8F47A4FE52C {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "6BC63D9D-AD7F-4133-9CEE-60A1EE0DC3EC",
       "type": "readCompleted",
@@ -2363,7 +2363,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 4D1552EF-B6DF-4D7B-AD3C-3181BE9A5A6E {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "C6B56C64-D980-41FC-8E81-84A7E4396A19",
       "type": "readCompleted",
@@ -2382,7 +2382,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 9856DA00-35F5-4D9B-BF02-8F0616718FBC {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "8B58D2B9-5897-48F2-A8A0-DB80B8E70AF9",
       "type": "readCompleted",
@@ -2401,7 +2401,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 4E2C4769-92E3-403E-BCA8-5CBC04074F5D {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "9F1E6486-7A07-4EFE-9718-A4A50089384D",
       "type": "readCompleted",
@@ -2420,7 +2420,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 47A9B0C3-7984-4CFF-B9EB-E58022315B6E {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4F9FCD8D-2B5C-4494-9C2A-2FA6085E55E7",
       "type": "readCompleted",
@@ -2439,13 +2439,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria48": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
       "parameters": {
@@ -2457,7 +2457,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "1BC8DD48-02CA-45FF-A188-F30A7D51D646",
       "type": "read",
@@ -2471,13 +2471,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria49": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && ($parameter1.has(id))",
       "parameters": {
@@ -2494,7 +2494,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "55F0E3DD-DF63-4BF7-8FF8-C86AA7A214C1",
       "type": "read",
@@ -2508,13 +2508,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria50": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireId == $parameter1",
       "parameters": {
@@ -2526,7 +2526,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "69DF0D17-626F-499E-A626-31C3B82E7770",
       "type": "read",
@@ -2540,7 +2540,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 2A6AF81D-67AA-46F5-89D1-B2EA26097EA2 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "FD181053-2F0D-400A-B864-DBAD14F3D20D",
       "type": "readCompleted",
@@ -2553,7 +2553,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} D9FFCA83-6B9E-4D30-A0A6-78FD1C8291F5 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E290459F-8DC7-496D-B4DD-3C56921341CC",
       "type": "readCompleted",
@@ -2617,13 +2617,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria51": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireQuestionId == $parameter1",
       "parameters": {
@@ -2635,7 +2635,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "2FB1AB13-8ACE-445A-A4BA-BBC5B90DA6BD",
       "type": "read",
@@ -2649,13 +2649,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria52": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireQuestionId == $parameter1",
       "parameters": {
@@ -2667,7 +2667,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "D2DD0511-BE12-40AF-88FE-B9CED05AD955",
       "type": "read",
@@ -2681,13 +2681,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria53": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireQuestionId == $parameter1",
       "parameters": {
@@ -2699,7 +2699,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "2B327706-2FB5-4CAC-9D09-750C38F507DC",
       "type": "read",
@@ -2713,13 +2713,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria54": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireQuestionId == $parameter1",
       "parameters": {
@@ -2731,7 +2731,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "58096CF4-C54C-4BBC-BBD5-68A3D44D4B0B",
       "type": "read",
@@ -2745,13 +2745,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria55": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireQuestionId == $parameter1",
       "parameters": {
@@ -2763,7 +2763,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "4EA9358F-930B-4854-9759-D821C7D05E8F",
       "type": "read",
@@ -2777,7 +2777,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 99AB6C03-A420-41C6-93DA-FCA671442D7A {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "073FFF46-D20B-45E4-ADBE-35958012E890",
       "type": "readCompleted",
@@ -2790,7 +2790,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 68C142F5-A20E-46F6-90B1-53D4D502945F {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "B83CDA1C-E9D8-4E29-B7C4-07165CF1BAA1",
       "type": "readCompleted",
@@ -2829,7 +2829,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 753E0A31-B308-495B-9C8D-16C8CA436312 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "273F9004-3603-4EC4-832D-9AC37C6FDEB3",
       "type": "readCompleted",
@@ -2863,13 +2863,13 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria56": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && questionnaireQuestionId == $parameter1",
       "parameters": {
@@ -2881,7 +2881,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "BA6A94F2-E225-4ADB-87DF-98EDE8C0E52D",
       "type": "read",
@@ -2895,7 +2895,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
  node_modules/business-data.mod/data/main.mod/service/operation-coordinator.js
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} EAFCB7F8-6DB9-4B6C-BFD1-0CE6F85D645B {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "0BBCD1C4-A1B2-4421-B533-FA6454C4C05C",
       "type": "readCompleted",
@@ -2914,7 +2914,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} F8371247-46ED-4245-ACC9-502583F9A4B8 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "AC771C39-073A-496B-825A-7AEA588FA174",
       "type": "readCompleted",
@@ -2933,7 +2933,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 8F42A682-7284-4DD5-895F-6F30F38D8C9F {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "9D7C0862-8667-42A2-8349-0684843498E9",
       "type": "readCompleted",
@@ -2952,7 +2952,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 0DD98113-68B1-4029-8D2C-520224E92087 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "9EAEF120-B879-4CD2-8C12-A94D38FCCF72",
       "type": "readCompleted",
@@ -2971,7 +2971,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} CC1FA7CD-13A8-4A49-BACD-B90B51F53330 {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "B0EDFB26-41A8-40B4-9352-58C5700CE8BF",
       "type": "readCompleted",
@@ -2990,7 +2990,7 @@ null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, prom
 }
 null: OperationCoordinator: _sendData to connection: {postToConnection: ƒ, promise: ƒ, _promise: Promise} 045B2B2A-98B7-4757-B3F1-95E73CD12F8D {
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "00E2179E-25BA-4683-91C2-116005B61AD4",
       "type": "readCompleted",

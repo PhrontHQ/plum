@@ -5,7 +5,7 @@
     <!-- <link rel="stylesheet" href="https://tops-forms.com/covid-consent-form/css/bootstrap.css" /> -->
     <!-- <link rel="stylesheet" href="https://tops-forms.com/covid-consent-form/css/jquery-ui.css" /> -->
     <link rel="stylesheet" type="text/css" href="form-overlay.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
   
         "owner": {
@@ -18,7 +18,7 @@
         },
 
         "closeButton": {
-            "prototype": "montage/ui/button.mod",
+            "prototype": "mod/ui/button.mod",
             "values": {
                 "element": {"#": "closeButton"}
             },
@@ -31,7 +31,7 @@
         },
 
         "overlay": {
-            "prototype": "montage/ui/overlay.mod",
+            "prototype": "mod/ui/overlay.mod",
             "values": {
                 "element": {"#": "overlay"},
                 "delegate": {"@": "owner"},
@@ -82,12 +82,12 @@
     -->
 </head>
 <body>
-    <div data-montage-id="formOverlay" class="FormOverlay">
-        <div data-montage-id="overlay" class="Formpopup">
-            <button data-montage-id="closeButton" class="button button-close">
+    <div data-mod-id="formOverlay" class="FormOverlay">
+        <div data-mod-id="overlay" class="Formpopup">
+            <button data-mod-id="closeButton" class="button button-close">
                 ✕
             </button>
-            <!-- <iframe data-montage-id="iframe" sandbox="allow-same-origin allow-forms allow-scripts" allowtransparency="true" class="formOverlay--container" type="text/html" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe> -->
+            <!-- <iframe data-mod-id="iframe" sandbox="allow-same-origin allow-forms allow-scripts" allowtransparency="true" class="formOverlay--container" type="text/html" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe> -->
             <div>
                 <div id='error_modal' class='error-modal'>
                     <div class='error-container'>
@@ -165,10 +165,10 @@
                         <input name="user_agent" value="" type="text">
                         <input name="submitted_at" value="" type="text">
                     </div>
-                    <div class="container paper" data-montage-id="supplementalInformedConsentRespondentQuestionnaireEditor"></div>
+                    <div class="container paper" data-mod-id="supplementalInformedConsentRespondentQuestionnaireEditor"></div>
             
             
-                    <div class="container paper" data-montage-id="supplementalHealthRespondentQuestionnaireEditor"></div>
+                    <div class="container paper" data-mod-id="supplementalHealthRespondentQuestionnaireEditor"></div>
 
                     <div>
                         <input value="Submit" name="Submit" class="tops-button" type="submit">

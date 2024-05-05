@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/core/meta/object-descriptor",
+        "prototype": "mod/core/meta/object-descriptor",
         "values": {
             "name": "appointments",
             "propertyDescriptors": [
@@ -30,21 +30,21 @@
         }
     },
     "appointment_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "appointment_id",
             "valueType": "string"
         }
     },
     "practice_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "practice_id",
             "valueType": "string"
         }
     },
     "created_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "created_date",
             "valueType": "date",
@@ -52,7 +52,7 @@
         }
     },
     "last_modified_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "last_modified_date",
             "valueType": "date",
@@ -60,7 +60,7 @@
         }
     },
     "location_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "location_object_id",
             "valueType": "string",
@@ -68,7 +68,7 @@
         }
     },
     "date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "date",
             "valueType": "date",
@@ -76,7 +76,7 @@
         }
     },
      "start_time": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "start_time",
             "valueType": "number",
@@ -84,7 +84,7 @@
         }
     },
      "duration": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "duration",
             "valueType": "number",
@@ -92,7 +92,7 @@
         }
     },
     "scheduled_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "scheduled_flag",
             "valueType": "boolean",
@@ -100,7 +100,7 @@
         }
     },
     "orthodontist_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "orthodontist_object_id",
             "valueType": "string",
@@ -108,7 +108,7 @@
         }
     },
     "procedure_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "procedure_object_id",
             "valueType": "string",
@@ -116,7 +116,7 @@
         }
     },
     "patient_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "patient_object_id",
             "valueType": "string",
@@ -124,7 +124,7 @@
         }
     },
     "appointment_status_object_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "appointment_status_object_id",
             "valueType": "string",
@@ -132,7 +132,7 @@
         }
     },
     "emergency_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "emergency_flag",
             "valueType": "boolean",
@@ -140,7 +140,7 @@
         }
     },
     "should_confirm_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "should_confirm_flag",
             "valueType": "boolean",
@@ -148,7 +148,7 @@
         }
     },
     "confirmed_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "confirmed_flag",
             "valueType": "boolean",
@@ -156,7 +156,7 @@
         }
     },
     "is_new_patient_exam_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_new_patient_exam_flag",
             "valueType": "boolean",
@@ -164,7 +164,7 @@
         }
     },
     "entry_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "entry_date",
             "valueType": "date",
@@ -172,7 +172,7 @@
         }
     },
     "is_recall_exam_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_recall_exam_flag",
             "valueType": "boolean",
@@ -180,7 +180,7 @@
         }
     },
     "is_records_visit_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_records_visit_flag",
             "valueType": "boolean",
@@ -188,7 +188,7 @@
         }
     },
     "is_consult_visit_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_consult_visit_flag",
             "valueType": "boolean",
@@ -196,7 +196,7 @@
         }
     },
     "is_retention_visit_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_retention_visit_flag",
             "valueType": "boolean",

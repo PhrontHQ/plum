@@ -1,13 +1,13 @@
 
 const WebSocket = require('ws');
 const https = require("https");
-require('montage/core/extras/string');
+require('mod/core/extras/string');
 const PATH = require("path");
 const fs = require('fs');
-const Deserializer = require("montage/core/serialization/deserializer/montage-deserializer").MontageDeserializer;
-const MontageSerializer = require("montage/core/serialization/serializer/montage-serializer").MontageSerializer;
-const Criteria = require("montage/core/criteria").Criteria;
-const DataOperation = require("montage/data/service/data-operation").DataOperation;
+const Deserializer = require("mod/core/serialization/deserializer/mod-deserializer").MontageDeserializer;
+const MontageSerializer = require("mod/core/serialization/serializer/mod-serializer").MontageSerializer;
+const Criteria = require("mod/core/criteria").Criteria;
+const DataOperation = require("mod/data/service/data-operation").DataOperation;
 const zlib = require('zlib');
 
 (function () {
@@ -88,8 +88,8 @@ socketUrl = webSocketURL + sessionArgument;
 //var transactionJSONFileDirectory = PATH.join(__dirname, transactionJSONFile.stringByDeletingLastPathComponent());
 var transactionJSONFileDirectory = transactionJSONFileFullPath.stringByDeletingLastPathComponent();
 
-// const Deserializer = (require)("montage/core/serialization/deserializer/montage-deserializer").MontageDeserializer,
-//       MontageSerializer = (require)("montage/core/serialization/serializer/montage-serializer").MontageSerializer,
+// const Deserializer = (require)("mod/core/serialization/deserializer/mod-deserializer").MontageDeserializer,
+//       MontageSerializer = (require)("mod/core/serialization/serializer/mod-serializer").MontageSerializer,
 //module.path in pure node is module.directory in mr
 //module.filename in pure node is module.locaation in mr
 
@@ -123,7 +123,7 @@ var pendingOperationById = new Map(),
                 "type": "keepAlive",
                 "data": null
             },
-            "prototype": "montage/data/service/data-operation"
+            "prototype": "mod/data/service/data-operation"
         }
     },
     serializedKeepAliveOperationString = JSON.stringify(serializedKeepAliveOperation);

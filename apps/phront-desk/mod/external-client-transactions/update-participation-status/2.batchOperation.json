@@ -1,6 +1,6 @@
 {
   "criteria95": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "id == $id",
       "parameters": {
@@ -9,7 +9,7 @@
     }
   },
   "dataoperation": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "5301364F-2607-44E1-83EB-AFDD32D7BFD7",
       "type": "updateOperation",
@@ -37,7 +37,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "076DB24B-FDB7-42C0-BD50-049FDACD86F0",
       "type": "batchOperation",

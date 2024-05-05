@@ -1,6 +1,6 @@
 {
   "dataoperation31": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "3DC7E527-5F7C-41BD-91AC-C4778B76DE6A",
       "type": "merge",
@@ -14,7 +14,7 @@
     }
   },
   "dataoperation32": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E1243CB9-E932-492B-A4A8-0B7004FF1FC1",
       "type": "merge",
@@ -28,7 +28,7 @@
     }
   },
   "dataoperation33": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "07E5A632-F566-4370-9DAD-FED5E19F5E84",
       "type": "merge",
@@ -42,7 +42,7 @@
     }
   },
   "dataoperation34": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "6C38B538-2E5D-4D9A-9BA2-D27ECD1FD833",
       "type": "merge",
@@ -61,7 +61,7 @@
     ]
   },
   "criteria8878": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales",
       "parameters": {
@@ -70,7 +70,7 @@
     }
   },
   "dataoperation35": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "45427ABF-A32E-4910-BD16-9705490E65A5",
       "type": "merge",
@@ -85,7 +85,7 @@
     }
   },
   "dataoperation36": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "6D9DC11E-3FEF-4392-A0A3-D8429B8FBFAB",
       "type": "merge",
@@ -99,7 +99,7 @@
     }
   },
   "dataoperation37": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "6A9D15D4-4DC0-4BAD-9A41-F428B42610A3",
       "type": "merge",
@@ -113,7 +113,7 @@
     }
   },
   "dataoperation41": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "7C336DC4-A51F-4B03-B356-0307B0676A6D",
       "type": "merge",
@@ -127,7 +127,7 @@
     }
   },
   "dataoperation42": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "A97C9CB6-0D49-4635-B922-E25FDDA2ECE4",
       "type": "merge",
@@ -141,7 +141,7 @@
     }
   },
   "dataoperation43": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "236D5FFA-3B58-4B17-BBFB-D1192E177478",
       "type": "merge",
@@ -155,7 +155,7 @@
     }
   },
   "dataoperation44": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "DA4C3904-242B-4ED6-B9AA-9CDEFDA56C46",
       "type": "merge,
@@ -169,7 +169,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "E2B8C89F-0DE2-4F9B-90EC-C82E809337D7",
       "type": "batch",

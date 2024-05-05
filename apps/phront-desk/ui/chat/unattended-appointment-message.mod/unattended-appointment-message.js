@@ -1,6 +1,6 @@
 
 "use strict";
-var DataEditor = require("montage/ui/data-editor").DataEditor;
+var DataEditor = require("mod/ui/data-editor").DataEditor;
 
 
 

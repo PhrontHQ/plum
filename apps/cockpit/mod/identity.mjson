@@ -1,6 +1,6 @@
 {
   "root": {
-    "prototype": "montage/data/model/identity",
+    "prototype": "mod/data/model/identity",
     "values": {
       "applicationIdentifier": "--applicationIdentifier--value--goes--here--",
       "applicationCredentials": "--applicationCredentials--value--goes--here--"

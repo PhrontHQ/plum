@@ -1,7 +1,7 @@
 /**
  * @module ui/plum-loader.mod
  */
-var Loader = require("montage/ui/loader.mod").Loader;
+var Loader = require("mod/ui/loader.mod").Loader;
 
 /**
  * @class PlumLoader

@@ -1,9 +1,9 @@
 //"use strict";
-var Component = require("montage/ui/component").Component,
-    DataEditor = require("montage/ui/data-editor").DataEditor,
-    Promise = require("montage/core/promise").Promise,
-    MontageReviver = require("montage/core/serialization/deserializer/montage-reviver").MontageReviver,
-    Template = require("montage/core/template").Template;
+var Component = require("mod/ui/component").Component,
+    DataEditor = require("mod/ui/data-editor").DataEditor,
+    Promise = require("mod/core/promise").Promise,
+    MontageReviver = require("mod/core/serialization/deserializer/montage-reviver").MontageReviver,
+    Template = require("mod/core/template").Template;
 
 //Expose moduleid so it's picked up by mop:
 require("ui/chat/chat-text-message.mod");
@@ -49,8 +49,8 @@ exports.ChatMessage = DataEditor.specialize({
     //                     if (serialization.component.style) {
     //                         element.setAttribute("style", serialization.component.style);
     //                     }
-    //                     html = "<head><script type='text/montage-serialization'>" + JSON.stringify(serialization) + "</script>" +
-    //                         "<div data-montage-id='component' class='" + element.className + "' style='" + element.style.cssText + "'></div>";
+    //                     html = "<head><script type='text/mod-serialization'>" + JSON.stringify(serialization) + "</script>" +
+    //                         "<div data-mod-id='component' class='" + element.className + "' style='" + element.style.cssText + "'></div>";
     //                     if (serialization.component.isFirstChild) {
     //                         this._element.insertBefore(element, this._element.firstChild);
     //                     } else {

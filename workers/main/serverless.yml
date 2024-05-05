@@ -20,23 +20,23 @@ package:
       - '!builds/**'
       - '!dev/**'
       - '!.vscode/**'
-      - '!node_modules/montage/demo/**'
-      - '!node_modules/montage/.git/**'
-      - '!node_modules/montage/ui/**'
-      - '!node_modules/montage/test/**'
-      - '!node_modules/montage/testing/**'
-      - '!node_modules/montage/tools/**'
-      - '!node_modules/montage/node_modules/**'
-      - '!node_modules/montage/.vscode/**'
+      - '!node_modules/mod/demo/**'
+      - '!node_modules/mod/.git/**'
+      - '!node_modules/mod/ui/**'
+      - '!node_modules/mod/test/**'
+      - '!node_modules/mod/testing/**'
+      - '!node_modules/mod/tools/**'
+      - '!node_modules/mod/node_modules/**'
+      - '!node_modules/mod/.vscode/**'
       - '!node_modules/business-data.mod/dev/**'
       - '!node_modules/business-data.mod/test/**'
       - '!node_modules/business-data.mod/sandbox/**'
       - '!node_modules/business-data.mod/node_modules/**'
       - '!node_modules/business-data.mod/.git/**'
       - '!node_modules/business-data.mod/.vscode/**'
-      - '!node_modules/montage-geo/ui/**'
-      - '!node_modules/montage-geo/test/**'
-      - '!node_modules/montage-geo/.git/**'
+      - '!node_modules/mod-geo/ui/**'
+      - '!node_modules/mod-geo/test/**'
+      - '!node_modules/mod-geo/.git/**'
       - '!node_modules/local-websocket-server/**'
       - '!node_modules/serverless/**'
       - '!node_modules/serverless-offline/**'
@@ -76,17 +76,17 @@ package:
 
       # - node_modules/@aws-sdk/**/dist-es/**
       # - node_modules/@aws-sdk/**/dist-types/**
-      - node_modules/montage/.git/**
-      - node_modules/montage/.vscode/**
-      - node_modules/montage/demo/**
-      - node_modules/montage/ui/**
-      - node_modules/montage/test/**
-      - node_modules/montage/testing/**
-      - node_modules/montage/tools/**
-      # - node_modules/montage/window-loader/**
-      - node_modules/montage-geo/.git/**
-      - node_modules/montage-geo/test/**
-      - node_modules/montage-geo/ui/**
+      - node_modules/mod/.git/**
+      - node_modules/mod/.vscode/**
+      - node_modules/mod/demo/**
+      - node_modules/mod/ui/**
+      - node_modules/mod/test/**
+      - node_modules/mod/testing/**
+      - node_modules/mod/tools/**
+      # - node_modules/mod/window-loader/**
+      - node_modules/mod-geo/.git/**
+      - node_modules/mod-geo/test/**
+      - node_modules/mod-geo/ui/**
       - node_modules/business-data.mod/.git/**
       - node_modules/business-data.mod/.vscode/**
       - node_modules/business-data.mod/dev/**
@@ -157,13 +157,13 @@ custom:
 
   distill:
     include:
-      - 'node_modules/montage/core/date/time-zone-data'
+      - 'node_modules/mod/core/date/time-zone-data'
       - 'node_modules/uuid'
 
     minifyPatterns:
       - 'node_modules/**'
-      - '!node_modules/montage/**'
-      - '!node_modules/montage-geo/**'
+      - '!node_modules/mod/**'
+      - '!node_modules/mod-geo/**'
       - '!node_modules/business-data.mod/**'
       # - '!*/**'
 

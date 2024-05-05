@@ -1,13 +1,13 @@
 {
     "root": {
-        "prototype": "montage/data/service/data-access-policy",
+        "prototype": "mod/data/service/data-access-policy",
         "values": {
             "dataOperationCriteriaRuleMap": {"@": "RulesMap"}
         }
     },
 
     "applicationIdentityCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "target == @IdentityDescriptor && data.applicationIdentifier.defined() && data.applicationCredentials.defined()"
         }
@@ -18,7 +18,7 @@
     },
 
     "applicationIdentityOrganizationAuthorizationQueryCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "applications.filter{appClients.filter{identifier == $.identifier && credentials == $.credentials}}",
             "parameters": {"@": "applicationIdentityOrganizationAuthorizationQueryCriteriaParameters"}
@@ -37,7 +37,7 @@
     },
 
     "applicationIdentityOrganizationAuthorizationQuery": {
-        "prototype": "montage/data/model/data-query",
+        "prototype": "mod/data/model/data-query",
         "values": {
             "type": {"@": "OrganizationDescriptor"},
             "criteria": {"@": "applicationIdentityOrganizationAuthorizationQueryCriteria"}
@@ -45,7 +45,7 @@
     },
 
     "applicationIdentityOrganizationScopeQueryCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "id == $.id",
             "parameters": {
@@ -55,7 +55,7 @@
     },
 
     "applicationIdentityOrganizationScopeQuery": {
-        "prototype": "montage/data/model/data-query",
+        "prototype": "mod/data/model/data-query",
         "values": {
             "type": {"@": "OrganizationDescriptor"},
             "criteria": {"@": "applicationIdentityOrganizationScopeQueryCriteria"}
@@ -63,7 +63,7 @@
     },
 
     "isApplicationAuthorizedRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "isAuthorized": {
@@ -74,14 +74,14 @@
     },
 
     "scopeQueryExpressionConverter": {
-        "prototype": "montage/core/converter/expression-converter",
+        "prototype": "mod/core/converter/expression-converter",
         "properties": {
             "convertExpression": "{id:.0.dataIdentifier.primaryKey, parentId:.0.snapshot.parentId}"
         }
     },
 
     "organizationScopeQueryResultConverter": {
-        "prototype": "montage/core/converter/pipeline-converter",
+        "prototype": "mod/core/converter/pipeline-converter",
         "properties": {
             "converters": [
                 {"@": "queryToDataStreamConverter"},
@@ -91,7 +91,7 @@
     },
 
     "setApplicationIdentityScopeOrganizationCriteriaParameterRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "@applicationIdentityOrganizationScopeQueryCriteria.parameters": {
@@ -103,7 +103,7 @@
     },
 
     "setApplicationIdentityScopeOrganizationRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "data.scope": {
@@ -114,7 +114,7 @@
     },
 
     "applicationIdentityOrganizationScopeQueryCriteriaResetRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "@applicationIdentityOrganizationScopeQueryCriteria.parameters": {
@@ -150,7 +150,7 @@
     },
 
     "restrictReadExpressionRule": {
-        "prototype": "montage/data/service/expression-data-access-policy-rule",
+        "prototype": "mod/data/service/expression-data-access-policy-rule",
         "values": {
             "descriptor": {
                 "data.scope.0.readExpressions": {
@@ -161,20 +161,20 @@
     },
 
     "queryToDataStreamConverter": {
-        "prototype": "montage/data/converter/query-to-data-stream-converter",
+        "prototype": "mod/data/converter/query-to-data-stream-converter",
         "values": {
         }
     },
 
     "hasResultExpressionConverter": {
-        "prototype": "montage/core/converter/expression-converter",
+        "prototype": "mod/core/converter/expression-converter",
         "properties": {
             "convertExpression": "length > 0"
         }
     },
 
     "hasQueryResultConverter": {
-        "prototype": "montage/core/converter/pipeline-converter",
+        "prototype": "mod/core/converter/pipeline-converter",
         "properties": {
             "converters": [
                 {"@": "queryToDataStreamConverter"},
@@ -184,7 +184,7 @@
     },
 
     "IdentityDescriptor": {
-        "object": "montage/data/model/identity.mjson"
+        "object": "mod/data/model/identity.mjson"
     },
 
     "ServiceEngagementDescriptor": {

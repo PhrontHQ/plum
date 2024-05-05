@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/core/meta/object-descriptor",
+        "prototype": "mod/core/meta/object-descriptor",
         "values": {
             "name": "procedure_types",
             "propertyDescriptors": [
@@ -23,28 +23,28 @@
         }
     },
     "type_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_id",
             "valueType": "string"
         }
     },
     "practice_id": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "practice_id",
             "valueType": "string"
         }
     },
     "type_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "type_label",
             "valueType": "string"
         }
     },
     "permanent_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "permanent_label",
             "valueType": "string",
@@ -52,7 +52,7 @@
         }
     },
     "short_label": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "short_label",
             "valueType": "string",
@@ -60,7 +60,7 @@
         }
     },
     "is_visible": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_visible",
             "valueType": "boolean",
@@ -68,7 +68,7 @@
         }
     },
     "created_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "created_date",
             "valueType": "date",
@@ -76,7 +76,7 @@
         }
     },
     "last_modified_date": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "last_modified_date",
             "valueType": "date",
@@ -84,7 +84,7 @@
         }
     },
     "emergency_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "emergency_flag",
             "valueType": "boolean",
@@ -92,7 +92,7 @@
         }
     },
     "total_time": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "total_time",
             "valueType": "number",
@@ -101,7 +101,7 @@
         }
     },
     "is_new_patient_exam_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_new_patient_exam_flag",
             "valueType": "boolean",
@@ -109,7 +109,7 @@
         }
     },
     "is_recall_exam_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_recall_exam_flag",
             "valueType": "boolean",
@@ -117,7 +117,7 @@
         }
     },
     "is_records_visit_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_records_visit_flag",
             "valueType": "boolean",
@@ -125,7 +125,7 @@
         }
     },
     "is_consult_visit_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_consult_visit_flag",
             "valueType": "boolean",
@@ -133,7 +133,7 @@
         }
     },
     "is_retention_visit_flag": {
-        "prototype": "montage/core/meta/property-descriptor",
+        "prototype": "mod/core/meta/property-descriptor",
         "values": {
             "name": "is_retention_visit_flag",
             "valueType": "boolean",

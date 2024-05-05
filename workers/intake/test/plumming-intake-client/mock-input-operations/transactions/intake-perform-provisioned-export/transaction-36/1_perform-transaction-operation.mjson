@@ -6,7 +6,7 @@
         "person_id" : "ba86983a-0cd6-46fe-bb4c-9015c9dc9323"
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "root" : {
     "values" : {
@@ -32,7 +32,7 @@
       "type" : "performTransactionOperation",
       "targetModuleId" : null
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "dataOperation493" : {
     "values" : {
@@ -84,7 +84,7 @@
         "@" : "criteria493"
       }
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "criteria493" : {
     "values" : {
@@ -93,7 +93,7 @@
         "person_id" : "cf7afb57-b4a4-4d11-bf86-2bdaa96cb69e"
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "dataOperation494" : {
     "values" : {
@@ -145,7 +145,7 @@
         "@" : "criteria494"
       }
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "criteria495" : {
     "values" : {
@@ -154,7 +154,7 @@
         "person_id" : "cd438521-d02d-4223-85cb-66f70fbdb3ba"
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "dataOperation495" : {
     "values" : {
@@ -206,6 +206,6 @@
         "@" : "criteria495"
       }
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   }
 }

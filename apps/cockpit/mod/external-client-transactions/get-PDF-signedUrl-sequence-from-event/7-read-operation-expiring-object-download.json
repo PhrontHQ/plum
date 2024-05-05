@@ -1,12 +1,12 @@
 {
   "locale": {
-    "prototype": "montage/core/locale",
+    "prototype": "mod/core/locale",
     "values": {
       "identifier": "en-US"
     }
   },
   "criteria80": {
-    "prototype": "montage/core/criteria",
+    "prototype": "mod/core/criteria",
     "values": {
       "expression": "locales == $DataServiceUserLocales && Key == $Key && Bucket == $Bucket && expirationDelay == $expirationDelay",
       "parameters": {
@@ -20,7 +20,7 @@
     }
   },
   "root": {
-    "prototype": "montage/data/service/data-operation",
+    "prototype": "mod/data/service/data-operation",
     "values": {
       "id": "175961A6-2C7A-4991-8EC2-1F9093211F40",
       "type": "read",

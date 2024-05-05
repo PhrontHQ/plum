@@ -6,7 +6,7 @@
         "practice_id" : 1000
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "root" : {
     "values" : {
@@ -26,7 +26,7 @@
       "type" : "performTransactionOperation",
       "targetModuleId" : null
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "dataOperation0" : {
     "values" : {
@@ -53,6 +53,6 @@
       "type" : "mergeOperation",
       "referrerId" : "1672E96C-4367-48AE-AE8C-61F5AA4DF4CE"
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   }
 }

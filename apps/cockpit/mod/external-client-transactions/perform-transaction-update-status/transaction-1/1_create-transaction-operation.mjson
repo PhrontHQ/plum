@@ -6,7 +6,7 @@
         "originId" : "aac98df0-52a7-426f-b407-cf7b9cfbe5bc"
       }
     },
-    "prototype" : "montage/core/criteria"
+    "prototype" : "mod/core/criteria"
   },
   "root" : {
     "values" : {
@@ -26,7 +26,7 @@
       "type" : "performTransactionOperation",
       "targetModuleId" : null
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   },
   "dataOperation3" : {
     "values" : {
@@ -44,6 +44,6 @@
       "type" : "updateOperation",
       "referrerId" : "5D84CCA1-C559-4C92-ADC8-00970CD6CA8E"
     },
-    "prototype" : "montage/data/service/data-operation"
+    "prototype" : "mod/data/service/data-operation"
   }
 }

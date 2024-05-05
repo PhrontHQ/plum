@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/data-access-policy",
+        "prototype": "mod/data/service/data-access-policy",
         "values": {
             "nextPoliciesKeyCriteria": {"@": "typeCriteria"},
             "nextPoliciesMap": {"@": "rootNextPolicyMap"}
@@ -8,7 +8,7 @@
     },
 
     "typeCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "type"
         }

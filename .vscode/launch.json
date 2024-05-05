@@ -488,12 +488,12 @@
             ],
             "outFiles": [
                 "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/**/*.js",
-                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/montage/**/*.js",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/mod/**/*.js",
                 "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/business-data.mod/**/*.js"
             ],
             "resolveSourceMapLocations": [
                 "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/**/*.js",
-                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/montage/**/*.js",
+                "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/mod/**/*.js",
                 "${workspaceFolder}/workers/main/.serverless/plumming-data-worker/node_modules/business-data.mod/**/*.js"
             ],
             "trace": false,

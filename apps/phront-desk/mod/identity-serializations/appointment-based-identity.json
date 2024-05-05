@@ -1,6 +1,6 @@
 {
     "criteria": {
-      "prototype": "montage/core/criteria",
+      "prototype": "mod/core/criteria",
       "values": {
         "expression": "originId == $.originId",
         "parameters": {
@@ -12,14 +12,14 @@
       "object": "business-data.mod/data/main.mod/model/service-engagement.mjson"
     },
     "dataquery": {
-      "prototype": "montage/data/model/data-query",
+      "prototype": "mod/data/model/data-query",
       "values": {
         "criteria": {"@": "criteria"},
         "type": {"@": "ServiceEngagement"}
       }
     },
     "root": {
-      "prototype": "montage/data/model/identity",
+      "prototype": "mod/data/model/identity",
       "values": {
         "scope": [
           {"@": "dataquery"}

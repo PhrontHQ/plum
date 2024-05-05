@@ -163,12 +163,12 @@
             ],
             "outFiles": [
                 "${workspaceFolder}/.serverless/plumming-data-worker/**/*.js",
-                "${workspaceFolder}/.serverless/plumming-data-worker/node_modules/montage/**/*.js",
+                "${workspaceFolder}/.serverless/plumming-data-worker/node_modules/mod/**/*.js",
                 "${workspaceFolder}/.serverless/plumming-data-worker/node_modules/business-data.mod/**/*.js"
             ],
             "resolveSourceMapLocations": [
                 "${workspaceFolder}/.serverless/plumming-data-worker/**/*.js",
-                "${workspaceFolder}/.serverless/plumming-data-worker/node_modules/montage/**/*.js",
+                "${workspaceFolder}/.serverless/plumming-data-worker/node_modules/mod/**/*.js",
                 "${workspaceFolder}/.serverless/plumming-data-worker/node_modules/business-data.mod/**/*.js"
             ],
             "trace": false,

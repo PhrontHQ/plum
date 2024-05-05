@@ -1,5 +1,5 @@
 // "use strict";
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 function lerp(v0, v1, t) {
     return (1 - t) * v0 + t * v1;

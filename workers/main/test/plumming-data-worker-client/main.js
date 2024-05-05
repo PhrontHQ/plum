@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-require('montage/core/extras/string');
+require('mod/core/extras/string');
 const PATH = require("path");
 const isDev = false;
 var ws;
@@ -22,8 +22,8 @@ var transactionJSONFileFullPath = PATH.join(__dirname, transactionJSONFile);
 var transactionJSONFileDirectory = PATH.join(__dirname, transactionJSONFile.stringByDeletingLastPathComponent());
 
 const fs = require('fs');
-const Deserializer = require("montage/core/serialization/deserializer/montage-deserializer").MontageDeserializer,
-      MontageSerializer = require("montage/core/serialization/serializer/montage-serializer").MontageSerializer,
+const Deserializer = require("mod/core/serialization/deserializer/mod-deserializer").MontageDeserializer,
+      MontageSerializer = require("mod/core/serialization/serializer/mod-serializer").MontageSerializer,
       //module.path in pure node is module.directory in mr
       //module.filename in pure node is module.locaation in mr
       
@@ -57,7 +57,7 @@ var pendingOperationById = new Map(),
                 "type" : "keepAlive",
                 "data" : null
             },
-            "prototype" : "montage/data/service/data-operation"
+            "prototype" : "mod/data/service/data-operation"
         }
     },
     serializedKeepAliveOperationString = JSON.stringify(serializedKeepAliveOperation);

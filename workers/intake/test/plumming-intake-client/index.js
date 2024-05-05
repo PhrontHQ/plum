@@ -6,7 +6,7 @@
 */
 global.crypto = require('crypto');
 
-var Montage = require('montage/montage');
+var Montage = require('mod/mod');
 var PATH = require("path");
 
 // //From Montage

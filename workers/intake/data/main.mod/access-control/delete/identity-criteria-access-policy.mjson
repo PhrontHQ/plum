@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/data-access-policy",
+        "prototype": "mod/data/service/data-access-policy",
         "values": {
             "nextPoliciesKeyCriteria": {"@": "DataOperationIdentityAccessPolicyCriteria"},
             "nextPoliciesMap": {"@": "DataOperationIdentityReadAccessNextPolicyMap"}
@@ -8,7 +8,7 @@
     },
 
     "DataOperationIdentityAccessPolicyCriteria": {
-        "prototype": "montage/core/criteria",
+        "prototype": "mod/core/criteria",
         "values": {
             "expression": "identity.scope.0.criteria.parameters.parentId.defined()"
         }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="chat.css">
-    <script type="text/montage-serialization">
+    <script type="text/mod-serialization">
     {
         "owner": {
             "values": {
@@ -13,7 +13,7 @@
             }
         },
         "chatRepetition": {
-            "prototype": "montage/ui/repetition.mod",
+            "prototype": "mod/ui/repetition.mod",
             "values": {
                 "element": {"#": "chat-repetition"},
                 "content": {"<-": "@owner.conversation"}
@@ -34,10 +34,10 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="Chat">
-        <div data-montage-id="chat-repetition" class="Chat-repetition">
+    <div data-mod-id="owner" class="Chat">
+        <div data-mod-id="chat-repetition" class="Chat-repetition">
             <div>
-                <div data-montage-id="message"></div>
+                <div data-mod-id="message"></div>
             </div>
         </div>
     </div>

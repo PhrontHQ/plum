@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/data-service",
+        "prototype": "mod/data/service/data-service",
         "values": {
             "name": "MainDataService",
             "performsAccessControl": true,
@@ -21,7 +21,7 @@
     },
 
     "AuthorizationPolicy": {
-        "object": "montage/data/service/authorization-policy"
+        "object": "mod/data/service/authorization-policy"
     },
 
     "MainAccessPolicy": {
@@ -29,7 +29,7 @@
     },
 
     "IdentityAuthorizationService": {
-        "object": "montage/data/service/identity-authorization-service.mjson",
+        "object": "mod/data/service/identity-authorization-service.mjson",
         "values": {
             "accessPolicies": [
                 {"@": "MainAccessPolicy"}
