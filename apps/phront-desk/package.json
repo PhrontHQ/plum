@@ -5,7 +5,7 @@
     "dependencies": {
         "launcher": "github:PhrontHQ/launcher#main",
         "mod": "github:PhrontHQ/mod#main",
-        "geo.mod": "github:PhrontHQ/geo.mod#montage-19",
+        "geo.mod": "github:PhrontHQ/geo.mod#main",
         "business-data.mod": "github:PhrontHQ/business-data.mod#main",
         "business-data-postgre-s-q-l.mod": "github:PhrontHQ/business-data-postgre-s-q-l.mod#main"
     },

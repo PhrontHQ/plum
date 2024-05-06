@@ -3,8 +3,8 @@
     "version": "0.1.0",
     "description": "application",
     "dependencies": {
-        "mod": "github:PhrontHQ/mod#montage-19",
-        "mod-geo": "github:PhrontHQ/mod-geo.git#montage-19",
+        "mod": "github:PhrontHQ/mod#main",
+        "mod-geo": "github:PhrontHQ/geo.mod#main",
         "business-data.mod": "github:PhrontHQ/business-data.mod#main"
     },
     "devDependencies": {
