@@ -45,7 +45,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch PhrontDesk on localhost",
-            "runtimeVersion": "18",
+            "runtimeVersion": "20",
             "runtimeArgs": [
                 "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
                 "--silent",
@@ -106,7 +106,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Cockpit on phront.local",
-            "runtimeVersion": "18",
+            "runtimeVersion": "20",
             "runtimeArgs": [
                 "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
                 "${workspaceFolder}/apps/cockpit/",
