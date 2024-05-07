@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch PhrontDesk on phront.local",
+            "name": "Launch PhrontDesk on phront.local http server",
             "runtimeVersion": "20",
             "runtimeArgs": [
                 "${workspaceFolder}/apps/phront-desk/node_modules/http-server/bin/http-server",
@@ -26,6 +26,17 @@
             ],
             "trace": false,
             "enableContentValidation": false,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open PhrontDesk on phront.local http server in Chrome",
+            "url": "https://phront.local:9797/?appointment_guid=e55c2b69-0367-41ab-86d9-3ba9b00606aa&stage=local&minuteOffset=-5",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "stable",
             "skipFiles": [
                 "<node_internals>/**"
             ]
