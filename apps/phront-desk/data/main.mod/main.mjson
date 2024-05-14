@@ -50,6 +50,9 @@
                 },
                 "local": {
                     "websocketURL": "wss://phront.local:3001"
+                },
+                "localhost": {
+                    "websocketURL": "wss://localhost:3002"
                 }
             }
         }        
