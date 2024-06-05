@@ -10,7 +10,7 @@ var DataOperation = require("mod/data/service/data-operation").DataOperation,
     Asset = require("business-data.mod/data/main.mod/model/asset").Asset,
     //Secret = (require) ("mod/data/model/app/secret").Secret,
     uuid = require("mod/core/uuid"),
-    secretObjectDescriptor = require("mod/data/model/secret.mjson").montageObject;
+    secretObjectDescriptor = require("mod/data/model/app/secret.mjson").montageObject;
 
 const hostname = "roostergrinforms.com",
     path = "/perl/post/11397-16996-IOov",
