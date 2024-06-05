@@ -31,7 +31,7 @@
     "serverless-apigw-binary": "^0.4.4",
     "serverless-deployment-bucket": "^1.5.2",
     "@dezeroku/serverless-certificate-creator": "^1.6.0",
-    "serverless-domain-manager": "^6.0.2",
+    "serverless-domain-manager": "^7.3.8",
     "serverless-dotenv-plugin": "^3.10.0",
     "serverless-hosted-zone": "^0.0.8",
     "serverless-offline": "^8.2.0",
