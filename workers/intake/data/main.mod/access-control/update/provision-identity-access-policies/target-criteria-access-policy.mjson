@@ -54,7 +54,7 @@
 
 
     "UserPoolDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/app/user-pool.mjson"
+        "object": "mod/data/model/app/user-pool.mjson"
     },
     "UserPoolAccessPolicy": {
         "object": "./user-pool-access-policy.mjson"
@@ -71,7 +71,7 @@
 
 
     "AppClientDescriptor": {
-        "object": "app-infrastructure-data.mod/data/main.mod/model/app-client.mjson"
+        "object": "mod/data/model/app/app-client.mjson"
     },
     "UserPoolClientAccessPolicy": {
         "object": "./user-pool-client-access-policy.mjson"

@@ -13,10 +13,10 @@
         "object": "business-data.mod/data/main.mod/model/app/application.mjson"
     },
     "UserPoolDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/app/user-pool.mjson"
+        "object": "mod/data/model/app/user-pool.mjson"
     },
     "AppClientDescriptor": {
-        "object": "app-infrastructure-data.mod/data/main.mod/model/app-client.mjson"
+        "object": "mod/data/model/app/app-client.mjson"
     },
 
     "objectDescriptorWhiteList": {
