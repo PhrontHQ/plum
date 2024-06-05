@@ -8,9 +8,9 @@ var DataOperation = require("mod/data/service/data-operation").DataOperation,
     // Object = (require) ("aws.mod/data/main.mod/model/s3/object").Object,
     ObjectDescriptor =  require("aws.mod/data/main.mod/model/s3/object.mjson").montageObject,
     Asset = require("business-data.mod/data/main.mod/model/asset").Asset,
-    //Secret = (require) ("app-infrastructure-data.mod/data/main.mod/model/secret").Secret,
+    //Secret = (require) ("mod/data/model/app/secret").Secret,
     uuid = require("mod/core/uuid"),
-    secretObjectDescriptor = require("app-infrastructure-data.mod/data/main.mod/model/secret.mjson").montageObject;
+    secretObjectDescriptor = require("mod/data/model/secret.mjson").montageObject;
 
 const hostname = "roostergrinforms.com",
     path = "/perl/post/11397-16996-IOov",

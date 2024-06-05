@@ -21,7 +21,6 @@
     "mod-geo": "github:PhrontHQ/geo.mod#main",
     "mod": "github:PhrontHQ/mod#main",
     "business-data.mod": "github:PhrontHQ/business-data.mod#main",
-    "app-infrastructure-data.mod": "github:PhrontHQ/app-infrastructure-data.mod#main",
     "aws.mod": "github:PhrontHQ/aws.mod#main",
     "gcp.mod": "github:PhrontHQ/gcp.mod#main",
     "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod#main",
