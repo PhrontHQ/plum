@@ -18,9 +18,14 @@
   "dependencies": {
     "commander": "^6.1.0",
     "isomorphic-ws": "^4.0.1",
-    "mod": "github:PhrontHQ/mod#main",
     "mod-geo": "github:PhrontHQ/geo.mod#main",
-    "business-data.mod": "github:phrontHQ/business-data.mod#main",
+    "mod": "github:PhrontHQ/mod#main",
+    "business-data.mod": "github:PhrontHQ/business-data.mod#main",
+    "app-infrastructure-data.mod": "github:PhrontHQ/app-infrastructure-data.mod#main",
+    "aws.mod": "github:PhrontHQ/aws.mod#main",
+    "gcp.mod": "github:PhrontHQ/gcp.mod#main",
+    "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod#main",
+    "business-data-postgre-s-q-l.mod": "github:PhrontHQ/business-data-postgre-s-q-l.mod#main",
     "ws": "^8.4.2"
   },
   "devDependencies": {

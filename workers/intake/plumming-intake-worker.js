@@ -1,14 +1,14 @@
-var DataWorker = require("business-data.mod/worker/data-worker").DataWorker,
+var DataWorker = require("mod/worker/data-worker").DataWorker,
     Organization = require("business-data.mod/data/main.mod/model/organization").Organization,
-    Application = require("business-data.mod/data/main.mod/model/app/application").Application,
+    Application = require("mod/data/model/app/application").Application,
     CognitoUserPool = require("aws.mod/data/main.mod/model/cognito/user-pool").UserPool,
     CognitoUserPoolClient = require("aws.mod/data/main.mod/model/cognito/user-pool").UserPoolClient,
     Criteria = require("mod/core/criteria").Criteria,
     DataQuery = require("mod/data/model/data-query").DataQuery,
-    UserPool = require("business-data.mod/data/main.mod/model/app/user-pool").UserPool,
-    AppClient = require("business-data.mod/data/main.mod/model/app/app-client").AppClient,
+    UserPool = require("mod/data/model/app/user-pool").UserPool,
+    AppClient = require("mod/data/model/app/app-client").AppClient,
     PracticeObjectDescriptor = require("./data/main.mod/model/practice.mjson").montageObject,
-    WebSocketSession = require("business-data.mod/data/main.mod/model/app/web-socket-session").WebSocketSession;
+    WebSocketSession = require("mod/data/model/app/web-socket-session").WebSocketSession;
 
 const WebSocket = require('isomorphic-ws'),
     crypto = require('crypto');
