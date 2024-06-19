@@ -4,8 +4,8 @@ const https = require("https");
 require('mod/core/extras/string');
 const PATH = require("path");
 const fs = require('fs');
-const Deserializer = require("mod/core/serialization/deserializer/mod-deserializer").MontageDeserializer;
-const MontageSerializer = require("mod/core/serialization/serializer/mod-serializer").MontageSerializer;
+const Deserializer = require("mod/core/serialization/deserializer/montage-deserializer").MontageDeserializer;
+const MontageSerializer = require("mod/core/serialization/serializer/montage-serializer").MontageSerializer;
 const Criteria = require("mod/core/criteria").Criteria;
 const DataOperation = require("mod/data/service/data-operation").DataOperation;
 const zlib = require('zlib');
@@ -88,8 +88,8 @@ socketUrl = webSocketURL + sessionArgument;
 //var transactionJSONFileDirectory = PATH.join(__dirname, transactionJSONFile.stringByDeletingLastPathComponent());
 var transactionJSONFileDirectory = transactionJSONFileFullPath.stringByDeletingLastPathComponent();
 
-// const Deserializer = (require)("mod/core/serialization/deserializer/mod-deserializer").MontageDeserializer,
-//       MontageSerializer = (require)("mod/core/serialization/serializer/mod-serializer").MontageSerializer,
+// const Deserializer = (require)("mod/core/serialization/deserializer/montage-deserializer").MontageDeserializer,
+//       MontageSerializer = (require)("mod/core/serialization/serializer/montage-serializer").MontageSerializer,
 //module.path in pure node is module.directory in mr
 //module.filename in pure node is module.locaation in mr
 
@@ -520,7 +520,7 @@ function receiveOperation(operationJSON) {
             //console.log("receiveOperation " + operationJSON.root.values.type, operationJSON);
             console.log("receiveOperation " + operationJSON.root.values.type, JSON.stringify(operationJSON));
 
-            if ((operationJSON.root.values.type === "commitTransactionCompletedOperation" || operationJSON.root.values.type === "performTransactionCompletedOperation") && (createdAppClients = (operationJSON.root.values.data?.createdDataObjects && operationJSON.root.values.data?.createdDataObjects["data/main.mod/model/app/app-client"]?.rawData))) {
+            if ((operationJSON.root.values.type === "commitTransactionCompletedOperation" || operationJSON.root.values.type === "performTransactionCompletedOperation") && (createdAppClients = (operationJSON.root.values.data?.createdDataObjects && operationJSON.root.values.data?.createdDataObjects["data/model/app/app-client"]?.rawData))) {
                 if (sessionPath.endsWith("/provision-session.mjson")) {
                     var serializedOrganizationsessionPath = `${PATH.dirname(sessionPath)}/organization-session.mjson`,
                         serializedOrganizationIdentity = fs.readFileSync(serializedOrganizationsessionPath, 'utf8'),

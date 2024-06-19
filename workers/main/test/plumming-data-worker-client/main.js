@@ -22,8 +22,8 @@ var transactionJSONFileFullPath = PATH.join(__dirname, transactionJSONFile);
 var transactionJSONFileDirectory = PATH.join(__dirname, transactionJSONFile.stringByDeletingLastPathComponent());
 
 const fs = require('fs');
-const Deserializer = require("mod/core/serialization/deserializer/mod-deserializer").MontageDeserializer,
-      MontageSerializer = require("mod/core/serialization/serializer/mod-serializer").MontageSerializer,
+const Deserializer = require("mod/core/serialization/deserializer/montage-deserializer").MontageDeserializer,
+      MontageSerializer = require("mod/core/serialization/serializer/montage-serializer").MontageSerializer,
       //module.path in pure node is module.directory in mr
       //module.filename in pure node is module.locaation in mr
       

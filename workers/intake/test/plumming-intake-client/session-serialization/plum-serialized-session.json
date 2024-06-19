@@ -27,7 +27,7 @@
       }
     },
     "root": {
-      "prototype": "business-data.mod/data/main.mod/model/app/web-socket-session",
+      "prototype": "mod/data/model/app/web-socket-session",
       "values": {
         "identity": {"@": "identity"}
       }

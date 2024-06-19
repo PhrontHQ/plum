@@ -4,9 +4,11 @@
 /*
   REMOVE ME: mr needs to be able to load node native modules
 */
-global.crypto = require('crypto');
+if(!global.crypto) {
+  global.crypto = require('crypto');
+}
 
-var Montage = require('mod/mod');
+var Montage = require('mod/montage');
 var PATH = require("path");
 
 // //From Montage
