@@ -5,6 +5,7 @@ var DataWorker = require("mod/worker/data-worker").DataWorker,
     CognitoUserPoolClient = require("aws.mod/data/main.mod/model/cognito/user-pool").UserPoolClient,
     Criteria = require("mod/core/criteria").Criteria,
     DataQuery = require("mod/data/model/data-query").DataQuery,
+    SecretObjectDescriptor = require("mod/data/model/app/secret.mjson").montageObject,
     UserPool = require("mod/data/model/app/user-pool").UserPool,
     AppClient = require("mod/data/model/app/app-client").AppClient,
     PracticeObjectDescriptor = require("./data/main.mod/model/practice.mjson").montageObject,
@@ -77,7 +78,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
 
 
     provisionRootOrganizationFromIdentity: {
-        value: function(identity, cogentDesignCognitoUserPool, provisionAppClient) {
+        value: function(identity, rootCognitoUserPool, provisionSecret) {
            var mainService = this.mainService;
 
            console.log("provisionRootOrganizationFromIdentity: create tables");
@@ -85,25 +86,27 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             console.log("provisionRootOrganizationFromIdentity: create objects");
 
             //Create the organization:
-            var cogentDesignOrganization = mainService.createDataObject(Organization);
-            cogentDesignOrganization.name = "Cogent Design, Inc.";
+            var rootOrganization = mainService.createDataObject(Organization);
+            rootOrganization.name = "Cogent Design, Inc.";
 
 
 
             var plummingProvisionApplication = mainService.createDataObject(Application);
             plummingProvisionApplication.name = 'plumming-provision';
-            plummingProvisionApplication.controllingOrganization = cogentDesignOrganization;
+            plummingProvisionApplication.controllingOrganization = rootOrganization;
 
 
+            if(rootCognitoUserPool) {
 
-            var cogentDesignUserPool = mainService.createDataObject(UserPool);
-            /*
-                Should probably be automated by some business logic
-            */
-            cogentDesignUserPool.name = cogentDesignCognitoUserPool.name;
+                var rootUserPool = mainService.createDataObject(UserPool);
+                /*
+                    Should probably be automated by some business logic
+                */
+                rootUserPool.name = rootCognitoUserPool.name;
 
-            cogentDesignUserPool.cognitoUserPool = cogentDesignCognitoUserPool;
-            cogentDesignOrganization.userPools = [cogentDesignUserPool];
+                rootUserPool.cognitoUserPool = rootCognitoUserPool;
+                rootOrganization.userPools = [rootUserPool];
+            }
 
 
             var plummingProvisionAppClient = mainService.createDataObject(AppClient);
@@ -112,10 +115,10 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             */
             plummingProvisionAppClient.name = plummingProvisionApplication.name;
 
-            plummingProvisionAppClient.identifier = provisionAppClient.clientId;
-            plummingProvisionAppClient.credentials = provisionAppClient.clientSecret;
-            plummingProvisionAppClient.userPool = cogentDesignUserPool;
-            plummingProvisionAppClient.cognitoUserPoolClient = provisionAppClient;
+            plummingProvisionAppClient.identifier = provisionSecret.value.applicationIdentifier;
+            plummingProvisionAppClient.credentials = provisionSecret.value.applicationCredentials;
+            // plummingProvisionAppClient.userPool = rootUserPool;
+            // plummingProvisionAppClient.cognitoUserPoolClient = provisionAppClient;
             plummingProvisionAppClient.application = plummingProvisionApplication;
 
             console.log("provisionRootOrganizationFromIdentity: saveChanges()");
@@ -124,7 +127,7 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             .then(function() {
                 console.log("provisionRootOrganizationFromIdentity: saveChanges() completed");
 
-                return cogentDesignOrganization;
+                return rootOrganization;
             })
             .catch(function(error) {
                 console.log("provisionRootOrganizationFromIdentity: saveChanges() failed");
@@ -150,94 +153,109 @@ exports.PlummingIntakeWorker = DataWorker.specialize( /** @lends PlummingIntakeW
             //     controllingOrganization: organization
             // }),
             var self = this,
-                userPoolQuery = DataQuery.withTypeAndCriteria(CognitoUserPool),
+                //userPoolQuery = DataQuery.withTypeAndCriteria(CognitoUserPool),
+                provisionIdentitySecretCriteria = new Criteria().initWithExpression("name == $.name", {
+                    name: "mod-plum-provision-identity"
+                }),
+                provisionIdentityQuery = DataQuery.withTypeAndCriteria(SecretObjectDescriptor, provisionIdentitySecretCriteria),
                 intakeDataService =  this.mainService.childServiceForType(PracticeObjectDescriptor);
 
-            userPoolQuery.fetchLimit = 5;
+            // userPoolQuery.fetchLimit = 5;
             
             return Promise.all([
                 this.provisionStorageForRootOrganization(), 
-                this.mainService.fetchData(userPoolQuery), 
+                this.mainService.fetchData(provisionIdentityQuery), 
                 intakeDataService.checkInQuestionnaire(), 
                 intakeDataService.createRolesIfNeeded()
             ])
             .then((results) => {
                 var result = results[1],
-                    cogentDesignCognitoUserPool;
+                    secret = result[0],
+                    rootCognitoUserPool;
 
-                console.log("Cognito UserPool fetch result:",result);
+                console.log("Provision Identity fetch result:",result);
+
+                if(secret.value.applicationIdentifier !== identity.applicationIdentifier || secret.value.applicationCredentials !== identity.applicationCredentials) {
+                    throw new Error("Identity Credentials don't match provisioning credentials");
+                }
+
+                /*
+                    Now we validated we have a legitimate
+                */
+                return self.provisionRootOrganizationFromIdentity(identity, rootCognitoUserPool, secret);
+
 
                 //Now find the CogentDesign one
-                if(!result || result.length === 0) {
-                    return Promise.reject(new Error ("Could not validate credentials"));
-                } else {
+                // if(!result || result.length === 0) {
+                //     return Promise.reject(new Error ("Could not validate credentials"));
+                // } else {
 
-                    for(var i=0, countI=result.length, iUserPool; (i<countI); i++ ) {
-                        iUserPool = result[i];
-                        if(iUserPool.name === "cogent-design") {
-                            cogentDesignCognitoUserPool = iUserPool;
-                            break;
-                        }
-                    }
+                //     for(var i=0, countI=result.length, iUserPool; (i<countI); i++ ) {
+                //         iUserPool = result[i];
+                //         if(iUserPool.name === "cogent-design") {
+                //             rootCognitoUserPool = iUserPool;
+                //             break;
+                //         }
+                //     }
 
-                    if(!cogentDesignCognitoUserPool) {
-                        throw new Error("No User Pool found for provisioning");
-                    } else {
-                        console.log("User Pool found for provisioning");
-                    }
+                //     if(!rootCognitoUserPool) {
+                //         throw new Error("No User Pool found for provisioning");
+                //     } else {
+                //         console.log("User Pool found for provisioning");
+                //     }
 
-                    return self.mainService.getObjectProperties(cogentDesignCognitoUserPool,"appClients")
-                    .then(function() {
+                //     return self.mainService.getObjectProperties(rootCognitoUserPool,"appClients")
+                //     .then(function() {
 
 
-                        /* 
-                            Now find the appClient matching identity credentials 
-                        */
-                        var appClients = cogentDesignCognitoUserPool.appClients,
-                            provisionAppClient;
+                //         /* 
+                //             Now find the appClient matching identity credentials 
+                //         */
+                //         var appClients = rootCognitoUserPool.appClients,
+                //             provisionAppClient;
 
-                        console.log("Cognito UserPool fetch appClients result:",appClients);
+                //         console.log("Cognito UserPool fetch appClients result:",appClients);
 
-                        for(var i=0, countI=appClients.length, iAppClient; (i<countI); i++ ) {
-                            iAppClient = appClients[i];
+                //         for(var i=0, countI=appClients.length, iAppClient; (i<countI); i++ ) {
+                //             iAppClient = appClients[i];
 
-                            if(iAppClient.clientName === "plumming-provision" && iAppClient.clientId === identity.applicationIdentifier) {
-                                provisionAppClient = iAppClient;                
-                                break;
-                            }
-                        }
+                //             if(iAppClient.clientName === "plumming-provision" && iAppClient.clientId === identity.applicationIdentifier) {
+                //                 provisionAppClient = iAppClient;                
+                //                 break;
+                //             }
+                //         }
 
-                        if(!provisionAppClient) {
-                            throw new Error("No App Client found for provisioning");
-                        } else {
-                            console.log("provision-plumming App Client Found");
-                        }
+                //         if(!provisionAppClient) {
+                //             throw new Error("No App Client found for provisioning");
+                //         } else {
+                //             console.log("provision-plumming App Client Found");
+                //         }
     
-                        /*
-                            Now get the clientSecret to validate it:
-                        */
-                        return self.mainService.getObjectProperties(provisionAppClient,"clientSecret")
-                        .then(function() {
-                            if(provisionAppClient.clientSecret !== identity.applicationCredentials) {
-                                throw new Error("Identity Credentials don't match provisioning credentials");
-                            }
+                //         /*
+                //             Now get the clientSecret to validate it:
+                //         */
+                //         return self.mainService.getObjectProperties(provisionAppClient,"clientSecret")
+                //         .then(function() {
+                //             if(provisionAppClient.clientSecret !== identity.applicationCredentials) {
+                //                 throw new Error("Identity Credentials don't match provisioning credentials");
+                //             }
 
-                            /*
-                                Now we validated we have a legitimate
-                            */
-                            return self.provisionRootOrganizationFromIdentity(identity, cogentDesignCognitoUserPool, provisionAppClient);
+                //             /*
+                //                 Now we validated we have a legitimate
+                //             */
+                //             return self.provisionRootOrganizationFromIdentity(identity, rootCognitoUserPool, provisionAppClient);
 
-                        });
+                //         });
     
     
         
-                    })
-                    .catch(function(error) {
-                        console.error("Error fetching UserPool App clients:",error);
-                        return Promise.reject(error);
-                    });
+                //     })
+                //     .catch(function(error) {
+                //         console.error("Error fetching UserPool App clients:",error);
+                //         return Promise.reject(error);
+                //     });
 
-                }
+                // }
 
 
             });
