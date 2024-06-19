@@ -17,7 +17,7 @@ package:
       - node_modules/mod/test/**
       - node_modules/mod/testing/**
       - node_modules/mod/tools/**
-      - node_modules/mod-geo/.git/**
+      - node_modules/geo.mod/.git/**
       - node_modules/business-data.mod/.git/**
       - node_modules/business-data.mod/test/**
       - node_modules/business-data.mod/sandbox/**

@@ -18,7 +18,7 @@
   "dependencies": {
     "commander": "^6.1.0",
     "isomorphic-ws": "^4.0.1",
-    "mod-geo": "github:PhrontHQ/geo.mod#main",
+    "geo.mod": "github:PhrontHQ/geo.mod#main",
     "mod": "github:PhrontHQ/mod#main",
     "business-data.mod": "github:PhrontHQ/business-data.mod#main",
     "aws.mod": "github:PhrontHQ/aws.mod#main",

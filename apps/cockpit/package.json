@@ -4,7 +4,7 @@
     "description": "application",
     "dependencies": {
         "mod": "github:PhrontHQ/mod#main",
-        "mod-geo": "github:PhrontHQ/geo.mod#main",
+        "geo.mod": "github:PhrontHQ/geo.mod#main",
         "business-data.mod": "github:PhrontHQ/business-data.mod#main"
     },
     "devDependencies": {

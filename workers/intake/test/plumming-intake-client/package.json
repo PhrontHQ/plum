@@ -24,7 +24,7 @@
     "strange": "../../node_modules/strange",
     "ical.js": "../../node_modules/ical.js",
     "mod": "../../node_modules/mod",
-    "mod-geo": "../../node_modules/mod-geo",
+    "geo.mod": "../../node_modules/geo.mod",
     "mod-testing": "../../node_modules/mod-testing",
     "object-sizeof": "../../node_modules/object-sizeof",
     "phront": "../../node_modules/business-data.mod",

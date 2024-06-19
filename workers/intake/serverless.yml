@@ -34,9 +34,9 @@ package:
       - '!node_modules/phront/node_modules/**'
       - '!node_modules/phront/.git/**'
       - '!node_modules/phront/.vscode/**'
-      - '!node_modules/mod-geo/ui/**'
-      - '!node_modules/mod-geo/test/**'
-      - '!node_modules/mod-geo/.git/**'
+      - '!node_modules/geo.mod/ui/**'
+      - '!node_modules/geo.mod/test/**'
+      - '!node_modules/geo.mod/.git/**'
       - '!node_modules/local-websocket-server/**'
       - '!node_modules/serverless/**'
       - '!node_modules/serverless-offline/**'
@@ -84,9 +84,9 @@ package:
       - node_modules/mod/testing/**
       - node_modules/mod/tools/**
       # - node_modules/mod/window-loader/**
-      - node_modules/mod-geo/.git/**
-      - node_modules/mod-geo/test/**
-      - node_modules/mod-geo/ui/**
+      - node_modules/geo.mod/.git/**
+      - node_modules/geo.mod/test/**
+      - node_modules/geo.mod/ui/**
       - node_modules/phront/.git/**
       - node_modules/phront/.vscode/**
       - node_modules/phront/dev/**
@@ -166,7 +166,7 @@ custom:
     minifyPatterns:
       - 'node_modules/**'
       - '!node_modules/mod/**'
-      - '!node_modules/mod-geo/**'
+      - '!node_modules/geo.mod/**'
       - '!node_modules/phront/**'
       # - '!*/**'
 
