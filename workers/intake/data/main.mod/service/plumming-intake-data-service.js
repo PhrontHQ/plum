@@ -102,6 +102,8 @@ var DataService = require("mod/data/service/data-service").DataService,
 
     STAFF_TYPE_ORIGIN_ID_RANGE_START = 1000000,
 
+    crypto = require('crypto'),
+
     PlummingIntakeDataService;
 
     const PATH = require("path");
@@ -3065,7 +3067,7 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
     },
 
 
-    cogentDesignOrganizationName: {
+    rootOrganizationName: {
         value: "Cogent Design, Inc."
     },
 
@@ -3074,8 +3076,8 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
     //         //console.log("createPractice",rawData);
     //         var mainService = this.rootService,
-    //             cogentDesignOrganization =  mainService.createDataObject(Organization);
-    //             cogentDesignOrganization.name = this.cogentDesignOrganizationName;
+    //             rootOrganization =  mainService.createDataObject(Organization);
+    //             rootOrganization.name = this.rootOrganizationName;
 
     //         /*
     //             Create the UserPools.
@@ -3084,34 +3086,34 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
 
     //             The easiest would be to have a captureUserPoolCreateOperation. But right now, these operations are nested in an append operations and processed direcly outside of typical event routing which we need to be able to have the custom logic there to create a cognito object first.
     //         */
-    //         var cogentDesignUserPool = mainService.createDataObject(UserPool);
-    //         cogentDesignUserPool.name = "cogent-design";
-    //         cogentDesignOrganization.userPools = [cogentDesignUserPool];
+    //         var rootUserPool = mainService.createDataObject(UserPool);
+    //         rootUserPool.name = "cogent-design";
+    //         rootOrganization.userPools = [rootUserPool];
 
     //         var provisionPlumming = mainService.createDataObject(Application);
     //         provisionPlumming.name = "provision-plumming";
-    //         provisionPlumming.controllingOrganization = cogentDesignOrganization;
+    //         provisionPlumming.controllingOrganization = rootOrganization;
 
     //         var provisionPlummingClient = mainService.createDataObject(UserPoolClient);
     //         provisionPlummingClient.name = "provision-plumming";
     //         provisionPlummingClient.application = provisionPlumming;
-    //         provisionPlummingClient.userPool = cogentDesignUserPool;
+    //         provisionPlummingClient.userPool = rootUserPool;
 
-    //         return Promise.resolve(cogentDesignOrganization);
+    //         return Promise.resolve(rootOrganization);
 
     //     }
     // },
 
-    _cogentDesignOrganization: {
+    _rootOrganization: {
         value: undefined
     },
 
-    cogentDesignOrganization: {
+    rootOrganization: {
         value: function() {
 
-            if(!this._cogentDesignOrganization) {
+            if(!this._rootOrganization) {
                 var criteria = new Criteria().initWithExpression("name == $.name", {
-                    name: this.cogentDesignOrganizationName
+                    name: this.rootOrganizationName
                 }),
                 query = DataQuery.withTypeAndCriteria(Organization, criteria);
     
@@ -3120,12 +3122,12 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
                     if(result.length === 0 ) {
                         throw "Cogent Design Inc Organization not found";
                     } else {
-                        this._cogentDesignOrganization = result[0];
+                        this._rootOrganization = result[0];
                         return result[0];
                     }
                 });    
             } else {
-                return Promise.resolve(this._cogentDesignOrganization);
+                return Promise.resolve(this._rootOrganization);
             }
         }
     },
@@ -3134,14 +3136,14 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
         value: function(rawData, originId, createTransactionOperation) {
             var self = this;
 
-            return this.cogentDesignOrganization()
-            .then(function(cogentDesignOrganization) {
+            return this.rootOrganization()
+            .then(function(rootOrganization) {
                 //console.log("createPractice",rawData);
                 var mainService = self.rootService,
                     organization =  mainService.createDataObject(Organization);
                 organization.name = rawData.practice_name;
                 organization.originId = rawData.practice_id.toString();
-                organization.parent = cogentDesignOrganization;
+                organization.parent = rootOrganization;
 
                 return self.createPracticeAuthentication(organization)
                 // .then(function() {
@@ -3165,9 +3167,9 @@ exports.PlummingIntakeDataService = PlummingIntakeDataService = RawDataService.s
             return mainService.getObjectProperties(dataObject, "parent"/*, "userPools"*/)
             .then(function() {
                 if(!dataObject.parent) {
-                    return self.cogentDesignOrganization()
-                    .then(function(cogentDesignOrganization) {
-                        dataObject.parent = cogentDesignOrganization;
+                    return self.rootOrganization()
+                    .then(function(rootOrganization) {
+                        dataObject.parent = rootOrganization;
                         return dataObject;
                     });
                 }
