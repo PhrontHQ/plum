@@ -10,8 +10,7 @@
                 {"@": "IdentityAuthorizationService"},
                 {"@": "postgreSQLService"},
                 {"@": "S3DataService"},
-                {"@": "SecretManagerDataService"},
-                {"@": "CognitoDataService"}
+                {"@": "GCPSecretManagerDataService"}
             ],
             "authorizationPolicy": {"=":"@AuthorizationPolicy.OnConnect"},
             "accessPolicies": [
@@ -145,7 +144,7 @@
                     ],
                     "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
                 },
-                "local-mod": {
+                "local-mod-neon": {
                     "clientPool": {"@":"neonPostgreSQLClientPool"},
                     "environment": "neon",
                     "database": "plum",
@@ -155,8 +154,18 @@
                     "resourceArn": "arn:aws:rds:us-east-1:006408448862:cluster:mod",
                     "endpoint": "ep-floral-base-444193-pooler.us-west-2.aws.neon.tech",
                     "secretArn": "arn:aws:secretsmanager:us-east-1:006408448862:secret:mod-plum-database-DMVjPC"
+                },
+                "local-mod-gcp": {
+                    "clientPool": {"@":"gcpPostgreSQLClientPool"},
+                    "environment": "gcp",
+                    "database": "plum",
+                    "owner": "postgres",
+                    "schema": "mod_plum_v1",
+                    "secretName": "gcp-mod-plum-database"
                 }
-            }
+
+            },
+            "connectionIdentifier": "local-mod-gcp"
         }
     },
 
@@ -168,11 +177,19 @@
     },
 
     "neonPostgreSQLClientPool": {
-        "prototype": "business-data.mod/data/main.mod/service/neon/neon-postgre-s-q-l-client-pool",
+        "prototype": "postgre-s-q-l.mod/data/main.mod/service/neon-postgre-s-q-l-client-pool",
         "values": {
             "delegate": {"@":"postgreSQLService"}
         }
     },
+
+    "gcpPostgreSQLClientPool": {
+        "prototype": "postgre-s-q-l.mod/data/main.mod/service/postgre-s-q-l-client-pool",
+        "values": {
+            "delegate": {"@":"postgreSQLService"}
+        }
+    },
+
 
     "S3DataService": {
         "object": "aws.mod/data/main.mod/s3-data-service.mjson",
@@ -196,7 +213,8 @@
             }
         }
     },
-    "SecretManagerDataService": {
+
+    "AWSSecretManagerDataService": {
         "object": "aws.mod/data/main.mod/secret-manager-data-service.mjson",
         "values": {
             "connectionDescriptor": {
@@ -215,6 +233,27 @@
             }
         }
     },
+
+    "GCPSecretManagerDataService": {
+        "object": "gcp.mod/data/main.mod/secret-manager-data-service.mjson",
+        "values": {
+            "connectionDescriptor": {
+                "live": {
+                    "profile": "cogent-live",
+                    "region": "us-east-1"
+                },
+                "test": {
+                    "profile": "cogent-test",
+                    "region": "us-west-2"
+                },
+                "mod": {
+                    "secretStore": "projects/174146837486/secrets/",
+                    "credentialsFilePath": "~/.config/gcloud/application_default_credentials.json" 
+                }
+            }
+        }
+    },
+
     "CognitoDataService": {
         "object": "aws.mod/data/main.mod/cognito-data-service.mjson",
         "values": {
