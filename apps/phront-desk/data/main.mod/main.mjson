@@ -1,6 +1,6 @@
 {
     "AuthenticationPolicy": {
-        "object": "mod/data/service/user-authentication-policy"
+        "object": "mod/data/service/authentication-policy"
     },
 
     "phrontClientIdentityService": {
