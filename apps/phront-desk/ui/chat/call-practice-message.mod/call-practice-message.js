@@ -1,5 +1,4 @@
 
-"use strict";
 var Component = require("mod/ui/component").Component,
     DataEditor = require("mod/ui/data-editor").DataEditor;
 
